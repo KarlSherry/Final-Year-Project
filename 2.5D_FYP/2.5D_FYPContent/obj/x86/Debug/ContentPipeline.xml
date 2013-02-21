@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>stars.bmp</Source>
+      <Name>stars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\stars.xnb</Output>
+      <Time>2013-02-16T17:41:53.1210197+00:00</Time>
+    </Item>
+    <Item>
+      <Source>fighter.x</Source>
+      <Name>fighter</Name>
+      <Importer>XImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\fighter.xnb</Output>
+      <Time>2013-02-16T16:43:51.5068827+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\fighter_0.xml</Key>
+        <Value>2013-02-16T17:21:43.3338238+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\thor_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>fighter.x</Source>
+      <Importer>XImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\fighter_0.xml</Output>
+      <Time>2013-02-16T16:43:51.5068827+00:00</Time>
+    </Item>
+    <Item>
+      <Source>thor.jpg</Source>
+      <Name>thor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\thor.xnb</Output>
+      <Time>2013-02-16T17:22:08.1052407+00:00</Time>
+    </Item>
+    <Item>
+      <Source>thor.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\thor_0.xnb</Output>
+      <Time>2013-02-16T17:22:08.1052407+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Ground.bmp</Source>
+      <Name>Ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Ground.xnb</Output>
+      <Time>2013-02-16T20:41:46.0213383+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Verdana.spritefont</Source>
+      <Name>Verdana</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Verdana.xnb</Output>
+      <Time>2013-02-16T20:48:27.2532874+00:00</Time>
+    </Item>
+    <Item>
+      <Source>sphere.fbx</Source>
+      <Name>sphere</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\sphere.xnb</Output>
+      <Time>2013-02-18T19:31:23.1641825+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\sphere_0.xml</Key>
+        <Value>2013-02-19T14:16:49.0174496+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>sphere.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\sphere_0.xml</Output>
+      <Time>2013-02-18T19:31:23.1641825+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Asteroid.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Asteroid_0.xml</Output>
+      <Time>2013-02-19T14:14:04.8040571+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Asteroid.fbx</Source>
+      <Name>Asteroid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">0.5</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Asteroid.xnb</Output>
+      <Time>2013-02-19T14:14:04.8040571+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Asteroid_0.xml</Key>
+        <Value>2013-02-19T14:16:50.3165239+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station.fbx</Source>
+      <Name>Station</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station.xnb</Output>
+      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Station_0.xml</Key>
+        <Value>2013-02-21T14:06:49.2241898+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>StationMaterial.fbx</Source>
+      <Name>StationMaterial</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\StationMaterial.xnb</Output>
+      <Time>2013-02-21T14:34:37.2815972+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\StationMaterial_0.xml</Key>
+        <Value>2013-02-21T14:34:40.3577732+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Station_0.xml</Output>
+      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
+    </Item>
+    <Item>
+      <Source>StationMaterial.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\StationMaterial_0.xml</Output>
+      <Time>2013-02-21T14:34:37.2815972+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar.png</Source>
+      <Name>Bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Bar.xnb</Output>
+      <Time>2013-02-21T15:06:16.5962318+00:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2010-11-28T02:22:13.7769968+00:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
