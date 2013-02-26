@@ -47,7 +47,7 @@ namespace _2._5D_FYP
             set { camera = value; }
         }
 
-        Asteroid asteroids = new Asteroid();
+        public Asteroid asteroids = new Asteroid();
         Metal metals = new Metal();
 
         private Player player;

@@ -8,7 +8,6 @@ namespace _2._5D_FYP
 {
     class Metal : FloatingObjects
     {
-        Random randomGenerator = new Random(DateTime.Now.Millisecond);
         public List<Entity> materialList = new List<Entity>();
 
         int materialCount = 25;

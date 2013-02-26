@@ -6,11 +6,31 @@ using Microsoft.Xna.Framework;
 
 namespace _2._5D_FYP
 {
-    class Asteroid : FloatingObjects
+    public class Asteroid : FloatingObjects
     {
         public Asteroid()
         {
             _entityName = "Models//Asteroid";
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+        }
+
+        public override void LoadContent()
+        {
+            base.LoadContent();
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+        }
+
+        public override void Draw(GameTime gameTime)
+        {
+            base.Draw(gameTime);
         }
 
         public void CreateAsteroidList()
@@ -19,6 +39,7 @@ namespace _2._5D_FYP
             {
                 FloatingObjects asteroid = new FloatingObjects();
                 asteroid._entityName = _entityName;
+                asteroid.LoadContent();
                 asteroid._pos = new Vector3(randomGenerator.Next(-900, 900), 50, randomGenerator.Next(-900, 900));
                 Game1.Instance().Children.Add(asteroid);
 

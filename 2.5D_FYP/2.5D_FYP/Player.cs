@@ -12,6 +12,8 @@ namespace _2._5D_FYP
     {
         public Vector3 acceleration;
         Weapon weapon;
+        CollisionDetection collision;
+        Metal metal;
 
         float rotationSpeed = 5.0f;
 
@@ -33,8 +35,8 @@ namespace _2._5D_FYP
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 50.0f;
-            _maxForce = 15.0f;
+            _maxSpeed = 500.0f;
+            _maxForce = 150.0f;
             _mass = 1.0f;
             _health = 100.0f;
             _shield = 100.0f;
@@ -42,6 +44,8 @@ namespace _2._5D_FYP
             weaponName = weaponArray[weaponIndex];
 
             weapon = new Weapon();
+            metal = new Metal();
+            collision = new CollisionDetection();
             rotationSpeed = 5.0f;
         } // End of Player()
 
@@ -65,6 +69,7 @@ namespace _2._5D_FYP
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
             weapon.Update(weaponIndex, gameTime);
             weapon.CheckWeaponFire();
+            //collision.CheckPlayerAsteroidCollision();
 
             acceleration = _force / _mass;
 

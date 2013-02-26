@@ -9,6 +9,7 @@ namespace _2._5D_FYP
 {
     public abstract class Entity
     {
+        protected static Random randomGenerator = new Random(DateTime.Now.Millisecond);
         public Vector3 _pos = Vector3.Zero;
 
         public Vector3 _look = Vector3.Forward;
@@ -22,7 +23,7 @@ namespace _2._5D_FYP
         public float _maxSpeed = 0.0f, _maxForce = 0.0f, _mass = 1.0f, _rotation = 0.0f;
         public float _health = 0.0f, _shield = 0.0f;
 
-        public string _entityName = "";
+        public string _entityName;
 
         public Matrix _worldTransform = new Matrix();
 
@@ -32,10 +33,7 @@ namespace _2._5D_FYP
         public bool Alive { get { return _alive; } set { _alive = value; } }
 
         public virtual void Initialize() { }
-        public virtual void LoadContent() 
-        {
-            _model = Game1.Instance().Content.Load<Model>(_entityName);
-        }
+        public virtual void LoadContent() { }
         public virtual void Update(GameTime gameTime) { }
         public virtual void Draw(GameTime gameTime) { }
 

@@ -97,6 +97,8 @@ namespace _2._5D_FYP
             bullet._pos = pos;
             bullet._look = look;
             Game1.Instance().Children.Add(bullet);
+
+
         }
     }
 }
