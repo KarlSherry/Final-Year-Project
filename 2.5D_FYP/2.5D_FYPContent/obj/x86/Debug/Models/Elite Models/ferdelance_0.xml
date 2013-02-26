@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:NodeContent">
+    <Name>RootNode</Name>
+    <Identity>
+      <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
+    <Children>
+      <Child Type="Graphics:MeshContent">
+        <Name>Ship_None</Name>
+        <Transform>7.54979E-09 0.1 4.371139E-09 0 -0.1 7.54979E-09 0 0 0 -4.371139E-09 0.1 0 0 0 0 1</Transform>
+        <Positions>-5 1.75 -0.5 0 -1.75 13.5 5 1.75 -0.5 0 2.25 -2.5 -5 -1.75 -0.5 -1.5 -1.75 -6.5 -1.5 0.25 -6.5 1.5 -1.75 -6.5 1.5 0.25 -6.5 5 -1.75 -0.5 0 -1.798275 -2.5 1.75 -1.798275 5.5 -1.75 -1.798275 5.5 -3.25 1.157772 2.25 -0.38 -1.351339 12.13 -2 1.778661 -0.5 2 1.774891 -0.5 0.38 -1.355109 12.13 3.25 1.176168 2.094943</Positions>
+        <Geometry>
+          <Batch>
+            <Material>#Resource1</Material>
+            <Indices>2 1 0 3 2 0 5 3 4</Indices>
+            <Vertices>
+              <PositionIndices>0 1 2 3 6 8</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">-0.7587817 0.6506546 -0.0296945088 0 -0.121646777 0.9925535 0.7587817 0.6506546 -0.0296945088 0 0.989104867 -0.147038177 -0.41340372 0.449262977 -0.7919553 0.41340372 0.449262977 -0.7919553</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource2</Material>
+            <Indices>2 1 0 0 4 3 6 5 1 4 5 7</Indices>
+            <Vertices>
+              <PositionIndices>1 0 4 9 2 3 6 8</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 -0.121646777 0.9925535 -0.7587817 0.6506546 -0.0296945088 -0.778588235 -0.62331 -0.07223731 0.778588235 -0.62331 -0.07223731 0.7587817 0.6506546 -0.0296945088 0 0.989104867 -0.147038177 -0.41340372 0.449262977 -0.7919553 0.41340372 0.449262977 -0.7919553</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource3</Material>
+            <Indices>2 1 0 3 1 2 6 5 4 7 6 4</Indices>
+            <Vertices>
+              <PositionIndices>4 0 5 6 9 7 8 2</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">-0.778588235 -0.62331 -0.07223731 -0.7587817 0.6506546 -0.0296945088 -0.394512773 -0.6103091 -0.6869106 -0.41340372 0.449262977 -0.7919553 0.778588235 -0.62331 -0.07223731 0.394512773 -0.6103091 -0.6869106 0.41340372 0.449262977 -0.7919553 0.7587817 0.6506546 -0.0296945088</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource4</Material>
+            <Indices>2 1 0 3 2 0</Indices>
+            <Vertices>
+              <PositionIndices>7 5 6 8</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.394512773 -0.6103091 -0.6869106 -0.394512773 -0.6103091 -0.6869106 -0.41340372 0.449262977 -0.7919553 0.41340372 0.449262977 -0.7919553</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource5</Material>
+            <Indices>2 1 0 3 2 0 4 3 0</Indices>
+            <Vertices>
+              <PositionIndices>9 1 4 5 7</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.778588235 -0.62331 -0.07223731 0 -0.121646777 0.9925535 -0.778588235 -0.62331 -0.07223731 -0.394512773 -0.6103091 -0.6869106 0.394512773 -0.6103091 -0.6869106</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource6</Material>
+            <Indices>2 1 0</Indices>
+            <Vertices>
+              <PositionIndices>10 11 12</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 -1 0 0 -1 0 0 -1 0</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource7</Material>
+            <Indices>2 1 0 5 4 3</Indices>
+            <Vertices>
+              <PositionIndices>13 14 15 16 17 18</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.0367137678 0.971068442 0.2359386 0.0367137678 0.971068442 0.2359386 0.0367137678 0.971068442 0.2359386 -0.0271919928 0.971068442 0.237159342 -0.0271919928 0.971068442 0.237159342 -0.0271919928 0.971068442 0.237159342</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+        </Geometry>
+      </Child>
+    </Children>
+  </Asset>
+  <Resources>
+    <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
+      <Name>Material_006</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0.480000019 0</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
+      <Name>Material_007</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0.320000023 0</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
+      <Name>Material_003</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0 0.640000045</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
+      <Name>Thruster</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.8 0.8 0</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource5" Type="Graphics:BasicMaterialContent">
+      <Name>Material_002</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0 0.8</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource6" Type="Graphics:BasicMaterialContent">
+      <Name>Material_004</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0 0.488</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource7" Type="Graphics:BasicMaterialContent">
+      <Name>Material_005</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\ferdelance.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0.8 0</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+  </Resources>
+</XnaContent>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:NodeContent">
+    <Name>RootNode</Name>
+    <Identity>
+      <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\moray.fbx</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
+    <Children>
+      <Child Type="Graphics:MeshContent">
+        <Name>moray</Name>
+        <Transform>7.54979E-10 0.01 4.37114E-10 0 -0.01 7.54979E-10 0 0 0 -4.37114E-10 0.01 0 0 0 0 1</Transform>
+        <Positions>15 0 65 0 18 -40 -15 0 65 -60 0 0 60 0 0 -30 -27 -10 30 -27 -10 9 -4.1 -25.3 0 -18.1 -16.3 -9 -4.1 -25.3 12 3.1 49 5 0 65 6 0 65 13 3.1 49 -13 3.1 49 -6 0 65 -5 0 65 -12 3.1 49</Positions>
+        <Geometry>
+          <Batch>
+            <Material>#Resource1</Material>
+            <Indices>2 1 0 4 1 3 5 1 4 6 1 5 3 2 4 5 0 6</Indices>
+            <Vertices>
+              <PositionIndices>0 1 2 3 5 6 4</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.357554853 0.08575701 0.9299295 0 0.552751243 -0.833338439 -0.357554853 0.08575701 0.9299295 -0.9833979 0.169957578 -0.0631122738 -0.389935 -0.8573565 -0.335947752 0.389935 -0.8573565 -0.335947752 0.9833979 0.169957578 -0.0631122738</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource2</Material>
+            <Indices>2 1 0 4 3 1 6 3 5 0 3 6</Indices>
+            <Vertices>
+              <PositionIndices>2 1 3 0 4 6 5</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">-0.357554853 0.08575701 0.9299295 0 0.552751243 -0.833338439 -0.9833979 0.169957578 -0.0631122738 0.357554853 0.08575701 0.9299295 0.9833979 0.169957578 -0.0631122738 0.389935 -0.8573565 -0.335947752 -0.389935 -0.8573565 -0.335947752</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource3</Material>
+            <Indices>2 1 0</Indices>
+            <Vertices>
+              <PositionIndices>7 8 9</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 -0.5407575 -0.8411512 0 -0.5407575 -0.8411512 0 -0.5407575 -0.8411512</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+          <Batch>
+            <Material>#Resource4</Material>
+            <Indices>2 1 0 3 2 0 6 5 4 7 6 4</Indices>
+            <Vertices>
+              <PositionIndices>10 11 12 13 14 15 16 17</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 0.981719434 0.190191358 0 0.981719434 0.190191358 0 0.981719434 0.190191358 0 0.981719434 0.190191358 0 0.981719434 0.190191358 0 0.981719434 0.190191358 0 0.981719434 0.190191358 0 0.981719434 0.190191358</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+        </Geometry>
+      </Child>
+    </Children>
+  </Asset>
+  <Resources>
+    <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
+      <Name>Material</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\moray.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0 0.480000019</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
+      <Name>LightBlue</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\moray.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.2024 0.2024 0.79408</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
+      <Name>Material_002</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\moray.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0.5516 0.8</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
+      <Name>Thruster</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\moray.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.35032 0.74904 0.0853600055</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+  </Resources>
+</XnaContent>

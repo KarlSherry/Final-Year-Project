@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:MeshContent">
+    <Name>boa_None</Name>
+    <Identity>
+      <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\boa.fbx</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <Transform>7.54979E-10 -0.01 4.37114E-10 0 -0.01 -7.54979E-10 0 0 0 -4.37114E-10 -0.01 0 0 0 0 1</Transform>
+    <Positions>13 -9 -107 0 7 -107 0 40 -87 38 40 -59 62 0 -67 38 -25 -99 -13 -9 -107 24 -65 -79 -24 -65 -79 -38 -25 -99 -62 0 -67 -38 40 -59 0 0 93</Positions>
+    <Geometry>
+      <Batch>
+        <Material>#Resource1</Material>
+        <Indices>2 1 0 3 2 0 4 3 0 5 4 0 5 0 6 7 5 6 8 7 6 9 8 6 11 10 9 2 11 9 1 2 9 6 1 9</Indices>
+        <Vertices>
+          <PositionIndices>0 1 2 3 4 5 6 7 8 9 10 11</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.268868059 0.0152592547 -0.9630421 0.006714072 0.3930784 -0.919461668 0.00204474013 0.7914365 -0.6112247 0.5566271 0.8223823 -0.117526777 0.9805902 0.0797753856 -0.1790521 0.5700247 -0.186712235 -0.8001038 -0.255989254 -0.0009460738 -0.9666433 0.4141667 -0.8668783 -0.277382731 -0.4141667 -0.8668783 -0.277382731 -0.571275949 -0.186254457 -0.799310267 -0.980132461 0.08053835 -0.181066319 -0.5571459 0.822138131 -0.1167333</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+      <Batch>
+        <Material>#Resource2</Material>
+        <Indices>2 1 0 5 4 3 8 7 6</Indices>
+        <Vertices>
+          <PositionIndices>3 2 11 7 5 4 9 8 10</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.5566271 0.8223823 -0.117526777 0.00204474013 0.7914365 -0.6112247 -0.5571459 0.822138131 -0.1167333 0.4141667 -0.8668783 -0.277382731 0.5700247 -0.186712235 -0.8001038 0.9805902 0.0797753856 -0.1790521 -0.571275949 -0.186254457 -0.799310267 -0.4141667 -0.8668783 -0.277382731 -0.980132461 0.08053835 -0.181066319</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+      <Batch>
+        <Material>#Resource3</Material>
+        <Indices>2 1 0 2 4 3 2 6 5</Indices>
+        <Vertices>
+          <PositionIndices>3 11 12 10 8 7 4</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.5566271 0.8223823 -0.117526777 -0.5571459 0.822138131 -0.1167333 0 0.0277108066 0.9996033 -0.980132461 0.08053835 -0.181066319 -0.4141667 -0.8668783 -0.277382731 0.4141667 -0.8668783 -0.277382731 0.9805902 0.0797753856 -0.1790521</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+      <Batch>
+        <Material>#Resource4</Material>
+        <Indices>2 1 0 4 3 0 6 5 0</Indices>
+        <Vertices>
+          <PositionIndices>12 11 10 8 7 4 3</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 0.0277108066 0.9996033 -0.5571459 0.822138131 -0.1167333 -0.980132461 0.08053835 -0.181066319 -0.4141667 -0.8668783 -0.277382731 0.4141667 -0.8668783 -0.277382731 0.9805902 0.0797753856 -0.1790521 0.5566271 0.8223823 -0.117526777</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+      <Batch>
+        <Material>#Resource5</Material>
+        <Indices>2 1 0</Indices>
+        <Vertices>
+          <PositionIndices>1 0 6</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.006714072 0.3930784 -0.919461668 0.268868059 0.0152592547 -0.9630421 -0.255989254 -0.0009460738 -0.9666433</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+    </Geometry>
+  </Asset>
+  <Resources>
+    <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
+      <Name>Material_005</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\boa.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.01016 0 0.56</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
+      <Name>Material_006</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\boa.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0.0376 0.4</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
+      <Name>Material_004</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\boa.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0 0.8</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
+      <Name>Material_003</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\boa.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.38944 0.34224 0.64904</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+    <Resource ID="#Resource5" Type="Graphics:BasicMaterialContent">
+      <Name>Thruster</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\Models\Elite Models\boa.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.06336 0.74904 0.07952</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+  </Resources>
+</XnaContent>
