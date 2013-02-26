@@ -19,18 +19,17 @@ namespace _2._5D_FYP
         public Matrix projection;
         public Matrix view;
         private MouseState mouseState;
-        private KeyboardState keyState;
         
         public Camera()
         {
-            _pos = new Vector3(0.0f, 100.0f, 0.0f);
+            _pos = new Vector3(0.0f, 300.0f, 100.0f);
             _look = new Vector3(0.0f, 0.0f, -1.0f);
         }
 
         public override void Update(GameTime gameTime)
         {
-
             float timeDelta = (float)(gameTime.ElapsedGameTime.Milliseconds / 1000.0f);
+            view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
 
             mouseState = Mouse.GetState();
 
@@ -49,11 +48,15 @@ namespace _2._5D_FYP
 
             Vector3 playerPosition = Game1.Instance().Player._pos;
 
-            //_pos = new Vector3(playerPosition.X, playerPosition.Y + 100.0f, playerPosition.Z);
-            //_look = Game1.instance.Player._look;
-
-            //view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
-            view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
+            KeyboardState k = Keyboard.GetState();
+            if(k.IsKeyDown(Keys.F1))
+                view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
+            if (k.IsKeyDown(Keys.F2))
+            {
+                view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
+                _pos = new Vector3(playerPosition.X, playerPosition.Y + 100.0f, playerPosition.Z);
+                _look = Game1.Instance().Player._look;
+            }
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);
             
         }

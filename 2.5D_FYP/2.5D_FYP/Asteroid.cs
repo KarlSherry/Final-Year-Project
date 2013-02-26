@@ -3,28 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace _2._5D_FYP
 {
     class Asteroid : FloatingObjects
     {
-        Random randomGenerator = new Random(DateTime.Now.Millisecond);
-
         public Asteroid()
         {
-            objectName = "Asteroid";
+            _entityName = "Models//Asteroid";
         }
 
         public void CreateAsteroidList()
         {
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 25; i++)
             {
                 FloatingObjects asteroid = new FloatingObjects();
-                asteroid.objectName = objectName;
+                asteroid._entityName = _entityName;
                 asteroid._pos = new Vector3(randomGenerator.Next(-900, 900), 50, randomGenerator.Next(-900, 900));
-
                 Game1.Instance().Children.Add(asteroid);
+
+                //System.Threading.Thread.Sleep(3000); // Delay implemented to ensure the position and look vectors are truely random
             }
         }
 

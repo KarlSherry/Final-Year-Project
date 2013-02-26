@@ -42,14 +42,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fighter.x">
+    <Compile Include="Models\fighter.x">
       <Name>fighter</Name>
       <Importer>XImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="thor.jpg">
+    <Compile Include="Models\thor.jpg">
       <Name>thor</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -77,14 +77,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="sphere.fbx">
+    <Compile Include="Models\sphere.fbx">
       <Name>sphere</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asteroid.fbx">
+    <Compile Include="Models\Asteroid.fbx">
       <Name>Asteroid</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
@@ -92,12 +92,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Station.fbx">
+    <Compile Include="Models\Station.fbx">
       <Name>Station</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="StationMaterial.fbx">
+    <Compile Include="Models\StationMaterial.fbx">
       <Name>StationMaterial</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
@@ -108,6 +108,98 @@
       <Name>Bar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Elite Models\adder.fbx">
+      <Name>adder</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\anaconda.fbx">
+      <Name>anaconda</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\asp.fbx">
+      <Name>asp</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\boa.fbx">
+      <Name>boa</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\cobramk1.fbx">
+      <Name>cobramk1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\cobramk3.fbx">
+      <Name>cobramk3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\coriolis.fbx">
+      <Name>coriolis</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\ferdelance.fbx">
+      <Name>ferdelance</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\gecko.fbx">
+      <Name>gecko</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\krait.fbx">
+      <Name>krait</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\marimba.fbx">
+      <Name>marimba</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\moray.fbx">
+      <Name>moray</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\python.fbx">
+      <Name>python</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\Shuttle.fbx">
+      <Name>Shuttle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\sidewinder.fbx">
+      <Name>sidewinder</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\thargoid.fbx">
+      <Name>thargoid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\transporter.fbx">
+      <Name>transporter</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Elite Models\viper.fbx">
+      <Name>viper</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

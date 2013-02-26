@@ -1,11 +1,29 @@
 Content\stars.xnb
-Content\fighter.xnb
-Content\thor.xnb
-Content\thor_0.xnb
 Content\Ground.xnb
 Content\Verdana.xnb
-Content\sphere.xnb
-Content\Asteroid.xnb
-Content\Station.xnb
-Content\StationMaterial.xnb
 Content\Bar.xnb
+Content\Models\fighter.xnb
+Content\Models\sphere.xnb
+Content\Models\Asteroid.xnb
+Content\Models\Station.xnb
+Content\Models\StationMaterial.xnb
+Content\Models\thor.xnb
+Content\Models\thor_0.xnb
+Content\Models\Elite Models\adder.xnb
+Content\Models\Elite Models\anaconda.xnb
+Content\Models\Elite Models\asp.xnb
+Content\Models\Elite Models\boa.xnb
+Content\Models\Elite Models\cobramk1.xnb
+Content\Models\Elite Models\cobramk3.xnb
+Content\Models\Elite Models\coriolis.xnb
+Content\Models\Elite Models\ferdelance.xnb
+Content\Models\Elite Models\gecko.xnb
+Content\Models\Elite Models\krait.xnb
+Content\Models\Elite Models\marimba.xnb
+Content\Models\Elite Models\moray.xnb
+Content\Models\Elite Models\python.xnb
+Content\Models\Elite Models\Shuttle.xnb
+Content\Models\Elite Models\sidewinder.xnb
+Content\Models\Elite Models\thargoid.xnb
+Content\Models\Elite Models\transporter.xnb
+Content\Models\Elite Models\viper.xnb

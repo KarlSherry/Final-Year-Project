@@ -11,52 +11,6 @@
       <Time>2013-02-16T17:41:53.1210197+00:00</Time>
     </Item>
     <Item>
-      <Source>fighter.x</Source>
-      <Name>fighter</Name>
-      <Importer>XImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\fighter.xnb</Output>
-      <Time>2013-02-16T16:43:51.5068827+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\fighter_0.xml</Key>
-        <Value>2013-02-16T17:21:43.3338238+00:00</Value>
-      </Dependency>
-      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\thor_0.xnb</Request>
-    </Item>
-    <Item>
-      <Source>fighter.x</Source>
-      <Importer>XImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\fighter_0.xml</Output>
-      <Time>2013-02-16T16:43:51.5068827+00:00</Time>
-    </Item>
-    <Item>
-      <Source>thor.jpg</Source>
-      <Name>thor</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\thor.xnb</Output>
-      <Time>2013-02-16T17:22:08.1052407+00:00</Time>
-    </Item>
-    <Item>
-      <Source>thor.jpg</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
-        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
-        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
-        <Data Key="GenerateMipmaps" Type="bool">true</Data>
-        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
-        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\thor_0.xnb</Output>
-      <Time>2013-02-16T17:22:08.1052407+00:00</Time>
-    </Item>
-    <Item>
       <Source>Ground.bmp</Source>
       <Name>Ground</Name>
       <Importer>TextureImporter</Importer>
@@ -75,89 +29,6 @@
       <Time>2013-02-16T20:48:27.2532874+00:00</Time>
     </Item>
     <Item>
-      <Source>sphere.fbx</Source>
-      <Name>sphere</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\sphere.xnb</Output>
-      <Time>2013-02-18T19:31:23.1641825+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\sphere_0.xml</Key>
-        <Value>2013-02-19T14:16:49.0174496+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>sphere.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\sphere_0.xml</Output>
-      <Time>2013-02-18T19:31:23.1641825+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Asteroid.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Asteroid_0.xml</Output>
-      <Time>2013-02-19T14:14:04.8040571+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Asteroid.fbx</Source>
-      <Name>Asteroid</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="Scale">0.5</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Asteroid.xnb</Output>
-      <Time>2013-02-19T14:14:04.8040571+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Asteroid_0.xml</Key>
-        <Value>2013-02-19T14:16:50.3165239+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Station.fbx</Source>
-      <Name>Station</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station.xnb</Output>
-      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Station_0.xml</Key>
-        <Value>2013-02-21T14:06:49.2241898+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>StationMaterial.fbx</Source>
-      <Name>StationMaterial</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\StationMaterial.xnb</Output>
-      <Time>2013-02-21T14:34:37.2815972+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\StationMaterial_0.xml</Key>
-        <Value>2013-02-21T14:34:40.3577732+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Station.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Station_0.xml</Output>
-      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
-    </Item>
-    <Item>
-      <Source>StationMaterial.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\StationMaterial_0.xml</Output>
-      <Time>2013-02-21T14:34:37.2815972+00:00</Time>
-    </Item>
-    <Item>
       <Source>Bar.png</Source>
       <Name>Bar</Name>
       <Importer>TextureImporter</Importer>
@@ -165,6 +36,495 @@
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Bar.xnb</Output>
       <Time>2013-02-21T15:06:16.5962318+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\fighter.x</Source>
+      <Name>Models\fighter</Name>
+      <Importer>XImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\fighter.xnb</Output>
+      <Time>2013-02-16T16:43:51.5068827+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\fighter_0.xml</Key>
+        <Value>2013-02-21T21:53:49.4683527+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\thor_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\sphere.fbx</Source>
+      <Name>Models\sphere</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\sphere.xnb</Output>
+      <Time>2013-02-18T19:31:23.1641825+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\sphere_0.xml</Key>
+        <Value>2013-02-21T21:53:57.8558324+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Asteroid.fbx</Source>
+      <Name>Models\Asteroid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">0.5</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Asteroid.xnb</Output>
+      <Time>2013-02-19T14:14:04.8040571+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Asteroid_0.xml</Key>
+        <Value>2013-02-21T21:53:58.9428946+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Station.fbx</Source>
+      <Name>Models\Station</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Station.xnb</Output>
+      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Station_0.xml</Key>
+        <Value>2013-02-21T21:53:59.0909031+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\StationMaterial.fbx</Source>
+      <Name>Models\StationMaterial</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\StationMaterial.xnb</Output>
+      <Time>2013-02-21T14:34:37.2815972+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\StationMaterial_0.xml</Key>
+        <Value>2013-02-21T21:53:59.2139101+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\fighter.x</Source>
+      <Importer>XImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\fighter_0.xml</Output>
+      <Time>2013-02-16T16:43:51.5068827+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\thor.jpg</Source>
+      <Name>Models\thor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\thor.xnb</Output>
+      <Time>2013-02-16T17:22:08.1052407+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\thor.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\thor_0.xnb</Output>
+      <Time>2013-02-16T17:22:08.1052407+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\sphere.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\sphere_0.xml</Output>
+      <Time>2013-02-18T19:31:23.1641825+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Asteroid.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Asteroid_0.xml</Output>
+      <Time>2013-02-19T14:14:04.8040571+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Station.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Station_0.xml</Output>
+      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\StationMaterial.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\StationMaterial_0.xml</Output>
+      <Time>2013-02-21T14:34:37.2815972+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\adder.fbx</Source>
+      <Name>Models\Elite Models\adder</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\adder.xnb</Output>
+      <Time>2013-02-26T11:29:59.4632669+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\adder_0.xml</Key>
+        <Value>2013-02-26T11:30:38.3804929+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\anaconda.fbx</Source>
+      <Name>Models\Elite Models\anaconda</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\anaconda.xnb</Output>
+      <Time>2013-02-26T11:29:59.481268+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\anaconda_0.xml</Key>
+        <Value>2013-02-26T11:30:38.6955109+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\asp.fbx</Source>
+      <Name>Models\Elite Models\asp</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\asp.xnb</Output>
+      <Time>2013-02-26T11:29:59.4932687+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\asp_0.xml</Key>
+        <Value>2013-02-26T11:30:38.8155178+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\boa.fbx</Source>
+      <Name>Models\Elite Models\boa</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\boa.xnb</Output>
+      <Time>2013-02-26T11:29:59.5032692+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\boa_0.xml</Key>
+        <Value>2013-02-26T11:30:38.9495254+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\cobramk1.fbx</Source>
+      <Name>Models\Elite Models\cobramk1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\cobramk1.xnb</Output>
+      <Time>2013-02-26T11:29:59.5152699+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\cobramk1_0.xml</Key>
+        <Value>2013-02-26T11:30:39.0635319+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\cobramk3.fbx</Source>
+      <Name>Models\Elite Models\cobramk3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\cobramk3.xnb</Output>
+      <Time>2013-02-26T11:29:59.5302708+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\cobramk3_0.xml</Key>
+        <Value>2013-02-26T11:30:39.2495426+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\coriolis.fbx</Source>
+      <Name>Models\Elite Models\coriolis</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\coriolis.xnb</Output>
+      <Time>2013-02-26T11:29:59.5422715+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\coriolis_0.xml</Key>
+        <Value>2013-02-26T11:30:39.3835502+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\ferdelance.fbx</Source>
+      <Name>Models\Elite Models\ferdelance</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\ferdelance.xnb</Output>
+      <Time>2013-02-26T11:29:59.5542721+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\ferdelance_0.xml</Key>
+        <Value>2013-02-26T11:30:39.5265584+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\gecko.fbx</Source>
+      <Name>Models\Elite Models\gecko</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\gecko.xnb</Output>
+      <Time>2013-02-26T11:29:59.5652728+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\gecko_0.xml</Key>
+        <Value>2013-02-26T11:30:39.6635663+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\krait.fbx</Source>
+      <Name>Models\Elite Models\krait</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\krait.xnb</Output>
+      <Time>2013-02-26T11:29:59.5772735+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\krait_0.xml</Key>
+        <Value>2013-02-26T11:30:39.7945738+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\marimba.fbx</Source>
+      <Name>Models\Elite Models\marimba</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\marimba.xnb</Output>
+      <Time>2013-02-26T11:29:59.5892741+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\marimba_0.xml</Key>
+        <Value>2013-02-26T11:30:39.9295815+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\moray.fbx</Source>
+      <Name>Models\Elite Models\moray</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\moray.xnb</Output>
+      <Time>2013-02-26T11:29:59.6002748+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\moray_0.xml</Key>
+        <Value>2013-02-26T11:30:40.0595889+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\python.fbx</Source>
+      <Name>Models\Elite Models\python</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\python.xnb</Output>
+      <Time>2013-02-26T11:29:59.6112754+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\python_0.xml</Key>
+        <Value>2013-02-26T11:30:40.1745955+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\Shuttle.fbx</Source>
+      <Name>Models\Elite Models\Shuttle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\Shuttle.xnb</Output>
+      <Time>2013-02-26T11:29:59.622276+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\Shuttle_0.xml</Key>
+        <Value>2013-02-26T11:30:40.288602+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\sidewinder.fbx</Source>
+      <Name>Models\Elite Models\sidewinder</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\sidewinder.xnb</Output>
+      <Time>2013-02-26T11:29:59.6322766+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\sidewinder_0.xml</Key>
+        <Value>2013-02-26T11:30:40.6806244+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\thargoid.fbx</Source>
+      <Name>Models\Elite Models\thargoid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\thargoid.xnb</Output>
+      <Time>2013-02-26T11:29:59.6452773+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\thargoid_0.xml</Key>
+        <Value>2013-02-26T11:30:40.8346332+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\transporter.fbx</Source>
+      <Name>Models\Elite Models\transporter</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\transporter.xnb</Output>
+      <Time>2013-02-26T11:29:59.6962803+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\transporter_0.xml</Key>
+        <Value>2013-02-26T11:30:40.9596404+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\viper.fbx</Source>
+      <Name>Models\Elite Models\viper</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\viper.xnb</Output>
+      <Time>2013-02-26T11:29:59.7202816+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\viper_0.xml</Key>
+        <Value>2013-02-26T11:30:41.0796473+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\adder.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\adder_0.xml</Output>
+      <Time>2013-02-26T11:29:59.4632669+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\anaconda.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\anaconda_0.xml</Output>
+      <Time>2013-02-26T11:29:59.481268+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\asp.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\asp_0.xml</Output>
+      <Time>2013-02-26T11:29:59.4932687+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\boa.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\boa_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5032692+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\cobramk1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\cobramk1_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5152699+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\cobramk3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\cobramk3_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5302708+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\coriolis.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\coriolis_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5422715+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\ferdelance.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\ferdelance_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5542721+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\gecko.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\gecko_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5652728+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\krait.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\krait_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5772735+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\marimba.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\marimba_0.xml</Output>
+      <Time>2013-02-26T11:29:59.5892741+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\moray.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\moray_0.xml</Output>
+      <Time>2013-02-26T11:29:59.6002748+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\python.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\python_0.xml</Output>
+      <Time>2013-02-26T11:29:59.6112754+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\Shuttle.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\Shuttle_0.xml</Output>
+      <Time>2013-02-26T11:29:59.622276+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\sidewinder.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\sidewinder_0.xml</Output>
+      <Time>2013-02-26T11:29:59.6322766+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\thargoid.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\thargoid_0.xml</Output>
+      <Time>2013-02-26T11:29:59.6452773+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\transporter.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\transporter_0.xml</Output>
+      <Time>2013-02-26T11:29:59.6962803+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\viper.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Elite Models\viper_0.xml</Output>
+      <Time>2013-02-26T11:29:59.7202816+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -48,7 +48,7 @@ namespace _2._5D_FYP
         }
 
         Asteroid asteroids = new Asteroid();
-        Material stationMaterial = new Material();
+        Metal metals = new Metal();
 
         private Player player;
         public Player Player
@@ -100,7 +100,10 @@ namespace _2._5D_FYP
             headsUpDisplay = new HUD();
 
             asteroids.CreateAsteroidList();
-            stationMaterial.CreateMaterialList();
+            metals.CreateMaterialList();
+
+            for (int i = 0; i < children.Count; i++)
+                children[i].Initialize();
 
             base.Initialize();
         }
@@ -128,15 +131,14 @@ namespace _2._5D_FYP
                 children[i].Update(gameTime);
 
             headsUpDisplay.Update(player, gameTime);
+            //Player.CheckForCollisions(ref player, ref station);
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            
+            GraphicsDevice.Clear(Color.CornflowerBlue);            
 
             spriteBatch.Begin();
             for (int i = 0; i < children.Count; i++)

@@ -19,19 +19,21 @@ namespace _2._5D_FYP
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>("sphere");
+            _model = Game1.Instance().Content.Load<Model>(_entityName);
         }
 
         public override void Update(GameTime gameTime)
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            _worldTransform = Matrix.CreateScale(.2f) * Matrix.CreateTranslation(_pos);
+
             float speed = 5.0f;
             walk(speed * timeDelta);
         }
 
         public override void Draw(GameTime gameTime)
-        {
-            _worldTransform = Matrix.CreateScale(.2f) * Matrix.CreateTranslation(_pos);
+        {           
             // Draw the mesh
             if (_model != null)
             {

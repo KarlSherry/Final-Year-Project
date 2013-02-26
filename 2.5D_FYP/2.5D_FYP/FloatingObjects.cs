@@ -9,15 +9,21 @@ namespace _2._5D_FYP
 {
     public class FloatingObjects : Entity
     {
-        Random randomGenerator = new Random(DateTime.Now.Millisecond);
-        public string objectName = null;
+        protected static Random randomGenerator = new Random(DateTime.Now.Millisecond);
         float angle = 0.0f;
 
         public FloatingObjects()
         {
             _worldTransform = Matrix.Identity;
-            _look = new Vector3(randomClamped(), 0, randomClamped());
+            
             _maxSpeed = randomGenerator.Next(10, 25);
+        }
+
+        public override void Initialize()
+        {
+            _look = new Vector3(randomClamped(), 0, randomClamped());
+            _look.Normalize();
+            base.Initialize();
         }
 
         float randomClamped()
@@ -27,7 +33,7 @@ namespace _2._5D_FYP
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>(objectName);
+            //_model = Game1.Instance().Content.Load<Model>(_entityName);
         }
 
         public override void Update(GameTime gameTime)

@@ -23,7 +23,7 @@ namespace _2._5D_FYP
         {
             groundWidth = 1000;
             groundHeight = 1000;
-            float twidth = 20, theight = 20;
+            float twidth = 10, theight = 10;
 
             vertices = new VertexPositionTexture[]
             {
@@ -36,7 +36,7 @@ namespace _2._5D_FYP
                 new VertexPositionTexture(new Vector3(groundWidth, 0, -groundHeight), new Vector2(twidth, 0))
             };
 
-            Texture2D portrait = Game1.Instance().Content.Load<Texture2D>("Ground");
+            Texture2D portrait = Game1.Instance().Content.Load<Texture2D>("Stars");
             float aspectRatio = graphics.GraphicsDevice.Viewport.AspectRatio;
 
             basicEffect = new BasicEffect(graphics.GraphicsDevice);

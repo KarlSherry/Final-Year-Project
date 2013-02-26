@@ -17,7 +17,7 @@ namespace _2._5D_FYP
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>("Station");
+            _model = Game1.Instance().Content.Load<Model>("Models//Elite Models//coriolis");
         }
 
         public override void Update(GameTime gameTime)
@@ -27,7 +27,7 @@ namespace _2._5D_FYP
 
         public override void Draw(GameTime gameTime)
         {
-            _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(10.0f) * Matrix.CreateWorld(_pos, _look, _up);
+            _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(0.25f) * Matrix.CreateWorld(_pos, _look, _up);
 
             if (_model != null)
             {

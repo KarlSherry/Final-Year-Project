@@ -11,13 +11,18 @@ namespace _2._5D_FYP
     public class Player : Entity
     {
         public Vector3 acceleration;
-        SpriteFont spriteFont;
+        Weapon weapon;
 
         float rotationSpeed = 5.0f;
-        float lastFired = 0.0f;
 
         public float capacity = 0.0f;
+        public int weaponIndex = 0;
+        public string weaponName = null;
+        public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
 
+        KeyboardState keyState;
+
+        bool keyPressed = false;
 
         public Player()
         {
@@ -34,13 +39,20 @@ namespace _2._5D_FYP
             _health = 100.0f;
             _shield = 100.0f;
 
+            weaponName = weaponArray[weaponIndex];
+
+            weapon = new Weapon();
             rotationSpeed = 5.0f;
-            spriteFont = Game1.Instance().Content.Load<SpriteFont>("Verdana");
         } // End of Player()
+
+        public override void Initialize()
+        {
+            base.Initialize();
+        }
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>("fighter");
+            _model = Game1.Instance().Content.Load<Model>("Models//Elite Models//cobramk3");
         } // End of LoadContent()
 
         void addForce(Vector3 force)
@@ -51,6 +63,8 @@ namespace _2._5D_FYP
         public override void Update(GameTime gameTime)
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            weapon.Update(weaponIndex, gameTime);
+            weapon.CheckWeaponFire();
 
             acceleration = _force / _mass;
 
@@ -71,7 +85,7 @@ namespace _2._5D_FYP
                 _right = Vector3.Cross(_look, _up);
             }
 
-            KeyboardState keyState = Keyboard.GetState();
+            keyState = Keyboard.GetState();
 
             if(keyState.IsKeyDown(Keys.Up))
             {
@@ -91,29 +105,48 @@ namespace _2._5D_FYP
             {
                 yaw(-rotationSpeed * timeDelta);
             }
-
-            if (keyState.IsKeyDown(Keys.Space))
+            if (keyState.IsKeyDown(Keys.W))
             {
-                if (lastFired >= 0.5f)
+                if (!keyPressed)
                 {
-                    lastFired = 0.0f;
-
-                    Bullet bullet = new Bullet();
-                    bullet.LoadContent();
-                    bullet._pos = _pos;
-                    bullet._look = _look;
-                    Game1.Instance().Children.Add(bullet);
+                    weaponIndex = ++weaponIndex % 4;
+                    weaponName = weaponArray[weaponIndex];
+                    keyPressed = true;                    
                 }
             }
-
-            lastFired += timeDelta;
+            else keyPressed = false;
 
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
 
+        /*public static void CheckForCollisions(ref Player player, ref Station Entity)
+        {
+            //Creates 2 bounding spheres, 1 for the player and one for station
+            for (int i = 0; i < player._model.Meshes.Count; i++)
+            {
+                BoundingSphere playerSphere = player._model.Meshes[i].BoundingSphere;
+                playerSphere.Center = player._pos;
+
+                playerSphere.Radius = 5;
+
+                for (int j = 0; j < Entity._model.Meshes.Count; j++) 
+                {
+                    BoundingSphere objSphere = Entity._model.Meshes[i].BoundingSphere;
+                    objSphere.Center = Entity._pos;
+
+                    objSphere.Radius = 5;
+
+                    //Checks to see if the player sphere intersects with the station sphere
+                    if (playerSphere.Intersects(objSphere))
+                        if(player._health > 0)
+                            player._health -= 50;
+                }
+            }
+        }*/
+
         public override void Draw(GameTime gameTime)
         {
-            _worldTransform = Matrix.CreateWorld(_pos, _look, _up);
+            _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(0.5f) * Matrix.CreateWorld(_pos, _look, _up);
 
             if (_model != null)
             {
