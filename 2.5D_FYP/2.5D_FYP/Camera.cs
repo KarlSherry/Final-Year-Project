@@ -49,9 +49,9 @@ namespace _2._5D_FYP
             Vector3 playerPosition = Game1.Instance().Player._pos;
 
             KeyboardState k = Keyboard.GetState();
-            if(k.IsKeyDown(Keys.F1))
+            if(k.IsKeyDown(Keys.F2))
                 view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
-            if (k.IsKeyDown(Keys.F2))
+            if (k.IsKeyDown(Keys.F1))
             {
                 view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
                 _pos = new Vector3(playerPosition.X, playerPosition.Y + 100.0f, playerPosition.Z);

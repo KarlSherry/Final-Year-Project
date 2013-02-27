@@ -12,8 +12,14 @@ namespace _2._5D_FYP
     {
         public Vector3 acceleration;
         Weapon weapon;
-        CollisionDetection collision;
         Metal metal;
+        Asteroid asteroid;
+        BoundingSphere playerSphere;
+        public BoundingSphere PlayerSphere
+        {
+            get { return playerSphere; }
+            set { playerSphere = value; }
+        }
 
         float rotationSpeed = 5.0f;
 
@@ -37,20 +43,21 @@ namespace _2._5D_FYP
 
             _maxSpeed = 500.0f;
             _maxForce = 150.0f;
-            _mass = 1.0f;
+            _mass = 10.0f;
             _health = 100.0f;
             _shield = 100.0f;
 
             weaponName = weaponArray[weaponIndex];
+            asteroid = new Asteroid();
 
             weapon = new Weapon();
             metal = new Metal();
-            collision = new CollisionDetection();
             rotationSpeed = 5.0f;
         } // End of Player()
 
         public override void Initialize()
         {
+            asteroid = Game1.Instance().asteroid;
             base.Initialize();
         }
 
@@ -69,7 +76,8 @@ namespace _2._5D_FYP
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
             weapon.Update(weaponIndex, gameTime);
             weapon.CheckWeaponFire();
-            //collision.CheckPlayerAsteroidCollision();
+
+            //CollisionDetection.CheckPlayerAsteroidCollision(this, asteroid);
 
             acceleration = _force / _mass;
 
@@ -89,6 +97,8 @@ namespace _2._5D_FYP
             {
                 _right = Vector3.Cross(_look, _up);
             }
+
+            _velocity *= 0.999f;
 
             keyState = Keyboard.GetState();
 
@@ -121,33 +131,14 @@ namespace _2._5D_FYP
             }
             else keyPressed = false;
 
+            if (IsHIt == true)
+            {
+                _health++;
+                IsHIt = false;
+            }
+
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
-
-        /*public static void CheckForCollisions(ref Player player, ref Station Entity)
-        {
-            //Creates 2 bounding spheres, 1 for the player and one for station
-            for (int i = 0; i < player._model.Meshes.Count; i++)
-            {
-                BoundingSphere playerSphere = player._model.Meshes[i].BoundingSphere;
-                playerSphere.Center = player._pos;
-
-                playerSphere.Radius = 5;
-
-                for (int j = 0; j < Entity._model.Meshes.Count; j++) 
-                {
-                    BoundingSphere objSphere = Entity._model.Meshes[i].BoundingSphere;
-                    objSphere.Center = Entity._pos;
-
-                    objSphere.Radius = 5;
-
-                    //Checks to see if the player sphere intersects with the station sphere
-                    if (playerSphere.Intersects(objSphere))
-                        if(player._health > 0)
-                            player._health -= 50;
-                }
-            }
-        }*/
 
         public override void Draw(GameTime gameTime)
         {
@@ -157,6 +148,10 @@ namespace _2._5D_FYP
             {
                 foreach (ModelMesh mesh in _model.Meshes)
                 {
+                    _entitySphere = mesh.BoundingSphere;
+                    _entitySphere.Center = _pos;
+                    _entitySphere.Radius = 10;
+                    
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.EnableDefaultLighting();

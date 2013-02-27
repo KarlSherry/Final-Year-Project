@@ -9,6 +9,8 @@ namespace _2._5D_FYP
 {
     public class Station  : Entity
     {
+        float angle = 0.0f;
+
         public Station()
         {
             _pos = new Vector3(0, 50, 0);
@@ -22,17 +24,20 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            
+            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            _worldTransform = Matrix.CreateRotationY(angle) *  Matrix.CreateScale(0.25f) * Matrix.CreateWorld(_pos, _look, _up);
+            angle += timeDelta;
         }
 
         public override void Draw(GameTime gameTime)
         {
-            _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(0.25f) * Matrix.CreateWorld(_pos, _look, _up);
-
             if (_model != null)
             {
                 foreach (ModelMesh mesh in _model.Meshes)
                 {
+                    _entitySphere = mesh.BoundingSphere;
+                    _entitySphere.Center = _pos;
+                    _entitySphere.Radius = 50;
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.EnableDefaultLighting();

@@ -53,6 +53,8 @@ namespace _2._5D_FYP
             {
                 foreach (ModelMesh mesh in _model.Meshes)
                 {
+                    _entitySphere = mesh.BoundingSphere;
+                    _entitySphere.Center = _pos;
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.EnableDefaultLighting();

@@ -54,21 +54,22 @@ namespace _2._5D_FYP
                             }
                         }
                         else fireWeaponPressed = false;
+                        break;
                     }
-                    break;
+                    
 
                 case 1:
                     {
                         bullet._entityName = "Models//sphere";
 
-                        if (keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 0.1f)
+                        if (keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 0.1f) //10 milliseconds
                         {
                             lastBulletFired = 0.0f;
 
                             FireBullet(player._pos, player._look);
                         }
+                        break;
                     }
-                    break;
 
                 case 2: 
                     {
@@ -80,15 +81,31 @@ namespace _2._5D_FYP
 
                             FireBullet(player._pos, player._look);
                         }
+                        break;
                     }
-                    break;
 
                 case 3:
                     {
                         //bullet._entityName = "Models//sphere";
+                        break;
                     }
-                    break;
-            }
+
+                default: //Assumes case 0
+                    {
+                        bullet._entityName = "Models//sphere";
+
+                        if (keyState.IsKeyDown(Keys.Space))
+                        {
+                            if (!fireWeaponPressed)
+                            {
+                                FireBullet(player._pos, player._look);
+                                fireWeaponPressed = true;
+                            }
+                        }
+                        else fireWeaponPressed = false;
+                        break;
+                    }
+            } //End of switch
         }
 
         public void FireBullet(Vector3 pos, Vector3 look)
@@ -97,8 +114,6 @@ namespace _2._5D_FYP
             bullet._pos = pos;
             bullet._look = look;
             Game1.Instance().Children.Add(bullet);
-
-
         }
     }
 }

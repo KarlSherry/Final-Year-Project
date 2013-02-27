@@ -9,7 +9,7 @@ namespace _2._5D_FYP
 {
     public abstract class Entity
     {
-        protected static Random randomGenerator = new Random(DateTime.Now.Millisecond);
+        public static Random randomGenerator = new Random(DateTime.Now.Millisecond);
         public Vector3 _pos = Vector3.Zero;
 
         public Vector3 _look = Vector3.Forward;
@@ -28,9 +28,21 @@ namespace _2._5D_FYP
         public Matrix _worldTransform = new Matrix();
 
         public Model _model = null;
+        public BoundingSphere _entitySphere;
 
-        public bool _alive;
-        public bool Alive { get { return _alive; } set { _alive = value; } }
+        bool _alive = false;
+        public bool Alive 
+        {
+            get { return _alive; }
+            set { _alive = value; } 
+        }
+
+        bool _isHIt = false;
+        public bool IsHIt
+        {
+            get { return _isHIt; }
+            set { _isHIt = value; }
+        }
 
         public virtual void Initialize() { }
         public virtual void LoadContent() { }

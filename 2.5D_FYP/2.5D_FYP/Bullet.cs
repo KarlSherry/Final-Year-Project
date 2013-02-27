@@ -26,9 +26,9 @@ namespace _2._5D_FYP
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            _worldTransform = Matrix.CreateScale(.2f) * Matrix.CreateTranslation(_pos);
+            _worldTransform = Matrix.CreateScale(.5f) * Matrix.CreateTranslation(_pos);
 
-            float speed = 5.0f;
+            float speed = 10.0f;
             walk(speed * timeDelta);
         }
 
@@ -39,6 +39,9 @@ namespace _2._5D_FYP
             {
                 foreach (ModelMesh mesh in _model.Meshes)
                 {
+                    _entitySphere = mesh.BoundingSphere;
+                    _entitySphere.Center = _pos;
+
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.EnableDefaultLighting();

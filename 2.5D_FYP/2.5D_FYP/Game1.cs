@@ -47,9 +47,6 @@ namespace _2._5D_FYP
             set { camera = value; }
         }
 
-        public Asteroid asteroids = new Asteroid();
-        Metal metals = new Metal();
-
         private Player player;
         public Player Player
         {
@@ -66,13 +63,15 @@ namespace _2._5D_FYP
             set { station = value; }
         }
 
+        public Asteroid asteroid;
+
         public Game1()
         {
             instance = this;
             graphics = new GraphicsDeviceManager(this);
 
-            graphics.PreferredBackBufferWidth = 1680;
-            graphics.PreferredBackBufferHeight = 1050;
+            graphics.PreferredBackBufferWidth = 1200;
+            graphics.PreferredBackBufferHeight = 600;
             graphics.PreferMultiSampling = true;
             graphics.SynchronizeWithVerticalRetrace = true;
             graphics.ApplyChanges();
@@ -97,10 +96,18 @@ namespace _2._5D_FYP
             station = new Station();
             children.Add(station);
 
+            asteroid = new Asteroid();
+            for (int i = 0; i < asteroid.AsteroidCount; i++) 
+            {
+                asteroid = new Asteroid();
+                asteroid._entityName = "Models//Asteroid";
+                asteroid._pos = new Vector3(Entity.randomGenerator.Next(-900, 900), 50, Entity.randomGenerator.Next(-900, 900));
+                Game1.Instance().Children.Add(asteroid);
+            }
+
             headsUpDisplay = new HUD();
 
-            asteroids.CreateAsteroidList();
-            metals.CreateMaterialList();
+            //Asteroid.CreateAsteroidList();
 
             for (int i = 0; i < children.Count; i++)
                 children[i].Initialize();
@@ -131,6 +138,8 @@ namespace _2._5D_FYP
                 children[i].Update(gameTime);
 
             headsUpDisplay.Update(player, gameTime);
+            //CollisionDetection.CheckPlayerAsteroidCollision(player, asteroid);
+            CollisionDetection.CheckPlayerCollision(player);
             //Player.CheckForCollisions(ref player, ref station);
 
             base.Update(gameTime);
