@@ -131,14 +131,32 @@ namespace _2._5D_FYP
             }
             else keyPressed = false;
 
+            ////////
+            //Type t = null;
+            //if (t == this.GetType()) { }
+            ////////
+
             if (IsHIt == true)
             {
                 _health++;
                 IsHIt = false;
             }
 
+            CollisionCheck(Game1.Instance().Children);
+
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
+
+        public override void CollisionCheck(List<Entity> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (this._entitySphere.Intersects(list.ElementAt(i)._entitySphere) && list.ElementAt(i).GetType() == Game1.Instance().asteroid.GetType()) 
+                {
+                    _health--;
+                }
+            }
+        }
 
         public override void Draw(GameTime gameTime)
         {

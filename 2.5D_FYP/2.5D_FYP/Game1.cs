@@ -135,11 +135,15 @@ namespace _2._5D_FYP
                 this.Exit();
 
             for (int i = 0; i < children.Count; i++)
+            {
+                children[i].CollisionCheck(children);
                 children[i].Update(gameTime);
+            }
+                
 
             headsUpDisplay.Update(player, gameTime);
             //CollisionDetection.CheckPlayerAsteroidCollision(player, asteroid);
-            CollisionDetection.CheckPlayerCollision(player);
+            //CollisionDetection.CheckPlayerCollision(player);
             //Player.CheckForCollisions(ref player, ref station);
 
             base.Update(gameTime);

@@ -48,6 +48,7 @@ namespace _2._5D_FYP
         public virtual void LoadContent() { }
         public virtual void Update(GameTime gameTime) { }
         public virtual void Draw(GameTime gameTime) { }
+        public virtual void CollisionCheck(List<Entity> list) { }
 
         public void yaw(float angle)
         {

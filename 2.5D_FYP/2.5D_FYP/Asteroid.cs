@@ -49,6 +49,8 @@ namespace _2._5D_FYP
 
             _pos += _look * timeDelta * _maxSpeed;
 
+            CollisionCheck(Game1.Instance().Children);
+
             base.Update(gameTime);
         }
 
@@ -76,6 +78,17 @@ namespace _2._5D_FYP
             }
 
             base.Draw(gameTime);
+        }
+
+        public override void CollisionCheck(List<Entity> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (this._entitySphere.Intersects(list.ElementAt(i)._entitySphere) && list.ElementAt(i).GetType() == Game1.Instance().Player.GetType())
+                {
+                    list.Remove(this);
+                }
+            }
         }
 
         /*public static void CreateAsteroidList()

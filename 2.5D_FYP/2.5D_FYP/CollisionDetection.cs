@@ -27,7 +27,7 @@ namespace _2._5D_FYP
             return entity1.IsHIt;
         }
 
-        public static void CheckPlayerCollision(Entity entity1)
+        public static Type CheckPlayerCollision(Entity entity1, Entity entity2)
         {
             List<Entity> children = Game1.Instance().Children;
             foreach (Entity entity in children)
@@ -38,7 +38,7 @@ namespace _2._5D_FYP
                 {
                     if (entity1._entitySphere.Intersects(entity._entitySphere))
                     {
-                        entity1.IsHIt = true;
+                        //entity1.IsHIt = true;
                         Console.WriteLine("true");
                     }
                 }
@@ -48,7 +48,7 @@ namespace _2._5D_FYP
                         Console.WriteLine("Asteroid hit");
                 }
             }
-            //return entity1.IsHIt;
+            return entity2.GetType();
         }
 
     } // End of class CollisionDetection
