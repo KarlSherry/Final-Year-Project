@@ -11,6 +11,10 @@ namespace _2._5D_FYP
     {
         float angle = 0.0f;
         int asteroidCount = 25;
+        bool hasHitSomething;
+
+        List<Entity> children = new List<Entity>();
+        CollisionDetection c = new CollisionDetection();
 
         public int AsteroidCount
         {
@@ -24,6 +28,9 @@ namespace _2._5D_FYP
             _type = this.GetType();
 
             Alive = true;
+            hasHitSomething = false;
+
+            children = game.Children;
         }
 
         public override void Initialize()
@@ -49,7 +56,8 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                CollisionHandler(game.Children);
+                hasHitSomething = c.CheckCollision(this, children);
+                CollisionHandler(children);
 
                 angle += timeDelta;
 
@@ -69,7 +77,7 @@ namespace _2._5D_FYP
                     {
                         _entitySphere = mesh.BoundingSphere;
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = 50;
+                        _entitySphere.Radius = 100;
                         foreach (BasicEffect effect in mesh.Effects)
                         {
                             effect.EnableDefaultLighting();
@@ -86,25 +94,22 @@ namespace _2._5D_FYP
 
         public override void CollisionHandler(List<Entity> children)
         {
-            Asteroid a = new Asteroid();
-            for (int i = 0; i < children.Count; i++)
+            if (hasHitSomething == true)
+                Console.WriteLine("Asteroid TRUE" + _pos);
+
+            if (hasHitSomething)
             {
-                if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Asteroid[24]._type)
+                foreach (Entity entity in children)
                 {
-                    // This one does not seem to be working correclty........
-                    _velocity = -_velocity;
+                    if (entity is Player)
+                    {
+                        Alive = false;
+                    }
+                    else if (entity is Station)
+                    {
+                        Alive = false;
+                    }
                 }
-                else if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Player._type)
-                {
-                    Alive = false;
-                    children.Remove(this);
-                }
-                else if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Player.weapon.bullet._type)
-                {
-                    Alive = false;
-                    children.Remove(this);
-                }
-               
             }
         }
 

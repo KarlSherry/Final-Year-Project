@@ -114,8 +114,6 @@ namespace _2._5D_FYP
 
             headsUpDisplay = new HUD();
 
-            //Asteroid.CreateAsteroidList();
-
             for (int i = 0; i < children.Count; i++)
                 children[i].Initialize();
 
@@ -145,12 +143,9 @@ namespace _2._5D_FYP
             {
                 children[i].Update(gameTime);
             }
-                
 
+            //collisionDetection.CheckCollision(player, children);
             headsUpDisplay.Update(player, gameTime);
-            //CollisionDetection.CheckPlayerAsteroidCollision(player, asteroid);
-            //CollisionDetection.CheckPlayerCollision(player);
-            //Player.CheckForCollisions(ref player, ref station);
 
             base.Update(gameTime);
         }

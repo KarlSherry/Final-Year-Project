@@ -12,8 +12,6 @@ namespace _2._5D_FYP
     {
         public Vector3 acceleration;
         public Weapon weapon;
-        CollisionDetection collision = new CollisionDetection();
-        Type collidingEntity = null;
         BoundingSphere playerSphere;
         public BoundingSphere PlayerSphere
         {
@@ -31,6 +29,10 @@ namespace _2._5D_FYP
         KeyboardState keyState;
 
         bool keyPressed = false;
+        bool hasHitSomething;
+
+        List<Entity> children = new List<Entity>();
+        CollisionDetection c = new CollisionDetection();
 
         public Player()
         {
@@ -52,7 +54,10 @@ namespace _2._5D_FYP
             weapon = new Weapon();
             rotationSpeed = 5.0f;
 
+            hasHitSomething = false;
             _alive = true;
+
+            children = game.Children;
         } // End of Player()
 
         public override void Initialize()
@@ -76,7 +81,8 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                CollisionHandler(game.Children);
+                hasHitSomething = c.CheckCollision(this, children);
+                CollisionHandler(children);
 
                 weapon.Update(weaponIndex, gameTime);
                 weapon.CheckWeaponFire();
@@ -152,51 +158,24 @@ namespace _2._5D_FYP
 
         public override void CollisionHandler(List<Entity> children)
         {
-            for (int i = 0; i < children.Count; i++)
+            if (hasHitSomething == true)
+                Console.WriteLine("Player TRUE" + _pos);
+
+            if (hasHitSomething)
             {
-                if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Asteroid[24]._type)
+                foreach (Entity entity in children)
                 {
-                    if (_health >= 5)
+                    if (entity is Asteroid)
                     {
                         _health -= 5;
                     }
-                    else
-                    {
-                        _health = 0;
-                    }
-                }
-                else if(_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Station._type)
-                {
-                    if (_health < 100)
+                    else if (entity is Station)
                     {
                         _health++;
-                    }    
+                    }
                 }
             }
-        }
-
-
-        /****************public override void CollisionHandler(List<Entity> children)
-        {
-            //CollisionDetection collision = new CollisionDetection();
-            //Type collidingEntity = null;
-
-            if (collidingEntity == game.Station._type)
-            {
-                _health++;
-            }
-            if (collidingEntity == game.asteroid._type)
-            {
-                if (_health >= 5)
-                {
-                    _health -= 5;
-                }
-                else
-                {
-                    _health = 0;
-                }
-            }
-        }*/////////////////////
+        } // End of CollisionHandler(List<Entity> children)
 
         public override void Draw(GameTime gameTime)
         {

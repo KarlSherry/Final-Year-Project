@@ -8,25 +8,28 @@ namespace _2._5D_FYP
 {
     public class CollisionDetection
     {
-        bool intersect = false;
-        Type collidedType;
+        static bool intersect;
+
+        public CollisionDetection()
+        {
+            intersect = false;
+        }
+
         public Boolean CheckCollision(Entity entity, List<Entity> children)
         {
-            collidedType = null;
-
             for (int i = 0; i < children.Count; i++)
             {
-                if (entity._entitySphere.Intersects(children.ElementAt(i)._entitySphere) || children.ElementAt(i)._entitySphere.Intersects(entity._entitySphere))
-                {
-                    intersect = true;
-                }
-                else
-                {
-                    intersect = false;
-                }
+                intersect = entity._entitySphere.Intersects(children.ElementAt(i)._entitySphere);                
             }
-
-            return intersect;
+            if (intersect == true)
+            {
+                Console.WriteLine("2 Entites are intersecting somewhere");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     } // End of class CollisionDetection
 }
