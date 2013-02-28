@@ -76,12 +76,12 @@ namespace _2._5D_FYP
 
                 if (_model != null)
                 {
-                    foreach (ModelMesh mesh in _model.Meshes)
+                    foreach (ModelMesh mesh1 in _model.Meshes)
                     {
-                        _entitySphere = mesh.BoundingSphere;
+                        _entitySphere = mesh1.BoundingSphere;
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = 25;
-                        foreach (BasicEffect effect in mesh.Effects)
+                        _entitySphere.Radius = mesh1.BoundingSphere.Radius;
+                        foreach (BasicEffect effect in mesh1.Effects)
                         {
                             effect.EnableDefaultLighting();
                             effect.PreferPerPixelLighting = true;
@@ -89,7 +89,7 @@ namespace _2._5D_FYP
                             effect.Projection = Game1.Instance().Camera.getProjection();
                             effect.View = Game1.Instance().Camera.getView();
                         }
-                        mesh.Draw();
+                        mesh1.Draw();
                     } // End of foreach(ModelMesh mesh in _model.Meshes)
                 }
             }

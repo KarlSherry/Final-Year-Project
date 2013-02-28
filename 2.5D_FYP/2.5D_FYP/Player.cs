@@ -194,7 +194,8 @@ namespace _2._5D_FYP
                     {
                         _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = 10;
+                        _entitySphere.Radius = mesh.BoundingSphere.Radius;
+
 
                         foreach (BasicEffect effect in mesh.Effects)
                         {
