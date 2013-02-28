@@ -11,9 +11,9 @@ namespace _2._5D_FYP
     public class Player : Entity
     {
         public Vector3 acceleration;
-        Weapon weapon;
-        Metal metal;
-        Asteroid asteroid;
+        public Weapon weapon;
+        CollisionDetection collision = new CollisionDetection();
+        Type collidingEntity = null;
         BoundingSphere playerSphere;
         public BoundingSphere PlayerSphere
         {
@@ -46,18 +46,17 @@ namespace _2._5D_FYP
             _mass = 10.0f;
             _health = 100.0f;
             _shield = 100.0f;
+            _type = this.GetType();
 
             weaponName = weaponArray[weaponIndex];
-            asteroid = new Asteroid();
-
             weapon = new Weapon();
-            metal = new Metal();
             rotationSpeed = 5.0f;
+
+            _alive = true;
         } // End of Player()
 
         public override void Initialize()
         {
-            asteroid = Game1.Instance().asteroid;
             base.Initialize();
         }
 
@@ -73,114 +72,158 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            weapon.Update(weaponIndex, gameTime);
-            weapon.CheckWeaponFire();
-
-            //CollisionDetection.CheckPlayerAsteroidCollision(this, asteroid);
-
-            acceleration = _force / _mass;
-
-            _velocity += acceleration * timeDelta;
-
-            _pos += _velocity * timeDelta;
-
-            _force = Vector3.Zero;
-
-            if (_velocity.Length() > _maxSpeed)
+            if (Alive)
             {
-                _velocity.Normalize();
-                _velocity *= _maxSpeed;
-            }
+                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (_velocity.Length() > 0.0001f)
-            {
-                _right = Vector3.Cross(_look, _up);
-            }
+                CollisionHandler(game.Children);
 
-            _velocity *= 0.999f;
+                weapon.Update(weaponIndex, gameTime);
+                weapon.CheckWeaponFire();
 
-            keyState = Keyboard.GetState();
+                acceleration = _force / _mass;
 
-            if(keyState.IsKeyDown(Keys.Up))
-            {
-                addForce(_look * _maxForce);
+                _velocity += acceleration * timeDelta;
 
-                if (_force.Length() > _maxForce)
+                _pos += _velocity * timeDelta;
+
+                _force = Vector3.Zero;
+
+                if (_velocity.Length() > _maxSpeed)
                 {
-                    _force.Normalize();
-                    _force *= _maxForce;
+                    _velocity.Normalize();
+                    _velocity *= _maxSpeed;
+                }
+
+                if (_velocity.Length() > 0.0001f)
+                {
+                    _right = Vector3.Cross(_look, _up);
+                }
+
+                _velocity *= 0.999f;
+
+                keyState = Keyboard.GetState();
+
+                if (keyState.IsKeyDown(Keys.Up))
+                {
+                    addForce(_look * _maxForce);
+
+                    if (_force.Length() > _maxForce)
+                    {
+                        _force.Normalize();
+                        _force *= _maxForce;
+                    }
+                }
+                if (keyState.IsKeyDown(Keys.Left))
+                {
+                    yaw(rotationSpeed * timeDelta);
+                }
+                if (keyState.IsKeyDown(Keys.Right))
+                {
+                    yaw(-rotationSpeed * timeDelta);
+                }
+                if (keyState.IsKeyDown(Keys.W))
+                {
+                    if (!keyPressed)
+                    {
+                        weaponIndex = ++weaponIndex % 4;
+                        weaponName = weaponArray[weaponIndex];
+                        keyPressed = true;
+                    }
+                }
+                else keyPressed = false;
+                if (_health == 0) 
+                {
+                    _alive = false;
+                    game.Children.Remove(this);
+                }
+                if (_health <= 0)
+                {
+                    _health = 0;
+                }
+                if (_health >= 100)
+                {
+                    _health = 100;
                 }
             }
-            if (keyState.IsKeyDown(Keys.Left))
-            {
-                yaw(rotationSpeed * timeDelta);
-            }
-            if (keyState.IsKeyDown(Keys.Right))
-            {
-                yaw(-rotationSpeed * timeDelta);
-            }
-            if (keyState.IsKeyDown(Keys.W))
-            {
-                if (!keyPressed)
-                {
-                    weaponIndex = ++weaponIndex % 4;
-                    weaponName = weaponArray[weaponIndex];
-                    keyPressed = true;                    
-                }
-            }
-            else keyPressed = false;
-
-            ////////
-            //Type t = null;
-            //if (t == this.GetType()) { }
-            ////////
-
-            if (IsHIt == true)
-            {
-                _health++;
-                IsHIt = false;
-            }
-
-            CollisionCheck(Game1.Instance().Children);
 
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
 
-        public override void CollisionCheck(List<Entity> list)
+        public override void CollisionHandler(List<Entity> children)
         {
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < children.Count; i++)
             {
-                if (this._entitySphere.Intersects(list.ElementAt(i)._entitySphere) && list.ElementAt(i).GetType() == Game1.Instance().asteroid.GetType()) 
+                if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Asteroid[24]._type)
                 {
-                    _health--;
+                    if (_health >= 5)
+                    {
+                        _health -= 5;
+                    }
+                    else
+                    {
+                        _health = 0;
+                    }
+                }
+                else if(_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Station._type)
+                {
+                    if (_health < 100)
+                    {
+                        _health++;
+                    }    
                 }
             }
         }
 
+
+        /****************public override void CollisionHandler(List<Entity> children)
+        {
+            //CollisionDetection collision = new CollisionDetection();
+            //Type collidingEntity = null;
+
+            if (collidingEntity == game.Station._type)
+            {
+                _health++;
+            }
+            if (collidingEntity == game.asteroid._type)
+            {
+                if (_health >= 5)
+                {
+                    _health -= 5;
+                }
+                else
+                {
+                    _health = 0;
+                }
+            }
+        }*/////////////////////
+
         public override void Draw(GameTime gameTime)
         {
-            _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(0.5f) * Matrix.CreateWorld(_pos, _look, _up);
-
-            if (_model != null)
+            if (Alive)
             {
-                foreach (ModelMesh mesh in _model.Meshes)
+                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(0.5f) * Matrix.CreateWorld(_pos, _look, _up);
+
+                if (_model != null)
                 {
-                    _entitySphere = mesh.BoundingSphere;
-                    _entitySphere.Center = _pos;
-                    _entitySphere.Radius = 10;
-                    
-                    foreach (BasicEffect effect in mesh.Effects)
+                    foreach (ModelMesh mesh in _model.Meshes)
                     {
-                        effect.EnableDefaultLighting();
-                        effect.PreferPerPixelLighting = true;
-                        effect.World = _worldTransform;
-                        effect.Projection = Game1.Instance().Camera.getProjection();
-                        effect.View = Game1.Instance().Camera.getView();
-                    }
-                    mesh.Draw();
-                } // End of foreach(ModelMesh mesh in _model.Meshes)
-            } // End of if(_model != null)
-        } // End of Draw(GameTime gameTime)
+                        _entitySphere = mesh.BoundingSphere;
+                        _entitySphere.Center = _pos;
+                        _entitySphere.Radius = 10;
+
+                        foreach (BasicEffect effect in mesh.Effects)
+                        {
+                            effect.EnableDefaultLighting();
+                            effect.PreferPerPixelLighting = true;
+                            effect.World = _worldTransform;
+                            effect.Projection = Game1.Instance().Camera.getProjection();
+                            effect.View = Game1.Instance().Camera.getView();
+                        }
+                        mesh.Draw();
+                    } // End of foreach(ModelMesh mesh in _model.Meshes)
+                } // End of if(_model != null)
+            } // End of Draw(GameTime gameTime)
+        }
     } // End of Player Class
 }

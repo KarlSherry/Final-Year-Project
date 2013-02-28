@@ -13,9 +13,15 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace _2._5D_FYP
 {
-    class Bullet : Entity
+    public class Bullet : Entity
     {
-        public Bullet() { }
+        float travelTime = 0.0f;
+        float maxTime = 3.0f;
+
+        public Bullet() 
+        {
+            _alive = true;
+        }
 
         public override void LoadContent()
         {
@@ -24,33 +30,47 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (Alive)
+            {
+                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            _worldTransform = Matrix.CreateScale(.5f) * Matrix.CreateTranslation(_pos);
+                _worldTransform = Matrix.CreateScale(.5f) * Matrix.CreateTranslation(_pos);
 
-            float speed = 10.0f;
-            walk(speed * timeDelta);
+                float speed = 10.0f;
+                walk(speed * timeDelta);
+
+                if (travelTime >= maxTime)
+                {
+                    Alive = false;
+                    game.Children.Remove(this);
+                }
+
+                travelTime += timeDelta;
+            }
         }
 
         public override void Draw(GameTime gameTime)
-        {           
-            // Draw the mesh
-            if (_model != null)
+        {
+            if (Alive)
             {
-                foreach (ModelMesh mesh in _model.Meshes)
+                if (_model != null)
                 {
-                    _entitySphere = mesh.BoundingSphere;
-                    _entitySphere.Center = _pos;
-
-                    foreach (BasicEffect effect in mesh.Effects)
+                    foreach (ModelMesh mesh in _model.Meshes)
                     {
-                        effect.EnableDefaultLighting();
-                        effect.PreferPerPixelLighting = true;
-                        effect.World = _worldTransform;
-                        effect.Projection = Game1.Instance().Camera.getProjection();
-                        effect.View = Game1.Instance().Camera.getView();
+                        _entitySphere = mesh.BoundingSphere;
+                        _entitySphere.Center = _pos;
+                        _entitySphere.Radius = 5;
+
+                        foreach (BasicEffect effect in mesh.Effects)
+                        {
+                            effect.EnableDefaultLighting();
+                            effect.PreferPerPixelLighting = true;
+                            effect.World = _worldTransform;
+                            effect.Projection = Game1.Instance().Camera.getProjection();
+                            effect.View = Game1.Instance().Camera.getView();
+                        }
+                        mesh.Draw();
                     }
-                    mesh.Draw();
                 }
             }
         }

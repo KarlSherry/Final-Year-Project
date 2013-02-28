@@ -54,7 +54,7 @@ namespace _2._5D_FYP
             set { player = value; }
         }
 
-        HUD headsUpDisplay;
+        private HUD headsUpDisplay;
 
         private Station station;
         public Station Station
@@ -63,7 +63,14 @@ namespace _2._5D_FYP
             set { station = value; }
         }
 
-        public Asteroid asteroid;
+        private Asteroid[] asteroid;
+        public Asteroid[] Asteroid
+        {
+            get { return asteroid; }
+            set { asteroid = value; }
+        }
+
+        private int AsteroidCount = 25;
 
         public Game1()
         {
@@ -96,13 +103,13 @@ namespace _2._5D_FYP
             station = new Station();
             children.Add(station);
 
-            asteroid = new Asteroid();
-            for (int i = 0; i < asteroid.AsteroidCount; i++) 
+            asteroid = new Asteroid[AsteroidCount];
+            for (int i = 0; i < AsteroidCount; i++) 
             {
-                asteroid = new Asteroid();
-                asteroid._entityName = "Models//Asteroid";
-                asteroid._pos = new Vector3(Entity.randomGenerator.Next(-900, 900), 50, Entity.randomGenerator.Next(-900, 900));
-                Game1.Instance().Children.Add(asteroid);
+                asteroid[i] = new Asteroid();
+                asteroid[i]._entityName = "Models//Asteroid";
+                asteroid[i]._pos = new Vector3(Entity.randomGenerator.Next(-900, 900), 50, Entity.randomGenerator.Next(-900, 900));
+                Game1.Instance().Children.Add(asteroid[i]);
             }
 
             headsUpDisplay = new HUD();
@@ -136,7 +143,6 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < children.Count; i++)
             {
-                children[i].CollisionCheck(children);
                 children[i].Update(gameTime);
             }
                 

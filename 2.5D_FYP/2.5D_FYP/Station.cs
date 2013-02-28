@@ -17,6 +17,10 @@ namespace _2._5D_FYP
             _look = Vector3.Forward;
         }
 
+        public override void Initialize()
+        {
+            _type = this.GetType();
+        }
         public override void LoadContent()
         {
             _model = Game1.Instance().Content.Load<Model>("Models//Elite Models//coriolis");

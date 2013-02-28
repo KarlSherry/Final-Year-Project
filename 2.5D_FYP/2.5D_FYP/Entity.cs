@@ -9,6 +9,7 @@ namespace _2._5D_FYP
 {
     public abstract class Entity
     {
+        public Game1 game = Game1.Instance();
         public static Random randomGenerator = new Random(DateTime.Now.Millisecond);
         public Vector3 _pos = Vector3.Zero;
 
@@ -30,25 +31,21 @@ namespace _2._5D_FYP
         public Model _model = null;
         public BoundingSphere _entitySphere;
 
-        bool _alive = false;
+        public bool _alive = false;
         public bool Alive 
         {
             get { return _alive; }
             set { _alive = value; } 
         }
 
-        bool _isHIt = false;
-        public bool IsHIt
-        {
-            get { return _isHIt; }
-            set { _isHIt = value; }
-        }
+        public Type _type;
 
         public virtual void Initialize() { }
         public virtual void LoadContent() { }
         public virtual void Update(GameTime gameTime) { }
         public virtual void Draw(GameTime gameTime) { }
-        public virtual void CollisionCheck(List<Entity> list) { }
+        public virtual void CollisionHandler(List<Entity> list) { }
+        //public virtual void CollisionHandler() { }
 
         public void yaw(float angle)
         {

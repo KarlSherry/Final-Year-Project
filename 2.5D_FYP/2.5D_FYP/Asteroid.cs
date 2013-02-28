@@ -20,7 +20,10 @@ namespace _2._5D_FYP
 
         public Asteroid()
         {
-            _worldTransform = Matrix.Identity;           
+            _worldTransform = Matrix.Identity;
+            _type = this.GetType();
+
+            Alive = true;
         }
 
         public override void Initialize()
@@ -28,7 +31,6 @@ namespace _2._5D_FYP
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
             _maxSpeed = randomGenerator.Next(10, 25);
-            base.Initialize();
         }
 
         float randomClamped()
@@ -43,67 +45,78 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (Alive)
+            {
+                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            angle += timeDelta;
+                CollisionHandler(game.Children);
 
-            _pos += _look * timeDelta * _maxSpeed;
+                angle += timeDelta;
 
-            CollisionCheck(Game1.Instance().Children);
-
-            base.Update(gameTime);
+                _pos += _look * timeDelta * _maxSpeed;
+            }
         }
 
         public override void Draw(GameTime gameTime)
         {
-            _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateTranslation(_pos);
-
-            if (_model != null)
+            if (Alive)
             {
-                foreach (ModelMesh mesh in _model.Meshes)
+                _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateTranslation(_pos);
+
+                if (_model != null)
                 {
-                    _entitySphere = mesh.BoundingSphere;
-                    _entitySphere.Center = _pos;
-                    _entitySphere.Radius = 10;
-                    foreach (BasicEffect effect in mesh.Effects)
+                    foreach (ModelMesh mesh in _model.Meshes)
                     {
-                        effect.EnableDefaultLighting();
-                        effect.PreferPerPixelLighting = true;
-                        effect.World = _worldTransform;
-                        effect.Projection = Game1.Instance().Camera.getProjection();
-                        effect.View = Game1.Instance().Camera.getView();
-                    }
-                    mesh.Draw();
-                } // End of foreach(ModelMesh mesh in _model.Meshes)
-            }
-
-            base.Draw(gameTime);
-        }
-
-        public override void CollisionCheck(List<Entity> list)
-        {
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (this._entitySphere.Intersects(list.ElementAt(i)._entitySphere) && list.ElementAt(i).GetType() == Game1.Instance().Player.GetType())
-                {
-                    list.Remove(this);
+                        _entitySphere = mesh.BoundingSphere;
+                        _entitySphere.Center = _pos;
+                        _entitySphere.Radius = 50;
+                        foreach (BasicEffect effect in mesh.Effects)
+                        {
+                            effect.EnableDefaultLighting();
+                            effect.PreferPerPixelLighting = true;
+                            effect.World = _worldTransform;
+                            effect.Projection = Game1.Instance().Camera.getProjection();
+                            effect.View = Game1.Instance().Camera.getView();
+                        }
+                        mesh.Draw();
+                    } // End of foreach(ModelMesh mesh in _model.Meshes)
                 }
             }
+        } // End of Draw(GameTime gameTime)
+
+        public override void CollisionHandler(List<Entity> children)
+        {
+            Asteroid a = new Asteroid();
+            for (int i = 0; i < children.Count; i++)
+            {
+                if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Asteroid[24]._type)
+                {
+                    // This one does not seem to be working correclty........
+                    _velocity = -_velocity;
+                }
+                else if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Player._type)
+                {
+                    Alive = false;
+                    children.Remove(this);
+                }
+                else if (_entitySphere.Intersects(children.ElementAt(i)._entitySphere) && children.ElementAt(i).GetType() == game.Player.weapon.bullet._type)
+                {
+                    Alive = false;
+                    children.Remove(this);
+                }
+               
+            }
         }
 
-        /*public static void CreateAsteroidList()
+        /******************public override void CollisionHandler()
         {
-            for (int i = 0; i < 25; i++)
-            {
-                Asteroid asteroid = new Asteroid();
-                asteroid._entityName = "Models//Asteroid";
-                asteroid.LoadContent();
-                asteroid._pos = new Vector3(randomGenerator.Next(-900, 900), 50, randomGenerator.Next(-900, 900));
-                Game1.Instance().Children.Add(asteroid);
-
-                //System.Threading.Thread.Sleep(3000); // Delay implemented to ensure the position and look vectors are truely random
-            }
-        }*/
-
+        CollisionDetection collision = new CollisionDetection();
+        Type collidingEntity;
+        collidingEntity = collision.CheckCollision(this, Game1.Instance().Children);
+        if(collidingEntity == game.Player._type)
+        {
+        Alive = false;
+        }
+        }******************/
     }
 }

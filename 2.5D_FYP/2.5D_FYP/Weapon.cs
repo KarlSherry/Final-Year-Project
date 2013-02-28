@@ -11,7 +11,7 @@ namespace _2._5D_FYP
     {
         int weaponIndex = 0;
         float lastBulletFired = 0.0f;
-        Bullet bullet;
+        public Bullet bullet;
         Player player;
 
         KeyboardState keyState;
@@ -113,6 +113,7 @@ namespace _2._5D_FYP
             bullet.LoadContent();
             bullet._pos = pos;
             bullet._look = look;
+
             Game1.Instance().Children.Add(bullet);
         }
     }
