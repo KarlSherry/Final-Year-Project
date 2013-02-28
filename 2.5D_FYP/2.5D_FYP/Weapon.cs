@@ -43,7 +43,7 @@ namespace _2._5D_FYP
             {
                 case 0:
                     {
-                        bullet._entityName = "Models//sphere";
+                        bullet._entityModel = "Models//sphere";
 
                         if(keyState.IsKeyDown(Keys.Space))
                         {
@@ -60,7 +60,7 @@ namespace _2._5D_FYP
 
                 case 1:
                     {
-                        bullet._entityName = "Models//sphere";
+                        bullet._entityModel = "Models//sphere";
 
                         if (keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 0.1f) //10 milliseconds
                         {
@@ -73,7 +73,7 @@ namespace _2._5D_FYP
 
                 case 2: 
                     {
-                        bullet._entityName = "Models//Station";
+                        bullet._entityModel = "Models//Station";
 
                         if (keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 3.0f)
                         {
@@ -92,7 +92,7 @@ namespace _2._5D_FYP
 
                 default: //Assumes case 0
                     {
-                        bullet._entityName = "Models//sphere";
+                        bullet._entityModel = "Models//sphere";
 
                         if (keyState.IsKeyDown(Keys.Space))
                         {

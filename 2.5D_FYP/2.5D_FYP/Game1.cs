@@ -70,7 +70,7 @@ namespace _2._5D_FYP
             set { asteroid = value; }
         }
 
-        private int AsteroidCount = 25;
+        private int AsteroidCount = 100;
 
         public Game1()
         {
@@ -107,9 +107,11 @@ namespace _2._5D_FYP
             for (int i = 0; i < AsteroidCount; i++) 
             {
                 asteroid[i] = new Asteroid();
-                asteroid[i]._entityName = "Models//Asteroid";
+                asteroid[i]._entityModel = "Models//Asteroid";
+                asteroid[i]._entityName = "Asteroid-*" + i;
+                Console.WriteLine(asteroid[i]._entityName);
                 asteroid[i]._pos = new Vector3(Entity.randomGenerator.Next(-900, 900), 50, Entity.randomGenerator.Next(-900, 900));
-                Game1.Instance().Children.Add(asteroid[i]);
+                Children.Add(asteroid[i]);
             }
 
             headsUpDisplay = new HUD();

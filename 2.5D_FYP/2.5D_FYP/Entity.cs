@@ -24,7 +24,9 @@ namespace _2._5D_FYP
         public float _maxSpeed = 0.0f, _maxForce = 0.0f, _mass = 1.0f, _rotation = 0.0f;
         public float _health = 0.0f, _shield = 0.0f;
 
+        public string _entityModel;
         public string _entityName;
+        public bool _entityCollisionFlag;
 
         public Matrix _worldTransform = new Matrix();
 

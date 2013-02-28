@@ -17,7 +17,7 @@ namespace _2._5D_FYP
         public Metal() 
         {
             material = new Asteroid[materialCount];
-            _entityName = "Models//StationMaterial";
+            _entityModel = "Models//StationMaterial";
         } 
 
         public void CreateMaterialList() 
@@ -28,7 +28,7 @@ namespace _2._5D_FYP
                 {
                     material[i] = new Asteroid();
                     material[i].Initialize();
-                    material[i]._entityName = _entityName;
+                    material[i]._entityModel = _entityModel;
                     material[i]._pos = new Vector3(randomGenerator.Next(-900, 900), 50, randomGenerator.Next(-900, 900));
                     materialList.Add(material[i]);
                 }

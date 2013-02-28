@@ -15,6 +15,8 @@ namespace _2._5D_FYP
         {
             _pos = new Vector3(0, 50, 0);
             _look = Vector3.Forward;
+
+            _entityName = "Station";
         }
 
         public override void Initialize()
@@ -39,7 +41,7 @@ namespace _2._5D_FYP
             {
                 foreach (ModelMesh mesh in _model.Meshes)
                 {
-                    _entitySphere = mesh.BoundingSphere;
+                    _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
                     _entitySphere.Center = _pos;
                     _entitySphere.Radius = 50;
                     foreach (BasicEffect effect in mesh.Effects)

@@ -47,7 +47,7 @@ namespace _2._5D_FYP
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>(_entityName);
+            _model = Game1.Instance().Content.Load<Model>(_entityModel);
         }
 
         public override void Update(GameTime gameTime)
@@ -62,6 +62,9 @@ namespace _2._5D_FYP
                 angle += timeDelta;
 
                 _pos += _look * timeDelta * _maxSpeed;
+
+                if (_alive == false)
+                    game.Children.Remove(this);
             }
         }
 
@@ -77,7 +80,7 @@ namespace _2._5D_FYP
                     {
                         _entitySphere = mesh.BoundingSphere;
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = 100;
+                        _entitySphere.Radius = 25;
                         foreach (BasicEffect effect in mesh.Effects)
                         {
                             effect.EnableDefaultLighting();
@@ -94,20 +97,22 @@ namespace _2._5D_FYP
 
         public override void CollisionHandler(List<Entity> children)
         {
-            if (hasHitSomething == true)
-                Console.WriteLine("Asteroid TRUE" + _pos);
+            //if (hasHitSomething == true)
+              //  Console.WriteLine("Asteroid TRUE" + _pos);
 
             if (hasHitSomething)
             {
                 foreach (Entity entity in children)
                 {
-                    if (entity is Player)
+                    if (entity._entityCollisionFlag == true && entity is Player)
                     {
-                        Alive = false;
+                        _alive = false;
+                        entity._entityCollisionFlag = false;
                     }
-                    else if (entity is Station)
+                    else if (entity._entityCollisionFlag == true && entity is Asteroid)
                     {
-                        Alive = false;
+                        entity._look = -entity._look;
+                        entity._entityCollisionFlag = false;
                     }
                 }
             }

@@ -57,6 +57,7 @@ namespace _2._5D_FYP
             hasHitSomething = false;
             _alive = true;
 
+            _entityName = "player";
             children = game.Children;
         } // End of Player()
 
@@ -82,7 +83,11 @@ namespace _2._5D_FYP
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 hasHitSomething = c.CheckCollision(this, children);
-                CollisionHandler(children);
+                if (hasHitSomething == true)
+                {
+                    Console.WriteLine("collided");
+                    CollisionHandler(children);
+                }
 
                 weapon.Update(weaponIndex, gameTime);
                 weapon.CheckWeaponFire();
@@ -153,25 +158,25 @@ namespace _2._5D_FYP
                 }
             }
 
+            hasHitSomething = false;
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
 
         public override void CollisionHandler(List<Entity> children)
         {
-            if (hasHitSomething == true)
-                Console.WriteLine("Player TRUE" + _pos);
-
             if (hasHitSomething)
             {
                 foreach (Entity entity in children)
                 {
-                    if (entity is Asteroid)
+                    if(entity._entityCollisionFlag == true && entity is Asteroid)
+                    //if (entity is Asteroid)
                     {
+                        entity._entityCollisionFlag = false;
                         _health -= 5;
                     }
-                    else if (entity is Station)
+                    else if (entity._entityCollisionFlag == true && entity is Station)
                     {
-                        _health++;
+                        entity._entityCollisionFlag = false;
                     }
                 }
             }
@@ -187,7 +192,7 @@ namespace _2._5D_FYP
                 {
                     foreach (ModelMesh mesh in _model.Meshes)
                     {
-                        _entitySphere = mesh.BoundingSphere;
+                        _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
                         _entitySphere.Center = _pos;
                         _entitySphere.Radius = 10;
 
