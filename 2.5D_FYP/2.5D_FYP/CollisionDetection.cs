@@ -34,14 +34,6 @@ namespace _2._5D_FYP
                 }              
             }
             return intersect;
-            //for (int i = 0; i < children.Count; i++)
-            //{
-
-                //intersect = entity._entitySphere.Intersects(children._entitySphere);
-                //string n = children.ElementAt(i)._entityName;
-            //}
-            //if (intersect == true)
-              //  return true;
         }
     } // End of class CollisionDetection
 }
