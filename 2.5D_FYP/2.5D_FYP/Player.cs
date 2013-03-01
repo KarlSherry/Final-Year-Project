@@ -152,7 +152,7 @@ namespace _2._5D_FYP
                 {
                     _health = 0;
                 }
-                if (_health >= 100)
+                if (_health > 100)
                 {
                     _health = 100;
                 }
@@ -171,11 +171,13 @@ namespace _2._5D_FYP
                     if(entity._entityCollisionFlag == true && entity is Asteroid)
                     //if (entity is Asteroid)
                     {
-                        entity._entityCollisionFlag = false;
                         _health -= 5;
+                        entity._entityCollisionFlag = false;
+                        Console.WriteLine("hit ast");
                     }
                     else if (entity._entityCollisionFlag == true && entity is Station)
                     {
+                        _health++;
                         entity._entityCollisionFlag = false;
                     }
                 }

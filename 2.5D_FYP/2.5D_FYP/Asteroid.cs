@@ -26,6 +26,7 @@ namespace _2._5D_FYP
         {
             _worldTransform = Matrix.Identity;
             _type = this.GetType();
+            _entityName = "Asteroid";
 
             Alive = true;
             hasHitSomething = false;
@@ -80,7 +81,7 @@ namespace _2._5D_FYP
                     {
                         _entitySphere = mesh1.BoundingSphere;
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = mesh1.BoundingSphere.Radius;
+                        _entitySphere.Radius = 10;
                         foreach (BasicEffect effect in mesh1.Effects)
                         {
                             effect.EnableDefaultLighting();
@@ -97,9 +98,6 @@ namespace _2._5D_FYP
 
         public override void CollisionHandler(List<Entity> children)
         {
-            //if (hasHitSomething == true)
-              //  Console.WriteLine("Asteroid TRUE" + _pos);
-
             if (hasHitSomething)
             {
                 foreach (Entity entity in children)
@@ -117,16 +115,5 @@ namespace _2._5D_FYP
                 }
             }
         }
-
-        /******************public override void CollisionHandler()
-        {
-        CollisionDetection collision = new CollisionDetection();
-        Type collidingEntity;
-        collidingEntity = collision.CheckCollision(this, Game1.Instance().Children);
-        if(collidingEntity == game.Player._type)
-        {
-        Alive = false;
-        }
-        }******************/
     }
 }

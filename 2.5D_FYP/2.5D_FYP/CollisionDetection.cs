@@ -27,7 +27,11 @@ namespace _2._5D_FYP
                     if (intersect == true)
                     {
                         entity._entityCollisionFlag = true;
-                        children.ElementAt(i)._entityCollisionFlag = true;
+                        if (!(entity.GetType() == children.ElementAt(i).GetType()))
+                        {
+                            children.ElementAt(i)._entityCollisionFlag = true;
+                        }
+
                         return true;
                     }
                     else { intersect = false; }

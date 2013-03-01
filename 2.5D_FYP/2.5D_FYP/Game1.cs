@@ -108,8 +108,7 @@ namespace _2._5D_FYP
             {
                 asteroid[i] = new Asteroid();
                 asteroid[i]._entityModel = "Models//Asteroid";
-                asteroid[i]._entityName = "Asteroid-*" + i;
-                Console.WriteLine(asteroid[i]._entityName);
+                asteroid[i]._entityName = asteroid[i]._entityName + i;
                 asteroid[i]._pos = new Vector3(Entity.randomGenerator.Next(-900, 900), 50, Entity.randomGenerator.Next(-900, 900));
                 Children.Add(asteroid[i]);
             }
@@ -145,8 +144,7 @@ namespace _2._5D_FYP
             {
                 children[i].Update(gameTime);
             }
-
-            //collisionDetection.CheckCollision(player, children);
+            
             headsUpDisplay.Update(player, gameTime);
 
             base.Update(gameTime);
