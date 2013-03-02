@@ -31,7 +31,7 @@ namespace _2._5D_FYP
         public override void Update(GameTime gameTime)
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            _worldTransform = Matrix.CreateRotationY(angle) *  Matrix.CreateScale(0.25f) * Matrix.CreateWorld(_pos, _look, _up);
+            _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateWorld(_pos, _look, _up);
             angle += timeDelta;
         }
 

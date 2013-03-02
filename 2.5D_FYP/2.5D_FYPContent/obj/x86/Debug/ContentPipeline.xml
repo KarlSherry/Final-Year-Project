@@ -81,19 +81,6 @@
       </Dependency>
     </Item>
     <Item>
-      <Source>Models\Station.fbx</Source>
-      <Name>Models\Station</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Station.xnb</Output>
-      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Station_0.xml</Key>
-        <Value>2013-02-21T21:53:59.0909031+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>Models\StationMaterial.fbx</Source>
       <Name>Models\StationMaterial</Name>
       <Importer>FbxImporter</Importer>
@@ -216,45 +203,6 @@
       <Dependency>
         <Key>obj\x86\Debug\Models\Elite Models\boa_0.xml</Key>
         <Value>2013-02-26T11:30:38.9495254+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Elite Models\cobramk1.fbx</Source>
-      <Name>Models\Elite Models\cobramk1</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\cobramk1.xnb</Output>
-      <Time>2013-02-26T11:29:59.5152699+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Elite Models\cobramk1_0.xml</Key>
-        <Value>2013-02-26T11:30:39.0635319+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Elite Models\cobramk3.fbx</Source>
-      <Name>Models\Elite Models\cobramk3</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\cobramk3.xnb</Output>
-      <Time>2013-02-26T11:29:59.5302708+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Elite Models\cobramk3_0.xml</Key>
-        <Value>2013-02-26T11:30:39.2495426+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Elite Models\coriolis.fbx</Source>
-      <Name>Models\Elite Models\coriolis</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\coriolis.xnb</Output>
-      <Time>2013-02-26T11:29:59.5422715+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Elite Models\coriolis_0.xml</Key>
-        <Value>2013-02-26T11:30:39.3835502+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -525,6 +473,70 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Elite Models\viper_0.xml</Output>
       <Time>2013-02-26T11:29:59.7202816+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\cobramk1.fbx</Source>
+      <Name>Models\Elite Models\cobramk1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">0.5</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\cobramk1.xnb</Output>
+      <Time>2013-02-26T11:29:59.5152699+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\cobramk1_0.xml</Key>
+        <Value>2013-02-26T11:30:39.0635319+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\cobramk3.fbx</Source>
+      <Name>Models\Elite Models\cobramk3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">0.5</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\cobramk3.xnb</Output>
+      <Time>2013-02-26T11:29:59.5302708+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\cobramk3_0.xml</Key>
+        <Value>2013-02-26T11:30:39.2495426+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Station.fbx</Source>
+      <Name>Models\Station</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">0.25</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Station.xnb</Output>
+      <Time>2013-02-21T14:01:50.6311112+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Station_0.xml</Key>
+        <Value>2013-02-21T21:53:59.0909031+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Elite Models\coriolis.fbx</Source>
+      <Name>Models\Elite Models\coriolis</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">0.25</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Elite Models\coriolis.xnb</Output>
+      <Time>2013-02-26T11:29:59.5422715+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Elite Models\coriolis_0.xml</Key>
+        <Value>2013-02-26T11:30:39.3835502+00:00</Value>
+      </Dependency>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

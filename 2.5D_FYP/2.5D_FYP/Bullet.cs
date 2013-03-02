@@ -30,7 +30,7 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            if (Alive)
+            if (_alive)
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -41,7 +41,7 @@ namespace _2._5D_FYP
 
                 if (travelTime >= maxTime)
                 {
-                    Alive = false;
+                    _alive = false;
                     game.Children.Remove(this);
                 }
 
@@ -51,7 +51,7 @@ namespace _2._5D_FYP
 
         public override void Draw(GameTime gameTime)
         {
-            if (Alive)
+            if (_alive)
             {
                 if (_model != null)
                 {

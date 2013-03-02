@@ -31,44 +31,13 @@ namespace _2._5D_FYP
             set { children = value; }
         }
 
-        private Ground ground;
-        public Ground Ground
-        {
-            get { return ground; }
-            set { ground = value; }
-        }
-
-        public World world;
-
-        private Camera camera;
-        public Camera Camera
-        {
-            get { return camera; }
-            set { camera = value; }
-        }
-
-        private Player player;
-        public Player Player
-        {
-            get { return player; }
-            set { player = value; }
-        }
-
-        private HUD headsUpDisplay;
-
-        private Station station;
-        public Station Station
-        {
-            get { return station; }
-            set { station = value; }
-        }
-
-        private Asteroid[] asteroid;
-        public Asteroid[] Asteroid
-        {
-            get { return asteroid; }
-            set { asteroid = value; }
-        }
+        public Ground Gound {get; set; }
+        public World World { get; set; }
+        public Camera Camera { get; set; }
+        public Player Player { get; set; }
+        public HUD HeadsUpDisplay { get; set; }
+        public Station Station { get; set; }
+        public Asteroid[] Asteroid { get; set; }
 
         private int AsteroidCount = 100;
 
@@ -76,7 +45,6 @@ namespace _2._5D_FYP
         {
             instance = this;
             graphics = new GraphicsDeviceManager(this);
-
             graphics.PreferredBackBufferWidth = 1200;
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferMultiSampling = true;
@@ -88,32 +56,30 @@ namespace _2._5D_FYP
 
         protected override void Initialize()
         {
-            camera = new Camera();
-            children.Add(camera);
+            Camera = new Camera();
+            children.Add(Camera);
 
-            ground = new Ground();
-            children.Add(ground);
+            Gound = new Ground();
+            children.Add(Gound);
 
-            world = new World();
-            children.Add(world);
+            World = new World();
+            children.Add(World);
 
-            player = new Player();
-            children.Add(player);
+            Player = new Player();
+            children.Add(Player);
 
-            station = new Station();
-            children.Add(station);
+            Station = new Station();
+            children.Add(Station);
 
-            asteroid = new Asteroid[AsteroidCount];
+            Asteroid = new Asteroid[AsteroidCount];
             for (int i = 0; i < AsteroidCount; i++) 
             {
-                asteroid[i] = new Asteroid();
-                asteroid[i]._entityModel = "Models//Asteroid";
-                asteroid[i]._entityName = asteroid[i]._entityName + i;
-                asteroid[i]._pos = new Vector3(Entity.randomGenerator.Next(-900, 900), 50, Entity.randomGenerator.Next(-900, 900));
-                Children.Add(asteroid[i]);
+                Asteroid[i] = new Asteroid();
+                Asteroid[i]._entityName = Asteroid[i]._entityName + "_"+ i;
+                Children.Add(Asteroid[i]);
             }
 
-            headsUpDisplay = new HUD();
+            HeadsUpDisplay = new HUD();
 
             for (int i = 0; i < children.Count; i++)
                 children[i].Initialize();
@@ -128,7 +94,7 @@ namespace _2._5D_FYP
             for (int i = 0; i < children.Count; i++)
                 children[i].LoadContent();
 
-            headsUpDisplay.LoadContent();
+            HeadsUpDisplay.LoadContent();
         }
 
         protected override void UnloadContent()
@@ -145,7 +111,7 @@ namespace _2._5D_FYP
                 children[i].Update(gameTime);
             }
             
-            headsUpDisplay.Update(player, gameTime);
+            HeadsUpDisplay.Update(Player, gameTime);
 
             base.Update(gameTime);
         }
@@ -163,7 +129,7 @@ namespace _2._5D_FYP
                 children[i].Draw(gameTime);
             }
 
-            headsUpDisplay.Draw(gameTime);
+            HeadsUpDisplay.Draw(gameTime);
             spriteBatch.End();
         }
 

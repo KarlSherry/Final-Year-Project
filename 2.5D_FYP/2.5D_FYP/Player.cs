@@ -19,8 +19,6 @@ namespace _2._5D_FYP
             set { playerSphere = value; }
         }
 
-        float rotationSpeed = 5.0f;
-
         public float capacity = 0.0f;
         public int weaponIndex = 0;
         public string weaponName = null;
@@ -32,44 +30,31 @@ namespace _2._5D_FYP
         bool hasHitSomething;
 
         List<Entity> children = new List<Entity>();
-        CollisionDetection c = new CollisionDetection();
 
         public Player()
         {
-            _worldTransform = Matrix.Identity;
+            _entityModel = "Models//Elite Models//cobramk3";
+            _entityName = "player";
+            _type = this.GetType();
+
             _pos = new Vector3(50, 50, 50);
             _look = new Vector3(0, 0, -1);
+
             _right = new Vector3(1, 0, 0);
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 500.0f;
-            _maxForce = 150.0f;
-            _mass = 10.0f;
-            _health = 100.0f;
-            _shield = 100.0f;
-            _type = this.GetType();
+            _maxSpeed = 500.0f; _maxForce = 150.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+            _health = 100.0f; _shield = 100.0f;
 
             weaponName = weaponArray[weaponIndex];
             weapon = new Weapon();
-            rotationSpeed = 5.0f;
 
             hasHitSomething = false;
             _alive = true;
 
-            _entityName = "player";
             children = game.Children;
         } // End of Player()
-
-        public override void Initialize()
-        {
-            base.Initialize();
-        }
-
-        public override void LoadContent()
-        {
-            _model = Game1.Instance().Content.Load<Model>("Models//Elite Models//cobramk3");
-        } // End of LoadContent()
 
         void addForce(Vector3 force)
         {
@@ -78,16 +63,15 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            if (Alive)
+            if (_alive)
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                hasHitSomething = c.CheckCollision(this, children);
-                if (hasHitSomething == true)
-                {
-                    Console.WriteLine("collided");
+                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateWorld(_pos, _look, _up);
+
+                hasHitSomething = CheckCollision(children);
+                if (hasHitSomething)
                     CollisionHandler(children);
-                }
 
                 weapon.Update(weaponIndex, gameTime);
                 weapon.CheckWeaponFire();
@@ -127,11 +111,11 @@ namespace _2._5D_FYP
                 }
                 if (keyState.IsKeyDown(Keys.Left))
                 {
-                    yaw(rotationSpeed * timeDelta);
+                    yaw(_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.Right))
                 {
-                    yaw(-rotationSpeed * timeDelta);
+                    yaw(-_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.W))
                 {
@@ -164,53 +148,22 @@ namespace _2._5D_FYP
 
         public override void CollisionHandler(List<Entity> children)
         {
-            if (hasHitSomething)
+            foreach (Entity entity in children)
             {
-                foreach (Entity entity in children)
+                if (entity._entityCollisionFlag == true && entity is Asteroid)
+                //if (entity is Asteroid)
                 {
-                    if(entity._entityCollisionFlag == true && entity is Asteroid)
-                    //if (entity is Asteroid)
-                    {
-                        _health -= 5;
-                        entity._entityCollisionFlag = false;
-                        Console.WriteLine("hit ast");
-                    }
-                    else if (entity._entityCollisionFlag == true && entity is Station)
-                    {
-                        _health++;
-                        entity._entityCollisionFlag = false;
-                    }
+                    _health -= 5;
+                    entity._entityCollisionFlag = false;
+                    Console.WriteLine("hit ast");
+                }
+                else if (entity._entityCollisionFlag == true && entity is Station)
+                {
+                    _health++;
+                    entity._entityCollisionFlag = false;
                 }
             }
+
         } // End of CollisionHandler(List<Entity> children)
-
-        public override void Draw(GameTime gameTime)
-        {
-            if (Alive)
-            {
-                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(0.5f) * Matrix.CreateWorld(_pos, _look, _up);
-
-                if (_model != null)
-                {
-                    foreach (ModelMesh mesh in _model.Meshes)
-                    {
-                        _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
-                        _entitySphere.Center = _pos;
-                        _entitySphere.Radius = mesh.BoundingSphere.Radius;
-
-
-                        foreach (BasicEffect effect in mesh.Effects)
-                        {
-                            effect.EnableDefaultLighting();
-                            effect.PreferPerPixelLighting = true;
-                            effect.World = _worldTransform;
-                            effect.Projection = Game1.Instance().Camera.getProjection();
-                            effect.View = Game1.Instance().Camera.getView();
-                        }
-                        mesh.Draw();
-                    } // End of foreach(ModelMesh mesh in _model.Meshes)
-                } // End of if(_model != null)
-            } // End of Draw(GameTime gameTime)
-        }
     } // End of Player Class
 }

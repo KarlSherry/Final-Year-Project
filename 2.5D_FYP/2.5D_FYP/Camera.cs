@@ -14,11 +14,14 @@ using Microsoft.Xna.Framework.Storage;
 namespace _2._5D_FYP
 {
     public class Camera : Entity
-    {
-        
+    {        
         public Matrix projection;
         public Matrix view;
         private MouseState mouseState;
+
+        //Vector3 _pos = Vector3.Zero;
+        //Vector3 _look = Vector3.Forward;
+        //Vector3 _up = Vector3.Up;
         
         public Camera()
         {

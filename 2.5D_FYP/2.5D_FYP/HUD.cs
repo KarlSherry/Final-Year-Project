@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace _2._5D_FYP
 {
-    class HUD
+    public class HUD
     {
         SpriteFont gameFont;
         Texture2D playerHealthBar;

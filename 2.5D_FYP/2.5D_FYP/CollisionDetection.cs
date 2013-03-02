@@ -14,7 +14,7 @@ namespace _2._5D_FYP
         {
         }
 
-        public Boolean CheckCollision(Entity entity, List<Entity> children)
+        /*public Boolean CheckCollision(Entity entity, List<Entity> children)
         {
             intersect = false;
 
@@ -38,6 +38,6 @@ namespace _2._5D_FYP
                 }              
             }
             return intersect;
-        }
+        }*/
     } // End of class CollisionDetection
 }
