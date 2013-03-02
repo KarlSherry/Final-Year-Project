@@ -17,15 +17,20 @@ namespace _2._5D_FYP
     {
         float travelTime = 0.0f;
         float maxTime = 3.0f;
+        bool hasHitSomething;
+
+        CollisionDetection c = new CollisionDetection();
+        List<Entity> children = Game1.Instance().Children;
 
         public Bullet() 
         {
             _alive = true;
+            hasHitSomething = false;
         }
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>(_entityModel);
+            _model = Game1.Instance().Content.Load<Model>(_entityModelName);
         }
 
         public override void Update(GameTime gameTime)
@@ -35,6 +40,12 @@ namespace _2._5D_FYP
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 _worldTransform = Matrix.CreateScale(.5f) * Matrix.CreateTranslation(_pos);
+
+                hasHitSomething = c.CheckCollision(this, children);
+                if (hasHitSomething == true)
+                {
+                    CollisionHandler(children);
+                }
 
                 float speed = 10.0f;
                 walk(speed * timeDelta);
@@ -73,6 +84,29 @@ namespace _2._5D_FYP
                     }
                 }
             }
-        }
-    }
+        } // End of Draw(GameTime gameTime)
+
+        public override void CollisionHandler(List<Entity> children)
+        {            
+            if (hasHitSomething)
+            {
+                foreach(Entity e in children)
+                {
+                    /*if (e._entityCollisionFlag == true && e is Asteroid)
+                    {
+                        Console.WriteLine("Bullet collided");
+                        _alive = false;
+                        e._entityCollisionFlag = false;
+                    }*/
+
+                    /*if (e._entityCollisionFlag == true && e is Enemy)
+                    {
+                        _alive = false;
+                        Console.WriteLine("Bullet collided");
+                        e._entityCollisionFlag = false;
+                    }*/
+                }
+            }
+        } // End of CollisionHandler(List<Entity children)
+    } // End of Bullet Class
 }

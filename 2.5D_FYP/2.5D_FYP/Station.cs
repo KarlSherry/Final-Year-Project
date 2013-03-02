@@ -41,7 +41,7 @@ namespace _2._5D_FYP
             {
                 foreach (ModelMesh mesh in _model.Meshes)
                 {
-                    _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
+                    _entitySphere = mesh.BoundingSphere;
                     _entitySphere.Center = _pos;
                     _entitySphere.Radius = 50;
                     foreach (BasicEffect effect in mesh.Effects)

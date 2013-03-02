@@ -31,7 +31,6 @@ namespace _2._5D_FYP
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>(_entityModel);
         }
 
         public override void Update(GameTime gameTime)

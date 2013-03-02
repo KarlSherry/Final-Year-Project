@@ -21,46 +21,52 @@ namespace _2._5D_FYP
         {
         }
 
-        public void Update(int index, GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            keyState = Keyboard.GetState();
-
-            weaponIndex = index;
 
             lastBulletFired += timeDelta;
 
             base.Update(gameTime);
         }
 
-        public void CheckWeaponFire()
+        public void CheckWeaponFire(int index, Entity e)
         {
             player = Game1.Instance().Player;
             bullet = new Bullet();
 
-            switch (weaponIndex)
+            switch (index)
             {
                 case 0:
                     {
-                        bullet._entityModel = "Models//sphere";
+                        bullet._entityModelName = "Models//sphere";
 
-                        if(keyState.IsKeyDown(Keys.Space))
+                        if (e is Player && e.keyPressed)
                         {
                             if (!fireWeaponPressed)
                             {
-                                 FireBullet(player._pos, player._look);
-                                 fireWeaponPressed = true;
+                                FireBullet(e._pos, e._look);
+                                fireWeaponPressed = true;
+                            }
+                        }                            
+                        else fireWeaponPressed = false;
+
+                        if (e is Enemy)
+                        {
+                            if (lastBulletFired >= 1.0f)
+                            {
+                                lastBulletFired = 0.0f;
+
+                                FireBullet(e._pos, e._look);
                             }
                         }
-                        else fireWeaponPressed = false;
                         break;
                     }
                     
 
                 case 1:
                     {
-                        bullet._entityModel = "Models//sphere";
+                        bullet._entityModelName = "Models//sphere";
 
                         if (keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 0.1f) //10 milliseconds
                         {
@@ -73,7 +79,7 @@ namespace _2._5D_FYP
 
                 case 2: 
                     {
-                        bullet._entityModel = "Models//Station";
+                        bullet._entityModelName = "Models//Station";
 
                         if (keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 3.0f)
                         {
@@ -92,7 +98,7 @@ namespace _2._5D_FYP
 
                 default: //Assumes case 0
                     {
-                        bullet._entityModel = "Models//sphere";
+                        bullet._entityModelName = "Models//sphere";
 
                         if (keyState.IsKeyDown(Keys.Space))
                         {

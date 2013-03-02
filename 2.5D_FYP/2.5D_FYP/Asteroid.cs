@@ -10,6 +10,7 @@ namespace _2._5D_FYP
     public class Asteroid : Entity
     {
         float angle = 0.0f;
+        public float scale = 0.0f;
         int asteroidCount = 25;
         bool hasHitSomething;
 
@@ -39,6 +40,8 @@ namespace _2._5D_FYP
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
             _maxSpeed = randomGenerator.Next(10, 25);
+            scale = randomGenerator.Next(1, 3);
+            _mass = scale;
         }
 
         float randomClamped()
@@ -48,7 +51,8 @@ namespace _2._5D_FYP
 
         public override void LoadContent()
         {
-            _model = Game1.Instance().Content.Load<Model>(_entityModel);
+            _model = Game1.Instance().Content.Load<Model>(_entityModelName);
+            base.LoadContent();
         }
 
         public override void Update(GameTime gameTime)
@@ -59,6 +63,25 @@ namespace _2._5D_FYP
 
                 hasHitSomething = c.CheckCollision(this, children);
                 CollisionHandler(children);
+
+                /*Vector3 acceleration = _force / _mass;
+
+                _velocity += acceleration * timeDelta;
+
+                _pos += _velocity * timeDelta;
+
+                _force = _look * 5;
+
+                if (_velocity.Length() > _maxSpeed)
+                {
+                    _velocity.Normalize();
+                    _velocity *= _maxSpeed;
+                }
+
+                if (_velocity.Length() > 0.0001f)
+                {
+                    _right = Vector3.Cross(_look, _up);
+                } */
 
                 angle += timeDelta;
 
@@ -73,7 +96,7 @@ namespace _2._5D_FYP
         {
             if (Alive)
             {
-                _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateTranslation(_pos);
+                _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateScale(scale) * Matrix.CreateTranslation(_pos);
 
                 if (_model != null)
                 {
@@ -81,7 +104,7 @@ namespace _2._5D_FYP
                     {
                         _entitySphere = mesh1.BoundingSphere;
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = 10;
+                        _entitySphere.Radius = mesh1.BoundingSphere.Radius * scale;
                         foreach (BasicEffect effect in mesh1.Effects)
                         {
                             effect.EnableDefaultLighting();
@@ -110,6 +133,11 @@ namespace _2._5D_FYP
                     else if (entity._entityCollisionFlag == true && entity is Asteroid)
                     {
                         entity._look = -entity._look;
+                        entity._entityCollisionFlag = false;
+                    }
+                    else if (entity._entityCollisionFlag == true && entity is Bullet)
+                    {
+                        _alive = false;
                         entity._entityCollisionFlag = false;
                     }
                 }

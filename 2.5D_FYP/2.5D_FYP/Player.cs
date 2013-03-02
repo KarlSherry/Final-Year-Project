@@ -24,11 +24,10 @@ namespace _2._5D_FYP
         public float capacity = 0.0f;
         public int weaponIndex = 0;
         public string weaponName = null;
-        public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
+        public string[] weaponTypes = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
 
         KeyboardState keyState;
 
-        bool keyPressed = false;
         bool hasHitSomething;
 
         List<Entity> children = new List<Entity>();
@@ -50,7 +49,7 @@ namespace _2._5D_FYP
             _shield = 100.0f;
             _type = this.GetType();
 
-            weaponName = weaponArray[weaponIndex];
+            weaponName = weaponTypes[weaponIndex];
             weapon = new Weapon();
             rotationSpeed = 5.0f;
 
@@ -89,8 +88,8 @@ namespace _2._5D_FYP
                     CollisionHandler(children);
                 }
 
-                weapon.Update(weaponIndex, gameTime);
-                weapon.CheckWeaponFire();
+                weapon.Update(gameTime);
+                weapon.CheckWeaponFire(weaponIndex, this);
 
                 acceleration = _force / _mass;
 
@@ -138,11 +137,21 @@ namespace _2._5D_FYP
                     if (!keyPressed)
                     {
                         weaponIndex = ++weaponIndex % 4;
-                        weaponName = weaponArray[weaponIndex];
+                        weaponName = weaponTypes[weaponIndex];
                         keyPressed = true;
                     }
                 }
                 else keyPressed = false;
+
+                if (keyState.IsKeyDown(Keys.Space))
+                {
+                    if (!keyPressed)
+                    {
+                        keyPressed = true;
+                    }
+                }
+                else keyPressed = false;
+
                 if (_health == 0) 
                 {
                     _alive = false;
@@ -162,28 +171,6 @@ namespace _2._5D_FYP
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
 
-        public override void CollisionHandler(List<Entity> children)
-        {
-            if (hasHitSomething)
-            {
-                foreach (Entity entity in children)
-                {
-                    if(entity._entityCollisionFlag == true && entity is Asteroid)
-                    //if (entity is Asteroid)
-                    {
-                        _health -= 5;
-                        entity._entityCollisionFlag = false;
-                        Console.WriteLine("hit ast");
-                    }
-                    else if (entity._entityCollisionFlag == true && entity is Station)
-                    {
-                        _health++;
-                        entity._entityCollisionFlag = false;
-                    }
-                }
-            }
-        } // End of CollisionHandler(List<Entity> children)
-
         public override void Draw(GameTime gameTime)
         {
             if (Alive)
@@ -194,11 +181,9 @@ namespace _2._5D_FYP
                 {
                     foreach (ModelMesh mesh in _model.Meshes)
                     {
-                        _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
+                        _entitySphere = mesh.BoundingSphere;
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = mesh.BoundingSphere.Radius;
-
-
+                        _entitySphere.Radius = 10;
                         foreach (BasicEffect effect in mesh.Effects)
                         {
                             effect.EnableDefaultLighting();
@@ -210,7 +195,29 @@ namespace _2._5D_FYP
                         mesh.Draw();
                     } // End of foreach(ModelMesh mesh in _model.Meshes)
                 } // End of if(_model != null)
-            } // End of Draw(GameTime gameTime)
-        }
+            }
+        } // End of Draw(GameTime gameTime)
+
+        public override void CollisionHandler(List<Entity> children)
+        {
+            if (hasHitSomething)
+            {
+                foreach (Entity entity in children)
+                {
+                    if (entity._entityCollisionFlag == true && entity is Asteroid)
+                    //if (entity is Asteroid)
+                    {
+                        _health -= 5;
+                        entity._entityCollisionFlag = false;
+                        Console.WriteLine("hit ast");
+                    }
+                    else if (entity._entityCollisionFlag == true && entity is Station)
+                    {
+                        _health++; // This seems to being called when it isn't supposed to, why is that?!
+                        entity._entityCollisionFlag = false;
+                    }
+                }
+            }
+        } // End of CollisionHandler(List<Entity> children)
     } // End of Player Class
 }

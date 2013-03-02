@@ -24,7 +24,7 @@ namespace _2._5D_FYP
         public float _maxSpeed = 0.0f, _maxForce = 0.0f, _mass = 1.0f, _rotation = 0.0f;
         public float _health = 0.0f, _shield = 0.0f;
 
-        public string _entityModel;
+        public string _entityModelName;
         public string _entityName;
         public bool _entityCollisionFlag;
 
@@ -32,6 +32,8 @@ namespace _2._5D_FYP
 
         public Model _model = null;
         public BoundingSphere _entitySphere;
+
+        public bool keyPressed = false;
 
         public bool _alive = false;
         public bool Alive 
