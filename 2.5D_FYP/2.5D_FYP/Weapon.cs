@@ -34,19 +34,16 @@ namespace _2._5D_FYP
         public void CheckWeaponFire(int weaponIndex, Entity e)
         {
             player = game.Player;
-            bullet = new Bullet();
 
             switch (weaponIndex)
             {
                 case 0:
                     {
-                        bullet._entityModel = "Models//sphere";
-
                         if (e is Player && player.keyState.IsKeyDown(Keys.Space))
                         {
                             if (!fireWeaponPressed)
                             {
-                                FireBullet(e._pos, e._look);
+                                FireBullet(e, e._pos, e._look);
                                 fireWeaponPressed = true;
                             }
                         }
@@ -66,26 +63,22 @@ namespace _2._5D_FYP
 
                 case 1:
                     {
-                        bullet._entityModel = "Models//sphere";
-
                         if (e is Player && player.keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 0.1f) //10 milliseconds
                         {
                             lastBulletFired = 0.0f;
 
-                            FireBullet(e._pos, e._look);
+                            //FireBullet(game.PlayerBulletList, e._pos, e._look);
                         }
                         break;
                     }
 
                 case 2: 
                     {
-                        bullet._entityModel = "Models//Elite Models//cobramk1";
-
                         if (e is Player && player.keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 3.0f)
                         {
                             lastBulletFired = 0.0f;
 
-                            FireBullet(e._pos, e._look);
+                           // FireBullet(game.PlayerBulletList, e._pos, e._look);
                         }
                         break;
                     }
@@ -98,13 +91,11 @@ namespace _2._5D_FYP
 
                 default: //Assumes case 0
                     {
-                        bullet._entityModel = "Models//sphere";
-
                         if (keyState.IsKeyDown(Keys.Space))
                         {
                             if (!fireWeaponPressed)
                             {
-                                FireBullet(player._pos, player._look);
+                                //FireBullet(game.PlayerBulletList, player._pos, player._look);
                                 fireWeaponPressed = true;
                             }
                         }
@@ -114,12 +105,17 @@ namespace _2._5D_FYP
             } //End of switch
         }
 
-        public void FireBullet(Vector3 pos, Vector3 look)
+        public void FireBullet(Entity e, Vector3 pos, Vector3 look)
         {
+            if(e is Player)
+                bullet = new Bullet(game.PlayerBulletList);
+
+            bullet._entityModel = "Models//sphere";
             bullet.LoadContent();
+            //if (e is Enemy)
+               // bullet = new Bullet(game.EnemyBulletList);
             bullet._pos = pos;
             bullet._look = look;
-            Game1.Instance().Children.Add(bullet);
         }
     }
 }

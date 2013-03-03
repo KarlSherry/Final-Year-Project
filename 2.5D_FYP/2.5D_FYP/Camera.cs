@@ -18,12 +18,16 @@ namespace _2._5D_FYP
         public Matrix projection;
         public Matrix view;
         private MouseState mouseState;
-        
-        public Camera()
+
+        public Camera(List<Entity> list)
         {
             _entityName = "Camera";
+
             _pos = new Vector3(0.0f, 300.0f, 100.0f);
             _look = new Vector3(0.0f, 0.0f, -1.0f);
+
+            parentList = list;
+            parentList.Add(this);
         }
 
         public override void Update(GameTime gameTime)

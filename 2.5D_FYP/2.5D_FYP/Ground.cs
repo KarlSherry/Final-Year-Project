@@ -14,9 +14,12 @@ namespace _2._5D_FYP
         BasicEffect basicEffect;
         public float groundWidth = 0.0f, groundHeight = 0.0f;
 
-        public Ground()
+        public Ground(List<Entity> list)
         {
             _entityName = "Ground";
+
+            parentList = list;
+            parentList.Add(this);
 
             graphics = game.GraphicsDeviceManager;
             groundWidth = game.World.worldWidth; groundHeight = game.World.worldHeight;            
@@ -47,7 +50,6 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-
             basicEffect.World = Matrix.Identity;
             basicEffect.Projection = Game1.Instance().Camera.projection;
             basicEffect.View = Game1.Instance().Camera.view;

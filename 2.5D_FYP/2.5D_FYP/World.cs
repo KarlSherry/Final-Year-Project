@@ -9,12 +9,15 @@ namespace _2._5D_FYP
     {
         public float worldWidth = 0, worldHeight = 0;
 
-        public World() 
+        public World(List<Entity> list) 
         {
             _entityName = "World";
 
-            worldWidth = 5000;
-            worldHeight = 5000;
+            worldWidth = 1000;
+            worldHeight = 1000;
+
+            parentList = list;
+            parentList.Add(this);
         }
     }
 }

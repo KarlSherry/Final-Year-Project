@@ -15,7 +15,7 @@ namespace _2._5D_FYP
         List<Entity> childrenList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
 
-        public Asteroid()
+        public Asteroid(List<Entity> list)
         {
             _entityModel = "Models//Asteroid";
             _entityName = "Asteroid";
@@ -27,10 +27,14 @@ namespace _2._5D_FYP
 
             _maxSpeed = randomGenerator.Next(10, 25); _scale = randomGenerator.Next(1, 4);
 
-            _alive = true;
             hasHitSomething = false;
+            _alive = true;
 
-            childrenList = game.Children;
+            parentList = list;
+            if (_alive)
+                list.Add(this);
+
+            childrenList = game.StageList;
         }
 
         float randomClamped()
@@ -38,7 +42,7 @@ namespace _2._5D_FYP
             return 1.0f - ((float)randomGenerator.NextDouble() * 2.0f);
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update( GameTime gameTime)
         {
             if (_alive)
             {
@@ -54,8 +58,8 @@ namespace _2._5D_FYP
 
                 _pos += _look * timeDelta * _maxSpeed;
 
-                if (_alive == false)
-                    game.AsteroidList.Remove(this);
+                if (!_alive)
+                    parentList.Remove(this);
             }
         }
 

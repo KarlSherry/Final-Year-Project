@@ -14,7 +14,7 @@ namespace _2._5D_FYP
         List<Entity> childrenList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
 
-        public Metal()
+        public Metal(List<Entity> list)
         {
             _entityModel = "Models//StationMaterial";
             _entityName = "Metal";
@@ -24,10 +24,14 @@ namespace _2._5D_FYP
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
-            _maxSpeed = randomGenerator.Next(10, 25); _scale = 1.0f;
+            _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
 
-            _alive = true;
             hasHitSomething = false;
+            _alive = true;
+
+            parentList = list;
+            if (_alive)
+                parentList.Add(this);
         }
 
         float randomClamped()
@@ -52,7 +56,7 @@ namespace _2._5D_FYP
                 _pos += _look * timeDelta * _maxSpeed;
 
                 if (_alive == false)
-                    game.MetalList.Remove(this);
+                    parentList.Remove(this);
             }
         }
     }

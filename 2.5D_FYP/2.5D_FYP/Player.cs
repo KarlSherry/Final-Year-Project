@@ -19,7 +19,7 @@ namespace _2._5D_FYP
             set { playerSphere = value; }
         }
 
-        public float capacity = 0.0f;
+        public int capacity = 0;
         public int weaponIndex = 0;
         public string weaponName = null;
         public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
@@ -28,12 +28,12 @@ namespace _2._5D_FYP
 
         public bool keyPressed = false;
         bool hasHitSomething;
-        
+
         List<Entity> childrenList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
         List<Entity> metalList = new List<Entity>();
 
-        public Player()
+        public Player(List<Entity> list)
         {
             _entityModel = "Models//Elite Models//cobramk3";
             _entityName = "Player";
@@ -54,8 +54,13 @@ namespace _2._5D_FYP
 
             hasHitSomething = false;
             _alive = true;
+            
+            parentList = list;
 
-            childrenList = game.Children;
+            if (_alive)
+                parentList.Add(this);
+
+            childrenList = game.StageList;
             asteroidList = game.AsteroidList;
             metalList = game.MetalList;
         } // End of Player()
@@ -70,24 +75,15 @@ namespace _2._5D_FYP
 
                 hasHitSomething = CheckCollision(asteroidList);
                 if (hasHitSomething)
-                {
-                    //CollisionHandler(asteroidList);
-                    CheckPlayerAsteroidCollision(asteroidList);
-                }
+                    CollisionHandler(asteroidList);
 
                 hasHitSomething = CheckCollision(metalList);
                 if (hasHitSomething)
-                {
-                    //CollisionHandler(childrenList);
-                    CheckPlayerMetalCollision(metalList);
-                }
+                    CollisionHandler(metalList);
 
                 hasHitSomething = CheckCollision(childrenList);
                 if (hasHitSomething)
-                {
-                    //CollisionHandler(childrenList);
-                    CheckPlayerMetalCollision(childrenList);
-                }
+                    CollisionHandler(childrenList);
 
                 weapon.Update(gameTime);
                 weapon.CheckWeaponFire(weaponIndex, this);
@@ -147,7 +143,7 @@ namespace _2._5D_FYP
                 if (_health == 0) 
                 {
                     _alive = false;
-                    game.Children.Remove(this);
+                    parentList.Remove(this);
                 }
                 if (_health <= 0)
                 {
@@ -168,60 +164,21 @@ namespace _2._5D_FYP
             foreach (Entity entity in list)
             {
                 if (entity._entityCollisionFlag == true && entity is Asteroid)
-                //if (entity is Asteroid)
                 {
                     _health -= 5;
                     entity._entityCollisionFlag = false;
-                    Console.WriteLine("hit ast");
                 }
-                else if (entity._entityCollisionFlag == true && entity is Station)
+                if (entity._entityCollisionFlag == true && entity is Station)
                 {
                     _health++;
+                    entity._entityCollisionFlag = false;
+                }
+                if (entity._entityCollisionFlag == true && entity is Metal)
+                {
                     entity._entityCollisionFlag = false;
                 }
             }
         } // End of CollisionHandler(List<Entity> children)
-
-        public void CheckPlayerAsteroidCollision(List<Entity> list) 
-        {
-            foreach (Entity entity in list)
-            {
-                if (entity._entityCollisionFlag == true && entity is Asteroid)
-                //if (entity is Asteroid)
-                {
-                    _health -= 5;
-                    entity._entityCollisionFlag = false;
-                    Console.WriteLine("hit ast");
-                }
-            }
-        }
-
-        public void CheckPlayerMetalCollision(List<Entity> list)
-        {
-            foreach (Entity entity in list)
-            {
-                if (entity._entityCollisionFlag == true && entity is Metal)
-                //if (entity is Asteroid)
-                {
-                    entity._entityCollisionFlag = false;
-                    Console.WriteLine("hit metal");
-                }
-            }
-        }
-
-        public void CheckPlayerStationCollision(List<Entity> list)
-        {
-            foreach (Entity entity in list)
-            {
-                if (entity._entityCollisionFlag == true && entity is Station)
-                //if (entity is Asteroid)
-                {
-                    _health++;
-                    entity._entityCollisionFlag = false;
-                    Console.WriteLine("hit station");
-                }
-            }
-        }
 
         void addForce(Vector3 force)
         {

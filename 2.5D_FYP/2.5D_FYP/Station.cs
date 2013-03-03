@@ -11,7 +11,7 @@ namespace _2._5D_FYP
     {
         float angle = 0.0f;
 
-        public Station()
+        public Station(List<Entity> list)
         {
             _entityModel = "Models//Elite Models//coriolis";
             _entityName = "Station";
@@ -23,6 +23,11 @@ namespace _2._5D_FYP
             _scale = 0.25f;
 
             _alive = true;
+
+            parentList = list;
+
+            if(_alive)
+                parentList.Add(this);
         }
 
         public override void Update(GameTime gameTime)
@@ -32,6 +37,9 @@ namespace _2._5D_FYP
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+
+                if (!_alive)
+                    parentList.Remove(this);
 
                 angle += timeDelta;
             }

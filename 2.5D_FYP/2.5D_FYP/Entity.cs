@@ -37,6 +37,8 @@ namespace _2._5D_FYP
 
         public bool _alive { get; set; }
 
+        public List<Entity> parentList;
+
         public static Random randomGenerator = new Random(DateTime.Now.Millisecond);
 
         public virtual void Initialize() { }
@@ -53,9 +55,12 @@ namespace _2._5D_FYP
                 {
                     foreach (ModelMesh mesh in _model.Meshes)
                     {
-                        _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
-                        _entitySphere.Center = _pos;
-                        _entitySphere.Radius = mesh.BoundingSphere.Radius * _scale;
+                        if (!(mesh.BoundingSphere.Radius == 0.0f))
+                        {
+                            _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
+                            _entitySphere.Center = _pos;
+                            _entitySphere.Radius = mesh.BoundingSphere.Radius * _scale;
+                        }
 
                         foreach (BasicEffect effect in mesh.Effects)
                         {

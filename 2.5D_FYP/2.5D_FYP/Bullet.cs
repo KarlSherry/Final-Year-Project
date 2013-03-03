@@ -18,14 +18,17 @@ namespace _2._5D_FYP
         float travelTime = 0.0f;
         float maxTime = 5.0f;
 
-        public Bullet() 
+        public Bullet(List<Entity> list) 
         {
             _entityModel = "Models//sphere";
             _entityName = "Bullet";
 
-            _scale = 0.5f;
+            _scale = 1.0f;
 
             _alive = true;
+
+            parentList = list;
+                parentList.Add(this);
         }
 
         public override void Update(GameTime gameTime)
@@ -38,12 +41,6 @@ namespace _2._5D_FYP
 
                 float speed = 10.0f;
                 walk(speed * timeDelta);
-
-                if (travelTime >= maxTime)
-                {
-                    _alive = false;
-                    game.Children.Remove(this);
-                }
 
                 travelTime += timeDelta;
             }
