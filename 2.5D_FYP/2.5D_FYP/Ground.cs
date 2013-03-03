@@ -12,18 +12,19 @@ namespace _2._5D_FYP
         GraphicsDeviceManager graphics;
         VertexPositionTexture[] vertices;
         BasicEffect basicEffect;
-        public float groundWidth = 0, groundHeight = 0;
+        public float groundWidth = 0.0f, groundHeight = 0.0f;
 
         public Ground()
         {
-            graphics = Game1.Instance().GraphicsDeviceManager;
+            _entityName = "Ground";
+
+            graphics = game.GraphicsDeviceManager;
+            groundWidth = game.World.worldWidth; groundHeight = game.World.worldHeight;            
         }
 
         public override void LoadContent()
         {
-            groundWidth = 1000;
-            groundHeight = 1000;
-            float twidth = 10, theight = 10;
+            float twidth = groundWidth / 100, theight = groundHeight / 100;
 
             vertices = new VertexPositionTexture[]
             {

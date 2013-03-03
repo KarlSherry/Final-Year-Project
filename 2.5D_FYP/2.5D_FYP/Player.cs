@@ -24,27 +24,29 @@ namespace _2._5D_FYP
         public string weaponName = null;
         public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
 
-        KeyboardState keyState;
+        public KeyboardState keyState;
 
-        bool keyPressed = false;
+        public bool keyPressed = false;
         bool hasHitSomething;
-
-        List<Entity> children = new List<Entity>();
+        
+        List<Entity> childrenList = new List<Entity>();
+        List<Entity> asteroidList = new List<Entity>();
+        List<Entity> metalList = new List<Entity>();
 
         public Player()
         {
             _entityModel = "Models//Elite Models//cobramk3";
-            _entityName = "player";
+            _entityName = "Player";
             _type = this.GetType();
 
-            _pos = new Vector3(50, 50, 50);
+            _pos = new Vector3(50, _YAxis, 50);
             _look = new Vector3(0, 0, -1);
 
             _right = new Vector3(1, 0, 0);
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 500.0f; _maxForce = 150.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+            _maxSpeed = 500.0f; _maxForce = 150.0f; _mass = 10.0f; _rotationSpeed = 5.0f; _scale = 0.5f;
             _health = 100.0f; _shield = 100.0f;
 
             weaponName = weaponArray[weaponIndex];
@@ -53,13 +55,10 @@ namespace _2._5D_FYP
             hasHitSomething = false;
             _alive = true;
 
-            children = game.Children;
+            childrenList = game.Children;
+            asteroidList = game.AsteroidList;
+            metalList = game.MetalList;
         } // End of Player()
-
-        void addForce(Vector3 force)
-        {
-            this._force += force;
-        }
 
         public override void Update(GameTime gameTime)
         {
@@ -67,14 +66,31 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
-                hasHitSomething = CheckCollision(children);
+                hasHitSomething = CheckCollision(asteroidList);
                 if (hasHitSomething)
-                    CollisionHandler(children);
+                {
+                    //CollisionHandler(asteroidList);
+                    CheckPlayerAsteroidCollision(asteroidList);
+                }
 
-                weapon.Update(weaponIndex, gameTime);
-                weapon.CheckWeaponFire();
+                hasHitSomething = CheckCollision(metalList);
+                if (hasHitSomething)
+                {
+                    //CollisionHandler(childrenList);
+                    CheckPlayerMetalCollision(metalList);
+                }
+
+                hasHitSomething = CheckCollision(childrenList);
+                if (hasHitSomething)
+                {
+                    //CollisionHandler(childrenList);
+                    CheckPlayerMetalCollision(childrenList);
+                }
+
+                weapon.Update(gameTime);
+                weapon.CheckWeaponFire(weaponIndex, this);
 
                 acceleration = _force / _mass;
 
@@ -127,6 +143,7 @@ namespace _2._5D_FYP
                     }
                 }
                 else keyPressed = false;
+
                 if (_health == 0) 
                 {
                     _alive = false;
@@ -146,9 +163,9 @@ namespace _2._5D_FYP
             base.Update(gameTime);
         } // End of Update(GameTime gameTime)
 
-        public override void CollisionHandler(List<Entity> children)
+        public override void CollisionHandler(List<Entity> list)
         {
-            foreach (Entity entity in children)
+            foreach (Entity entity in list)
             {
                 if (entity._entityCollisionFlag == true && entity is Asteroid)
                 //if (entity is Asteroid)
@@ -163,7 +180,52 @@ namespace _2._5D_FYP
                     entity._entityCollisionFlag = false;
                 }
             }
-
         } // End of CollisionHandler(List<Entity> children)
+
+        public void CheckPlayerAsteroidCollision(List<Entity> list) 
+        {
+            foreach (Entity entity in list)
+            {
+                if (entity._entityCollisionFlag == true && entity is Asteroid)
+                //if (entity is Asteroid)
+                {
+                    _health -= 5;
+                    entity._entityCollisionFlag = false;
+                    Console.WriteLine("hit ast");
+                }
+            }
+        }
+
+        public void CheckPlayerMetalCollision(List<Entity> list)
+        {
+            foreach (Entity entity in list)
+            {
+                if (entity._entityCollisionFlag == true && entity is Metal)
+                //if (entity is Asteroid)
+                {
+                    entity._entityCollisionFlag = false;
+                    Console.WriteLine("hit metal");
+                }
+            }
+        }
+
+        public void CheckPlayerStationCollision(List<Entity> list)
+        {
+            foreach (Entity entity in list)
+            {
+                if (entity._entityCollisionFlag == true && entity is Station)
+                //if (entity is Asteroid)
+                {
+                    _health++;
+                    entity._entityCollisionFlag = false;
+                    Console.WriteLine("hit station");
+                }
+            }
+        }
+
+        void addForce(Vector3 force)
+        {
+            this._force += force;
+        }
     } // End of Player Class
 }

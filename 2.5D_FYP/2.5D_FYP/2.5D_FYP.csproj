@@ -110,7 +110,6 @@
     <Compile Include="Asteroid.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="Camera.cs" />
-    <Compile Include="CollisionDetection.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="FloatingObjects.cs" />
     <Compile Include="Ground.cs" />

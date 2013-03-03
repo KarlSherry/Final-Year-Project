@@ -31,15 +31,31 @@ namespace _2._5D_FYP
             set { children = value; }
         }
 
-        public Ground Gound {get; set; }
+        List<Entity> asteroidList = new List<Entity>();
+        public List<Entity> AsteroidList
+        {
+        get { return asteroidList; }
+        set { asteroidList = value; }
+        }
+
+        List<Entity> metalList = new List<Entity>();
+        public List<Entity> MetalList
+        {
+            get { return metalList; }
+            set { metalList = value; }
+        }
+
+        public Ground Ground {get; set; }
         public World World { get; set; }
         public Camera Camera { get; set; }
         public Player Player { get; set; }
         public HUD HeadsUpDisplay { get; set; }
         public Station Station { get; set; }
         public Asteroid[] Asteroid { get; set; }
+        public Metal[] Metal { get; set; }
 
         private int AsteroidCount = 100;
+        private int MetalCount = 50;
 
         public Game1()
         {
@@ -56,14 +72,14 @@ namespace _2._5D_FYP
 
         protected override void Initialize()
         {
+            World = new World();
+            children.Add(World);
+
             Camera = new Camera();
             children.Add(Camera);
 
-            Gound = new Ground();
-            children.Add(Gound);
-
-            World = new World();
-            children.Add(World);
+            Ground = new Ground();
+            children.Add(Ground);
 
             Player = new Player();
             children.Add(Player);
@@ -76,13 +92,30 @@ namespace _2._5D_FYP
             {
                 Asteroid[i] = new Asteroid();
                 Asteroid[i]._entityName = Asteroid[i]._entityName + "_"+ i;
-                Children.Add(Asteroid[i]);
+                AsteroidList.Add(Asteroid[i]);
+            }
+
+            Metal = new Metal[MetalCount];
+            for (int i = 0; i < MetalCount; i++)
+            {
+                Metal[i] = new Metal();
+                Metal[i]._entityName = Metal[i]._entityName + "_" + i;
+                MetalList.Add(Metal[i]);
             }
 
             HeadsUpDisplay = new HUD();
 
             for (int i = 0; i < children.Count; i++)
+            {
                 children[i].Initialize();
+                Console.WriteLine(children.ElementAt(i)._entityName);
+            }
+
+            for (int i = 0; i < asteroidList.Count; i++)
+                asteroidList[i].Initialize();
+
+            for (int i = 0; i < metalList.Count; i++)
+                metalList[i].Initialize();
 
             base.Initialize();
         }
@@ -93,6 +126,12 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < children.Count; i++)
                 children[i].LoadContent();
+
+            for (int i = 0; i < asteroidList.Count; i++)
+                asteroidList[i].LoadContent();
+
+            for (int i = 0; i < metalList.Count; i++)
+                metalList[i].LoadContent();
 
             HeadsUpDisplay.LoadContent();
         }
@@ -107,9 +146,13 @@ namespace _2._5D_FYP
                 this.Exit();
 
             for (int i = 0; i < children.Count; i++)
-            {
                 children[i].Update(gameTime);
-            }
+
+            for (int i = 0; i < asteroidList.Count; i++)
+                asteroidList[i].Update(gameTime);
+
+            for (int i = 0; i < metalList.Count; i++)
+                metalList[i].Update(gameTime);
             
             HeadsUpDisplay.Update(Player, gameTime);
 
@@ -128,6 +171,12 @@ namespace _2._5D_FYP
                 GraphicsDevice.DepthStencilState = state;
                 children[i].Draw(gameTime);
             }
+
+            for (int i = 0; i < asteroidList.Count; i++)
+                asteroidList[i].Draw(gameTime);
+
+            for (int i = 0; i < metalList.Count; i++)
+                metalList[i].Draw(gameTime);
 
             HeadsUpDisplay.Draw(gameTime);
             spriteBatch.End();

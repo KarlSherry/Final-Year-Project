@@ -6,34 +6,53 @@ using Microsoft.Xna.Framework;
 
 namespace _2._5D_FYP
 {
-    class Metal : Asteroid
+    public class Metal : Entity
     {
-        public List<Entity> materialList = new List<Entity>();
+        float angle = 0.0f;
+        bool hasHitSomething;
 
-        int materialCount = 25;
+        List<Entity> childrenList = new List<Entity>();
+        List<Entity> asteroidList = new List<Entity>();
 
-        Asteroid[] material;
-
-        public Metal() 
+        public Metal()
         {
-            material = new Asteroid[materialCount];
             _entityModel = "Models//StationMaterial";
-        } 
+            _entityName = "Metal";
+            _type = this.GetType();
 
-        public void CreateMaterialList() 
+            _pos = new Vector3(Entity.randomGenerator.Next(-900, 900), _YAxis, Entity.randomGenerator.Next(-900, 900));
+            _look = new Vector3(randomClamped(), 0, randomClamped());
+            _look.Normalize();
+
+            _maxSpeed = randomGenerator.Next(10, 25); _scale = 1.0f;
+
+            _alive = true;
+            hasHitSomething = false;
+        }
+
+        float randomClamped()
         {
-            for (int i = 0; i < materialCount; i++)
-            {
-                if (materialList.Count < materialCount)
-                {
-                    material[i] = new Asteroid();
-                    material[i].Initialize();
-                    material[i]._entityModel = _entityModel;
-                    material[i]._pos = new Vector3(randomGenerator.Next(-900, 900), 50, randomGenerator.Next(-900, 900));
-                    materialList.Add(material[i]);
-                }
+            return 1.0f - ((float)randomGenerator.NextDouble() * 2.0f);
+        }
 
-                Game1.Instance().Children.Add(materialList.ElementAt(i));
+        public override void Update(GameTime gameTime)
+        {
+            if (_alive)
+            {
+                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
+
+                hasHitSomething = CheckCollision(childrenList);
+                if (hasHitSomething)
+                    CollisionHandler(childrenList);
+
+                angle += timeDelta;
+
+                _pos += _look * timeDelta * _maxSpeed;
+
+                if (_alive == false)
+                    game.MetalList.Remove(this);
             }
         }
     }

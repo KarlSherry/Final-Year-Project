@@ -136,19 +136,16 @@
       <Name>cobramk1</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
     </Compile>
     <Compile Include="Models\Elite Models\cobramk3.fbx">
       <Name>cobramk3</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
     </Compile>
     <Compile Include="Models\Elite Models\coriolis.fbx">
       <Name>coriolis</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>0.25</ProcessorParameters_Scale>
     </Compile>
     <Compile Include="Models\Elite Models\ferdelance.fbx">
       <Name>ferdelance</Name>

@@ -16,16 +16,16 @@ namespace _2._5D_FYP
     public class Bullet : Entity
     {
         float travelTime = 0.0f;
-        float maxTime = 3.0f;
+        float maxTime = 5.0f;
 
         public Bullet() 
         {
-            _alive = true;
-        }
+            _entityModel = "Models//sphere";
+            _entityName = "Bullet";
 
-        public override void LoadContent()
-        {
-            _model = Game1.Instance().Content.Load<Model>(_entityModel);
+            _scale = 0.5f;
+
+            _alive = true;
         }
 
         public override void Update(GameTime gameTime)
@@ -34,7 +34,7 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateScale(.5f) * Matrix.CreateTranslation(_pos);
+                _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
                 float speed = 10.0f;
                 walk(speed * timeDelta);
@@ -46,32 +46,6 @@ namespace _2._5D_FYP
                 }
 
                 travelTime += timeDelta;
-            }
-        }
-
-        public override void Draw(GameTime gameTime)
-        {
-            if (_alive)
-            {
-                if (_model != null)
-                {
-                    foreach (ModelMesh mesh in _model.Meshes)
-                    {
-                        _entitySphere = mesh.BoundingSphere;
-                        _entitySphere.Center = _pos;
-                        _entitySphere.Radius = 5;
-
-                        foreach (BasicEffect effect in mesh.Effects)
-                        {
-                            effect.EnableDefaultLighting();
-                            effect.PreferPerPixelLighting = true;
-                            effect.World = _worldTransform;
-                            effect.Projection = Game1.Instance().Camera.getProjection();
-                            effect.View = Game1.Instance().Camera.getView();
-                        }
-                        mesh.Draw();
-                    }
-                }
             }
         }
     }

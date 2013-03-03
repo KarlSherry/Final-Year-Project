@@ -7,54 +7,34 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace _2._5D_FYP
 {
-    public class Station  : Entity
+    public class Station : Entity
     {
         float angle = 0.0f;
 
         public Station()
         {
-            _pos = new Vector3(0, 50, 0);
+            _entityModel = "Models//Elite Models//coriolis";
+            _entityName = "Station";
+            _type = this.GetType();
+
+            _pos = new Vector3(0, _YAxis, 0);
             _look = Vector3.Forward;
 
-            _entityName = "Station";
-        }
+            _scale = 0.25f;
 
-        public override void Initialize()
-        {
-            _type = this.GetType();
-        }
-        public override void LoadContent()
-        {
-            _model = Game1.Instance().Content.Load<Model>("Models//Elite Models//coriolis");
+            _alive = true;
         }
 
         public override void Update(GameTime gameTime)
         {
-            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateWorld(_pos, _look, _up);
-            angle += timeDelta;
-        }
-
-        public override void Draw(GameTime gameTime)
-        {
-            if (_model != null)
+            if (_alive)
             {
-                foreach (ModelMesh mesh in _model.Meshes)
-                {
-                    _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
-                    _entitySphere.Center = _pos;
-                    _entitySphere.Radius = 50;
-                    foreach (BasicEffect effect in mesh.Effects)
-                    {
-                        effect.EnableDefaultLighting();
-                        effect.PreferPerPixelLighting = true;
-                        effect.World = _worldTransform;
-                        effect.Projection = Game1.Instance().Camera.getProjection();
-                        effect.View = Game1.Instance().Camera.getView();
-                    }
-                    mesh.Draw();
-                } // End of foreach(ModelMesh mesh in _model.Meshes)
-            } // End of if(_model != null)
-        } // End of Draw(GameTime gameTime)
+                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+
+                angle += timeDelta;
+            }
+        }
     } // End of Station Class
 }

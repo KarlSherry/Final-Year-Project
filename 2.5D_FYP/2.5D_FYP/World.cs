@@ -11,8 +11,10 @@ namespace _2._5D_FYP
 
         public World() 
         {
-            worldWidth = 1000;
-            worldHeight = 1000;
+            _entityName = "World";
+
+            worldWidth = 5000;
+            worldHeight = 5000;
         }
     }
 }

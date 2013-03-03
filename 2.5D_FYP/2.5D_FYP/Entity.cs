@@ -27,8 +27,9 @@ namespace _2._5D_FYP
         public Vector3 _basis = Vector3.Forward;
         public Vector3 _globalUp = Vector3.Backward;
 
-        public float _maxSpeed = 0.0f, _maxForce = 0.0f, _mass = 0.0f, _rotationSpeed = 0.0f;
+        public float _maxSpeed = 0.0f, _maxForce = 0.0f, _mass = 0.0f, _rotationSpeed = 0.0f, _scale = 1.0f;
         public float _health = 0.0f, _shield = 0.0f;
+        public int _YAxis = 10;
 
         public bool _entityCollisionFlag;
 
@@ -54,7 +55,7 @@ namespace _2._5D_FYP
                     {
                         _entitySphere = mesh.BoundingSphere.Transform(_worldTransform);
                         _entitySphere.Center = _pos;
-                        _entitySphere.Radius = mesh.BoundingSphere.Radius;
+                        _entitySphere.Radius = mesh.BoundingSphere.Radius * _scale;
 
                         foreach (BasicEffect effect in mesh.Effects)
                         {
