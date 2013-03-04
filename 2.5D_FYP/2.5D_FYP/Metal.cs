@@ -9,10 +9,6 @@ namespace _2._5D_FYP
     public class Metal : Entity
     {
         float angle = 0.0f;
-        bool hasHitSomething;
-
-        List<Entity> childrenList = new List<Entity>();
-        List<Entity> asteroidList = new List<Entity>();
 
         public Metal(List<Entity> list)
         {
@@ -26,7 +22,6 @@ namespace _2._5D_FYP
 
             _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
 
-            hasHitSomething = false;
             _alive = true;
 
             parentList = list;
@@ -47,17 +42,12 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
-                hasHitSomething = CheckCollision(childrenList);
-                if (hasHitSomething)
-                    CollisionHandler(childrenList);
-
                 angle += timeDelta;
 
                 _pos += _look * timeDelta * _maxSpeed;
-
-                if (_alive == false)
-                    parentList.Remove(this);
             }
+            else
+                parentList.Remove(this);
         }
     }
 }

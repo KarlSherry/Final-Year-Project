@@ -9,11 +9,16 @@ namespace _2._5D_FYP
 {
     public class Asteroid : Entity
     {
+        Vector3 acceleration;
+
         float angle = 0.0f;
+
         bool hasHitSomething;
 
-        List<Entity> childrenList = new List<Entity>();
+        List<Entity> stageList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
+        List<Entity> metalList = new List<Entity>();
+        List<Entity> playerBulletList = new List<Entity>();
 
         public Asteroid(List<Entity> list)
         {
@@ -25,7 +30,7 @@ namespace _2._5D_FYP
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
-            _maxSpeed = randomGenerator.Next(10, 25); _scale = randomGenerator.Next(1, 4);
+            _maxSpeed = randomGenerator.Next(10, 25); _maxForce = 5.0f;  _scale = randomGenerator.Next(1, 4); _mass = _scale;
 
             hasHitSomething = false;
             _alive = true;
@@ -34,7 +39,10 @@ namespace _2._5D_FYP
             if (_alive)
                 list.Add(this);
 
-            childrenList = game.StageList;
+            stageList = game.StageList;
+            asteroidList = game.AsteroidList;
+            metalList = game.MetalList;
+            playerBulletList = game.PlayerBulletList;
         }
 
         float randomClamped()
@@ -50,13 +58,37 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
-                hasHitSomething = CheckCollision(childrenList);
+                hasHitSomething = CheckCollision(stageList);
                 if (hasHitSomething)
-                    CollisionHandler(childrenList);
+                    CollisionHandler(stageList);
 
-                angle += timeDelta;
+                hasHitSomething = CheckCollision(asteroidList);
+                if(hasHitSomething)
+                    CollisionHandler(asteroidList);
+
+                hasHitSomething = CheckCollision(metalList);
+                if (hasHitSomething)
+                    CollisionHandler(metalList);
+
+                hasHitSomething = CheckCollision(playerBulletList);
+                if(hasHitSomething)
+                    CollisionHandler(playerBulletList);
+                
+                /*_velocity += _look * _maxSpeed * timeDelta;
+
+                _pos += _velocity * timeDelta;
+
+                _force += _look * _maxForce;
+
+                if (_velocity.Length() > _maxSpeed)
+                {
+                    _velocity.Normalize();
+                    _velocity *= _maxSpeed;
+                }*/
 
                 _pos += _look * timeDelta * _maxSpeed;
+
+                angle += timeDelta;
 
                 if (!_alive)
                     parentList.Remove(this);
@@ -72,9 +104,31 @@ namespace _2._5D_FYP
                     _alive = false;
                     entity._entityCollisionFlag = false;
                 }
-                else if (entity._entityCollisionFlag == true && entity is Asteroid)
+                if (entity._entityCollisionFlag == true && entity is Asteroid)
                 {
-                    entity._look = -entity._look;
+                    _look = -_look;
+                    //entity._look.Normalize();
+                    /*//entity._look = _look + entity._look;
+                    //entity._look.Normalize();
+
+                    entity._force = entity._look * entity._maxForce;
+                    if (entity._force.Length() > _maxForce)
+                    {
+                        entity._force.Normalize();
+                        entity._force *= _maxForce;
+                    }*/
+
+                    entity._entityCollisionFlag = false;
+                }
+                if (entity._entityCollisionFlag == true && entity is Metal)
+                {
+                    entity._alive = false;
+                    entity._entityCollisionFlag = false;
+                }
+                if(entity._entityCollisionFlag == true && entity is Bullet)
+                {
+                    _alive = false;
+                    entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }
             }            

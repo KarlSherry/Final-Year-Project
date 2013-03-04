@@ -25,5 +25,5 @@ Content\Models\Elite Models\transporter.xnb
 Content\Models\Elite Models\viper.xnb
 Content\Models\Station.xnb
 Content\Models\Elite Models\cobramk1.xnb
-Content\Models\Elite Models\coriolis.xnb
 Content\Models\Elite Models\cobramk3.xnb
+Content\Models\Elite Models\coriolis.xnb

@@ -111,7 +111,6 @@
     <Compile Include="Bullet.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="FloatingObjects.cs" />
     <Compile Include="Ground.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="Metal.cs" />

@@ -38,10 +38,9 @@ namespace _2._5D_FYP
         public Station Station { get; set; }
         public Asteroid[] Asteroid { get; set; }
         public Metal[] Metal { get; set; }
-        Bullet b;
 
         private int AsteroidCount = 100;
-        private int MetalCount = 50;
+        private int MetalCount = 0;
 
         public Game1()
         {
@@ -67,10 +66,8 @@ namespace _2._5D_FYP
             World = new World(StageList);//
             Camera = new Camera(StageList);//
             Ground = new Ground(StageList);//
-            Player = new Player(StageList);//
             Station = new Station(StageList);//
-
-            b = new Bullet(PlayerBulletList);
+            Player = new Player(StageList);//
 
             Asteroid = new Asteroid[AsteroidCount];//
             for (int i = 0; i < AsteroidCount; i++) 

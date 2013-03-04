@@ -16,19 +16,23 @@ namespace _2._5D_FYP
     public class Bullet : Entity
     {
         float travelTime = 0.0f;
-        float maxTime = 5.0f;
+        float maxTime = 1.0f;
+
+        List<Entity> asteroidList = new List<Entity>();
 
         public Bullet(List<Entity> list) 
         {
             _entityModel = "Models//sphere";
             _entityName = "Bullet";
 
-            _scale = 1.0f;
+            _maxSpeed = 100.0f; _scale = 1.0f;
 
             _alive = true;
 
             parentList = list;
                 parentList.Add(this);
+
+            asteroidList = game.AsteroidList;
         }
 
         public override void Update(GameTime gameTime)
@@ -39,11 +43,20 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
-                float speed = 10.0f;
-                walk(speed * timeDelta);
+                walk(_maxSpeed * timeDelta);
+
+                if (travelTime >= maxTime)
+                {
+                    _alive = false;
+                }
 
                 travelTime += timeDelta;
+
+                if (!_alive)
+                    parentList.Remove(this);
             }
         }
+
+
     }
 }

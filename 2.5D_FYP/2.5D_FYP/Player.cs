@@ -12,15 +12,10 @@ namespace _2._5D_FYP
     {
         public Vector3 acceleration;
         public Weapon weapon;
-        BoundingSphere playerSphere;
-        public BoundingSphere PlayerSphere
-        {
-            get { return playerSphere; }
-            set { playerSphere = value; }
-        }
 
         public int capacity = 0;
         public int weaponIndex = 0;
+
         public string weaponName = null;
         public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
 
@@ -29,9 +24,10 @@ namespace _2._5D_FYP
         public bool keyPressed = false;
         bool hasHitSomething;
 
-        List<Entity> childrenList = new List<Entity>();
+        List<Entity> stageList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
         List<Entity> metalList = new List<Entity>();
+        List<Entity> enemyBulletList = new List<Entity>();
 
         public Player(List<Entity> list)
         {
@@ -46,7 +42,7 @@ namespace _2._5D_FYP
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 500.0f; _maxForce = 150.0f; _mass = 10.0f; _rotationSpeed = 5.0f; _scale = 0.5f;
+            _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
             _health = 100.0f; _shield = 100.0f;
 
             weaponName = weaponArray[weaponIndex];
@@ -60,9 +56,10 @@ namespace _2._5D_FYP
             if (_alive)
                 parentList.Add(this);
 
-            childrenList = game.StageList;
+            stageList = game.StageList;
             asteroidList = game.AsteroidList;
             metalList = game.MetalList;
+            enemyBulletList = game.EnemyBulletList;
         } // End of Player()
 
         public override void Update(GameTime gameTime)
@@ -81,9 +78,9 @@ namespace _2._5D_FYP
                 if (hasHitSomething)
                     CollisionHandler(metalList);
 
-                hasHitSomething = CheckCollision(childrenList);
+                hasHitSomething = CheckCollision(stageList);
                 if (hasHitSomething)
-                    CollisionHandler(childrenList);
+                    CollisionHandler(stageList);
 
                 weapon.Update(gameTime);
                 weapon.CheckWeaponFire(weaponIndex, this);
@@ -140,19 +137,25 @@ namespace _2._5D_FYP
                 }
                 else keyPressed = false;
 
+                if (_shield <= 0)
+                    _shield = 0;
+                if (_shield > 100)
+                    _shield = 100;
+
                 if (_health == 0) 
-                {
                     _alive = false;
-                    parentList.Remove(this);
-                }
                 if (_health <= 0)
-                {
                     _health = 0;
-                }
                 if (_health > 100)
-                {
                     _health = 100;
-                }
+
+                if (capacity <= 0)
+                    capacity = 0;
+                if (capacity > 15)
+                    capacity = 15;
+
+                if (!_alive)
+                    parentList.Remove(this);
             }
 
             hasHitSomething = false;
@@ -165,7 +168,10 @@ namespace _2._5D_FYP
             {
                 if (entity._entityCollisionFlag == true && entity is Asteroid)
                 {
-                    _health -= 5;
+                    _shield -= 5 * entity._scale;
+                    if (_shield <= 0)
+                        _health -= 5 * entity._scale;
+
                     entity._entityCollisionFlag = false;
                 }
                 if (entity._entityCollisionFlag == true && entity is Station)
@@ -175,6 +181,15 @@ namespace _2._5D_FYP
                 }
                 if (entity._entityCollisionFlag == true && entity is Metal)
                 {
+                    capacity += 1;
+                    entity._alive = false;
+                    Console.WriteLine("metal");
+                    entity._entityCollisionFlag = false;
+                }
+                if (entity._entityCollisionFlag == true && entity is Bullet)
+                {
+                    _health -= 5;
+                    entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }
             }

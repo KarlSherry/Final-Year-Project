@@ -67,7 +67,7 @@ namespace _2._5D_FYP
                         {
                             lastBulletFired = 0.0f;
 
-                            //FireBullet(game.PlayerBulletList, e._pos, e._look);
+                            FireBullet(e, e._pos, e._look);
                         }
                         break;
                     }
@@ -112,8 +112,6 @@ namespace _2._5D_FYP
 
             bullet._entityModel = "Models//sphere";
             bullet.LoadContent();
-            //if (e is Enemy)
-               // bullet = new Bullet(game.EnemyBulletList);
             bullet._pos = pos;
             bullet._look = look;
         }
