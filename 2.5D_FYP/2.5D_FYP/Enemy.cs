@@ -8,10 +8,14 @@ namespace _2._5D_FYP
 {
     public class Enemy : Entity
     {
+        Vector3 acceleration;
+
         int enemyTypeIndex = 0;
         string[] enemyType = { "anaconda", "python", "viper", "gecko" };
 
         bool hasHitSomething;
+
+        List<Entity> playerBulletList = new List<Entity>();
 
         public Enemy(List<Entity> list)
         {
@@ -31,6 +35,8 @@ namespace _2._5D_FYP
             parentList = list;
             if (_alive)
                 parentList.Add(this);
+
+            playerBulletList = game.PlayerBulletList;
         }
 
         float randomClamped()
@@ -40,9 +46,70 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (_alive)
+            {
+                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            _worldTransform = Matrix.CreateRotationY(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateRotationY(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+
+                hasHitSomething = CheckCollision(playerBulletList);
+                if (hasHitSomething)
+                    CollisionHandler(playerBulletList);
+
+                _look = Vector3.Normalize(_velocity);
+
+                acceleration = _force / _mass;
+
+                _velocity += acceleration * timeDelta;
+
+                if (_velocity.Length() > _maxSpeed)
+                {
+                    _velocity.Normalize();
+                    _velocity *= _maxSpeed;
+                }
+
+                _pos += _velocity * timeDelta;
+
+                _force = pursue(game.Player);
+
+                if (!_alive)
+                    parentList.Remove(this);
+            }
+            else parentList.Remove(this);           
+        }
+
+        Vector3 seek(Vector3 targetPos)
+        {
+            Vector3 desiredVelocity;
+
+            desiredVelocity = targetPos - _pos;
+            desiredVelocity.Normalize();
+            desiredVelocity *= _maxSpeed;
+
+            return (desiredVelocity - _velocity);
+        }
+
+        Vector3 pursue(Entity entity)
+        {
+            float dist = (entity._pos - _pos).Length();
+
+            float lookAhead = (dist / _maxSpeed);
+
+            Vector3 target = entity._pos + (lookAhead * entity._velocity);
+            return seek(target);
+        }
+
+        public void CollisionHandler(List<Entity> list)
+        {
+            foreach (Entity entity in list)
+            {
+                if (entity._entityCollisionFlag == true && entity is Bullet)
+                {
+                    _alive = false;
+                    entity._alive = false;
+                    entity._entityCollisionFlag = false;
+                }
+            }
         }
     }
 }

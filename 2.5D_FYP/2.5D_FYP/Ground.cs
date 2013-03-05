@@ -31,13 +31,13 @@ namespace _2._5D_FYP
 
             vertices = new VertexPositionTexture[]
             {
-                new VertexPositionTexture(new Vector3(-groundWidth, 0, groundHeight), new Vector2(0, theight)),
-                new VertexPositionTexture(new Vector3(-groundWidth, 0, -groundHeight), new Vector2(0,0)),
-                new VertexPositionTexture(new Vector3(groundWidth, 0, groundHeight), new Vector2(twidth, theight)),
+                new VertexPositionTexture(new Vector3(-groundWidth, -10, groundHeight), new Vector2(0, theight)),
+                new VertexPositionTexture(new Vector3(-groundWidth, -10, -groundHeight), new Vector2(0,0)),
+                new VertexPositionTexture(new Vector3(groundWidth, -10, groundHeight), new Vector2(twidth, theight)),
 
-                new VertexPositionTexture(new Vector3(groundWidth, 0, groundHeight), new Vector2(twidth, theight)),
-                new VertexPositionTexture(new Vector3(-groundWidth, 0, -groundHeight), new Vector2(0, 0)),
-                new VertexPositionTexture(new Vector3(groundWidth, 0, -groundHeight), new Vector2(twidth, 0))
+                new VertexPositionTexture(new Vector3(groundWidth, -10, groundHeight), new Vector2(twidth, theight)),
+                new VertexPositionTexture(new Vector3(-groundWidth, -10, -groundHeight), new Vector2(0, 0)),
+                new VertexPositionTexture(new Vector3(groundWidth, -10, -groundHeight), new Vector2(twidth, 0))
             };
 
             Texture2D portrait = Game1.Instance().Content.Load<Texture2D>("Stars");

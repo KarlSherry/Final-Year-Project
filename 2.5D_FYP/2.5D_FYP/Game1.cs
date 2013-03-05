@@ -13,6 +13,9 @@ namespace _2._5D_FYP
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public int currentRound = 1;
+        int previousRound = 0;
+
         private static Game1 instance = null;
         public static Game1 Instance() { return instance; }
         GraphicsDeviceManager graphics;
@@ -42,9 +45,9 @@ namespace _2._5D_FYP
 
         public HUD HeadsUpDisplay { get; set; }
 
-        private int EnemyCount = 25;
-        private int AsteroidCount = 100;
-        private int MetalCount = 0;
+        private int EnemyCount;
+        private int AsteroidCount;
+        private int MetalCount;
 
         public Game1()
         {
@@ -61,6 +64,10 @@ namespace _2._5D_FYP
 
         protected override void Initialize()
         {
+            EnemyCount = 5 * currentRound;
+            AsteroidCount = 100;
+            MetalCount = 0;
+
             StageList = new List<Entity>();
             EnemyList = new List<Entity>();
             AsteroidList = new List<Entity>();
@@ -151,6 +158,18 @@ namespace _2._5D_FYP
         {
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
                 this.Exit();
+
+            previousRound = currentRound;
+
+            if (EnemyList.Count <= 0)
+                currentRound += 1;
+
+            /*if (currentRound != previousRound)
+            {
+                Initialize();
+                LoadContent();
+                previousRound = currentRound;
+            }*/
 
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].Update(gameTime);

@@ -157,9 +157,7 @@ namespace _2._5D_FYP
                 if (!_alive)
                     parentList.Remove(this);
             }
-
-            hasHitSomething = false;
-            base.Update(gameTime);
+            else parentList.Remove(this);
         } // End of Update(GameTime gameTime)
 
         public override void CollisionHandler(List<Entity> list)

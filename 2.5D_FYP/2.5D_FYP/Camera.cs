@@ -19,15 +19,19 @@ namespace _2._5D_FYP
         public Matrix view;
         private MouseState mouseState;
 
+        private bool topDown = false;
+
         public Camera(List<Entity> list)
         {
             _entityName = "Camera";
 
-            _pos = new Vector3(0.0f, 300.0f, 100.0f);
-            _look = new Vector3(0.0f, 0.0f, -1.0f);
+            _pos = new Vector3(0, 300, 100);
+            _look = Vector3.Forward;
 
             parentList = list;
             parentList.Add(this);
+
+            topDown = false;
         }
 
         public override void Update(GameTime gameTime)
@@ -53,14 +57,25 @@ namespace _2._5D_FYP
             Vector3 playerPosition = Game1.Instance().Player._pos;
 
             KeyboardState k = Keyboard.GetState();
-            if(k.IsKeyDown(Keys.F2))
-                view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
+            if (k.IsKeyDown(Keys.F2))
+                topDown = false;
             if (k.IsKeyDown(Keys.F1))
             {
-                view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
-                //_pos = new Vector3(playerPosition.X, playerPosition.Y + 100.0f, playerPosition.Z);
-                //_look = Game1.Instance().Player._look;
+                topDown = true;
             }
+
+            if (topDown)
+            {
+                _pos = new Vector3(playerPosition.X, playerPosition.Y + 500.0f, playerPosition.Z);
+                _look = Game1.Instance().Player._look;
+                view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
+            }
+            else
+            {
+                _pos = new Vector3(0, 300, 0);
+                view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
+            }
+
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);
         }
 

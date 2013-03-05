@@ -49,8 +49,7 @@ namespace _2._5D_FYP
             Game1.Instance().spriteBatch.DrawString(gameFont, "Stored: " + capacity, new Vector2(115, 50), Color.White);
             Game1.Instance().spriteBatch.DrawString(gameFont, "Weapon: " + Game1.Instance().Player.weaponName, new Vector2(10, 70), Color.White);
             Game1.Instance().spriteBatch.DrawString(gameFont, "Player Position: (" + playerPosition.X + "," + playerPosition.Y + "," + playerPosition.Z + ")", new Vector2(10, 90), Color.White);
-            Game1.Instance().spriteBatch.DrawString(gameFont, "Player Acceleration: (" + playerAcceleration.X + "," + playerAcceleration.Y + "," + playerAcceleration.Z + ")", new Vector2(10, 110), Color.White);
-            Game1.Instance().spriteBatch.DrawString(gameFont, "Player Force: (" + playerForce.X + "," + playerForce.Y + "," + playerForce.Z + ")", new Vector2(10, 130), Color.White);
+            Game1.Instance().spriteBatch.DrawString(gameFont, "Current Round: " + Game1.Instance().currentRound, new Vector2(10, 110), Color.White);
             //Game1.Instance().spriteBatch.DrawString(gameFont, "Random Shit:" + Game1.Instance().Asteroid.Alive, new Vector2(10, 150), Color.White);
 
             // Draws the Player's shield bar

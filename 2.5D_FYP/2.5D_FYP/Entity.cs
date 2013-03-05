@@ -29,7 +29,7 @@ namespace _2._5D_FYP
 
         public float _maxSpeed = 0.0f, _maxForce = 0.0f, _scale = 1.0f, _mass = 0.0f, _rotationSpeed = 0.0f; 
         public float _health = 0.0f, _shield = 0.0f;
-        public int _YAxis = 10;
+        public int _YAxis = 0;
 
         public bool _entityCollisionFlag;
 

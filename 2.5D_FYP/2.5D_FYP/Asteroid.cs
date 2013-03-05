@@ -94,6 +94,7 @@ namespace _2._5D_FYP
                 if (!_alive)
                     parentList.Remove(this);
             }
+            else parentList.Remove(this);
         }
 
         public override void CollisionHandler(List<Entity> list)

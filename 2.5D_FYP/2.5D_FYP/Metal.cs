@@ -47,8 +47,7 @@ namespace _2._5D_FYP
 
                 _pos += _look * timeDelta * _maxSpeed;
             }
-            else
-                parentList.Remove(this);
+            else parentList.Remove(this);
         }
     }
 }
