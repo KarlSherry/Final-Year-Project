@@ -45,9 +45,8 @@ namespace _2._5D_FYP
 
         public HUD HeadsUpDisplay { get; set; }
 
-        private int EnemyCount;
-        private int AsteroidCount;
-        private int MetalCount;
+        private int EnemyBaseCount = 5, AsteroidBaseCount = 15, MetalBaseCount = 15;
+        private int EnemyCount, AsteroidCount, MetalCount;
 
         public Game1()
         {
@@ -64,9 +63,9 @@ namespace _2._5D_FYP
 
         protected override void Initialize()
         {
-            EnemyCount = 5 * currentRound;
-            AsteroidCount = 100;
-            MetalCount = 0;
+            EnemyCount = EnemyBaseCount * currentRound;
+            AsteroidCount = AsteroidBaseCount * currentRound;
+            MetalCount = MetalBaseCount * currentRound;
 
             StageList = new List<Entity>();
             EnemyList = new List<Entity>();
@@ -86,6 +85,7 @@ namespace _2._5D_FYP
             {
                 Enemies[i] = new Enemy(EnemyList);
                 Enemies[i]._entityName = Enemies[i]._entityName + "_" + i;
+                Console.WriteLine(Enemies[i]._entityName);
             }
 
             Asteroids = new Asteroid[AsteroidCount];//
@@ -93,6 +93,7 @@ namespace _2._5D_FYP
             {
                 Asteroids[i] = new Asteroid(AsteroidList);
                 Asteroids[i]._entityName = Asteroids[i]._entityName + "_"+ i;
+                Console.WriteLine(Asteroids[i]._entityName);
             }
 
             Metals = new Metal[MetalCount];//
@@ -100,6 +101,7 @@ namespace _2._5D_FYP
             {
                 Metals[i] = new Metal(MetalList);
                 Metals[i]._entityName = Metals[i]._entityName + "_" + i;
+                Console.WriteLine(Metals[i]._entityName);
             }
 
             HeadsUpDisplay = new HUD();
@@ -161,8 +163,8 @@ namespace _2._5D_FYP
 
             previousRound = currentRound;
 
-            if (EnemyList.Count <= 0)
-                currentRound += 1;
+            //if (EnemyList.Count <= 0)
+               // currentRound += 1;
 
             /*if (currentRound != previousRound)
             {

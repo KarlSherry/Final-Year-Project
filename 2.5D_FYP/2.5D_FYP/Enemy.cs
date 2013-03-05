@@ -8,12 +8,16 @@ namespace _2._5D_FYP
 {
     public class Enemy : Entity
     {
-        Vector3 acceleration;
+        private Vector3 acceleration;
+        private Weapon weapon;
 
-        int enemyTypeIndex = 0;
+        private int weaponIndex = 0;
+
+        private int enemyTypeIndex = 0;
         string[] enemyType = { "anaconda", "python", "viper", "gecko" };
 
-        bool hasHitSomething;
+        public bool fireWeapon = false;
+        private bool hasHitSomething = false;
 
         List<Entity> playerBulletList = new List<Entity>();
 
@@ -29,12 +33,13 @@ namespace _2._5D_FYP
 
             _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.2f; _mass = 10.0f; _rotationSpeed = 5.0f;
 
-            hasHitSomething = false;
             _alive = true;
 
             parentList = list;
             if (_alive)
                 parentList.Add(this);
+
+            weapon = new Weapon();
 
             playerBulletList = game.PlayerBulletList;
         }
@@ -56,11 +61,19 @@ namespace _2._5D_FYP
                 if (hasHitSomething)
                     CollisionHandler(playerBulletList);
 
+                weapon.Update(gameTime);
+
                 _look = Vector3.Normalize(_velocity);
 
                 acceleration = _force / _mass;
 
                 _velocity += acceleration * timeDelta;
+                
+                _velocity *= 0.99f;
+
+                _pos += _velocity * timeDelta;
+
+                _force = pursue(game.Player);
 
                 if (_velocity.Length() > _maxSpeed)
                 {
@@ -68,9 +81,9 @@ namespace _2._5D_FYP
                     _velocity *= _maxSpeed;
                 }
 
-                _pos += _velocity * timeDelta;
-
-                _force = pursue(game.Player);
+                if ((game.Player._pos - _pos).Length() < 100)
+                    weapon.CheckWeaponFire(weaponIndex, this);
+                    
 
                 if (!_alive)
                     parentList.Remove(this);
@@ -99,7 +112,7 @@ namespace _2._5D_FYP
             return seek(target);
         }
 
-        public void CollisionHandler(List<Entity> list)
+        public override void CollisionHandler(List<Entity> list)
         {
             foreach (Entity entity in list)
             {

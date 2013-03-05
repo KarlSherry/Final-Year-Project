@@ -13,9 +13,7 @@ namespace _2._5D_FYP
         Texture2D playerHealthBar;
         Texture2D playerShieldBar;
         Texture2D playerCapacityBar;
-        Vector3 playerAcceleration;
         Vector3 playerPosition;
-        Vector3 playerForce;
         int health;
         int shield;
         int capacity;
@@ -38,8 +36,6 @@ namespace _2._5D_FYP
             shield = (int)player._shield;
             capacity = (int)player.capacity;
             playerPosition = player._pos;
-            playerAcceleration = player.acceleration;
-            playerForce = player._force;
         }
 
         public void Draw(GameTime gameTime)

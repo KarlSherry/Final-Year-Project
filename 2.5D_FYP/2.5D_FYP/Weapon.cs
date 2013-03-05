@@ -12,9 +12,9 @@ namespace _2._5D_FYP
         float lastBulletFired = 0.0f;
         public Bullet bullet;
         Player player;
+        Enemy enemy;
 
-        KeyboardState keyState;
-        bool fireWeaponPressed = false;
+        bool shootWeapon = false;
 
         public Weapon()
         {
@@ -23,8 +23,6 @@ namespace _2._5D_FYP
         public override void Update(GameTime gameTime)
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            keyState = Keyboard.GetState();
 
             lastBulletFired += timeDelta;
 
@@ -39,31 +37,31 @@ namespace _2._5D_FYP
             {
                 case 0:
                     {
-                        if (e is Player && player.keyState.IsKeyDown(Keys.Space))
+                        if (e is Player && player.fireWeapon)
                         {
-                            if (!fireWeaponPressed)
+                            if (!shootWeapon)
                             {
                                 FireBullet(e, e._pos, e._look);
-                                fireWeaponPressed = true;
+                                shootWeapon = true;
                             }
                         }
-                        else fireWeaponPressed = false;
+                        else shootWeapon = false;
 
-                        /*if (e is Enemy)
+                        if (e is Enemy)
                         {
                             if (lastBulletFired >= 1.0f)
                             {
                                 lastBulletFired = 0.0f;
 
-                                FireBullet(e._pos, e._look);
+                                FireBullet(e, e._pos, e._look);
                             }
-                        }*/
+                        }
                         break;
                     }                    
 
                 case 1:
                     {
-                        if (e is Player && player.keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 0.1f) //10 milliseconds
+                        if (e is Player && player.fireWeapon && lastBulletFired >= 0.1f) //10 milliseconds
                         {
                             lastBulletFired = 0.0f;
 
@@ -74,7 +72,7 @@ namespace _2._5D_FYP
 
                 case 2: 
                     {
-                        if (e is Player && player.keyState.IsKeyDown(Keys.Space) && lastBulletFired >= 3.0f)
+                        if (e is Player && player.fireWeapon && lastBulletFired >= 3.0f)
                         {
                             lastBulletFired = 0.0f;
 
@@ -91,15 +89,15 @@ namespace _2._5D_FYP
 
                 default: //Assumes case 0
                     {
-                        if (keyState.IsKeyDown(Keys.Space))
+                        if (e is Player && player.fireWeapon)
                         {
-                            if (!fireWeaponPressed)
+                            if (!shootWeapon)
                             {
-                                //FireBullet(game.PlayerBulletList, player._pos, player._look);
-                                fireWeaponPressed = true;
+                                FireBullet(e, e._pos, e._look);
+                                shootWeapon = true;
                             }
                         }
-                        else fireWeaponPressed = false;
+                        else shootWeapon = false;
                         break;
                     }
             } //End of switch
@@ -109,6 +107,8 @@ namespace _2._5D_FYP
         {
             if(e is Player)
                 bullet = new Bullet(game.PlayerBulletList);
+            if (e is Enemy)
+                bullet = new Bullet(game.EnemyBulletList);
 
             bullet._entityModel = "Models//sphere";
             bullet.LoadContent();
