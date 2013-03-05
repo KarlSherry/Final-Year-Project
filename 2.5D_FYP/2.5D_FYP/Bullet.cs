@@ -18,21 +18,14 @@ namespace _2._5D_FYP
         float travelTime = 0.0f;
         float maxTime = 1.0f;
 
-        List<Entity> asteroidList = new List<Entity>();
+        Weapon w = Game1.Instance().Player.weapon;
 
         public Bullet(List<Entity> list) 
         {
-            _entityModel = "Models//sphere";
-            _entityName = "Bullet";
-
-            _maxSpeed = 100.0f; _scale = 1.0f;
-
             _alive = true;
 
             parentList = list;
                 parentList.Add(this);
-
-            asteroidList = game.AsteroidList;
         }
 
         public override void Update(GameTime gameTime)
@@ -58,6 +51,24 @@ namespace _2._5D_FYP
             else parentList.Remove(this);
         }
 
-
+        public void getBulletType(int b)
+        {
+            switch (b)
+            {
+                case 0:
+                    _entityModel = "Models//sphere";
+                    _maxSpeed = 100.0f; _scale = 1.0f;
+                    break;
+                case 1:
+                    _entityModel = "Models//sphere";
+                    _maxSpeed = 100.0f; _scale = 2.0f;
+                    break;
+                case 2:
+                    _entityModel = "Models//Elite Models//boa";
+                    _maxSpeed = 200.0f; _scale = 0.1f;
+                    break;
+                case 3: break;
+            }
+        }
     }
 }

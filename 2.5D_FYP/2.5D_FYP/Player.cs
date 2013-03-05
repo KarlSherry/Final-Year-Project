@@ -11,13 +11,13 @@ namespace _2._5D_FYP
     public class Player : Entity
     {
         private Vector3 acceleration;
-        private Weapon weapon;
+        public Weapon weapon;
 
         public int capacity = 0;
         private int weaponIndex = 0;
 
         public string weaponName = null;
-        private string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
+        public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
 
         private KeyboardState keyState;
 
@@ -25,6 +25,7 @@ namespace _2._5D_FYP
         private bool keyPressed = false;
         private bool hasHitSomething = false;
         private bool isThrusting = false;
+        public bool changeWeapon = false;
 
         List<Entity> stageList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
@@ -47,8 +48,8 @@ namespace _2._5D_FYP
             _maxSpeed = 500.0f; _maxForce = 300.0f; _scale = 0.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
             _health = 100.0f; _shield = 100.0f;
 
-            weaponName = weaponArray[weaponIndex];
             weapon = new Weapon();
+            weaponName = weaponArray[weaponIndex];
             
             _alive = true;
             
@@ -138,12 +139,13 @@ namespace _2._5D_FYP
                 {
                     if (!keyPressed)
                     {
+                        changeWeapon = true;
                         weaponIndex = ++weaponIndex % 4;
                         weaponName = weaponArray[weaponIndex];
                         keyPressed = true;
                     }
                 }
-                else keyPressed = false;
+                else { changeWeapon = false; keyPressed = false;}
 
                 if (_shield <= 0) _shield = 0;
                 if (_shield > 100) _shield = 100;
