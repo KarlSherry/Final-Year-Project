@@ -83,6 +83,10 @@ namespace _2._5D_FYP
                 if (hasHitSomething)
                     CollisionHandler(stageList);
 
+                hasHitSomething = CheckCollision(enemyBulletList);
+                if (hasHitSomething)
+                    CollisionHandler(enemyBulletList);
+
                 weapon.Update(gameTime);
                 weapon.CheckWeaponFire(weaponIndex, this);
 
@@ -183,7 +187,7 @@ namespace _2._5D_FYP
                 }
                 if (entity._entityCollisionFlag == true && entity is Bullet)
                 {
-                    _health -= 5;
+                    _health--;
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }

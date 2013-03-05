@@ -31,7 +31,7 @@ namespace _2._5D_FYP
                 , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
             _look = new Vector3(randomClamped(), 0, randomClamped());
 
-            _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.2f; _mass = 10.0f; _rotationSpeed = 5.0f;
+            _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.1f; _mass = 10.0f; _rotationSpeed = 5.0f;
 
             _alive = true;
 
@@ -40,6 +40,7 @@ namespace _2._5D_FYP
                 parentList.Add(this);
 
             weapon = new Weapon();
+            weaponIndex = Entity.randomGenerator.Next(0, 3);
 
             playerBulletList = game.PlayerBulletList;
         }
