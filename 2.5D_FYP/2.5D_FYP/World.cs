@@ -7,7 +7,7 @@ namespace _2._5D_FYP
 {
     public class World : Entity
     {
-        public float worldWidth = 0, worldHeight = 0;
+        public int worldWidth = 0, worldHeight = 0;
 
         public World(List<Entity> list) 
         {

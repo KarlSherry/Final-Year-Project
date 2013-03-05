@@ -25,20 +25,24 @@ namespace _2._5D_FYP
         }
 
         public List<Entity> StageList { get; set; }
+        public List<Entity> EnemyList { get; set; }
         public List<Entity> AsteroidList { get; set; }
         public List<Entity> MetalList { get; set; }
         public List<Entity> PlayerBulletList { get; set; }
         public List<Entity> EnemyBulletList { get; set; }
 
-        public Ground Ground {get; set; }
         public World World { get; set; }
         public Camera Camera { get; set; }
-        public Player Player { get; set; }
-        public HUD HeadsUpDisplay { get; set; }
+        public Ground Ground { get; set; }
         public Station Station { get; set; }
-        public Asteroid[] Asteroid { get; set; }
-        public Metal[] Metal { get; set; }
+        public Player Player { get; set; }
+        public Enemy[] Enemies { get; set; }
+        public Asteroid[] Asteroids { get; set; }
+        public Metal[] Metals { get; set; }
 
+        public HUD HeadsUpDisplay { get; set; }
+
+        private int EnemyCount = 25;
         private int AsteroidCount = 100;
         private int MetalCount = 0;
 
@@ -58,6 +62,7 @@ namespace _2._5D_FYP
         protected override void Initialize()
         {
             StageList = new List<Entity>();
+            EnemyList = new List<Entity>();
             AsteroidList = new List<Entity>();
             MetalList = new List<Entity>();
             PlayerBulletList = new List<Entity>();
@@ -69,18 +74,25 @@ namespace _2._5D_FYP
             Station = new Station(StageList);//
             Player = new Player(StageList);//
 
-            Asteroid = new Asteroid[AsteroidCount];//
-            for (int i = 0; i < AsteroidCount; i++) 
+            Enemies = new Enemy[EnemyCount];
+            for (int i = 0; i < EnemyCount; i++)
             {
-                Asteroid[i] = new Asteroid(AsteroidList);
-                Asteroid[i]._entityName = Asteroid[i]._entityName + "_"+ i;
+                Enemies[i] = new Enemy(EnemyList);
+                Enemies[i]._entityName = Enemies[i]._entityName + "_" + i;
             }
 
-            Metal = new Metal[MetalCount];//
+            Asteroids = new Asteroid[AsteroidCount];//
+            for (int i = 0; i < AsteroidCount; i++) 
+            {
+                Asteroids[i] = new Asteroid(AsteroidList);
+                Asteroids[i]._entityName = Asteroids[i]._entityName + "_"+ i;
+            }
+
+            Metals = new Metal[MetalCount];//
             for (int i = 0; i < MetalCount; i++)
             {
-                Metal[i] = new Metal(MetalList);
-                Metal[i]._entityName = Metal[i]._entityName + "_" + i;
+                Metals[i] = new Metal(MetalList);
+                Metals[i]._entityName = Metals[i]._entityName + "_" + i;
             }
 
             HeadsUpDisplay = new HUD();

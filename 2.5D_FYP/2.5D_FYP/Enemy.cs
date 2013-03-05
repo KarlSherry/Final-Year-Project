@@ -6,23 +6,26 @@ using Microsoft.Xna.Framework;
 
 namespace _2._5D_FYP
 {
-    public class Metal : Entity
+    public class Enemy : Entity
     {
-        float angle = 0.0f;
+        int enemyTypeIndex = 0;
+        string[] enemyType = { "anaconda", "python", "viper", "gecko" };
 
-        public Metal(List<Entity> list)
+        bool hasHitSomething;
+
+        public Enemy(List<Entity> list)
         {
-            _entityModel = "Models//StationMaterial";
-            _entityName = "Metal";
-            _type = this.GetType();
+            enemyTypeIndex = Entity.randomGenerator.Next(0, 4);
+            _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+            _entityName = "Enemy";
 
             _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
                 , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
             _look = new Vector3(randomClamped(), 0, randomClamped());
-            _look.Normalize();
 
-            _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
+            _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.2f; _mass = 10.0f; _rotationSpeed = 5.0f;
 
+            hasHitSomething = false;
             _alive = true;
 
             parentList = list;
@@ -37,18 +40,9 @@ namespace _2._5D_FYP
 
         public override void Update(GameTime gameTime)
         {
-            if (_alive)
-            {
-                float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
-
-                angle += timeDelta;
-
-                _pos += _look * timeDelta * _maxSpeed;
-            }
-            else
-                parentList.Remove(this);
+            _worldTransform = Matrix.CreateRotationY(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
         }
     }
 }

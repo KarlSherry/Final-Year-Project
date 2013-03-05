@@ -26,7 +26,8 @@ namespace _2._5D_FYP
             _entityName = "Asteroid";
             _type = this.GetType();
 
-            _pos = new Vector3(Entity.randomGenerator.Next(-900, 900), _YAxis, Entity.randomGenerator.Next(-900, 900));
+            _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
+                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
