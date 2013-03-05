@@ -100,6 +100,9 @@ namespace _2._5D_FYP
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].Initialize();
 
+            for (int i = 0; i < EnemyList.Count; i++)
+                EnemyList[i].Initialize();
+
             for (int i = 0; i < AsteroidList.Count; i++)
                 AsteroidList[i].Initialize();
 
@@ -121,6 +124,9 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].LoadContent();
+
+            for (int i = 0; i < EnemyList.Count; i++)
+                EnemyList[i].LoadContent();
 
             for (int i = 0; i < AsteroidList.Count; i++)
                 AsteroidList[i].LoadContent();
@@ -148,6 +154,9 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].Update(gameTime);
+
+            for (int i = 0; i < EnemyList.Count; i++)
+                EnemyList[i].Update(gameTime);
 
             for (int i = 0; i < AsteroidList.Count; i++)
                 AsteroidList[i].Update(gameTime);
@@ -178,6 +187,9 @@ namespace _2._5D_FYP
                 GraphicsDevice.DepthStencilState = state;
                 StageList[i].Draw(gameTime);
             }
+
+            for (int i = 0; i < EnemyList.Count; i++)
+                EnemyList[i].Draw(gameTime);
 
             for (int i = 0; i < AsteroidList.Count; i++)
                 AsteroidList[i].Draw(gameTime);
