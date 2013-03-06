@@ -9,12 +9,12 @@ namespace _2._5D_FYP
     public class Enemy : Entity
     {
         private Vector3 acceleration;
-        private Weapon weapon;
+        private Weapon weapon = new Weapon();
 
         private int weaponIndex = 0;
 
-        private int enemyTypeIndex = 0;
-        string[] enemyType = { "anaconda", "python", "viper", "gecko" };
+        public int enemyTypeIndex = 0;
+        string[] enemyType = { "gecko", "ferdelance", "viper", "asp" };
 
         public bool fireWeapon = false;
         private bool hasHitSomething = false;
@@ -24,14 +24,10 @@ namespace _2._5D_FYP
         public Enemy(List<Entity> list)
         {
             enemyTypeIndex = Entity.randomGenerator.Next(0, 4);
-            _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
-            _entityName = "Enemy";
 
             _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
                 , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
             _look = new Vector3(randomClamped(), 0, randomClamped());
-
-            _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.1f; _mass = 10.0f; _rotationSpeed = 5.0f;
 
             _alive = true;
 
@@ -39,7 +35,6 @@ namespace _2._5D_FYP
             if (_alive)
                 parentList.Add(this);
 
-            weapon = new Weapon();
             weaponIndex = Entity.randomGenerator.Next(0, 3);
 
             playerBulletList = game.PlayerBulletList;
@@ -58,6 +53,8 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationY(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
+                getEnemyType(enemyTypeIndex);
+
                 hasHitSomething = CheckCollision(playerBulletList);
                 if (hasHitSomething)
                     CollisionHandler(playerBulletList);
@@ -73,8 +70,6 @@ namespace _2._5D_FYP
                 _velocity *= 0.99f;
 
                 _pos += _velocity * timeDelta;
-
-                _force = pursue(game.Player);
 
                 if (_velocity.Length() > _maxSpeed)
                 {
@@ -110,6 +105,10 @@ namespace _2._5D_FYP
             float lookAhead = (dist / _maxSpeed);
 
             Vector3 target = entity._pos + (lookAhead * entity._velocity);
+
+            if (entity is Station)
+                target.Y = entity._YAxis;
+
             return seek(target);
         }
 
@@ -123,6 +122,37 @@ namespace _2._5D_FYP
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }
+            }
+        }
+
+        public void getEnemyType(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    weaponIndex = 0;
+                    _maxSpeed = 1000.0f; _maxForce = 150.0f; _scale = 0.1f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    _force = pursue(game.Player);
+                    break;
+                case 1:
+                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    weaponIndex = 1;
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 1.0f; _mass = 15.0f; _rotationSpeed = 5.0f;
+                    _force = pursue(game.Player);
+                    break;
+                case 2:
+                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    weaponIndex = 2;
+                    _maxSpeed = 300.0f; _maxForce = 150.0f; _scale = 0.25f; _mass = 25.0f; _rotationSpeed = 5.0f;
+                    _force = pursue(game.Player);
+                    break;
+                case 3:
+                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    weaponIndex = 2;
+                    _maxSpeed = 250.0f; _maxForce = 150.0f; _scale = 0.5f; _mass = 50.0f; _rotationSpeed = 5.0f;
+                    _force = pursue(game.Station);
+                    break;
             }
         }
     }

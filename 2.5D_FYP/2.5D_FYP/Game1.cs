@@ -15,6 +15,7 @@ namespace _2._5D_FYP
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public Stopwatch timer = new Stopwatch();
         public int currentRound = 1;
         int previousRound = 0;
 
@@ -86,6 +87,7 @@ namespace _2._5D_FYP
             for (int i = 0; i < EnemyCount; i++)
             {
                 Enemies[i] = new Enemy(EnemyList);
+                Enemies[i].getEnemyType(Enemies[i].enemyTypeIndex);
                 Enemies[i]._entityName = Enemies[i]._entityName + "_" + i;
                 Console.WriteLine(Enemies[i]._entityName);
             }
@@ -160,6 +162,8 @@ namespace _2._5D_FYP
 
         protected override void Update(GameTime gameTime)
         {
+            timer.Start();
+
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
                 this.Exit();
 

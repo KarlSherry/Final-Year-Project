@@ -17,7 +17,7 @@ namespace _2._5D_FYP
             _entityName = "Station";
             _type = this.GetType();
 
-            _pos = new Vector3(0, _YAxis, 0);
+            _pos = new Vector3(0, -40, 0);
             _look = Vector3.Forward;
 
             _scale = 0.25f;

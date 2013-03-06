@@ -19,7 +19,8 @@ namespace _2._5D_FYP
         public Matrix view;
         private MouseState mouseState;
 
-        private bool topDown = false;
+        private bool firstPerson = false;
+        private bool topDown = true;
 
         public Camera(List<Entity> list)
         {
@@ -30,8 +31,6 @@ namespace _2._5D_FYP
 
             parentList = list;
             parentList.Add(this);
-
-            topDown = false;
         }
 
         public override void Update(GameTime gameTime)
@@ -58,9 +57,13 @@ namespace _2._5D_FYP
 
             KeyboardState k = Keyboard.GetState();
             if (k.IsKeyDown(Keys.F2))
+            {
+                firstPerson = true;
                 topDown = false;
+            }
             if (k.IsKeyDown(Keys.F1))
             {
+                firstPerson = false;
                 topDown = true;
             }
 
@@ -70,9 +73,10 @@ namespace _2._5D_FYP
                 _look = Game1.Instance().Player._look;
                 view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
             }
-            else
+            if(firstPerson)
             {
-                _pos = new Vector3(0, 300, 0);
+                _pos = new Vector3(playerPosition.X, playerPosition.Y, playerPosition.Z);
+                _look = Game1.Instance().Player._look;
                 view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
             }
 

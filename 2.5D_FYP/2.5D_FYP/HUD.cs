@@ -10,7 +10,6 @@ namespace _2._5D_FYP
 {
     public class HUD
     {
-        Stopwatch timer = new Stopwatch();
         SpriteFont gameFont;
         Texture2D playerHealthBar;
         Texture2D playerShieldBar;
@@ -30,8 +29,6 @@ namespace _2._5D_FYP
 
         public void Update(Player player, GameTime gameTime)
         {
-            timer.Start();
-
             health = (int)MathHelper.Clamp(health, 0, 100);
             shield = (int)MathHelper.Clamp(shield, 0, 100);
             capacity = (int)MathHelper.Clamp(capacity, 0, 15);
@@ -50,7 +47,7 @@ namespace _2._5D_FYP
             Game1.Instance().spriteBatch.DrawString(gameFont, "Weapon: " + Game1.Instance().Player.weaponName, new Vector2(10, 70), Color.White);
             Game1.Instance().spriteBatch.DrawString(gameFont, "Player Position: (" + playerPosition.X + "," + playerPosition.Y + "," + playerPosition.Z + ")", new Vector2(10, 90), Color.White);
             Game1.Instance().spriteBatch.DrawString(gameFont, "Current Round: " + Game1.Instance().currentRound, new Vector2(10, 110), Color.White);
-            Game1.Instance().spriteBatch.DrawString(gameFont, "Time: " + timer.Elapsed.Minutes + ":" + timer.Elapsed.Seconds, new Vector2(10, 130), Color.White);
+            Game1.Instance().spriteBatch.DrawString(gameFont, "Time: " + Game1.Instance().timer.Elapsed.Minutes + ":" + Game1.Instance().timer.Elapsed.Seconds, new Vector2(10, 130), Color.White);
 
             // Draws the Player's shield bar
             Game1.Instance().spriteBatch.Draw(playerShieldBar, new Rectangle(10, 10, 200, 15), new Rectangle(0, 45, playerShieldBar.Width, 44), Color.Gray);
