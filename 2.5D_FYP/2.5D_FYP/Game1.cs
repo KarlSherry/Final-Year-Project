@@ -165,15 +165,15 @@ namespace _2._5D_FYP
 
             previousRound = currentRound;
 
-            //if (EnemyList.Count <= 0)
-               // currentRound += 1;
+            if (EnemyList.Count <= 0)
+                currentRound += 1;
 
-            /*if (currentRound != previousRound)
+            if (currentRound != previousRound)
             {
                 Initialize();
                 LoadContent();
                 previousRound = currentRound;
-            }*/
+            }
 
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].Update(gameTime);

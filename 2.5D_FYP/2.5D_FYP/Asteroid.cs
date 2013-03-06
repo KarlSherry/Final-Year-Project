@@ -32,6 +32,7 @@ namespace _2._5D_FYP
             _look.Normalize();
 
             _maxSpeed = randomGenerator.Next(10, 25); _maxForce = 5.0f;  _scale = randomGenerator.Next(1, 4); _mass = _scale;
+            _damageOnCollision = 5 * _scale;
 
             hasHitSomething = false;
             _alive = true;

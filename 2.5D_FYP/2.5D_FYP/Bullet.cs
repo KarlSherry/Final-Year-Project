@@ -20,13 +20,18 @@ namespace _2._5D_FYP
 
         Weapon w = Game1.Instance().Player.weapon;
 
+        #region Bullet Constructor
+        // Parameter passed: The list that this bullet will be added to.
         public Bullet(List<Entity> list) 
         {
+            _maxForce = 200.0f;
+
             _alive = true;
 
             parentList = list;
                 parentList.Add(this);
         }
+        #endregion
 
         public override void Update(GameTime gameTime)
         {
@@ -36,13 +41,24 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
+                /*Vector3 acceleration = _force / _mass;
+                
+                _velocity += acceleration * timeDelta;
+
+                if (_velocity.Length() > _maxSpeed)
+                {
+                    _velocity.Normalize();
+                    _velocity *= _maxSpeed;
+                }
+
+                _pos += _velocity * timeDelta;*/
+
                 walk(_maxSpeed * timeDelta);
 
                 if (travelTime >= maxTime)
                 {
                     _alive = false;
                 }
-
                 travelTime += timeDelta;
 
                 if (!_alive)
@@ -51,24 +67,31 @@ namespace _2._5D_FYP
             else parentList.Remove(this);
         }
 
-        public void getBulletType(int b)
+        #region Method to check for Bullet Type
+        // Parameter passed: The Entity in question's weaponIndex(ie. weaponType).
+        public void getBulletType(int entityWeaponIndex)
         {
-            switch (b)
+            switch (entityWeaponIndex)
             {
                 case 0:
                     _entityModel = "Models//sphere";
-                    _maxSpeed = 100.0f; _scale = 1.0f;
+                    _maxSpeed = 200.0f; _scale = 1.0f; _mass = 1.0f;
+                    _damageOnCollision = 2;
                     break;
                 case 1:
                     _entityModel = "Models//sphere";
-                    _maxSpeed = 100.0f; _scale = 2.0f;
+                    _maxSpeed = 200.0f; _scale = 2.0f; _mass = 1.0f;
+                    _damageOnCollision = 2;
                     break;
                 case 2:
                     _entityModel = "Models//Elite Models//boa";
-                    _maxSpeed = 200.0f; _scale = 0.1f;
+                    _maxSpeed = 100.0f; _scale = 0.1f; _mass = 50.0f;
+                    _damageOnCollision = 20;
                     break;
-                case 3: break;
+                case 3: 
+                    break;
             }
         }
+        #endregion
     }
 }

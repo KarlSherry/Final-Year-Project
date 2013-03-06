@@ -15,6 +15,7 @@ namespace _2._5D_FYP
 
         public int capacity = 0;
         private int weaponIndex = 0;
+        private float timeSinceLastHit = 0;
 
         public string weaponName = null;
         public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
@@ -147,6 +148,7 @@ namespace _2._5D_FYP
                 }
                 else { changeWeapon = false; keyPressed = false;}
 
+                if (timeSinceLastHit >= 10.0f) _shield++;
                 if (_shield <= 0) _shield = 0;
                 if (_shield > 100) _shield = 100;
 
@@ -159,6 +161,8 @@ namespace _2._5D_FYP
 
                 if (!_alive)
                     parentList.Remove(this);
+
+                timeSinceLastHit += timeDelta;
             }
             else parentList.Remove(this);
         } // End of Update(GameTime gameTime)
@@ -169,9 +173,10 @@ namespace _2._5D_FYP
             {
                 if (entity._entityCollisionFlag == true && entity is Asteroid)
                 {
-                    _shield -= 5 * entity._scale;
+                    timeSinceLastHit = 0.0f;
+                    _shield -= entity._damageOnCollision;
                     if (_shield <= 0)
-                        _health -= 5 * entity._scale;
+                        _health -= entity._damageOnCollision;
 
                     entity._entityCollisionFlag = false;
                 }
@@ -189,7 +194,10 @@ namespace _2._5D_FYP
                 }
                 if (entity._entityCollisionFlag == true && entity is Bullet)
                 {
-                    _health--;
+                    timeSinceLastHit = 0.0f;
+                    _shield -= entity._damageOnCollision;
+                    if (_shield <= 0)
+                        _health -= entity._damageOnCollision;
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }
