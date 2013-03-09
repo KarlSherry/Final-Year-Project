@@ -19,6 +19,9 @@ namespace _2._5D_FYP
         public int currentRound = 1;
         int previousRound = 0;
 
+        public Vector3 playerStartingPos = new Vector3(50, 0, 50);
+        public Vector3 playerStartingLook = Vector3.Forward;
+
         private static Game1 instance = null;
         public static Game1 Instance() { return instance; }
         GraphicsDeviceManager graphics;
@@ -55,8 +58,8 @@ namespace _2._5D_FYP
         {
             instance = this;
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth = 1200;
-            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 1500;
+            graphics.PreferredBackBufferHeight = 1000;
             graphics.PreferMultiSampling = true;
             graphics.SynchronizeWithVerticalRetrace = true;
             graphics.ApplyChanges();
@@ -163,6 +166,8 @@ namespace _2._5D_FYP
         protected override void Update(GameTime gameTime)
         {
             timer.Start();
+            playerStartingPos = Player._pos;
+            playerStartingLook = Player._look;
 
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
                 this.Exit();

@@ -38,7 +38,7 @@ namespace _2._5D_FYP
                         if (e is Player && player.fireWeapon)
                         {
                             bullet = new Bullet(game.PlayerBulletList);
-                            bullet.getBulletType(index);
+                            bullet.getBulletType(e, index);
                             if (!shootWeapon)
                             {
                                 FireBullet(e, e._pos, e._look);
@@ -50,7 +50,7 @@ namespace _2._5D_FYP
                         if (e is Enemy)
                         {
                             bullet = new Bullet(game.EnemyBulletList);
-                            bullet.getBulletType(index);
+                            bullet.getBulletType(e, index);
                             if (lastBulletFired >= 1.0f)
                             {
                                 lastBulletFired = 0.0f;
@@ -65,16 +65,16 @@ namespace _2._5D_FYP
                         if (e is Player && player.fireWeapon && lastBulletFired >= 0.1f) //10 milliseconds
                         {
                             bullet = new Bullet(game.PlayerBulletList);
-                            bullet.getBulletType(index);
+                            bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
 
                             FireBullet(e, e._pos, e._look);
                         }
-                        if (e is Enemy && lastBulletFired >= 0.5f) //10 milliseconds
+                        if (e is Enemy && lastBulletFired >= 0.1f) //10 milliseconds
                         {
                             bullet = new Bullet(game.EnemyBulletList);
-                            bullet.getBulletType(index);
+                            bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
 
@@ -87,7 +87,7 @@ namespace _2._5D_FYP
                         if (e is Player && player.fireWeapon && lastBulletFired >= 3.0f)
                         {
                             bullet = new Bullet(game.PlayerBulletList);
-                            bullet.getBulletType(index);
+                            bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
 
@@ -96,7 +96,7 @@ namespace _2._5D_FYP
                         if (e is Enemy && lastBulletFired >= 3.0f)
                         {
                             bullet = new Bullet(game.EnemyBulletList);
-                            bullet.getBulletType(index);
+                            bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
 

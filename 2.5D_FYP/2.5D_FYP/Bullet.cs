@@ -41,9 +41,9 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
-                /*Vector3 acceleration = _force / _mass;
+                Vector3 acceleration = _force / _mass;
                 
-                _velocity += acceleration * timeDelta;
+                _velocity += acceleration;
 
                 if (_velocity.Length() > _maxSpeed)
                 {
@@ -51,7 +51,7 @@ namespace _2._5D_FYP
                     _velocity *= _maxSpeed;
                 }
 
-                _pos += _velocity * timeDelta;*/
+                _pos += _velocity * timeDelta;
 
                 walk(_maxSpeed * timeDelta);
 
@@ -69,23 +69,32 @@ namespace _2._5D_FYP
 
         #region Method to check for Bullet Type
         // Parameter passed: The Entity in question's weaponIndex(ie. weaponType).
-        public void getBulletType(int entityWeaponIndex)
+        public void getBulletType(Entity e, int entityWeaponIndex)
         {
             switch (entityWeaponIndex)
             {
                 case 0:
                     _entityModel = "Models//sphere";
+                    _maxForce = 200.0f;
                     _maxSpeed = 200.0f; _scale = 1.0f; _mass = 1.0f;
+                    //_force = _look * _maxForce;
                     _damageOnCollision = 2;
                     break;
                 case 1:
                     _entityModel = "Models//sphere";
+                    _maxForce = 200.0f;
                     _maxSpeed = 200.0f; _scale = 2.0f; _mass = 1.0f;
+                    //_force = _look * _maxForce;
                     _damageOnCollision = 2;
                     break;
                 case 2:
                     _entityModel = "Models//Elite Models//boa";
+                    _maxForce = 100.0f;
                     _maxSpeed = 100.0f; _scale = 0.1f; _mass = 50.0f;
+                    //if (e is Enemy)
+                    //{
+                      //  _force = seek(game.Player._pos);
+                    //}
                     _damageOnCollision = 20;
                     break;
                 case 3: 
@@ -93,5 +102,16 @@ namespace _2._5D_FYP
             }
         }
         #endregion
+
+        Vector3 seek(Vector3 targetPos)
+        {
+            Vector3 desiredVelocity;
+
+            desiredVelocity = targetPos - _pos;
+            desiredVelocity.Normalize();
+            desiredVelocity *= _maxSpeed;
+
+            return (desiredVelocity - _velocity);
+        }
     }
 }

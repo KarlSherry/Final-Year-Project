@@ -10,6 +10,14 @@ namespace _2._5D_FYP
 {
     public class Player : Entity
     {
+        public enum State
+        {
+            Attack,
+            Defence,
+            Safe,
+        };
+        public State playerState = State.Attack;
+
         private Vector3 acceleration;
         public Weapon weapon;
 
@@ -26,6 +34,8 @@ namespace _2._5D_FYP
         private bool keyPressed = false;
         private bool hasHitSomething = false;
         private bool isThrusting = false;
+        private bool Docked = false;
+
         public bool changeWeapon = false;
 
         List<Entity> stageList = new List<Entity>();
@@ -39,14 +49,14 @@ namespace _2._5D_FYP
             _entityName = "Player";
             _type = this.GetType();
 
-            _pos = new Vector3(50, _YAxis, 50);
-            _look = new Vector3(0, 0, -1);
+            _pos = game.playerStartingPos;
+            _look = game.playerStartingLook;
 
             _right = new Vector3(1, 0, 0);
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 500.0f; _maxForce = 300.0f; _scale = 0.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
+            _maxSpeed = 1000.0f; _maxForce = 300.0f; _scale = 0.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
             _health = 100.0f; _shield = 100.0f;
 
             weapon = new Weapon();
@@ -113,6 +123,7 @@ namespace _2._5D_FYP
 
                 if (keyState.IsKeyDown(Keys.Up))
                 {
+                    if (Docked) Docked = false;
                     isThrusting = true;
                     addForce(_look * _maxForce);
 
@@ -130,10 +141,12 @@ namespace _2._5D_FYP
 
                 if (keyState.IsKeyDown(Keys.Left))
                 {
+                    if (Docked) Docked = false;
                     yaw(_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.Right))
                 {
+                    if (Docked) Docked = false;
                     yaw(-_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.W))
@@ -147,6 +160,14 @@ namespace _2._5D_FYP
                     }
                 }
                 else { changeWeapon = false; keyPressed = false;}
+
+                if (keyState.IsKeyDown(Keys.D))
+                {
+                    if (!Docked)
+                    {
+                        Docked = true;
+                    }
+                }
 
                 if (timeSinceLastHit >= 10.0f) _shield++;
                 if (_shield <= 0) _shield = 0;
@@ -180,9 +201,11 @@ namespace _2._5D_FYP
 
                     entity._entityCollisionFlag = false;
                 }
-                if (entity._entityCollisionFlag == true && entity is Station)
+                if (entity._entityCollisionFlag == true && entity is Station && Docked)
                 {
+                    //Vector3 aboveStation = new Vector3(entity._pos.X, entity._YAxis, entity._pos.Z);
                     _health++;
+                    //_force = arrive(aboveStation);
                     entity._entityCollisionFlag = false;
                 }
                 if (entity._entityCollisionFlag == true && entity is Metal)
@@ -207,6 +230,25 @@ namespace _2._5D_FYP
         void addForce(Vector3 force)
         {
             this._force += force;
+        }
+
+        public Vector3 arrive(Vector3 targetPos)
+        {
+            Vector3 distanceToTarget = targetPos - _pos;
+
+            float slowingDistance = 8.0f;
+            float distance = distanceToTarget.Length();
+            if (distance == 0.0f)
+            {
+                return Vector3.Zero;
+            }
+            const float DecelerationTweaker = 10.3f;
+            float ramped = _maxSpeed * (distance / (slowingDistance * DecelerationTweaker));
+
+            float clamped = Math.Min(ramped, _maxSpeed);
+            Vector3 desiredVelocity = clamped * (distanceToTarget / distance);
+
+            return desiredVelocity - _velocity;
         }
     } // End of Player Class
 }

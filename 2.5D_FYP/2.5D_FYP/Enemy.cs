@@ -75,11 +75,7 @@ namespace _2._5D_FYP
                 {
                     _velocity.Normalize();
                     _velocity *= _maxSpeed;
-                }
-
-                if ((game.Player._pos - _pos).Length() < 100)
-                    weapon.CheckWeaponFire(weaponIndex, this);
-                    
+                }                    
 
                 if (!_alive)
                     parentList.Remove(this);
@@ -132,26 +128,34 @@ namespace _2._5D_FYP
                 case 0:
                     _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 0;
-                    _maxSpeed = 1000.0f; _maxForce = 150.0f; _scale = 0.1f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.1f; _mass = 10.0f; _rotationSpeed = 5.0f;
                     _force = pursue(game.Player);
+                    if ((game.Player._pos - _pos).Length() < 100)
+                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 1:
                     _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 1;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 1.0f; _mass = 15.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 1.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
                     _force = pursue(game.Player);
+                    if ((game.Player._pos - _pos).Length() < 100)
+                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 2:
                     _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 2;
                     _maxSpeed = 300.0f; _maxForce = 150.0f; _scale = 0.25f; _mass = 25.0f; _rotationSpeed = 5.0f;
                     _force = pursue(game.Player);
+                    if ((game.Player._pos - _pos).Length() < 200)
+                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 3:
                     _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 2;
                     _maxSpeed = 250.0f; _maxForce = 150.0f; _scale = 0.5f; _mass = 50.0f; _rotationSpeed = 5.0f;
                     _force = pursue(game.Station);
+                    if ((game.Station._pos - _pos).Length() < 200)
+                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
             }
         }
