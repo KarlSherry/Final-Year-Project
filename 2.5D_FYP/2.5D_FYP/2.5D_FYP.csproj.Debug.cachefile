@@ -4,7 +4,6 @@ Content\Verdana.xnb
 Content\Bar.xnb
 Content\Models\fighter.xnb
 Content\Models\sphere.xnb
-Content\Models\Asteroid.xnb
 Content\Models\StationMaterial.xnb
 Content\Models\thor.xnb
 Content\Models\thor_0.xnb
@@ -27,3 +26,17 @@ Content\Models\Station.xnb
 Content\Models\Elite Models\cobramk1.xnb
 Content\Models\Elite Models\cobramk3.xnb
 Content\Models\Elite Models\coriolis.xnb
+Content\Smoke.xnb
+Content\Explosion3.xnb
+Content\Fire.xnb
+Content\Explosion.xnb
+Content\Explosion2.xnb
+Content\Models\Asteroid.xnb
+Content\StationExplode.xnb
+Content\peterssphere.xnb
+Content\Models\sphereGrey.xnb
+Content\Models\sphereOrange.xnb
+Content\SoundEffects\explosion.xnb
+Content\Station Phases\stationComplete.xnb
+Content\Models\sphereBlue.xnb
+Content\Models\sphereFire.xnb

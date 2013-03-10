@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 using System.Timers;
 using System.Diagnostics;
 
+
 namespace _2._5D_FYP
 {
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -18,9 +19,6 @@ namespace _2._5D_FYP
         public Stopwatch timer = new Stopwatch();
         public int currentRound = 1;
         int previousRound = 0;
-
-        public Vector3 playerStartingPos = new Vector3(50, 0, 50);
-        public Vector3 playerStartingLook = Vector3.Forward;
 
         private static Game1 instance = null;
         public static Game1 Instance() { return instance; }
@@ -33,12 +31,12 @@ namespace _2._5D_FYP
             set { spriteBatch = value; }
         }
 
-        public List<Entity> StageList { get; set; }
-        public List<Entity> EnemyList { get; set; }
-        public List<Entity> AsteroidList { get; set; }
-        public List<Entity> MetalList { get; set; }
-        public List<Entity> PlayerBulletList { get; set; }
-        public List<Entity> EnemyBulletList { get; set; }
+        public List<Entity> StageList = new List<Entity>();
+        public List<Entity> EnemyList = new List<Entity>();
+        public List<Entity> AsteroidList = new List<Entity>();
+        public List<Entity> MetalList = new List<Entity>();
+        public List<Entity> PlayerBulletList = new List<Entity>();
+        public List<Entity> EnemyBulletList = new List<Entity>();
 
         public World World { get; set; }
         public Camera Camera { get; set; }
@@ -51,8 +49,15 @@ namespace _2._5D_FYP
 
         public HUD HeadsUpDisplay { get; set; }
 
-        private int EnemyBaseCount = 5, AsteroidBaseCount = 15, MetalBaseCount = 15;
+        public GameTime gametime;
+
+        private int EnemyBaseCount = 15, AsteroidBaseCount = 100, MetalBaseCount = 100;
         private int EnemyCount, AsteroidCount, MetalCount;
+
+        public ParticleSystem p;
+
+        //public ParticleSystem p;
+        public bool pHit = false;
 
         public Game1()
         {
@@ -65,6 +70,15 @@ namespace _2._5D_FYP
             graphics.ApplyChanges();
 
             Content.RootDirectory = "Content";
+            
+            World = new World(StageList);//
+            Camera = new Camera(StageList);//
+            Ground = new Ground(StageList);//
+            Station = new Station(StageList);//
+            Player = new Player(StageList);//
+
+            for (int i = 0; i < StageList.Count; i++)
+                StageList[i].Initialize();
         }
 
         protected override void Initialize()
@@ -72,19 +86,6 @@ namespace _2._5D_FYP
             EnemyCount = EnemyBaseCount * currentRound;
             AsteroidCount = AsteroidBaseCount * currentRound;
             MetalCount = MetalBaseCount * currentRound;
-
-            StageList = new List<Entity>();
-            EnemyList = new List<Entity>();
-            AsteroidList = new List<Entity>();
-            MetalList = new List<Entity>();
-            PlayerBulletList = new List<Entity>();
-            EnemyBulletList = new List<Entity>();
-
-            World = new World(StageList);//
-            Camera = new Camera(StageList);//
-            Ground = new Ground(StageList);//
-            Station = new Station(StageList);//
-            Player = new Player(StageList);//
 
             Enemies = new Enemy[EnemyCount];
             for (int i = 0; i < EnemyCount; i++)
@@ -113,8 +114,8 @@ namespace _2._5D_FYP
 
             HeadsUpDisplay = new HUD();
 
-            for (int i = 0; i < StageList.Count; i++)
-                StageList[i].Initialize();
+            //for (int i = 0; i < StageList.Count; i++)
+              //  StageList[i].Initialize();
 
             for (int i = 0; i < EnemyList.Count; i++)
                 EnemyList[i].Initialize();
@@ -130,6 +131,8 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < EnemyBulletList.Count; i++)
                 EnemyBulletList[i].Initialize();
+
+            p = new ParticleSystem();
 
             base.Initialize();
         }
@@ -161,13 +164,12 @@ namespace _2._5D_FYP
 
         protected override void UnloadContent()
         {
+            //p.Destroy();
         }
 
         protected override void Update(GameTime gameTime)
         {
             timer.Start();
-            playerStartingPos = Player._pos;
-            playerStartingLook = Player._look;
 
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
                 this.Exit();
@@ -204,6 +206,8 @@ namespace _2._5D_FYP
             
             HeadsUpDisplay.Update(Player, gameTime);
 
+            p.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -224,7 +228,9 @@ namespace _2._5D_FYP
                 EnemyList[i].Draw(gameTime);
 
             for (int i = 0; i < AsteroidList.Count; i++)
+            {
                 AsteroidList[i].Draw(gameTime);
+            }
 
             for (int i = 0; i < MetalList.Count; i++)
                 MetalList[i].Draw(gameTime);
@@ -234,6 +240,8 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < EnemyBulletList.Count; i++)
                 EnemyBulletList[i].Draw(gameTime);
+
+            p.Draw(gameTime);
 
             HeadsUpDisplay.Draw(gameTime);
             spriteBatch.End();

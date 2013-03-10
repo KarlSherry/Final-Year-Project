@@ -13,8 +13,8 @@ namespace _2._5D_FYP
         {
             _entityName = "World";
 
-            worldWidth = 1000;
-            worldHeight = 1000;
+            worldWidth = 5000;
+            worldHeight = 5000;
 
             parentList = list;
             parentList.Add(this);

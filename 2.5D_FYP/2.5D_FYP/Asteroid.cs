@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Audio;
 
 namespace _2._5D_FYP
 {
@@ -20,6 +21,8 @@ namespace _2._5D_FYP
         List<Entity> metalList = new List<Entity>();
         List<Entity> playerBulletList = new List<Entity>();
 
+        SoundEffect asteroidExplosion = Game1.Instance().Content.Load<SoundEffect>("SoundEffects//explosion");
+
         public Asteroid(List<Entity> list)
         {
             _entityModel = "Models//Asteroid";
@@ -31,7 +34,7 @@ namespace _2._5D_FYP
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
-            _maxSpeed = randomGenerator.Next(10, 25); _maxForce = 5.0f;  _scale = randomGenerator.Next(1, 4); _mass = _scale;
+            _maxSpeed = randomGenerator.Next(10, 25); _maxForce = 5.0f;  _scale = randomGenerator.Next(0, 4); _mass = _scale;
             _damageOnCollision = 5 * _scale;
 
             hasHitSomething = false;
@@ -93,7 +96,11 @@ namespace _2._5D_FYP
                 angle += timeDelta;
 
                 if (!_alive)
+                {
+                    game.p.Start(this, _pos);
+                    asteroidExplosion.Play();
                     parentList.Remove(this);
+                }
             }
             else parentList.Remove(this);
         }

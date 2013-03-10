@@ -13,14 +13,14 @@ namespace _2._5D_FYP
 
         public Station(List<Entity> list)
         {
-            _entityModel = "Models//Elite Models//coriolis";
+            _entityModel = "Station Phases//stationComplete";
             _entityName = "Station";
             _type = this.GetType();
 
             _pos = new Vector3(0, -40, 0);
             _look = Vector3.Forward;
 
-            _scale = 0.25f;
+            _scale = 250.0f;
 
             _alive = true;
 

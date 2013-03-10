@@ -32,11 +32,13 @@ namespace _2._5D_FYP
 
         public bool fireWeapon = false;
         private bool keyPressed = false;
-        private bool hasHitSomething = false;
+        public bool hasHitSomething = false;
         private bool isThrusting = false;
         private bool Docked = false;
 
         public bool changeWeapon = false;
+
+        bool emitterIsOn = false;
 
         List<Entity> stageList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
@@ -49,8 +51,8 @@ namespace _2._5D_FYP
             _entityName = "Player";
             _type = this.GetType();
 
-            _pos = game.playerStartingPos;
-            _look = game.playerStartingLook;
+            _pos = new Vector3(100, _YAxis, 100);
+            _look = Vector3.Forward;
 
             _right = new Vector3(1, 0, 0);
             _up = new Vector3(0, 1, 0);
@@ -85,7 +87,9 @@ namespace _2._5D_FYP
 
                 hasHitSomething = CheckCollision(asteroidList);
                 if (hasHitSomething)
+                {
                     CollisionHandler(asteroidList);
+                }
 
                 hasHitSomething = CheckCollision(metalList);
                 if (hasHitSomething)
@@ -184,6 +188,7 @@ namespace _2._5D_FYP
                     parentList.Remove(this);
 
                 timeSinceLastHit += timeDelta;
+
             }
             else parentList.Remove(this);
         } // End of Update(GameTime gameTime)

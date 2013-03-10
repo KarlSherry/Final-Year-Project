@@ -58,26 +58,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\sphere.xnb</Output>
-      <Time>2013-03-05T14:47:51.8027094+00:00</Time>
+      <Time>2013-03-09T16:32:00.7206445+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\sphere_0.xml</Key>
-        <Value>2013-03-05T14:53:06.026682+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Asteroid.fbx</Source>
-      <Name>Models\Asteroid</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="Scale">0.5</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Asteroid.xnb</Output>
-      <Time>2013-03-05T14:47:51.3306824+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Asteroid_0.xml</Key>
-        <Value>2013-03-05T14:53:07.1527464+00:00</Value>
+        <Value>2013-03-09T16:33:58.5453836+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -130,7 +114,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\sphere_0.xml</Output>
-      <Time>2013-03-05T14:47:51.8027094+00:00</Time>
+      <Time>2013-03-09T16:32:00.7206445+00:00</Time>
     </Item>
     <Item>
       <Source>Models\Asteroid.fbx</Source>
@@ -528,6 +512,219 @@
         <Key>obj\x86\Debug\Models\Elite Models\coriolis_0.xml</Key>
         <Value>2013-03-05T14:53:08.3188131+00:00</Value>
       </Dependency>
+    </Item>
+    <Item>
+      <Source>Smoke.png</Source>
+      <Name>Smoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Smoke.xnb</Output>
+      <Time>2013-03-09T13:34:34.8147335+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Explosion3.png</Source>
+      <Name>Explosion3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Explosion3.xnb</Output>
+      <Time>2013-03-09T14:56:28.0867566+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Fire.png</Source>
+      <Name>Fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Fire.xnb</Output>
+      <Time>2013-03-09T14:25:50.8516727+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Explosion.png</Source>
+      <Name>Explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Explosion.xnb</Output>
+      <Time>2013-03-09T14:56:25.104586+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Explosion2.png</Source>
+      <Name>Explosion2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Explosion2.xnb</Output>
+      <Time>2013-03-09T14:56:25.122587+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Asteroid.fbx</Source>
+      <Name>Models\Asteroid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Asteroid.xnb</Output>
+      <Time>2013-03-05T14:47:51.3306824+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Asteroid_0.xml</Key>
+        <Value>2013-03-05T14:53:07.1527464+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>peterssphere.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\peterssphere_0.xml</Output>
+      <Time>2013-03-09T19:06:08.052207+00:00</Time>
+    </Item>
+    <Item>
+      <Source>StationExplode.fbx</Source>
+      <Name>StationExplode</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\StationExplode.xnb</Output>
+      <Time>2013-03-09T20:26:02.6464421+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\StationExplode_0.xml</Key>
+        <Value>2013-03-09T20:26:34.6812744+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>StationExplode.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\StationExplode_0.xml</Output>
+      <Time>2013-03-09T20:26:02.6464421+00:00</Time>
+    </Item>
+    <Item>
+      <Source>peterssphere.fbx</Source>
+      <Name>peterssphere</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">10</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\peterssphere.xnb</Output>
+      <Time>2013-03-09T19:06:08.052207+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\peterssphere_0.xml</Key>
+        <Value>2013-03-09T19:06:36.918858+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\stationComplete.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Station Phases\stationComplete_0.xml</Output>
+      <Time>2013-03-10T12:01:18.4089305+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\sphereGrey.fbx</Source>
+      <Name>Models\sphereGrey</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\sphereGrey.xnb</Output>
+      <Time>2013-03-10T12:47:47.2234416+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\sphereGrey_0.xml</Key>
+        <Value>2013-03-10T12:47:57.9840571+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\sphereGrey.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\sphereGrey_0.xml</Output>
+      <Time>2013-03-10T12:47:47.2234416+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\sphereOrange.fbx</Source>
+      <Name>Models\sphereOrange</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\sphereOrange.xnb</Output>
+      <Time>2013-03-10T13:07:41.2627367+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\sphereOrange_0.xml</Key>
+        <Value>2013-03-10T13:08:38.5420129+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\sphereOrange.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\sphereOrange_0.xml</Output>
+      <Time>2013-03-10T13:07:41.2627367+00:00</Time>
+    </Item>
+    <Item>
+      <Source>SoundEffects\explosion.wav</Source>
+      <Name>SoundEffects\explosion</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\explosion.xnb</Output>
+      <Time>2013-03-10T13:16:17.0852401+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\stationComplete.fbx</Source>
+      <Name>Station Phases\stationComplete</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="RotationX">90</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\stationComplete.xnb</Output>
+      <Time>2013-03-10T12:01:18.4089305+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Station Phases\stationComplete_0.xml</Key>
+        <Value>2013-03-10T12:01:35.3679005+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\sphereBlue.fbx</Source>
+      <Name>Models\sphereBlue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\sphereBlue.xnb</Output>
+      <Time>2013-03-10T13:41:02.9802284+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\sphereBlue_0.xml</Key>
+        <Value>2013-03-10T13:41:34.0490054+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\sphereFire.fbx</Source>
+      <Name>Models\sphereFire</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\sphereFire.xnb</Output>
+      <Time>2013-03-10T13:41:02.9942292+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\sphereFire_0.xml</Key>
+        <Value>2013-03-10T13:41:34.2310159+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\sphereBlue.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\sphereBlue_0.xml</Output>
+      <Time>2013-03-10T13:41:02.9802284+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\sphereFire.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\sphereFire_0.xml</Output>
+      <Time>2013-03-10T13:41:02.9942292+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
