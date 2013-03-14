@@ -31,6 +31,8 @@ namespace _2._5D_FYP
             set { spriteBatch = value; }
         }
 
+        public MenuSystem menuSystem { get; set; }
+
         public List<Entity> StageList = new List<Entity>();
         public List<Entity> EnemyList = new List<Entity>();
         public List<Entity> AsteroidList = new List<Entity>();
@@ -52,6 +54,8 @@ namespace _2._5D_FYP
 
         public GameTime gametime;
 
+        public static string GameState = "Main Menu Screen";
+
         private int EnemyBaseCount = 10, AsteroidBaseCount = 15, MetalBaseCount = 15;
         private int EnemyCount, AsteroidCount, MetalCount;
 
@@ -61,13 +65,14 @@ namespace _2._5D_FYP
         {
             instance = this;
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth = 1500;
-            graphics.PreferredBackBufferHeight = 1000;
+            graphics.PreferredBackBufferWidth = 1200;
+            graphics.PreferredBackBufferHeight = 800;
             graphics.PreferMultiSampling = true;
             graphics.SynchronizeWithVerticalRetrace = true;
             graphics.ApplyChanges();
 
             Content.RootDirectory = "Content";
+            GameState = "Main Menu Screen";
             
             World = new World(StageList);//
             Camera = new Camera(StageList);//
@@ -82,6 +87,8 @@ namespace _2._5D_FYP
 
         protected override void Initialize()
         {
+            menuSystem = new MenuSystem();
+
             EnemyCount = EnemyBaseCount * currentRound;
             AsteroidCount = AsteroidBaseCount * currentRound;
             MetalCount = MetalBaseCount * currentRound;
@@ -137,6 +144,8 @@ namespace _2._5D_FYP
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            menuSystem.LoadContent(this.Content);
+
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].LoadContent();
 
@@ -166,8 +175,10 @@ namespace _2._5D_FYP
         {
             timer.Start();
 
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
-                this.Exit();
+            //if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
+              //  this.Exit();
+
+            menuSystem.Update(gameTime);
 
             previousRound = currentRound;
 
@@ -181,7 +192,7 @@ namespace _2._5D_FYP
                 previousRound = currentRound;
             }
 
-            for (int i = 0; i < StageList.Count; i++)
+            /*for (int i = 0; i < StageList.Count; i++)
                 StageList[i].Update(gameTime);
 
             for (int i = 0; i < EnemyList.Count; i++)
@@ -201,7 +212,7 @@ namespace _2._5D_FYP
             
             HeadsUpDisplay.Update(Player, gameTime);
 
-            particleSystem.Update(gameTime);
+            particleSystem.Update(gameTime);*/
 
             base.Update(gameTime);
         }
@@ -211,7 +222,10 @@ namespace _2._5D_FYP
             GraphicsDevice.Clear(Color.Black);            
 
             spriteBatch.Begin();
-            for (int i = 0; i < StageList.Count; i++)
+
+            menuSystem.Draw(gameTime, spriteBatch);
+
+            /*for (int i = 0; i < StageList.Count; i++)
             {
                 DepthStencilState state = new DepthStencilState();
                 state.DepthBufferEnable = true;
@@ -238,7 +252,7 @@ namespace _2._5D_FYP
 
             particleSystem.Draw(gameTime);
 
-            HeadsUpDisplay.Draw(gameTime);
+            HeadsUpDisplay.Draw(gameTime);*/
             spriteBatch.End();
         }
 

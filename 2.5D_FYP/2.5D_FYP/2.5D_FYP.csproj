@@ -118,6 +118,14 @@
     <Compile Include="ForceField.cs" />
     <Compile Include="Ground.cs" />
     <Compile Include="HUD.cs" />
+    <Compile Include="Menu Logic\BaseScreen.cs" />
+    <Compile Include="Menu Logic\ControlScreen.cs" />
+    <Compile Include="Menu Logic\GameOverScreen.cs" />
+    <Compile Include="Menu Logic\GameScreen.cs" />
+    <Compile Include="Menu Logic\HighscoreScreen.cs" />
+    <Compile Include="Menu Logic\MainMenuScreen.cs" />
+    <Compile Include="Menu Logic\MenuSystem.cs" />
+    <Compile Include="Menu Logic\PauseMenuScreen.cs" />
     <Compile Include="Metal.cs" />
     <Compile Include="Particle.cs" />
     <Compile Include="ParticleSystem.cs" />
