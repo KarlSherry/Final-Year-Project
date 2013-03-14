@@ -115,6 +115,7 @@
     <Compile Include="Camera.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="ForceField.cs" />
     <Compile Include="Ground.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="Metal.cs" />

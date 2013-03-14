@@ -14,7 +14,7 @@ namespace _2._5D_FYP
         private int weaponIndex = 0;
 
         public int enemyTypeIndex = 0;
-        string[] enemyType = { "gecko", "ferdelance", "viper", "asp" };
+        string[] enemyType = { "Alien4", "Alien4", "Alien4", "asp" };
 
         public bool fireWeapon = false;
         private bool hasHitSomething = false;
@@ -51,7 +51,7 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationY(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi)     * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
                 getEnemyType(enemyTypeIndex);
 
@@ -126,26 +126,29 @@ namespace _2._5D_FYP
             switch (index)
             {
                 case 0:
-                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    _entityModel = "Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 0;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 0.1f; _mass = 10.0f; _rotationSpeed = 5.0f;
-                    _force = pursue(game.Player);
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 5.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    if(game.Player.playerState != Player.State.Safe)
+                        _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 100)
                         weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 1:
-                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    _entityModel = "Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 1;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 1.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
-                    _force = pursue(game.Player);
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 5.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    if (game.Player.playerState != Player.State.Safe)
+                        _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 100)
                         weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 2:
-                    _entityModel = "Models//Elite Models//" + enemyType[enemyTypeIndex];
+                    _entityModel = "Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 2;
                     _maxSpeed = 300.0f; _maxForce = 150.0f; _scale = 0.25f; _mass = 25.0f; _rotationSpeed = 5.0f;
-                    _force = pursue(game.Player);
+                    if (game.Player.playerState != Player.State.Safe)
+                        _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 200)
                         weapon.CheckWeaponFire(weaponIndex, this);
                     break;

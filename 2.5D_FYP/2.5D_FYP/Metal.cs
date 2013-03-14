@@ -12,7 +12,7 @@ namespace _2._5D_FYP
 
         public Metal(List<Entity> list)
         {
-            _entityModel = "Models//StationMaterial";
+            _entityModel = "Models//frag22";
             _entityName = "Metal";
             _type = this.GetType();
 
@@ -41,7 +41,13 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
+                _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
+
+                if (_pos.Length() > game.World.worldWidth)
+                {
+                    _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
+                           , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
+                }
 
                 angle += timeDelta;
 

@@ -514,51 +514,6 @@
       </Dependency>
     </Item>
     <Item>
-      <Source>Smoke.png</Source>
-      <Name>Smoke</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Smoke.xnb</Output>
-      <Time>2013-03-09T13:34:34.8147335+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Explosion3.png</Source>
-      <Name>Explosion3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Explosion3.xnb</Output>
-      <Time>2013-03-09T14:56:28.0867566+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Fire.png</Source>
-      <Name>Fire</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Fire.xnb</Output>
-      <Time>2013-03-09T14:25:50.8516727+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Explosion.png</Source>
-      <Name>Explosion</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Explosion.xnb</Output>
-      <Time>2013-03-09T14:56:25.104586+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Explosion2.png</Source>
-      <Name>Explosion2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Explosion2.xnb</Output>
-      <Time>2013-03-09T14:56:25.122587+00:00</Time>
-    </Item>
-    <Item>
       <Source>Models\Asteroid.fbx</Source>
       <Name>Models\Asteroid</Name>
       <Importer>FbxImporter</Importer>
@@ -725,6 +680,279 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\sphereFire_0.xml</Output>
       <Time>2013-03-10T13:41:02.9942292+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\stationComplete1.fbx</Source>
+      <Name>Station Phases\stationComplete1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\stationComplete1.xnb</Output>
+      <Time>2013-03-11T19:22:51.5580907+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Station Phases\stationComplete1_0.xml</Key>
+        <Value>2013-03-11T19:22:56.0753491+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\stationComplete1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Station Phases\stationComplete1_0.xml</Output>
+      <Time>2013-03-11T19:22:51.5580907+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\MetalBare.jpg</Source>
+      <Name>Models\MetalBare</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\MetalBare.xnb</Output>
+      <Time>2013-03-12T19:44:43.1198733+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\RockRough.jpg</Source>
+      <Name>Models\RockRough</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough.xnb</Output>
+      <Time>2013-03-12T19:44:43.1228734+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\RockRough0002_S.jpg</Source>
+      <Name>Models\RockRough0002_S</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough0002_S.xnb</Output>
+      <Time>2013-03-12T19:44:43.1268737+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\RockRough0012_1_M.jpg</Source>
+      <Name>Models\RockRough0012_1_M</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough0012_1_M.xnb</Output>
+      <Time>2013-03-12T19:44:43.1308739+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\frag11.fbx</Source>
+      <Name>Models\frag11</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\frag11.xnb</Output>
+      <Time>2013-03-12T19:44:43.1068725+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\frag11_0.xml</Key>
+        <Value>2013-03-12T19:44:56.3916324+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\frag22.fbx</Source>
+      <Name>Models\frag22</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\frag22.xnb</Output>
+      <Time>2013-03-12T19:49:21.8458155+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\frag22_0.xml</Key>
+        <Value>2013-03-12T19:49:23.0188826+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough0002_S_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\frag33.fbx</Source>
+      <Name>Models\frag33</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\frag33.xnb</Output>
+      <Time>2013-03-12T19:44:43.1138729+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\frag33_0.xml</Key>
+        <Value>2013-03-12T19:48:00.6841733+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough0012_1_M_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\frag44.fbx</Source>
+      <Name>Models\frag44</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\frag44.xnb</Output>
+      <Time>2013-03-12T19:44:43.1168731+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\frag44_0.xml</Key>
+        <Value>2013-03-12T19:48:01.483219+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\MetalBare_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\frag11.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\frag11_0.xml</Output>
+      <Time>2013-03-12T19:44:43.1068725+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\RockRough.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1228734+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\frag22.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\frag22_0.xml</Output>
+      <Time>2013-03-12T19:49:21.8458155+00:00</Time>
+    </Item>
+    <Item>
+      <Source>textures\RockRough0002_S.jpg</Source>
+      <Name>textures\RockRough0002_S</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\textures\RockRough0002_S.xnb</Output>
+      <Time>2013-03-12T19:47:15.8006061+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\RockRough0002_S.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough0002_S_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1268737+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\frag33.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\frag33_0.xml</Output>
+      <Time>2013-03-12T19:44:43.1138729+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\RockRough0012_1_M.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\RockRough0012_1_M_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1308739+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\frag44.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\frag44_0.xml</Output>
+      <Time>2013-03-12T19:44:43.1168731+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\MetalBare.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\MetalBare_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1198733+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip2.fbx</Source>
+      <Name>Models\SpaceShip2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\SpaceShip2.xnb</Output>
+      <Time>2013-03-13T19:37:10.0838826+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\SpaceShip2_0.xml</Key>
+        <Value>2013-03-13T19:37:32.2331494+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\SpaceShip2_0.xml</Output>
+      <Time>2013-03-13T19:37:10.0838826+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip3.fbx</Source>
+      <Name>Models\SpaceShip3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\SpaceShip3.xnb</Output>
+      <Time>2013-03-13T21:31:50.1493998+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\SpaceShip3_0.xml</Key>
+        <Value>2013-03-13T21:32:02.6001119+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\SpaceShip3_0.xml</Output>
+      <Time>2013-03-13T21:31:50.1493998+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Alien4.fbx</Source>
+      <Name>Models\Alien4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien4.xnb</Output>
+      <Time>2013-03-13T23:12:29.9148546+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Alien4_0.xml</Key>
+        <Value>2013-03-13T23:13:29.7872791+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Alien4.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Alien4_0.xml</Output>
+      <Time>2013-03-13T23:12:29.9148546+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

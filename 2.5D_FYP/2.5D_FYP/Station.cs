@@ -13,14 +13,14 @@ namespace _2._5D_FYP
 
         public Station(List<Entity> list)
         {
-            _entityModel = "Station Phases//stationComplete";
+            _entityModel = "Station Phases//stationComplete1";
             _entityName = "Station";
             _type = this.GetType();
 
             _pos = new Vector3(0, -40, 0);
             _look = Vector3.Forward;
 
-            _scale = 250.0f;
+            _scale = 20.0f;
 
             _alive = true;
 
@@ -36,13 +36,13 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateRotationX(-MathHelper.PiOver2) * Matrix.CreateRotationY(angle) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
                 if (!_alive)
                     parentList.Remove(this);
 
                 angle += timeDelta;
             }
-        }
+        }                   
     } // End of Station Class
 }

@@ -10,8 +10,6 @@ namespace _2._5D_FYP
 {
     public class Asteroid : Entity
     {
-        Vector3 acceleration;
-
         float angle = 0.0f;
 
         bool hasHitSomething;
@@ -29,8 +27,8 @@ namespace _2._5D_FYP
             _entityName = "Asteroid";
             _type = this.GetType();
 
-            _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
-                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
+            _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth +1, game.World.worldWidth-1)
+                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth+1, game.World.worldWidth-1));
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
@@ -78,18 +76,12 @@ namespace _2._5D_FYP
                 hasHitSomething = CheckCollision(playerBulletList);
                 if(hasHitSomething)
                     CollisionHandler(playerBulletList);
-                
-                /*_velocity += _look * _maxSpeed * timeDelta;
 
-                _pos += _velocity * timeDelta;
-
-                _force += _look * _maxForce;
-
-                if (_velocity.Length() > _maxSpeed)
+                if (_pos.Length() > game.World.worldWidth)
                 {
-                    _velocity.Normalize();
-                    _velocity *= _maxSpeed;
-                }*/
+                    _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth + 1, game.World.worldWidth -1)
+                           , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth +1, game.World.worldWidth -1));
+                }
 
                 _pos += _look * timeDelta * _maxSpeed;
 
@@ -97,7 +89,7 @@ namespace _2._5D_FYP
 
                 if (!_alive)
                 {
-                    game.p.Start(this, _pos);
+                    game.particleSystem.Start(this, _pos);
                     asteroidExplosion.Play();
                     parentList.Remove(this);
                 }
@@ -117,17 +109,6 @@ namespace _2._5D_FYP
                 if (entity._entityCollisionFlag == true && entity is Asteroid)
                 {
                     _look = -_look;
-                    //entity._look.Normalize();
-                    /*//entity._look = _look + entity._look;
-                    //entity._look.Normalize();
-
-                    entity._force = entity._look * entity._maxForce;
-                    if (entity._force.Length() > _maxForce)
-                    {
-                        entity._force.Normalize();
-                        entity._force *= _maxForce;
-                    }*/
-
                     entity._entityCollisionFlag = false;
                 }
                 if (entity._entityCollisionFlag == true && entity is Metal)

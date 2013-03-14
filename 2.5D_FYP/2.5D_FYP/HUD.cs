@@ -48,6 +48,8 @@ namespace _2._5D_FYP
             Game1.Instance().spriteBatch.DrawString(gameFont, "Player Position: (" + playerPosition.X + "," + playerPosition.Y + "," + playerPosition.Z + ")", new Vector2(10, 90), Color.White);
             Game1.Instance().spriteBatch.DrawString(gameFont, "Current Round: " + Game1.Instance().currentRound, new Vector2(10, 110), Color.White);
             Game1.Instance().spriteBatch.DrawString(gameFont, "Time: " + Game1.Instance().timer.Elapsed.Minutes + ":" + Game1.Instance().timer.Elapsed.Seconds, new Vector2(10, 130), Color.White);
+            Game1.Instance().spriteBatch.DrawString(gameFont, "Docked: " + Game1.Instance().Player.Docked, new Vector2(10, 150), Color.White);
+            Game1.Instance().spriteBatch.DrawString(gameFont, "State: " + Game1.Instance().Player.playerState, new Vector2(10, 170), Color.White);
 
             // Draws the Player's shield bar
             Game1.Instance().spriteBatch.Draw(playerShieldBar, new Rectangle(10, 10, 200, 15), new Rectangle(0, 45, playerShieldBar.Width, 44), Color.Gray);

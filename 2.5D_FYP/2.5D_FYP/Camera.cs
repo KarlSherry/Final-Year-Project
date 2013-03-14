@@ -69,8 +69,9 @@ namespace _2._5D_FYP
 
             if (topDown)
             {
-                _pos = new Vector3(playerPosition.X, playerPosition.Y + 500.0f, playerPosition.Z);
                 _look = Game1.Instance().Player._look;
+                _pos = new Vector3(playerPosition.X, playerPosition.Y + 500.0f, playerPosition.Z + 250.0f);
+                //_look = Game1.Instance().Player._look;
                 view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
             }
             if(firstPerson)

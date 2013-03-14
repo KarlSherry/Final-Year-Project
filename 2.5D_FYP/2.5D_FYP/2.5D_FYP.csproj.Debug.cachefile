@@ -26,11 +26,6 @@ Content\Models\Station.xnb
 Content\Models\Elite Models\cobramk1.xnb
 Content\Models\Elite Models\cobramk3.xnb
 Content\Models\Elite Models\coriolis.xnb
-Content\Smoke.xnb
-Content\Explosion3.xnb
-Content\Fire.xnb
-Content\Explosion.xnb
-Content\Explosion2.xnb
 Content\Models\Asteroid.xnb
 Content\StationExplode.xnb
 Content\peterssphere.xnb
@@ -40,3 +35,20 @@ Content\SoundEffects\explosion.xnb
 Content\Station Phases\stationComplete.xnb
 Content\Models\sphereBlue.xnb
 Content\Models\sphereFire.xnb
+Content\Station Phases\stationComplete1.xnb
+Content\Models\MetalBare.xnb
+Content\Models\RockRough.xnb
+Content\Models\RockRough0002_S.xnb
+Content\Models\RockRough0012_1_M.xnb
+Content\Models\frag11.xnb
+Content\Models\frag22.xnb
+Content\Models\frag33.xnb
+Content\Models\frag44.xnb
+Content\Models\RockRough_0.xnb
+Content\textures\RockRough0002_S.xnb
+Content\Models\RockRough0002_S_0.xnb
+Content\Models\RockRough0012_1_M_0.xnb
+Content\Models\MetalBare_0.xnb
+Content\Models\SpaceShip2.xnb
+Content\Models\SpaceShip3.xnb
+Content\Models\Alien4.xnb

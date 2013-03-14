@@ -34,11 +34,9 @@ namespace _2._5D_FYP
         private bool keyPressed = false;
         public bool hasHitSomething = false;
         private bool isThrusting = false;
-        private bool Docked = false;
+        public bool Docked = false;
 
         public bool changeWeapon = false;
-
-        bool emitterIsOn = false;
 
         List<Entity> stageList = new List<Entity>();
         List<Entity> asteroidList = new List<Entity>();
@@ -47,7 +45,7 @@ namespace _2._5D_FYP
 
         public Player(List<Entity> list)
         {
-            _entityModel = "Models//Elite Models//cobramk3";
+            _entityModel = "Models//SpaceShip3";
             _entityName = "Player";
             _type = this.GetType();
 
@@ -58,7 +56,7 @@ namespace _2._5D_FYP
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 1000.0f; _maxForce = 300.0f; _scale = 0.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
+            _maxSpeed = 1000.0f; _maxForce = 300.0f; _scale = 5.0f; _mass = 10.0f; _rotationSpeed = 2.5f;
             _health = 100.0f; _shield = 100.0f;
 
             weapon = new Weapon();
@@ -83,13 +81,11 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
                 hasHitSomething = CheckCollision(asteroidList);
                 if (hasHitSomething)
-                {
                     CollisionHandler(asteroidList);
-                }
 
                 hasHitSomething = CheckCollision(metalList);
                 if (hasHitSomething)
@@ -112,8 +108,6 @@ namespace _2._5D_FYP
 
                 _pos += _velocity * timeDelta;
 
-                _force = Vector3.Zero;
-
                 if (_velocity.Length() > _maxSpeed)
                 {
                     _velocity.Normalize();
@@ -127,7 +121,7 @@ namespace _2._5D_FYP
 
                 if (keyState.IsKeyDown(Keys.Up))
                 {
-                    if (Docked) Docked = false;
+                    Docked = false;
                     isThrusting = true;
                     addForce(_look * _maxForce);
 
@@ -145,12 +139,12 @@ namespace _2._5D_FYP
 
                 if (keyState.IsKeyDown(Keys.Left))
                 {
-                    if (Docked) Docked = false;
+                    Docked = false;
                     yaw(_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.Right))
                 {
-                    if (Docked) Docked = false;
+                    Docked = false;
                     yaw(-_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.W))
@@ -206,13 +200,14 @@ namespace _2._5D_FYP
 
                     entity._entityCollisionFlag = false;
                 }
-                if (entity._entityCollisionFlag == true && entity is Station && Docked)
+                if (entity._entityCollisionFlag == true && entity is ForceField && Docked)
                 {
-                    //Vector3 aboveStation = new Vector3(entity._pos.X, entity._YAxis, entity._pos.Z);
+                    Vector3 aboveStation = new Vector3(entity._pos.X, entity._YAxis, entity._pos.Z);
+                    playerState = State.Safe;
                     _health++;
-                    //_force = arrive(aboveStation);
-                    entity._entityCollisionFlag = false;
+                    _force = arrive(aboveStation);
                 }
+
                 if (entity._entityCollisionFlag == true && entity is Metal)
                 {
                     capacity += 1;
@@ -241,13 +236,13 @@ namespace _2._5D_FYP
         {
             Vector3 distanceToTarget = targetPos - _pos;
 
-            float slowingDistance = 8.0f;
+            float slowingDistance = 20.0f;
             float distance = distanceToTarget.Length();
             if (distance == 0.0f)
             {
                 return Vector3.Zero;
             }
-            const float DecelerationTweaker = 10.3f;
+            const float DecelerationTweaker = 20.0f;
             float ramped = _maxSpeed * (distance / (slowingDistance * DecelerationTweaker));
 
             float clamped = Math.Min(ramped, _maxSpeed);

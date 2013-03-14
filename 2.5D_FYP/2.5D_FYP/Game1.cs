@@ -43,6 +43,7 @@ namespace _2._5D_FYP
         public Ground Ground { get; set; }
         public Station Station { get; set; }
         public Player Player { get; set; }
+        public ForceField ForceField { get; set; }
         public Enemy[] Enemies { get; set; }
         public Asteroid[] Asteroids { get; set; }
         public Metal[] Metals { get; set; }
@@ -51,13 +52,10 @@ namespace _2._5D_FYP
 
         public GameTime gametime;
 
-        private int EnemyBaseCount = 15, AsteroidBaseCount = 100, MetalBaseCount = 100;
+        private int EnemyBaseCount = 10, AsteroidBaseCount = 15, MetalBaseCount = 15;
         private int EnemyCount, AsteroidCount, MetalCount;
 
-        public ParticleSystem p;
-
-        //public ParticleSystem p;
-        public bool pHit = false;
+        public ParticleSystem particleSystem;
 
         public Game1()
         {
@@ -76,6 +74,7 @@ namespace _2._5D_FYP
             Ground = new Ground(StageList);//
             Station = new Station(StageList);//
             Player = new Player(StageList);//
+            ForceField = new ForceField(StageList);
 
             for (int i = 0; i < StageList.Count; i++)
                 StageList[i].Initialize();
@@ -114,9 +113,6 @@ namespace _2._5D_FYP
 
             HeadsUpDisplay = new HUD();
 
-            //for (int i = 0; i < StageList.Count; i++)
-              //  StageList[i].Initialize();
-
             for (int i = 0; i < EnemyList.Count; i++)
                 EnemyList[i].Initialize();
 
@@ -132,7 +128,7 @@ namespace _2._5D_FYP
             for (int i = 0; i < EnemyBulletList.Count; i++)
                 EnemyBulletList[i].Initialize();
 
-            p = new ParticleSystem();
+            particleSystem = new ParticleSystem();
 
             base.Initialize();
         }
@@ -164,7 +160,6 @@ namespace _2._5D_FYP
 
         protected override void UnloadContent()
         {
-            //p.Destroy();
         }
 
         protected override void Update(GameTime gameTime)
@@ -206,14 +201,14 @@ namespace _2._5D_FYP
             
             HeadsUpDisplay.Update(Player, gameTime);
 
-            p.Update(gameTime);
+            particleSystem.Update(gameTime);
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);            
+            GraphicsDevice.Clear(Color.Black);            
 
             spriteBatch.Begin();
             for (int i = 0; i < StageList.Count; i++)
@@ -241,7 +236,7 @@ namespace _2._5D_FYP
             for (int i = 0; i < EnemyBulletList.Count; i++)
                 EnemyBulletList[i].Draw(gameTime);
 
-            p.Draw(gameTime);
+            particleSystem.Draw(gameTime);
 
             HeadsUpDisplay.Draw(gameTime);
             spriteBatch.End();
