@@ -1,5 +1,3 @@
-Content\Models\fighter.xnb
-Content\Models\thor.xnb
 Content\Stars.xnb
 Content\Ground.xnb
 Content\Bar.xnb
@@ -11,8 +9,6 @@ Content\textures\RockRough0002_S.xnb
 Content\Verdana.xnb
 Content\Models\sphere.xnb
 Content\Models\Asteroid.xnb
-Content\Models\Station.xnb
-Content\Models\StationMaterial.xnb
 Content\Models\Elite Models\adder.xnb
 Content\Models\Elite Models\anaconda.xnb
 Content\Models\Elite Models\asp.xnb
@@ -43,14 +39,19 @@ Content\Models\frag11.xnb
 Content\Models\frag22.xnb
 Content\Models\frag33.xnb
 Content\Models\frag44.xnb
-Content\Models\SpaceShip2.xnb
 Content\Models\SpaceShip3.xnb
-Content\Models\Alien4.xnb
 Content\SoundEffects\explosion.xnb
-Content\Models\thor_0.xnb
 Content\Models\RockRough_0.xnb
 Content\Models\RockRough0002_S_0.xnb
 Content\Models\RockRough0012_1_M_0.xnb
 Content\Models\MetalBare_0.xnb
 Content\menuFont.xnb
 Content\menuBackground1.xnb
+Content\SoundEffects\Ifyouwantto-low.xnb
+Content\SoundEffects\Ifyouwantto-medium.xnb
+Content\SoundEffects\Ifyouwantto-starlightremix.xnb
+Content\menuBackground2.xnb
+Content\Models\Alien6-Blue.xnb
+Content\Models\Alien6-Green.xnb
+Content\Models\Alien6-Red.xnb
+Content\menuBackground3.xnb

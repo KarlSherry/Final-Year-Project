@@ -14,7 +14,7 @@ namespace _2._5D_FYP
         private int weaponIndex = 0;
 
         public int enemyTypeIndex = 0;
-        string[] enemyType = { "Alien4", "Alien4", "Alien4", "asp" };
+        string[] enemyType = { "Alien6-Green", "Alien6-Blue", "Alien6-Red", "asp" };
 
         public bool fireWeapon = false;
         private bool hasHitSomething = false;
@@ -128,7 +128,7 @@ namespace _2._5D_FYP
                 case 0:
                     _entityModel = "Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 0;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 5.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 3.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
                     if(game.Player.playerState != Player.State.Safe)
                         _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 100)
@@ -137,7 +137,7 @@ namespace _2._5D_FYP
                 case 1:
                     _entityModel = "Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 1;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 5.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 4.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
                     if (game.Player.playerState != Player.State.Safe)
                         _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 100)
@@ -146,7 +146,7 @@ namespace _2._5D_FYP
                 case 2:
                     _entityModel = "Models//" + enemyType[enemyTypeIndex];
                     weaponIndex = 2;
-                    _maxSpeed = 300.0f; _maxForce = 150.0f; _scale = 0.25f; _mass = 25.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 300.0f; _maxForce = 150.0f; _scale = 5.0f; _mass = 25.0f; _rotationSpeed = 5.0f;
                     if (game.Player.playerState != Player.State.Safe)
                         _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 200)

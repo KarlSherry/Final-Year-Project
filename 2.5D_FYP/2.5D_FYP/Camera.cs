@@ -17,7 +17,6 @@ namespace _2._5D_FYP
     {        
         public Matrix projection;
         public Matrix view;
-        private MouseState mouseState;
 
         private bool firstPerson = false;
         private bool topDown = true;
@@ -37,21 +36,6 @@ namespace _2._5D_FYP
         {
             float timeDelta = (float)(gameTime.ElapsedGameTime.Milliseconds / 1000.0f);
             view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
-
-            mouseState = Mouse.GetState();
-
-            int mouseX = mouseState.X;
-            int mouseY = mouseState.Y;
-
-            int midX = GraphicsDeviceManager.DefaultBackBufferHeight / 2;
-            int midY = GraphicsDeviceManager.DefaultBackBufferWidth / 2;
-
-            int deltaX = mouseX - midX;
-            int deltaY = mouseY - midY;
-
-            yaw(-(float)deltaX / 100.0f);
-            pitch(-(float)deltaY / 100.0f);
-            Mouse.SetPosition(midX, midY);
 
             Vector3 playerPosition = Game1.Instance().Player._pos;
 

@@ -81,6 +81,7 @@ namespace _2._5D_FYP
                     break;
                 case "Pause Menu Screen":
                     pauseMenuScreen.Draw(spriteBatch);
+                    gameScreen.Draw(gameTime);
                     break;
                 case "Game Screen":
                     gameScreen.Draw(gameTime);

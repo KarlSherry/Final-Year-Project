@@ -6,12 +6,14 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Audio;
 
 namespace _2._5D_FYP
 {
     class MainMenuScreen : BaseScreen
     {
         Texture2D menuBackground;
+        SoundEffect gameMusic;
 
         public MainMenuScreen() 
         {
@@ -20,7 +22,10 @@ namespace _2._5D_FYP
             menuButtons.Add("Highscores");
             menuButtons.Add("Controls");
             menuButtons.Add("Quit Game");
-            menuBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground1");
+            menuBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground3");
+            gameMusic = Game1.Instance().Content.Load<SoundEffect>("SoundEffects//Ifyouwantto-starlightremix");                
+
+            gameMusic.Play();
         }
 
         public override void Update(GameTime gameTime)
@@ -29,7 +34,6 @@ namespace _2._5D_FYP
 
             if (menuItem == 0 && isSelected == true)
             {
-                Game1.Instance().menuSystem.gameScreen.isRunning = Game1.Instance().IsActive;
                 Game1.GameState = "Game Screen";
             }
             if (menuItem == 1 && isSelected == true) Game1.GameState = "Highscore Screen";
@@ -47,7 +51,7 @@ namespace _2._5D_FYP
 
             for (int i = 0; i < menuButtons.Count; i++)
             {
-                color = (i == menuItem) ? Color.Yellow : Color.Black;
+                color = (i == menuItem) ? Color.Yellow : Color.White;
 
                 spriteBatch.DrawString(menuFont, menuButtons[i],
                     new Vector2(menuItemPosX - (menuFont.MeasureString(menuButtons[i]).X /2),

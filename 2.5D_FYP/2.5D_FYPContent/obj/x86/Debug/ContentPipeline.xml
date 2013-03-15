@@ -2,29 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Models\fighter.x</Source>
-      <Name>Models\fighter</Name>
-      <Importer>XImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\fighter.xnb</Output>
-      <Time>2013-03-05T14:47:51.796709+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\fighter_0.xml</Key>
-        <Value>2013-03-14T16:40:32.4181153+00:00</Value>
-      </Dependency>
-      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\thor_0.xnb</Request>
-    </Item>
-    <Item>
-      <Source>Models\thor.jpg</Source>
-      <Name>Models\thor</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\thor.xnb</Output>
-      <Time>2013-03-05T14:47:51.8067096+00:00</Time>
-    </Item>
-    <Item>
       <Source>Stars.bmp</Source>
       <Name>Stars</Name>
       <Importer>TextureImporter</Importer>
@@ -129,35 +106,6 @@
       <Dependency>
         <Key>obj\x86\Debug\Models\Asteroid_0.xml</Key>
         <Value>2013-03-14T16:40:35.6973029+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Station.fbx</Source>
-      <Name>Models\Station</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="Scale">0.25</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Station.xnb</Output>
-      <Time>2013-03-05T14:47:51.7637071+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Station_0.xml</Key>
-        <Value>2013-03-14T16:40:35.8993145+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\StationMaterial.fbx</Source>
-      <Name>Models\StationMaterial</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\StationMaterial.xnb</Output>
-      <Time>2013-03-05T14:47:51.7667073+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\StationMaterial_0.xml</Key>
-        <Value>2013-03-14T16:40:36.0983258+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -561,19 +509,6 @@
       <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\MetalBare_0.xnb</Request>
     </Item>
     <Item>
-      <Source>Models\SpaceShip2.fbx</Source>
-      <Name>Models\SpaceShip2</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\SpaceShip2.xnb</Output>
-      <Time>2013-03-13T19:37:10.0838826+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\SpaceShip2_0.xml</Key>
-        <Value>2013-03-14T16:40:46.3069097+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>Models\SpaceShip3.fbx</Source>
       <Name>Models\SpaceShip3</Name>
       <Importer>FbxImporter</Importer>
@@ -587,19 +522,6 @@
       </Dependency>
     </Item>
     <Item>
-      <Source>Models\Alien4.fbx</Source>
-      <Name>Models\Alien4</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien4.xnb</Output>
-      <Time>2013-03-13T23:12:29.9148546+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Alien4_0.xml</Key>
-        <Value>2013-03-14T16:40:46.6109271+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>SoundEffects\explosion.wav</Source>
       <Name>SoundEffects\explosion</Name>
       <Importer>WavImporter</Importer>
@@ -607,29 +529,6 @@
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\explosion.xnb</Output>
       <Time>2013-03-10T13:16:17.0852401+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\fighter.x</Source>
-      <Importer>XImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\fighter_0.xml</Output>
-      <Time>2013-03-05T14:47:51.796709+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\thor.jpg</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
-        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
-        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
-        <Data Key="GenerateMipmaps" Type="bool">true</Data>
-        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
-        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\thor_0.xnb</Output>
-      <Time>2013-03-05T14:47:51.8067096+00:00</Time>
     </Item>
     <Item>
       <Source>Models\sphere.fbx</Source>
@@ -644,20 +543,6 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Asteroid_0.xml</Output>
       <Time>2013-03-05T14:47:51.3306824+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\Station.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\Station_0.xml</Output>
-      <Time>2013-03-05T14:47:51.7637071+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\StationMaterial.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\StationMaterial_0.xml</Output>
-      <Time>2013-03-05T14:47:51.7667073+00:00</Time>
     </Item>
     <Item>
       <Source>Models\Elite Models\adder.fbx</Source>
@@ -934,25 +819,11 @@
       <Time>2013-03-12T19:44:43.1198733+00:00</Time>
     </Item>
     <Item>
-      <Source>Models\SpaceShip2.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\SpaceShip2_0.xml</Output>
-      <Time>2013-03-13T19:37:10.0838826+00:00</Time>
-    </Item>
-    <Item>
       <Source>Models\SpaceShip3.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\SpaceShip3_0.xml</Output>
       <Time>2013-03-13T21:31:50.1493998+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\Alien4.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\Alien4_0.xml</Output>
-      <Time>2013-03-13T23:12:29.9148546+00:00</Time>
     </Item>
     <Item>
       <Source>menuFont.spritefont</Source>
@@ -971,6 +842,111 @@
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground1.xnb</Output>
       <Time>2013-03-14T17:22:41.2117541+00:00</Time>
+    </Item>
+    <Item>
+      <Source>SoundEffects\Ifyouwantto-low.wav</Source>
+      <Name>SoundEffects\Ifyouwantto-low</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-low.xnb</Output>
+      <Time>2013-03-14T21:01:29.2818272+00:00</Time>
+    </Item>
+    <Item>
+      <Source>SoundEffects\Ifyouwantto-medium.wav</Source>
+      <Name>SoundEffects\Ifyouwantto-medium</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-medium.xnb</Output>
+      <Time>2013-03-14T21:01:31.5469567+00:00</Time>
+    </Item>
+    <Item>
+      <Source>SoundEffects\Ifyouwantto-starlightremix.wav</Source>
+      <Name>SoundEffects\Ifyouwantto-starlightremix</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-starlightremix.xnb</Output>
+      <Time>2013-03-14T21:01:33.7530829+00:00</Time>
+    </Item>
+    <Item>
+      <Source>menuBackground2.png</Source>
+      <Name>menuBackground2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground2.xnb</Output>
+      <Time>2013-03-14T21:12:26.1543981+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Alien6-Blue.fbx</Source>
+      <Name>Models\Alien6-Blue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien6-Blue.xnb</Output>
+      <Time>2013-03-14T21:34:33.0082898+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Alien6-Blue_0.xml</Key>
+        <Value>2013-03-14T21:34:38.0745796+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Alien6-Green.fbx</Source>
+      <Name>Models\Alien6-Green</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien6-Green.xnb</Output>
+      <Time>2013-03-14T21:34:33.01029+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Alien6-Green_0.xml</Key>
+        <Value>2013-03-14T21:34:38.2665906+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Alien6-Red.fbx</Source>
+      <Name>Models\Alien6-Red</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien6-Red.xnb</Output>
+      <Time>2013-03-14T21:34:33.0522924+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\Alien6-Red_0.xml</Key>
+        <Value>2013-03-14T21:34:38.4215995+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Alien6-Blue.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Alien6-Blue_0.xml</Output>
+      <Time>2013-03-14T21:34:33.0082898+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Alien6-Green.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Alien6-Green_0.xml</Output>
+      <Time>2013-03-14T21:34:33.01029+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Alien6-Red.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\Alien6-Red_0.xml</Output>
+      <Time>2013-03-14T21:34:33.0522924+00:00</Time>
+    </Item>
+    <Item>
+      <Source>menuBackground3.png</Source>
+      <Name>menuBackground3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground3.xnb</Output>
+      <Time>2013-03-15T13:22:31.4679906+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

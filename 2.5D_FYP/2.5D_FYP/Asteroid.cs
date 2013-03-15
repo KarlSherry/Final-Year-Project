@@ -90,7 +90,7 @@ namespace _2._5D_FYP
                 if (!_alive)
                 {
                     game.particleSystem.Start(this, _pos);
-                    asteroidExplosion.Play();
+                    asteroidExplosion.Play(0.10f,0.5f,0.0f);
                     parentList.Remove(this);
                 }
             }

@@ -56,7 +56,7 @@ namespace _2._5D_FYP
 
         public static string GameState = "Main Menu Screen";
 
-        private int EnemyBaseCount = 10, AsteroidBaseCount = 15, MetalBaseCount = 15;
+        private int EnemyBaseCount = 10, AsteroidBaseCount = 30, MetalBaseCount = 30;
         private int EnemyCount, AsteroidCount, MetalCount;
 
         public ParticleSystem particleSystem;

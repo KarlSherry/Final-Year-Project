@@ -12,6 +12,7 @@ namespace _2._5D_FYP
     {
         public bool isRunning = false;
         public bool isPaused = false;
+        public bool isNewGame = false;
 
         public GameScreen()
         {
@@ -64,8 +65,6 @@ namespace _2._5D_FYP
         #region Draw GameScreen
         public override void Draw(GameTime gameTime)
         {
-            //spriteBatch.DrawString(menuFont, "Game Screen", new Vector2(10, 10), color);
-
             for (int i = 0; i < Game1.Instance().StageList.Count; i++)
             {
                 DepthStencilState state = new DepthStencilState();
@@ -93,7 +92,7 @@ namespace _2._5D_FYP
 
             Game1.Instance().particleSystem.Draw(gameTime);
 
-            Game1.Instance().HeadsUpDisplay.Draw(gameTime);
+            //Game1.Instance().HeadsUpDisplay.Draw(gameTime);
         }
         #endregion
     }
