@@ -35,11 +35,10 @@ namespace _2._5D_FYP
         public override void Update(GameTime gameTime)
         {
             float timeDelta = (float)(gameTime.ElapsedGameTime.Milliseconds / 1000.0f);
-            view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
 
             Vector3 playerPosition = Game1.Instance().Player._pos;
 
-            KeyboardState k = Keyboard.GetState();
+            /*KeyboardState k = Keyboard.GetState();
             if (k.IsKeyDown(Keys.F2))
             {
                 firstPerson = true;
@@ -49,21 +48,19 @@ namespace _2._5D_FYP
             {
                 firstPerson = false;
                 topDown = true;
-            }
+            }*/
 
-            if (topDown)
-            {
-                _look = Game1.Instance().Player._look;
-                _pos = new Vector3(playerPosition.X, playerPosition.Y + 500.0f, playerPosition.Z + 250.0f);
-                //_look = Game1.Instance().Player._look;
-                view = Matrix.CreateLookAt(_pos, playerPosition + _look, _up);
-            }
-            if(firstPerson)
+            //_look = Game1.Instance().Player._look;
+            _pos = new Vector3(playerPosition.X, playerPosition.Y + 500.0f, playerPosition.Z + 250.0f);
+            //_look = Game1.Instance().Player._look;
+            view = Matrix.CreateLookAt(_pos, playerPosition, _up);
+            
+           /* if(firstPerson)
             {
                 _pos = new Vector3(playerPosition.X, playerPosition.Y, playerPosition.Z);
                 _look = Game1.Instance().Player._look;
                 view = Matrix.CreateLookAt(_pos, _pos + _look, _up);
-            }
+            }*/
 
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);
         }

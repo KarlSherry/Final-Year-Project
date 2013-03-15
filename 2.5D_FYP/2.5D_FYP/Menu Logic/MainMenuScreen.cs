@@ -23,9 +23,9 @@ namespace _2._5D_FYP
             menuButtons.Add("Controls");
             menuButtons.Add("Quit Game");
             menuBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground3");
-            gameMusic = Game1.Instance().Content.Load<SoundEffect>("SoundEffects//Ifyouwantto-starlightremix");                
+            //gameMusic = Game1.Instance().Content.Load<SoundEffect>("SoundEffects//Ifyouwantto-starlightremix");                
 
-            gameMusic.Play();
+            //gameMusic.Play();
         }
 
         public override void Update(GameTime gameTime)

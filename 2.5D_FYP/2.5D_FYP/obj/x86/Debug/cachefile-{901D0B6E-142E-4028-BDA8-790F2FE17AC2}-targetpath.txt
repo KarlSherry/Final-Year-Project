@@ -47,9 +47,6 @@ Content\Models\RockRough0012_1_M_0.xnb
 Content\Models\MetalBare_0.xnb
 Content\menuFont.xnb
 Content\menuBackground1.xnb
-Content\SoundEffects\Ifyouwantto-low.xnb
-Content\SoundEffects\Ifyouwantto-medium.xnb
-Content\SoundEffects\Ifyouwantto-starlightremix.xnb
 Content\menuBackground2.xnb
 Content\Models\Alien6-Blue.xnb
 Content\Models\Alien6-Green.xnb

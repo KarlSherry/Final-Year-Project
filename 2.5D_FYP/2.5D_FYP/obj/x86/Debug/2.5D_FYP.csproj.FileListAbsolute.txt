@@ -55,9 +55,6 @@ C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\De
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\obj\x86\Debug\2.5D_FYP.exe
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\obj\x86\Debug\2.5D_FYP.pdb
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground1.xnb
-C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-low.xnb
-C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-medium.xnb
-C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-starlightremix.xnb
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground2.xnb
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien6-Blue.xnb
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Alien6-Green.xnb

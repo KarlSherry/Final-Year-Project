@@ -311,23 +311,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SoundEffects\Ifyouwantto-low.wav">
-      <Name>Ifyouwantto-low</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-    <Compile Include="SoundEffects\Ifyouwantto-medium.wav">
-      <Name>Ifyouwantto-medium</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-    <Compile Include="SoundEffects\Ifyouwantto-starlightremix.wav">
-      <Name>Ifyouwantto-starlightremix</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="menuBackground2.png">
       <Name>menuBackground2</Name>
       <Importer>TextureImporter</Importer>

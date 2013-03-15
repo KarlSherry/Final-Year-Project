@@ -844,33 +844,6 @@
       <Time>2013-03-14T17:22:41.2117541+00:00</Time>
     </Item>
     <Item>
-      <Source>SoundEffects\Ifyouwantto-low.wav</Source>
-      <Name>SoundEffects\Ifyouwantto-low</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-low.xnb</Output>
-      <Time>2013-03-14T21:01:29.2818272+00:00</Time>
-    </Item>
-    <Item>
-      <Source>SoundEffects\Ifyouwantto-medium.wav</Source>
-      <Name>SoundEffects\Ifyouwantto-medium</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-medium.xnb</Output>
-      <Time>2013-03-14T21:01:31.5469567+00:00</Time>
-    </Item>
-    <Item>
-      <Source>SoundEffects\Ifyouwantto-starlightremix.wav</Source>
-      <Name>SoundEffects\Ifyouwantto-starlightremix</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\Ifyouwantto-starlightremix.xnb</Output>
-      <Time>2013-03-14T21:01:33.7530829+00:00</Time>
-    </Item>
-    <Item>
       <Source>menuBackground2.png</Source>
       <Name>menuBackground2</Name>
       <Importer>TextureImporter</Importer>
