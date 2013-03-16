@@ -56,6 +56,6 @@ namespace _2._5D_FYP
         }
 
         public virtual void Draw(SpriteBatch spriteBatch) { }
-        public virtual void Draw(GameTime gameTime) { }
+        public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime) { }
     }
 }

@@ -1,57 +1,36 @@
 Content\Stars.xnb
 Content\Ground.xnb
 Content\Bar.xnb
-Content\Models\MetalBare.xnb
-Content\Models\RockRough.xnb
-Content\Models\RockRough0002_S.xnb
-Content\Models\RockRough0012_1_M.xnb
-Content\textures\RockRough0002_S.xnb
 Content\Verdana.xnb
-Content\Models\sphere.xnb
-Content\Models\Asteroid.xnb
-Content\Models\Elite Models\adder.xnb
-Content\Models\Elite Models\anaconda.xnb
-Content\Models\Elite Models\asp.xnb
-Content\Models\Elite Models\boa.xnb
-Content\Models\Elite Models\cobramk1.xnb
-Content\Models\Elite Models\cobramk3.xnb
-Content\Models\Elite Models\coriolis.xnb
-Content\Models\Elite Models\ferdelance.xnb
-Content\Models\Elite Models\gecko.xnb
-Content\Models\Elite Models\krait.xnb
-Content\Models\Elite Models\marimba.xnb
-Content\Models\Elite Models\moray.xnb
-Content\Models\Elite Models\python.xnb
-Content\Models\Elite Models\Shuttle.xnb
-Content\Models\Elite Models\sidewinder.xnb
-Content\Models\Elite Models\thargoid.xnb
-Content\Models\Elite Models\transporter.xnb
-Content\Models\Elite Models\viper.xnb
 Content\peterssphere.xnb
 Content\StationExplode.xnb
 Content\Station Phases\stationComplete.xnb
-Content\Models\sphereGrey.xnb
-Content\Models\sphereOrange.xnb
-Content\Models\sphereBlue.xnb
-Content\Models\sphereFire.xnb
 Content\Station Phases\stationComplete1.xnb
-Content\Models\frag11.xnb
-Content\Models\frag22.xnb
-Content\Models\frag33.xnb
-Content\Models\frag44.xnb
 Content\Models\SpaceShip3.xnb
 Content\SoundEffects\explosion.xnb
-Content\Models\RockRough_0.xnb
-Content\Models\RockRough0002_S_0.xnb
-Content\Models\RockRough0012_1_M_0.xnb
-Content\Models\MetalBare_0.xnb
 Content\menuFont.xnb
 Content\menuBackground1.xnb
-Content\SoundEffects\Ifyouwantto-low.xnb
-Content\SoundEffects\Ifyouwantto-medium.xnb
-Content\SoundEffects\Ifyouwantto-starlightremix.xnb
 Content\menuBackground2.xnb
-Content\Models\Alien6-Blue.xnb
-Content\Models\Alien6-Green.xnb
-Content\Models\Alien6-Red.xnb
 Content\menuBackground3.xnb
+Content\Models\FloatingObjects\MetalBare.xnb
+Content\Models\FloatingObjects\RockRough.xnb
+Content\Models\FloatingObjects\RockRough0002_S.xnb
+Content\Models\FloatingObjects\RockRough0012_1_M.xnb
+Content\Models\FloatingObjects\Asteroid.xnb
+Content\Models\FloatingObjects\frag11.xnb
+Content\Models\FloatingObjects\frag22.xnb
+Content\Models\FloatingObjects\frag33.xnb
+Content\Models\FloatingObjects\frag44.xnb
+Content\Models\FloatingObjects\RockRough_0.xnb
+Content\Models\FloatingObjects\RockRough0002_S_0.xnb
+Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb
+Content\Models\FloatingObjects\MetalBare_0.xnb
+Content\Models\ParticleSpheres\sphere.xnb
+Content\Models\ParticleSpheres\sphereGrey.xnb
+Content\Models\ParticleSpheres\sphereOrange.xnb
+Content\Models\ParticleSpheres\sphereBlue.xnb
+Content\Models\ParticleSpheres\sphereFire.xnb
+Content\Models\Enemies\Alien6-Blue.xnb
+Content\Models\Enemies\Alien6-Green.xnb
+Content\Models\Enemies\Alien6-Red.xnb
+Content\Models\Enemies\AlienMama1.xnb

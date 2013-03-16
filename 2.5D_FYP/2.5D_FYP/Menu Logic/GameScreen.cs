@@ -63,7 +63,7 @@ namespace _2._5D_FYP
             }
         }
         #region Draw GameScreen
-        public override void Draw(GameTime gameTime)
+        public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             for (int i = 0; i < Game1.Instance().StageList.Count; i++)
             {
@@ -92,7 +92,7 @@ namespace _2._5D_FYP
 
             Game1.Instance().particleSystem.Draw(gameTime);
 
-            //Game1.Instance().HeadsUpDisplay.Draw(gameTime);
+            Game1.Instance().HeadsUpDisplay.Draw(spriteBatch);
         }
         #endregion
     }

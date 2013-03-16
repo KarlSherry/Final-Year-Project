@@ -56,10 +56,11 @@ namespace _2._5D_FYP
 
         public static string GameState = "Main Menu Screen";
 
-        private int EnemyBaseCount = 10, AsteroidBaseCount = 30, MetalBaseCount = 30;
+        private int EnemyBaseCount = 15, AsteroidBaseCount = 25, MetalBaseCount = 25;
         private int EnemyCount, AsteroidCount, MetalCount;
 
         public ParticleSystem particleSystem;
+        public ScoreSystem scoreSystem;
 
         public Game1()
         {
@@ -136,6 +137,7 @@ namespace _2._5D_FYP
                 EnemyBulletList[i].Initialize();
 
             particleSystem = new ParticleSystem();
+            scoreSystem = new ScoreSystem();
 
             base.Initialize();
         }

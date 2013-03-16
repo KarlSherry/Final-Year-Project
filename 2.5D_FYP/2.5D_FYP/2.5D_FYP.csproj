@@ -110,13 +110,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asteroid.cs" />
-    <Compile Include="Bullet.cs" />
-    <Compile Include="Camera.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="Entity.cs" />
-    <Compile Include="ForceField.cs" />
-    <Compile Include="Ground.cs" />
+    <Compile Include="Entities\Asteroid.cs" />
+    <Compile Include="Entities\Bullet.cs" />
+    <Compile Include="Entities\Camera.cs" />
+    <Compile Include="Entities\Enemy.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\ForceField.cs" />
+    <Compile Include="Entities\Ground.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="Menu Logic\BaseScreen.cs" />
     <Compile Include="Menu Logic\ControlScreen.cs" />
@@ -126,16 +126,17 @@
     <Compile Include="Menu Logic\MainMenuScreen.cs" />
     <Compile Include="Menu Logic\MenuSystem.cs" />
     <Compile Include="Menu Logic\PauseMenuScreen.cs" />
-    <Compile Include="Metal.cs" />
-    <Compile Include="Particle.cs" />
-    <Compile Include="ParticleSystem.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Entities\Metal.cs" />
+    <Compile Include="Particles\Particle.cs" />
+    <Compile Include="Particles\ParticleSystem.cs" />
+    <Compile Include="Entities\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Station.cs" />
-    <Compile Include="Weapon.cs" />
-    <Compile Include="World.cs" />
+    <Compile Include="Entities\Station.cs" />
+    <Compile Include="Entities\Weapon.cs" />
+    <Compile Include="Entities\World.cs" />
+    <Compile Include="ScoreSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

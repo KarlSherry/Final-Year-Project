@@ -63,14 +63,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\sphere.fbx">
+    <Compile Include="Models\ParticleSpheres\sphere.fbx">
       <Name>sphere</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Asteroid.fbx">
+    <Compile Include="Models\FloatingObjects\Asteroid.fbx">
       <Name>Asteroid</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
@@ -84,110 +84,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Elite Models\adder.fbx">
-      <Name>adder</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\anaconda.fbx">
-      <Name>anaconda</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\asp.fbx">
-      <Name>asp</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\boa.fbx">
-      <Name>boa</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\cobramk1.fbx">
-      <Name>cobramk1</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\cobramk3.fbx">
-      <Name>cobramk3</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\coriolis.fbx">
-      <Name>coriolis</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\ferdelance.fbx">
-      <Name>ferdelance</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\gecko.fbx">
-      <Name>gecko</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\krait.fbx">
-      <Name>krait</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\marimba.fbx">
-      <Name>marimba</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\moray.fbx">
-      <Name>moray</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\python.fbx">
-      <Name>python</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\Shuttle.fbx">
-      <Name>Shuttle</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\sidewinder.fbx">
-      <Name>sidewinder</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\thargoid.fbx">
-      <Name>thargoid</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\transporter.fbx">
-      <Name>transporter</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-    <Compile Include="Models\Elite Models\viper.fbx">
-      <Name>viper</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="peterssphere.fbx">
       <Name>peterssphere</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <ProcessorParameters_Scale>10</ProcessorParameters_Scale>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="StationExplode.fbx">
-      <Name>StationExplode</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -199,14 +100,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\sphereGrey.fbx">
+    <Compile Include="Models\ParticleSpheres\sphereGrey.fbx">
       <Name>sphereGrey</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\sphereOrange.fbx">
+    <Compile Include="Models\ParticleSpheres\sphereOrange.fbx">
       <Name>sphereOrange</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
@@ -220,12 +121,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\sphereBlue.fbx">
+    <Compile Include="Models\ParticleSpheres\sphereBlue.fbx">
       <Name>sphereBlue</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\sphereFire.fbx">
+    <Compile Include="Models\ParticleSpheres\sphereFire.fbx">
       <Name>sphereFire</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
@@ -239,52 +140,45 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\frag11.fbx">
+    <Compile Include="Models\FloatingObjects\frag11.fbx">
       <Name>frag11</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\frag22.fbx">
+    <Compile Include="Models\FloatingObjects\frag22.fbx">
       <Name>frag22</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\frag33.fbx">
+    <Compile Include="Models\FloatingObjects\frag33.fbx">
       <Name>frag33</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\frag44.fbx">
+    <Compile Include="Models\FloatingObjects\frag44.fbx">
       <Name>frag44</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\MetalBare.jpg">
+    <Compile Include="Models\FloatingObjects\MetalBare.jpg">
       <Name>MetalBare</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Models\RockRough.jpg">
+    <Compile Include="Models\FloatingObjects\RockRough.jpg">
       <Name>RockRough</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Models\RockRough0002_S.jpg">
+    <Compile Include="Models\FloatingObjects\RockRough0002_S.jpg">
       <Name>RockRough0002_S</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Models\RockRough0012_1_M.jpg">
+    <Compile Include="Models\FloatingObjects\RockRough0012_1_M.jpg">
       <Name>RockRough0012_1_M</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="textures\RockRough0002_S.jpg">
-      <Name>RockRough0002_S</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -304,13 +198,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="menuBackground1.png">
-      <Name>menuBackground1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="menuBackground2.png">
       <Name>menuBackground2</Name>
       <Importer>TextureImporter</Importer>
@@ -318,20 +205,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Alien6-Blue.fbx">
+    <Compile Include="Models\Enemies\Alien6-Blue.fbx">
       <Name>Alien6-Blue</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
+      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
     </Compile>
-    <Compile Include="Models\Alien6-Green.fbx">
+    <Compile Include="Models\Enemies\Alien6-Green.fbx">
       <Name>Alien6-Green</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
+      <ProcessorParameters_Scale>3</ProcessorParameters_Scale>
     </Compile>
-    <Compile Include="Models\Alien6-Red.fbx">
+    <Compile Include="Models\Enemies\Alien6-Red.fbx">
       <Name>Alien6-Red</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
+      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -340,6 +230,26 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuBackground1.png">
+      <Name>menuBackground1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Enemies\AlienMama1.fbx">
+      <Name>AlienMama1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <ProcessorParameters_Scale>4</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="highScores.txt">
+      <Name>highScores</Name>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -22,7 +22,7 @@ namespace _2._5D_FYP
             menuButtons.Add("Highscores");
             menuButtons.Add("Controls");
             menuButtons.Add("Quit Game");
-            menuBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground3");
+            menuBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground1");
             //gameMusic = Game1.Instance().Content.Load<SoundEffect>("SoundEffects//Ifyouwantto-starlightremix");                
 
             //gameMusic.Play();
