@@ -84,14 +84,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="peterssphere.fbx">
-      <Name>peterssphere</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>10</ProcessorParameters_Scale>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Station Phases\stationComplete.fbx">
       <Name>stationComplete</Name>
       <Importer>FbxImporter</Importer>
@@ -250,6 +242,21 @@
     <None Include="highScores.txt">
       <Name>highScores</Name>
     </None>
+    <Compile Include="Models\Enemies\Alien7Blue.fbx">
+      <Name>Alien7Blue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Enemies\Alien7Green.fbx">
+      <Name>Alien7Green</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Enemies\Alien7Red.fbx">
+      <Name>Alien7Red</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

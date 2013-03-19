@@ -23,9 +23,10 @@ namespace _2._5D_FYP
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 if (screenRunTime > maxScreenTime)
-                {
+                {                    
                     Game1.GameState = "Main Menu Screen";
                     screenRunTime = 0;
+                    MenuSystem.menus.gameScreen.isRunning = false;
                 }
 
                 screenRunTime += timeDelta;

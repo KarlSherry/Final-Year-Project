@@ -21,7 +21,7 @@ namespace _2._5D_FYP
             public string scoreTime;
         }
 
-        Score[] highScores = new Score[10];
+        public Score[] highScores = new Score[10];
         string[] scoreLine = new string[10];
 
         public HighscoreScreen() 
@@ -32,6 +32,8 @@ namespace _2._5D_FYP
             {
                 scoreLine[i] = highScores[i].initials + '\t' + highScores[i].score + '\t' + highScores[i].scoreDate + '\t' + highScores[i].scoreTime;
             }
+
+            Console.WriteLine(highScores[9].score + " last score");
         }
 
         public override void Update(GameTime gameTime)

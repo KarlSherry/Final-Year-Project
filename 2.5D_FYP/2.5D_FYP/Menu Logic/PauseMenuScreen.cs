@@ -37,8 +37,9 @@ namespace _2._5D_FYP
             if (menuItem == menuButtons.Count - 1 && isSelected == true)
             {
                 menuItem = 0;
-                Game1.Instance().menuSystem.gameScreen.isPaused = false;
                 Game1.GameState = "Main Menu Screen";
+                //Game1.Instance().menuSystem.gameScreen.isPaused = false;
+                Game1.Instance().menuSystem.gameScreen.isRunning = false;
             }
         }
 

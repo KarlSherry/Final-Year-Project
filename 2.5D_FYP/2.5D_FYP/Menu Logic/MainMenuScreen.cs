@@ -32,6 +32,8 @@ namespace _2._5D_FYP
         {
             base.Update(gameTime);
 
+            //Game1.Instance().menuSystem.gameScreen.isRunning = false; 
+
             if (menuItem == 0 && isSelected == true)
             {
                 Game1.GameState = "Game Screen";

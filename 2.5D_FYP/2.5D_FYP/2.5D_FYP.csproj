@@ -125,6 +125,7 @@
     <Compile Include="Menu Logic\HighscoreScreen.cs" />
     <Compile Include="Menu Logic\MainMenuScreen.cs" />
     <Compile Include="Menu Logic\MenuSystem.cs" />
+    <Compile Include="Menu Logic\NewScoreScreen.cs" />
     <Compile Include="Menu Logic\PauseMenuScreen.cs" />
     <Compile Include="Entities\Metal.cs" />
     <Compile Include="Particles\Particle.cs" />

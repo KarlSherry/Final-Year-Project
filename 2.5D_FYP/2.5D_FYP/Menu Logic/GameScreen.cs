@@ -58,8 +58,13 @@ namespace _2._5D_FYP
 
             if (!Game1.Instance().Player._alive)
             {
-                isRunning = false;
-                Game1.GameState = "Game Over Screen";
+                if (Game1.Instance().Player.playerScore > MenuSystem.menus.highscoreScreen.highScores[9].score)
+                {
+                    MenuSystem.menus.newScoreScreen = new NewScoreScreen(Game1.Instance().Player.playerScore);
+                    MenuSystem.menus.newScoreScreen.LoadContent(Game1.Instance().Content);
+                    Game1.GameState = "New Score Screen";
+                }
+                else Game1.GameState = "Game Over Screen";
             }
         }
         #region Draw GameScreen

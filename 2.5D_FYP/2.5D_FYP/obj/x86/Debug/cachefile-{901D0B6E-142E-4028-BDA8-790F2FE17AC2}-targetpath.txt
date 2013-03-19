@@ -2,7 +2,6 @@ Content\Stars.xnb
 Content\Ground.xnb
 Content\Bar.xnb
 Content\Verdana.xnb
-Content\peterssphere.xnb
 Content\Station Phases\stationComplete.xnb
 Content\Station Phases\stationComplete1.xnb
 Content\Models\SpaceShip3.xnb
@@ -33,3 +32,6 @@ Content\Models\Enemies\Alien6-Blue.xnb
 Content\Models\Enemies\Alien6-Green.xnb
 Content\Models\Enemies\Alien6-Red.xnb
 Content\Models\Enemies\AlienMama1.xnb
+Content\Models\Enemies\Alien7Blue.xnb
+Content\Models\Enemies\Alien7Green.xnb
+Content\Models\Enemies\Alien7Red.xnb

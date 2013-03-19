@@ -12,17 +12,22 @@ namespace _2._5D_FYP
     {
         private string state;
 
+        public static MenuSystem menus;
+
         MainMenuScreen mainMenuScreen;
         PauseMenuScreen pauseMenuScreen;
         public GameScreen gameScreen;
-        HighscoreScreen highscoreScreen;
+        public HighscoreScreen highscoreScreen;
         ControlScreen controlScreen;
         GameOverScreen gameOverScreen;
+        public NewScoreScreen newScoreScreen;
 
         List<BaseScreen> screenList = new List<BaseScreen>();
 
         public MenuSystem() 
         {
+            menus = this;
+
             mainMenuScreen = new MainMenuScreen();
             screenList.Add(mainMenuScreen);
             pauseMenuScreen = new PauseMenuScreen();
@@ -35,6 +40,8 @@ namespace _2._5D_FYP
             screenList.Add(controlScreen);
             gameOverScreen = new GameOverScreen();
             screenList.Add(gameOverScreen);
+            newScoreScreen = new NewScoreScreen(0);
+            screenList.Add(newScoreScreen);
         }
 
         public void LoadContent(ContentManager Content)
@@ -69,6 +76,9 @@ namespace _2._5D_FYP
                 case "Game Over Screen":
                     gameOverScreen.Update(gameTime);
                     break;
+                case "New Score Screen":
+                    newScoreScreen.Update(gameTime);
+                    break;
             }
         }
 
@@ -94,6 +104,9 @@ namespace _2._5D_FYP
                     break;
                 case "Game Over Screen":
                     gameOverScreen.Draw(spriteBatch);
+                    break;
+                case "New Score Screen":
+                    newScoreScreen.Draw(spriteBatch);
                     break;
             }
         }
