@@ -34,15 +34,15 @@ namespace _2._5D_FYP
                 MenuSystem.menus.highscoreScreen.highScores[9].score = playerScore;
                 SortScores(MenuSystem.menus.highscoreScreen.highScores);
                 WriteTextFile();
-                MenuSystem.menus.highscoreScreen = new HighscoreScreen();
-                MenuSystem.menus.highscoreScreen.LoadContent(Game1.Instance().Content);
-                MenuSystem.menus.gameScreen.isRunning = false;
             }
 
             if (screenRunTime > maxScreenTime)
             {
                 screenRunTime = 0;
+                MenuSystem.menus.highscoreScreen = new HighscoreScreen();
+                MenuSystem.menus.highscoreScreen.LoadContent(Game1.Instance().Content);
                 Game1.GameState = "Highscore Screen";
+                MenuSystem.menus.gameScreen.isRunning = false;
             }
 
             screenRunTime += timeDelta;

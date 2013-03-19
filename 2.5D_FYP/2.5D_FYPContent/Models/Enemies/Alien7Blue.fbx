@@ -10,10 +10,10 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2013
 		Month: 03
-		Day: 17
-		Hour: 13
-		Minute: 06
-		Second: 57
+		Day: 19
+		Hour: 18
+		Minute: 37
+		Second: 38
 		Millisecond: 0
 	}
 	Creator: "FBX SDK/FBX Plugins build 20070228"
@@ -21,7 +21,7 @@ FBXHeaderExtension:  {
 		FlagPLE: 0
 	}
 }
-CreationTime: "2013-03-17 13:06:57:000"
+CreationTime: "2013-03-19 18:37:38:000"
 Creator: "Blender version 2.66 (sub 1)"
 
 ; Object definitions
@@ -141,7 +141,7 @@ Objects:  {
 		Properties60:  {
 			Property: "QuaternionInterpolate", "bool", "",0
 			Property: "Visibility", "Visibility", "A+",1
-			Property: "Lcl Translation", "Lcl Translation", "A+",7.481131553649902,5.343665122985840,6.507639884948730
+			Property: "Lcl Translation", "Lcl Translation", "A+",8.080470085144043,5.400223255157471,5.823714256286621
 			Property: "Lcl Rotation", "Lcl Rotation", "A+",23.240196764176893,142.362356870423241,34.212065797802460
 			Property: "Lcl Scaling", "Lcl Scaling", "A+",1.000000000000000,0.999999880790710,1.000000000000000
 			Property: "RotationOffset", "Vector3D", "",0,0,0
@@ -283,7 +283,7 @@ Objects:  {
 		Culling: "CullingOff"
 		TypeFlags: "Camera"
 		GeometryVersion: 124
-		Position: 7.481132,5.343665,6.507640
+		Position: 8.080470,5.400223,5.823714
 		Up: -0.317370,0.895343,-0.312469
 		LookAt: -0.685881,0.010817,0.727634
 		ShowInfoOnMoving: 1
@@ -1079,7 +1079,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: "Model::AlienShip", "Mesh" {
+	Model: "Model::AlienShip_001", "Mesh" {
 		Version: 232
 		Properties60:  {
 			Property: "QuaternionInterpolate", "bool", "",0
@@ -2781,7 +2781,7 @@ Objects:  {
 			Matrix: 0.000000075497901,0.000000000000000,-1.000000000000000,0.000000000000000,-1.000000000000000,0.000000000000000,-0.000000075497901,0.000000000000000,0.000000000000000,1.000000000000000,0.000000000000000,0.000000000000000,0.000000000000000,0.000000000000000,0.000000000000000,1.000000000000000
 		}
 		PoseNode:  {
-			Node: "Model::AlienShip"
+			Node: "Model::AlienShip_001"
 			Matrix: 0.000000075497901,0.000000000000000,-1.000000000000000,0.000000000000000,-1.000000000000000,0.000000000000000,-0.000000075497901,0.000000000000000,0.000000000000000,1.000000000000000,0.000000000000000,0.000000000000000,0.000000000000000,0.000000000000000,0.000000000000000,1.000000000000000
 		}
 	}
@@ -2807,7 +2807,7 @@ Relations:  {
 	}
 	Model: "Model::AlienShip_002", "Mesh" {
 	}
-	Model: "Model::AlienShip", "Mesh" {
+	Model: "Model::AlienShip_001", "Mesh" {
 	}
 	Model: "Model::Camera", "Camera" {
 	}
@@ -2855,7 +2855,7 @@ Relations:  {
 Connections:  {
 	Connect: "OO", "Model::AlienShip_003", "Model::Scene"
 	Connect: "OO", "Model::AlienShip_002", "Model::Scene"
-	Connect: "OO", "Model::AlienShip", "Model::Scene"
+	Connect: "OO", "Model::AlienShip_001", "Model::Scene"
 	Connect: "OO", "Model::Lamp", "Model::Scene"
 	Connect: "OO", "Model::Camera", "Model::Scene"
 	Connect: "OO", "Material::Black", "Model::AlienShip_003"
@@ -2874,12 +2874,12 @@ Connections:  {
 	Connect: "OO", "Material::Red", "Model::AlienShip_002"
 	Connect: "OO", "Material::WingSpike", "Model::AlienShip_002"
 	Connect: "OO", "Material::Yellow", "Model::AlienShip_002"
-	Connect: "OO", "Material::Black", "Model::AlienShip"
-	Connect: "OO", "Material::Blue", "Model::AlienShip"
-	Connect: "OO", "Material::Body", "Model::AlienShip"
-	Connect: "OO", "Material::CockPit", "Model::AlienShip"
-	Connect: "OO", "Material::WingSpike", "Model::AlienShip"
-	Connect: "OO", "Material::Yellow", "Model::AlienShip"
+	Connect: "OO", "Material::Black", "Model::AlienShip_001"
+	Connect: "OO", "Material::Blue", "Model::AlienShip_001"
+	Connect: "OO", "Material::Body", "Model::AlienShip_001"
+	Connect: "OO", "Material::CockPit", "Model::AlienShip_001"
+	Connect: "OO", "Material::WingSpike", "Model::AlienShip_001"
+	Connect: "OO", "Material::Yellow", "Model::AlienShip_001"
 }
 ;Takes and animation section
 ;----------------------------------------------------
@@ -3065,7 +3065,7 @@ Takes:  {
 				}
 			}
 		}
-		Model: "Model::AlienShip" {
+		Model: "Model::AlienShip_001" {
 			Version: 1.1
 			Channel: "Transform" {
 				Channel: "T" {
@@ -3156,27 +3156,27 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 7.481131553649902
+						Default: 8.080470085144043
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,7.481131553649902,L
+							1924423250,8.080470085144043,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 5.343665122985840
+						Default: 5.400223255157471
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,5.343665122985840,L
+							1924423250,5.400223255157471,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 6.507639884948730
+						Default: 5.823714256286621
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,6.507639884948730,L
+							1924423250,5.823714256286621,L
 						Color: 0,0,1
 					}
 					LayerType: 1

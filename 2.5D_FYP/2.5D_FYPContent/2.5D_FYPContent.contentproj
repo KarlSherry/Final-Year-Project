@@ -197,26 +197,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Enemies\Alien6-Blue.fbx">
-      <Name>Alien6-Blue</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
-    </Compile>
-    <Compile Include="Models\Enemies\Alien6-Green.fbx">
-      <Name>Alien6-Green</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>3</ProcessorParameters_Scale>
-    </Compile>
-    <Compile Include="Models\Enemies\Alien6-Red.fbx">
-      <Name>Alien6-Red</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="menuBackground3.png">
       <Name>menuBackground3</Name>
       <Importer>TextureImporter</Importer>
@@ -254,6 +234,11 @@
     </Compile>
     <Compile Include="Models\Enemies\Alien7Red.fbx">
       <Name>Alien7Red</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\ParticleSpheres\Rocket.fbx">
+      <Name>Rocket</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>

@@ -20,6 +20,7 @@ namespace _2._5D_FYP
         private bool hasHitSomething = false;
 
         List<Entity> playerBulletList = new List<Entity>();
+        List<Entity> enemyList = new List<Entity>();
 
         public Enemy(List<Entity> list)
         {
@@ -39,6 +40,7 @@ namespace _2._5D_FYP
             weaponIndex = Entity.randomGenerator.Next(0, 3);
 
             playerBulletList = game.PlayerBulletList;
+            enemyList = game.EnemyList;
         }
 
         float randomClamped()
@@ -52,13 +54,16 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi)     * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
                 getEnemyType(enemyTypeIndex);
 
                 hasHitSomething = CheckCollision(playerBulletList);
                 if (hasHitSomething)
                     CollisionHandler(playerBulletList);
+                hasHitSomething = CheckCollision(enemyList);
+                if (hasHitSomething)
+                    CollisionHandler(enemyList);
 
                 weapon.Update(gameTime);
 
@@ -121,6 +126,11 @@ namespace _2._5D_FYP
                     _alive = false;
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
+                }
+                if (entity._entityCollisionFlag == true && entity is Enemy)
+                {
+                    _force = Vector3.Cross(_pos, entity._pos);
+                    entity._force = Vector3.Cross( _pos, entity._pos);
                 }
             }
         }

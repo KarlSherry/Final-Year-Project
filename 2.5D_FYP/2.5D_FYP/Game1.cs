@@ -209,13 +209,15 @@ namespace _2._5D_FYP
             previousRound = currentRound;
 
             if (EnemyList.Count <= 0)
+            {
                 currentRound += 1;
+            }
 
             if (currentRound != previousRound)
             {
+                previousRound = currentRound;
                 Initialize();
                 LoadContent();
-                previousRound = currentRound;
             }
 
             base.Update(gameTime);

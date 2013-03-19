@@ -28,10 +28,8 @@ Content\Models\ParticleSpheres\sphereGrey.xnb
 Content\Models\ParticleSpheres\sphereOrange.xnb
 Content\Models\ParticleSpheres\sphereBlue.xnb
 Content\Models\ParticleSpheres\sphereFire.xnb
-Content\Models\Enemies\Alien6-Blue.xnb
-Content\Models\Enemies\Alien6-Green.xnb
-Content\Models\Enemies\Alien6-Red.xnb
 Content\Models\Enemies\AlienMama1.xnb
 Content\Models\Enemies\Alien7Blue.xnb
 Content\Models\Enemies\Alien7Green.xnb
 Content\Models\Enemies\Alien7Red.xnb
+Content\Models\ParticleSpheres\Rocket.xnb

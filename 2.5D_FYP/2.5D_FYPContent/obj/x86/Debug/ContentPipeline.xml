@@ -350,27 +350,6 @@
       <Time>2013-03-12T19:44:43.1198733+00:00</Time>
     </Item>
     <Item>
-      <Source>Models\Enemies\Alien6-Blue.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\Enemies\Alien6-Blue_0.xml</Output>
-      <Time>2013-03-14T21:34:33.0082898+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\Enemies\Alien6-Green.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\Enemies\Alien6-Green_0.xml</Output>
-      <Time>2013-03-14T21:34:33.01029+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\Enemies\Alien6-Red.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\Enemies\Alien6-Red_0.xml</Output>
-      <Time>2013-03-14T21:34:33.0522924+00:00</Time>
-    </Item>
-    <Item>
       <Source>Models\ParticleSpheres\sphere.fbx</Source>
       <Name>Models\ParticleSpheres\sphere</Name>
       <Importer>FbxImporter</Importer>
@@ -478,54 +457,6 @@
       <Time>2013-03-18T14:08:07.0683776+00:00</Time>
     </Item>
     <Item>
-      <Source>Models\Enemies\Alien6-Blue.fbx</Source>
-      <Name>Models\Enemies\Alien6-Blue</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="Scale">2</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien6-Blue.xnb</Output>
-      <Time>2013-03-14T21:34:33.0082898+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Enemies\Alien6-Blue_0.xml</Key>
-        <Value>2013-03-16T13:14:21.2839789+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Enemies\Alien6-Green.fbx</Source>
-      <Name>Models\Enemies\Alien6-Green</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="Scale">3</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien6-Green.xnb</Output>
-      <Time>2013-03-14T21:34:33.01029+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Enemies\Alien6-Green_0.xml</Key>
-        <Value>2013-03-16T13:14:21.4369876+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\Enemies\Alien6-Red.fbx</Source>
-      <Name>Models\Enemies\Alien6-Red</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="Scale">2</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien6-Red.xnb</Output>
-      <Time>2013-03-14T21:34:33.0522924+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\Enemies\Alien6-Red_0.xml</Key>
-        <Value>2013-03-16T13:14:21.6049972+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>Models\Enemies\AlienMama1.fbx</Source>
       <Name>Models\Enemies\AlienMama1</Name>
       <Importer>FbxImporter</Importer>
@@ -548,10 +479,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien7Blue.xnb</Output>
-      <Time>2013-03-18T14:09:06.7427907+00:00</Time>
+      <Time>2013-03-19T19:31:40.3243369+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\Enemies\Alien7Blue_0.xml</Key>
-        <Value>2013-03-18T14:09:58.795768+00:00</Value>
+        <Value>2013-03-19T19:32:29.7541641+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -561,10 +492,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien7Green.xnb</Output>
-      <Time>2013-03-18T14:09:09.0339218+00:00</Time>
+      <Time>2013-03-19T19:31:40.3403378+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\Enemies\Alien7Green_0.xml</Key>
-        <Value>2013-03-18T14:09:59.0027798+00:00</Value>
+        <Value>2013-03-19T19:32:30.9272312+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -574,10 +505,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien7Red.xnb</Output>
-      <Time>2013-03-18T14:09:09.6099547+00:00</Time>
+      <Time>2013-03-19T19:31:40.3573388+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\Enemies\Alien7Red_0.xml</Key>
-        <Value>2013-03-18T14:09:59.2457937+00:00</Value>
+        <Value>2013-03-19T19:32:31.1792457+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -585,21 +516,41 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Enemies\Alien7Blue_0.xml</Output>
-      <Time>2013-03-18T14:09:06.7427907+00:00</Time>
+      <Time>2013-03-19T19:31:40.3243369+00:00</Time>
     </Item>
     <Item>
       <Source>Models\Enemies\Alien7Green.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Enemies\Alien7Green_0.xml</Output>
-      <Time>2013-03-18T14:09:09.0339218+00:00</Time>
+      <Time>2013-03-19T19:31:40.3403378+00:00</Time>
     </Item>
     <Item>
       <Source>Models\Enemies\Alien7Red.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Enemies\Alien7Red_0.xml</Output>
-      <Time>2013-03-18T14:09:09.6099547+00:00</Time>
+      <Time>2013-03-19T19:31:40.3573388+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\Rocket.fbx</Source>
+      <Name>Models\ParticleSpheres\Rocket</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\Rocket.xnb</Output>
+      <Time>2013-03-19T19:32:04.3217095+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\Rocket_0.xml</Key>
+        <Value>2013-03-19T19:32:31.3132533+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\Rocket.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\ParticleSpheres\Rocket_0.xml</Output>
+      <Time>2013-03-19T19:32:04.3217095+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
