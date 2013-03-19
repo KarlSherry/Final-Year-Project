@@ -13,14 +13,14 @@ namespace _2._5D_FYP
 
         public Station(List<Entity> list)
         {
-            _entityModel = "Station Phases//stationComplete1";
+            _entityModel = "Station Phases//CompleteStations5a";
             _entityName = "Station";
             _type = this.GetType();
 
             _pos = new Vector3(0, -40, 0);
             _look = Vector3.Forward;
 
-            _scale = 20.0f;
+            _scale = 50.0f;
 
             _alive = true;
 

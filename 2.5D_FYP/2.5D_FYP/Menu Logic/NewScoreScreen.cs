@@ -38,11 +38,11 @@ namespace _2._5D_FYP
 
             if (screenRunTime > maxScreenTime)
             {
-                screenRunTime = 0;
                 MenuSystem.menus.highscoreScreen = new HighscoreScreen();
                 MenuSystem.menus.highscoreScreen.LoadContent(Game1.Instance().Content);
                 Game1.GameState = "Highscore Screen";
                 MenuSystem.menus.gameScreen.isRunning = false;
+                screenRunTime = 0;
             }
 
             screenRunTime += timeDelta;

@@ -129,8 +129,11 @@ namespace _2._5D_FYP
                 }
                 if (entity._entityCollisionFlag == true && entity is Enemy)
                 {
-                    _force = Vector3.Cross(_pos, entity._pos);
-                    entity._force = Vector3.Cross( _pos, entity._pos);
+                    if (enemyTypeIndex != 3)
+                    {
+                        _force = Vector3.Cross(_pos, entity._pos);
+                    }
+
                 }
             }
         }
@@ -142,7 +145,7 @@ namespace _2._5D_FYP
                 case 0:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
                     weaponIndex = 0;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 3.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 500.0f; _maxForce = 10.0f; _scale = 3.0f; _mass = 10.0f; _rotationSpeed = 5.0f;
                     if(game.Player.playerState != Player.State.Safe)
                         _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 100)
@@ -151,7 +154,7 @@ namespace _2._5D_FYP
                 case 1:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
                     weaponIndex = 1;
-                    _maxSpeed = 500.0f; _maxForce = 150.0f; _scale = 4.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 500.0f; _maxForce = 10.0f; _scale = 4.5f; _mass = 10.0f; _rotationSpeed = 5.0f;
                     if (game.Player.playerState != Player.State.Safe)
                         _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 100)
@@ -160,7 +163,7 @@ namespace _2._5D_FYP
                 case 2:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
                     weaponIndex = 2;
-                    _maxSpeed = 300.0f; _maxForce = 150.0f; _scale = 6.0f; _mass = 25.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 300.0f; _maxForce = 10.0f; _scale = 6.0f; _mass = 25.0f; _rotationSpeed = 5.0f;
                     if (game.Player.playerState != Player.State.Safe)
                         _force = pursue(game.Player);
                     if ((game.Player._pos - _pos).Length() < 200)
@@ -169,7 +172,7 @@ namespace _2._5D_FYP
                 case 3:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
                     weaponIndex = 2;
-                    _maxSpeed = 250.0f; _maxForce = 150.0f; _scale = 5.0f; _mass = 25.0f; _rotationSpeed = 5.0f;
+                    _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 5.0f; _mass = 25.0f; _rotationSpeed = 5.0f;
                     _force = pursue(game.Station);
                     if ((game.Station._pos - _pos).Length() < 200)
                         weapon.CheckWeaponFire(weaponIndex, this);

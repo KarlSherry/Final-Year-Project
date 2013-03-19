@@ -2,8 +2,6 @@ Content\Stars.xnb
 Content\Ground.xnb
 Content\Bar.xnb
 Content\Verdana.xnb
-Content\Station Phases\stationComplete.xnb
-Content\Station Phases\stationComplete1.xnb
 Content\Models\SpaceShip3.xnb
 Content\SoundEffects\explosion.xnb
 Content\menuFont.xnb
@@ -26,10 +24,12 @@ Content\Models\FloatingObjects\MetalBare_0.xnb
 Content\Models\ParticleSpheres\sphere.xnb
 Content\Models\ParticleSpheres\sphereGrey.xnb
 Content\Models\ParticleSpheres\sphereOrange.xnb
-Content\Models\ParticleSpheres\sphereBlue.xnb
 Content\Models\ParticleSpheres\sphereFire.xnb
 Content\Models\Enemies\AlienMama1.xnb
 Content\Models\Enemies\Alien7Blue.xnb
 Content\Models\Enemies\Alien7Green.xnb
 Content\Models\Enemies\Alien7Red.xnb
 Content\Models\ParticleSpheres\Rocket.xnb
+Content\Station Phases\CompleteStations5.xnb
+Content\Station Phases\CompleteStations5a.xnb
+Content\Models\ParticleSpheres\sphereBlue.xnb

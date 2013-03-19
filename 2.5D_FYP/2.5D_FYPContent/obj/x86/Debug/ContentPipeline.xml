@@ -38,35 +38,6 @@
       <Time>2013-02-16T20:48:27.2532874+00:00</Time>
     </Item>
     <Item>
-      <Source>Station Phases\stationComplete.fbx</Source>
-      <Name>Station Phases\stationComplete</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Parameters>
-        <Data Key="RotationX">90</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\stationComplete.xnb</Output>
-      <Time>2013-03-10T12:01:18.4089305+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Station Phases\stationComplete_0.xml</Key>
-        <Value>2013-03-14T16:40:40.0985546+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Station Phases\stationComplete1.fbx</Source>
-      <Name>Station Phases\stationComplete1</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\stationComplete1.xnb</Output>
-      <Time>2013-03-11T19:22:51.5580907+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Station Phases\stationComplete1_0.xml</Key>
-        <Value>2013-03-14T16:40:41.0786107+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>Models\SpaceShip3.fbx</Source>
       <Name>Models\SpaceShip3</Name>
       <Importer>FbxImporter</Importer>
@@ -87,20 +58,6 @@
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\SoundEffects\explosion.xnb</Output>
       <Time>2013-03-10T13:16:17.0852401+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Station Phases\stationComplete.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Station Phases\stationComplete_0.xml</Output>
-      <Time>2013-03-10T12:01:18.4089305+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Station Phases\stationComplete1.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Station Phases\stationComplete1_0.xml</Output>
-      <Time>2013-03-11T19:22:51.5580907+00:00</Time>
     </Item>
     <Item>
       <Source>Models\SpaceShip3.fbx</Source>
@@ -389,19 +346,6 @@
       </Dependency>
     </Item>
     <Item>
-      <Source>Models\ParticleSpheres\sphereBlue.fbx</Source>
-      <Name>Models\ParticleSpheres\sphereBlue</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereBlue.xnb</Output>
-      <Time>2013-03-10T13:41:02.9802284+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\ParticleSpheres\sphereBlue_0.xml</Key>
-        <Value>2013-03-16T13:41:20.8346119+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>Models\ParticleSpheres\sphereFire.fbx</Source>
       <Name>Models\ParticleSpheres\sphereFire</Name>
       <Importer>FbxImporter</Importer>
@@ -434,13 +378,6 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\sphereOrange_0.xml</Output>
       <Time>2013-03-10T13:07:41.2627367+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Models\ParticleSpheres\sphereBlue.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Models\ParticleSpheres\sphereBlue_0.xml</Output>
-      <Time>2013-03-10T13:41:02.9802284+00:00</Time>
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\sphereFire.fbx</Source>
@@ -479,10 +416,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien7Blue.xnb</Output>
-      <Time>2013-03-19T19:31:40.3243369+00:00</Time>
+      <Time>2013-03-19T20:33:46.1224404+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\Enemies\Alien7Blue_0.xml</Key>
-        <Value>2013-03-19T19:32:29.7541641+00:00</Value>
+        <Value>2013-03-19T20:33:49.9246579+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -492,10 +429,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien7Green.xnb</Output>
-      <Time>2013-03-19T19:31:40.3403378+00:00</Time>
+      <Time>2013-03-19T20:33:46.1434416+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\Enemies\Alien7Green_0.xml</Key>
-        <Value>2013-03-19T19:32:30.9272312+00:00</Value>
+        <Value>2013-03-19T20:33:50.0836669+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -505,10 +442,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\Enemies\Alien7Red.xnb</Output>
-      <Time>2013-03-19T19:31:40.3573388+00:00</Time>
+      <Time>2013-03-19T20:33:46.1564423+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\Enemies\Alien7Red_0.xml</Key>
-        <Value>2013-03-19T19:32:31.1792457+00:00</Value>
+        <Value>2013-03-19T20:33:50.2356756+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -516,21 +453,21 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Enemies\Alien7Blue_0.xml</Output>
-      <Time>2013-03-19T19:31:40.3243369+00:00</Time>
+      <Time>2013-03-19T20:33:46.1224404+00:00</Time>
     </Item>
     <Item>
       <Source>Models\Enemies\Alien7Green.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Enemies\Alien7Green_0.xml</Output>
-      <Time>2013-03-19T19:31:40.3403378+00:00</Time>
+      <Time>2013-03-19T20:33:46.1434416+00:00</Time>
     </Item>
     <Item>
       <Source>Models\Enemies\Alien7Red.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\Enemies\Alien7Red_0.xml</Output>
-      <Time>2013-03-19T19:31:40.3573388+00:00</Time>
+      <Time>2013-03-19T20:33:46.1564423+00:00</Time>
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\Rocket.fbx</Source>
@@ -551,6 +488,66 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\Rocket_0.xml</Output>
       <Time>2013-03-19T19:32:04.3217095+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\CompleteStations5.fbx</Source>
+      <Name>Station Phases\CompleteStations5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\CompleteStations5.xnb</Output>
+      <Time>2013-03-19T23:07:29.6299948+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Station Phases\CompleteStations5_0.xml</Key>
+        <Value>2013-03-19T23:07:33.584221+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\CompleteStations5.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Station Phases\CompleteStations5_0.xml</Output>
+      <Time>2013-03-19T23:07:29.6299948+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\CompleteStations5a.fbx</Source>
+      <Name>Station Phases\CompleteStations5a</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\CompleteStations5a.xnb</Output>
+      <Time>2013-03-19T23:13:03.7821072+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Station Phases\CompleteStations5a_0.xml</Key>
+        <Value>2013-03-19T23:13:10.6955027+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\CompleteStations5a.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Station Phases\CompleteStations5a_0.xml</Output>
+      <Time>2013-03-19T23:13:03.7821072+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereBlue.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereBlue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereBlue.xnb</Output>
+      <Time>2013-03-19T23:13:39.3811434+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\sphereBlue_0.xml</Key>
+        <Value>2013-03-19T23:13:52.5958992+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereBlue.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\ParticleSpheres\sphereBlue_0.xml</Output>
+      <Time>2013-03-19T23:13:39.3811434+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

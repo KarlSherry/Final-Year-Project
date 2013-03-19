@@ -84,14 +84,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Station Phases\stationComplete.fbx">
-      <Name>stationComplete</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <ProcessorParameters_RotationX>90</ProcessorParameters_RotationX>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Models\ParticleSpheres\sphereGrey.fbx">
       <Name>sphereGrey</Name>
       <Importer>FbxImporter</Importer>
@@ -113,20 +105,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ParticleSpheres\sphereBlue.fbx">
-      <Name>sphereBlue</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
     <Compile Include="Models\ParticleSpheres\sphereFire.fbx">
       <Name>sphereFire</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Station Phases\stationComplete1.fbx">
-      <Name>stationComplete1</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
@@ -222,6 +202,11 @@
     <None Include="highScores.txt">
       <Name>highScores</Name>
     </None>
+    <Compile Include="Models\ParticleSpheres\Rocket.fbx">
+      <Name>Rocket</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
     <Compile Include="Models\Enemies\Alien7Blue.fbx">
       <Name>Alien7Blue</Name>
       <Importer>FbxImporter</Importer>
@@ -237,8 +222,18 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\ParticleSpheres\Rocket.fbx">
-      <Name>Rocket</Name>
+    <Compile Include="Station Phases\CompleteStations5.fbx">
+      <Name>CompleteStations5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\CompleteStations5a.fbx">
+      <Name>CompleteStations5a</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\ParticleSpheres\sphereBlue.fbx">
+      <Name>sphereBlue</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>

@@ -20,7 +20,7 @@ namespace _2._5D_FYP
             _pos = game.Station._pos;
             _look = Vector3.Forward;
 
-            _scale = 100.0f;
+            _scale = 200.0f;
 
             _alive = true;
 
@@ -63,7 +63,7 @@ namespace _2._5D_FYP
                         {
                             effect.EnableDefaultLighting();
                             effect.PreferPerPixelLighting = true;
-                            effect.Alpha = 0.25f;
+                            effect.Alpha = 0.15f;
                             effect.World = _worldTransform;
                             effect.Projection = Game1.Instance().Camera.getProjection();
                             effect.View = Game1.Instance().Camera.getView();
