@@ -17,7 +17,7 @@ namespace _2._5D_FYP
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         public Stopwatch timer = new Stopwatch();
-        public int currentRound = 1;
+        public static int currentRound = 1;
         int previousRound = 0;
 
         private static Game1 instance = null;
@@ -50,20 +50,26 @@ namespace _2._5D_FYP
         public Asteroid[] Asteroids { get; set; }
         public Metal[] Metals { get; set; }
 
+        /// <summary>
+        /// ///////////
+        /// </summary>
+        MiniMap m;
+
         public HUD HeadsUpDisplay { get; set; }
 
         public GameTime gametime;
 
         public static string GameState = "Main Menu Screen";
 
-        private int EnemyBaseCount = 5, AsteroidBaseCount = 25, MetalBaseCount = 25;
-        private int EnemyCount, AsteroidCount, MetalCount;
+        private int EnemyBaseCount = 2, AsteroidBaseCount = 15, MetalBaseCount = 15;
+        public int EnemyCount, AsteroidCount, MetalCount;
 
         public ParticleSystem particleSystem;
         public ScoreSystem scoreSystem;
 
         public bool isNewGame = true;
         public bool hasMenuSystem = false;
+        Texture2D mapUnderLay;
 
         public Game1()
         {
@@ -88,6 +94,7 @@ namespace _2._5D_FYP
 
             if (isNewGame)
             {
+                timer = new Stopwatch();
                 World = new World(StageList);//
                 Camera = new Camera(StageList);//
                 Ground = new Ground(StageList);//
@@ -225,13 +232,16 @@ namespace _2._5D_FYP
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);            
+            GraphicsDevice.Clear(Color.Black);
 
-            spriteBatch.Begin();
 
             menuSystem.Draw(gameTime, spriteBatch);
 
-            spriteBatch.End();
+        }
+
+        public static int getCurrentRound()
+        {
+            return currentRound;
         }
 
         public GraphicsDeviceManager GraphicsDeviceManager

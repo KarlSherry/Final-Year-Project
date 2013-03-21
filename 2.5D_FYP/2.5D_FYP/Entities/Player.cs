@@ -58,7 +58,7 @@ namespace _2._5D_FYP
             _up = new Vector3(0, 1, 0);
             _globalUp = new Vector3(0, 1, 0);
 
-            _maxSpeed = 100.0f; _maxForce = 500.0f; _scale = 5.0f; _mass = 10.0f; _rotationSpeed = 2.5f;
+            _maxSpeed = 500.0f; _maxForce = 100.0f; _scale = 5.0f; _mass = 1.0f; _rotationSpeed = 2.5f;
             _health = 100.0f; _shield = 100.0f;
 
             weapon = new Weapon();
@@ -198,7 +198,7 @@ namespace _2._5D_FYP
                     timeSinceLastHit = 0.0f;
                     _shield -= entity._damageOnCollision;
                     if (_shield <= 0)
-                        _health -= entity._damageOnCollision;
+                        this._health -= entity._damageOnCollision;
 
                     entity._entityCollisionFlag = false;
                 }

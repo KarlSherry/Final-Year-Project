@@ -28,7 +28,7 @@ namespace _2._5D_FYP
         public Vector3 _globalUp = Vector3.Backward;
 
         public float _maxSpeed = 0.0f, _maxForce = 0.0f, _scale = 1.0f, _mass = 0.0f, _rotationSpeed = 0.0f;
-        public float _health = 0.0f, _shield = 0.0f;
+        public float _health = 0.0f, _shield = 0.0f, _attackStrength = 0.0f, _defence = 0.0f;
         public float _damageOnCollision;
         public int _YAxis = 0;
 

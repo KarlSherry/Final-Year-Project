@@ -18,9 +18,6 @@ namespace _2._5D_FYP
         public Matrix projection;
         public Matrix view;
 
-        private bool firstPerson = false;
-        private bool topDown = true;
-
         public Camera(List<Entity> list)
         {
             _entityName = "Camera";

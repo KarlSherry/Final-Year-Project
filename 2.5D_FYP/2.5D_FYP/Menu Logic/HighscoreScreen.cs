@@ -30,7 +30,7 @@ namespace _2._5D_FYP
             ReadTextFile();
             for (int i = 0; i < 10; i++)
             {
-                scoreLine[i] = highScores[i].initials + '\t' + highScores[i].score + '\t' + highScores[i].scoreDate + '\t' + highScores[i].scoreTime;
+                scoreLine[i] = (i + 1) + ".  " + highScores[i].initials + '\t' + highScores[i].score + '\t' + highScores[i].scoreDate + '\t' + highScores[i].scoreTime;
             }
 
             Console.WriteLine(highScores[9].score + " last score");

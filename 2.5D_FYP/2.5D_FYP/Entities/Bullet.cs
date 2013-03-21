@@ -39,7 +39,7 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationX(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
+                _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos,_look, _up);
 
                 Vector3 acceleration = _force / _mass;
                 
@@ -78,22 +78,22 @@ namespace _2._5D_FYP
                     _maxForce = 200.0f;
                     _maxSpeed = 200.0f; _scale = 1.0f; _mass = 1.0f;
                     //_force = _look * _maxForce;
-                    _damageOnCollision = 2;
+                    _damageOnCollision = 5 * e._attackStrength;
                     break;
                 case 1:
                     _entityModel = "Models//ParticleSpheres//sphere";
                     _maxForce = 200.0f;
                     _maxSpeed = 200.0f; _scale = 2.0f; _mass = 1.0f;
                     //_force = _look * _maxForce;
-                    _damageOnCollision = 2;
+                    _damageOnCollision = 2 * e._attackStrength;
                     break;
                 case 2:
                     _entityModel = "Models//ParticleSpheres//Rocket";
                     _maxForce = 100.0f;
-                    _maxSpeed = 100.0f; _scale = 5.0f; _mass = 50.0f;
+                    _maxSpeed = 100.0f; _scale = 1.0f; _mass = 50.0f;
 
                     //_force = seek(game.Player._pos);
-                    _damageOnCollision = 20;
+                    _damageOnCollision = 20 * e._attackStrength;
                     break;
                 case 3: 
                     break;

@@ -34,9 +34,11 @@ namespace _2._5D_FYP
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
                 spriteBatch.DrawString(menuFont, gameOver,
                     new Vector2((Game1.Instance().GraphicsDevice.Viewport.Width / 2) - (menuFont.MeasureString(gameOver).X / 2),
                         Game1.Instance().GraphicsDevice.Viewport.Height / 2), color);
+            spriteBatch.End();
         }
     }
 }

@@ -11,6 +11,10 @@ namespace _2._5D_FYP
     {
         float angle = 0.0f;
 
+        bool hasHitSomething = false;
+
+        List<Entity> enemyBulletList = new List<Entity>();
+
         public Station(List<Entity> list)
         {
             _entityModel = "Station Phases//CompleteStations5a";
@@ -21,13 +25,15 @@ namespace _2._5D_FYP
             _look = Vector3.Forward;
 
             _scale = 50.0f;
+            _health = 10.0f; _defence = 100.0f;
 
             _alive = true;
 
             parentList = list;
-
             if(_alive)
                 parentList.Add(this);
+
+            enemyBulletList = Game1.Instance().EnemyBulletList;
         }
 
         public override void Update(GameTime gameTime)
@@ -38,11 +44,30 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationX(-MathHelper.PiOver2) * Matrix.CreateRotationY(angle) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
+                hasHitSomething = CheckCollision(enemyBulletList);
+                if (hasHitSomething)
+                    CollisionHandler(enemyBulletList);
+
                 if (!_alive)
                     parentList.Remove(this);
 
                 angle += timeDelta;
             }
-        }                   
+            else
+                parentList.Remove(this);
+        }
+
+        public override void CollisionHandler(List<Entity> list)
+        {
+            foreach (Entity e in list)
+            {
+                if (e is Bullet)
+                {
+                    _health -= (e._damageOnCollision / _defence);
+                    e._alive = false;
+                }
+            }
+        }
+   
     } // End of Station Class
 }

@@ -11,6 +11,12 @@ namespace _2._5D_FYP
     {
         float angle = 0.0f;
 
+        bool hasHitSomething = false;
+
+        List<Entity> enemyBulletList = new List<Entity>();
+
+        float Transparency;
+
         public ForceField(List<Entity> list)
         {
             _entityModel = "Models//ParticleSpheres//sphereBlue";
@@ -21,13 +27,18 @@ namespace _2._5D_FYP
             _look = Vector3.Forward;
 
             _scale = 200.0f;
+            _health = 100.0f;
+            Transparency = 0.02f;
 
             _alive = true;
 
             parentList = list;
-
             if(_alive)
                 parentList.Add(this);
+
+            _defence = 100;
+
+            enemyBulletList = Game1.Instance().EnemyBulletList;
         }
 
         public override void Update(GameTime gameTime)
@@ -38,11 +49,22 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
+                hasHitSomething = CheckCollision(enemyBulletList);
+                if (hasHitSomething)
+                    CollisionHandler(enemyBulletList);
+
+                if (_health < 0)
+                {
+                    _alive = false;
+                }
+
                 if (!_alive)
                     parentList.Remove(this);
 
                 angle += timeDelta;
             }
+            else
+                parentList.Remove(this);
         }
 
         public override void Draw(GameTime gameTime)
@@ -63,7 +85,7 @@ namespace _2._5D_FYP
                         {
                             effect.EnableDefaultLighting();
                             effect.PreferPerPixelLighting = true;
-                            effect.Alpha = 0.15f;
+                            effect.Alpha = Transparency;
                             effect.World = _worldTransform;
                             effect.Projection = Game1.Instance().Camera.getProjection();
                             effect.View = Game1.Instance().Camera.getView();
@@ -71,6 +93,18 @@ namespace _2._5D_FYP
                         mesh.Draw();
                     } // End of foreach(ModelMesh mesh in _model.Meshes)
                 } // End of if(_model != null)
+            }
+        } // End of Draw
+
+        public override void CollisionHandler(List<Entity> list)
+        {
+            foreach(Entity e in list)
+            {
+                if (e is Bullet)
+                {
+                    this._health -= (e._damageOnCollision / _defence);
+                    e._alive = false;
+                }
             }
         }
     }

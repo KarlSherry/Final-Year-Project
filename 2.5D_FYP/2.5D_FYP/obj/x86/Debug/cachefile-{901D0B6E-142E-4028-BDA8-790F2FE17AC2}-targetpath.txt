@@ -2,7 +2,6 @@ Content\Stars.xnb
 Content\Ground.xnb
 Content\Bar.xnb
 Content\Verdana.xnb
-Content\Models\SpaceShip3.xnb
 Content\SoundEffects\explosion.xnb
 Content\menuFont.xnb
 Content\menuBackground1.xnb
@@ -29,7 +28,14 @@ Content\Models\Enemies\AlienMama1.xnb
 Content\Models\Enemies\Alien7Blue.xnb
 Content\Models\Enemies\Alien7Green.xnb
 Content\Models\Enemies\Alien7Red.xnb
-Content\Models\ParticleSpheres\Rocket.xnb
 Content\Station Phases\CompleteStations5.xnb
 Content\Station Phases\CompleteStations5a.xnb
 Content\Models\ParticleSpheres\sphereBlue.xnb
+Content\Bar2.xnb
+Content\Bar3.xnb
+Content\Models\ParticleSpheres\Rocket.xnb
+Content\mapAsteroids.xnb
+Content\mapShip.xnb
+Content\mapStation.xnb
+Content\mapunderlay.xnb
+Content\Models\SpaceShip3.xnb

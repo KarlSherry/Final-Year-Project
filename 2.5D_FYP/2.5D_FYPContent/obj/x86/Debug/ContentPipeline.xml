@@ -38,19 +38,6 @@
       <Time>2013-02-16T20:48:27.2532874+00:00</Time>
     </Item>
     <Item>
-      <Source>Models\SpaceShip3.fbx</Source>
-      <Name>Models\SpaceShip3</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\SpaceShip3.xnb</Output>
-      <Time>2013-03-13T21:31:50.1493998+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\SpaceShip3_0.xml</Key>
-        <Value>2013-03-14T16:40:46.4579184+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>SoundEffects\explosion.wav</Source>
       <Name>SoundEffects\explosion</Name>
       <Importer>WavImporter</Importer>
@@ -471,19 +458,6 @@
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\Rocket.fbx</Source>
-      <Name>Models\ParticleSpheres\Rocket</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\Rocket.xnb</Output>
-      <Time>2013-03-19T19:32:04.3217095+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\ParticleSpheres\Rocket_0.xml</Key>
-        <Value>2013-03-19T19:32:31.3132533+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\ParticleSpheres\Rocket.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\Rocket_0.xml</Output>
@@ -548,6 +522,89 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\sphereBlue_0.xml</Output>
       <Time>2013-03-19T23:13:39.3811434+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar2.png</Source>
+      <Name>Bar2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Bar2.xnb</Output>
+      <Time>2013-03-20T13:40:52.0074231+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar3.png</Source>
+      <Name>Bar3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Bar3.xnb</Output>
+      <Time>2013-03-20T13:43:58.9841176+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\Rocket.fbx</Source>
+      <Name>Models\ParticleSpheres\Rocket</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="RotationY">180</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\Rocket.xnb</Output>
+      <Time>2013-03-19T19:32:04.3217095+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\Rocket_0.xml</Key>
+        <Value>2013-03-19T19:32:31.3132533+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>mapAsteroids.png</Source>
+      <Name>mapAsteroids</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapAsteroids.xnb</Output>
+      <Time>2013-03-21T15:15:46.4400129+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapShip.png</Source>
+      <Name>mapShip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapShip.xnb</Output>
+      <Time>2013-03-21T15:15:46.476015+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapStation.png</Source>
+      <Name>mapStation</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapStation.xnb</Output>
+      <Time>2013-03-21T15:15:46.4840154+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapunderlay.png</Source>
+      <Name>mapunderlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapunderlay.xnb</Output>
+      <Time>2013-03-21T16:10:43.5389928+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip3.fbx</Source>
+      <Name>Models\SpaceShip3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\SpaceShip3.xnb</Output>
+      <Time>2013-03-13T21:31:50.1493998+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\SpaceShip3_0.xml</Key>
+        <Value>2013-03-14T16:40:46.4579184+00:00</Value>
+      </Dependency>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

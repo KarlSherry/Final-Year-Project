@@ -41,3 +41,9 @@ C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\De
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\CompleteStations5.xnb
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Station Phases\CompleteStations5a.xnb
 C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereBlue.xnb
+C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Bar2.xnb
+C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Bar3.xnb
+C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapAsteroids.xnb
+C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapShip.xnb
+C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapStation.xnb
+C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\mapunderlay.xnb

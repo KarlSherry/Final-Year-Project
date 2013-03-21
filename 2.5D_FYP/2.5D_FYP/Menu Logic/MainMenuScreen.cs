@@ -49,6 +49,7 @@ namespace _2._5D_FYP
             int menuItemPosX = Game1.Instance().GraphicsDevice.Viewport.Width / 2;
             int menuItemPosY = Game1.Instance().GraphicsDevice.Viewport.Height / 2;
 
+            spriteBatch.Begin();
             spriteBatch.Draw(menuBackground, new Vector2(0, 0), Color.White);
 
             for (int i = 0; i < menuButtons.Count; i++)
@@ -60,6 +61,7 @@ namespace _2._5D_FYP
                         menuItemPosY - (menuFont.LineSpacing * (menuButtons.Count /2)) + ((menuFont.LineSpacing + padding) * i)),
                         color);
             }
+            spriteBatch.End();
         }
 
     }
