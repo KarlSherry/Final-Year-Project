@@ -13,16 +13,17 @@ namespace _2._5D_FYP
         VertexPositionTexture[] vertices;
         BasicEffect basicEffect;
         public float groundWidth = 0.0f, groundHeight = 0.0f;
+        float groundYaxis = -200;
 
         public Ground(List<Entity> list)
         {
             _entityName = "Ground";
 
-            parentList = list;
-            parentList.Add(this);
+            _parentList = list;
+            _parentList.Add(this);
 
             graphics = game.GraphicsDeviceManager;
-            groundWidth = game.World.worldWidth; groundHeight = game.World.worldHeight;            
+            groundWidth = 5000; groundHeight = 5000;            
         }
 
         public override void LoadContent()
@@ -31,13 +32,13 @@ namespace _2._5D_FYP
 
             vertices = new VertexPositionTexture[]
             {
-                new VertexPositionTexture(new Vector3(-groundWidth, -200, groundHeight), new Vector2(0, theight)),
-                new VertexPositionTexture(new Vector3(-groundWidth, -200, -groundHeight), new Vector2(0,0)),
-                new VertexPositionTexture(new Vector3(groundWidth, -200, groundHeight), new Vector2(twidth, theight)),
+                new VertexPositionTexture(new Vector3(-groundWidth, groundYaxis, groundHeight), new Vector2(0, theight)),
+                new VertexPositionTexture(new Vector3(-groundWidth, groundYaxis, -groundHeight), new Vector2(0,0)),
+                new VertexPositionTexture(new Vector3(groundWidth, groundYaxis, groundHeight), new Vector2(twidth, theight)),
 
-                new VertexPositionTexture(new Vector3(groundWidth, -200, groundHeight), new Vector2(twidth, theight)),
-                new VertexPositionTexture(new Vector3(-groundWidth, -200, -groundHeight), new Vector2(0, 0)),
-                new VertexPositionTexture(new Vector3(groundWidth, -200, -groundHeight), new Vector2(twidth, 0))
+                new VertexPositionTexture(new Vector3(groundWidth, groundYaxis, groundHeight), new Vector2(twidth, theight)),
+                new VertexPositionTexture(new Vector3(-groundWidth, groundYaxis, -groundHeight), new Vector2(0, 0)),
+                new VertexPositionTexture(new Vector3(groundWidth, groundYaxis, -groundHeight), new Vector2(twidth, 0))
             };
 
             Texture2D portrait = Game1.Instance().Content.Load<Texture2D>("Stars");

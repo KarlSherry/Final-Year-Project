@@ -26,14 +26,14 @@ namespace _2._5D_FYP
 
         public HighscoreScreen() 
         {
-            screenBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground1");
+            screenBackground = Game1.Instance().Content.Load<Texture2D>("BG");
             ReadTextFile();
             for (int i = 0; i < 10; i++)
             {
                 scoreLine[i] = (i + 1) + ".  " + highScores[i].initials + '\t' + highScores[i].score + '\t' + highScores[i].scoreDate + '\t' + highScores[i].scoreTime;
             }
 
-            Console.WriteLine(highScores[9].score + " last score");
+            color = Color.Yellow;
         }
 
         public override void Update(GameTime gameTime)
@@ -54,6 +54,7 @@ namespace _2._5D_FYP
             int linePosX = 150;
             int linePosY = 150;
 
+            spriteBatch.Begin();
             spriteBatch.Draw(screenBackground, new Vector2(0, 0), Color.White);
             spriteBatch.DrawString(menuFont, "High Scores", new Vector2(500, 50), Color.White);
 
@@ -63,6 +64,7 @@ namespace _2._5D_FYP
                     new Vector2(linePosX,
                         (linePosY - menuFont.LineSpacing * (menuButtons.Count /2)) + ((menuFont.LineSpacing + padding) * i)), color);
             }
+            spriteBatch.End();
         }
 
         private void ReadTextFile()

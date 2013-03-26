@@ -28,8 +28,8 @@ namespace _2._5D_FYP
 
             _alive = true;
 
-            parentList = list;
-                parentList.Add(this);
+            _parentList = list;
+                _parentList.Add(this);
         }
         #endregion
 
@@ -53,7 +53,7 @@ namespace _2._5D_FYP
 
                 _pos += _velocity * timeDelta;
 
-                walk(_maxSpeed * timeDelta);
+                //walk(_maxSpeed * timeDelta);
 
                 if (travelTime >= maxTime)
                 {
@@ -62,9 +62,9 @@ namespace _2._5D_FYP
                 travelTime += timeDelta;
 
                 if (!_alive)
-                    parentList.Remove(this);
+                    _parentList.Remove(this);
             }
-            else parentList.Remove(this);
+            else _parentList.Remove(this);
         }
 
         #region Method to check for Bullet Type
@@ -76,23 +76,27 @@ namespace _2._5D_FYP
                 case 0:
                     _entityModel = "Models//ParticleSpheres//sphere";
                     _maxForce = 200.0f;
-                    _maxSpeed = 200.0f; _scale = 1.0f; _mass = 1.0f;
-                    //_force = _look * _maxForce;
+                    _maxSpeed = 400.0f; _scale = 1.0f; _mass = 1.0f;
+                    maxTime = 1.0f;
+                    _look = e._look;
+                    _force = _look * _maxForce;
                     _damageOnCollision = 5 * e._attackStrength;
                     break;
                 case 1:
                     _entityModel = "Models//ParticleSpheres//sphere";
                     _maxForce = 200.0f;
-                    _maxSpeed = 200.0f; _scale = 2.0f; _mass = 1.0f;
-                    //_force = _look * _maxForce;
+                    _maxSpeed = 1000.0f; _scale = 2.0f; _mass = 1.0f;
+                    maxTime = 1.0f;
+                    _look = e._look;
+                    _force = _look * _maxForce;
                     _damageOnCollision = 2 * e._attackStrength;
                     break;
                 case 2:
                     _entityModel = "Models//ParticleSpheres//Rocket";
-                    _maxForce = 100.0f;
-                    _maxSpeed = 100.0f; _scale = 1.0f; _mass = 50.0f;
-
-                    //_force = seek(game.Player._pos);
+                    _maxForce = 10.0f;
+                    _maxSpeed = 500.0f; _scale = 1.0f; _mass = 1.0f;
+                    maxTime = 10.0f;
+                    _force = seek(Game1.Instance().Player._pos);
                     _damageOnCollision = 20 * e._attackStrength;
                     break;
                 case 3: 

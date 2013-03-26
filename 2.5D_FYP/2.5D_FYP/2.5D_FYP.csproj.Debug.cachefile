@@ -28,9 +28,6 @@ Content\Models\Enemies\AlienMama1.xnb
 Content\Models\Enemies\Alien7Blue.xnb
 Content\Models\Enemies\Alien7Green.xnb
 Content\Models\Enemies\Alien7Red.xnb
-Content\Station Phases\CompleteStations5.xnb
-Content\Station Phases\CompleteStations5a.xnb
-Content\Models\ParticleSpheres\sphereBlue.xnb
 Content\Bar2.xnb
 Content\Bar3.xnb
 Content\Models\ParticleSpheres\Rocket.xnb
@@ -39,3 +36,26 @@ Content\mapShip.xnb
 Content\mapStation.xnb
 Content\mapunderlay.xnb
 Content\Models\SpaceShip3.xnb
+Content\Models\FloatingObjects\Map__12_Cellular.xnb
+Content\Models\FloatingObjects\Map__15_Noise.xnb
+Content\Models\FloatingObjects\Map__4_Mix.xnb
+Content\Models\FloatingObjects\Asteroid1.xnb
+Content\Models\FloatingObjects\Map__15_Noise_0.xnb
+Content\Models\FloatingObjects\metal1.xnb
+Content\Models\FloatingObjects\metal2.xnb
+Content\Models\FloatingObjects\metal3.xnb
+Content\Models\FloatingObjects\metal4.xnb
+Content\BG.xnb
+Content\Station Phases\station10.xnb
+Content\Station Phases\station9.xnb
+Content\Station Phases\station1.xnb
+Content\Station Phases\station2.xnb
+Content\Station Phases\station3.xnb
+Content\Station Phases\station4.xnb
+Content\Station Phases\station5.xnb
+Content\Station Phases\station6.xnb
+Content\Station Phases\station7.xnb
+Content\Station Phases\station8.xnb
+Content\Models\FloatingObjects\Glow.xnb
+Content\Models\ParticleSpheres\sphereBlue1.xnb
+Content\Models\ParticleSpheres\blueSphere.xnb

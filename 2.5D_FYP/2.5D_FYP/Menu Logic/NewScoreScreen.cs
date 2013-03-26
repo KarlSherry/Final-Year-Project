@@ -34,6 +34,7 @@ namespace _2._5D_FYP
                 MenuSystem.menus.highscoreScreen.highScores[9].score = playerScore;
                 SortScores(MenuSystem.menus.highscoreScreen.highScores);
                 WriteTextFile();
+                playerScore = 0;
             }
 
             if (screenRunTime > maxScreenTime)
@@ -50,9 +51,11 @@ namespace _2._5D_FYP
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             spriteBatch.DrawString(menuFont, congrats,
                 new Vector2((Game1.Instance().GraphicsDevice.Viewport.Width / 2) - (menuFont.MeasureString(congrats).X / 2),
                     Game1.Instance().GraphicsDevice.Viewport.Height / 2), color);
+            spriteBatch.End();
         }
 
         private void WriteTextFile()

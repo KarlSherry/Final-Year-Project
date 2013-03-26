@@ -23,7 +23,7 @@ namespace _2._5D_FYP
 
         public Asteroid(List<Entity> list)
         {
-            _entityModel = "Models//FloatingObjects//Asteroid";
+            _entityModel = "Models//FloatingObjects//Asteroid1";
             _entityName = "Asteroid";
             _type = this.GetType();
 
@@ -38,7 +38,7 @@ namespace _2._5D_FYP
             hasHitSomething = false;
             _alive = true;
 
-            parentList = list;
+            _parentList = list;
             if (_alive)
                 list.Add(this);
 
@@ -60,28 +60,27 @@ namespace _2._5D_FYP
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
+                
+                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
+                {
+                    _pos = -_pos;
+                }
 
-                hasHitSomething = CheckCollision(stageList);
+                hasHitSomething = CheckCollision(this,stageList);
                 if (hasHitSomething)
                     CollisionHandler(stageList);
 
-                hasHitSomething = CheckCollision(asteroidList);
+                hasHitSomething = CheckCollision(this,asteroidList);
                 if(hasHitSomething)
                     CollisionHandler(asteroidList);
 
-                hasHitSomething = CheckCollision(metalList);
+                hasHitSomething = CheckCollision(this,metalList);
                 if (hasHitSomething)
                     CollisionHandler(metalList);
 
-                hasHitSomething = CheckCollision(playerBulletList);
+                hasHitSomething = CheckCollision(this,playerBulletList);
                 if(hasHitSomething)
                     CollisionHandler(playerBulletList);
-
-                if (_pos.Length() > game.World.worldWidth)
-                {
-                    _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth + 1, game.World.worldWidth -1)
-                           , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth +1, game.World.worldWidth -1));
-                }
 
                 _pos += _look * timeDelta * _maxSpeed;
 
@@ -91,10 +90,10 @@ namespace _2._5D_FYP
                 {
                     game.particleSystem.Start(this, _pos);
                     asteroidExplosion.Play(0.10f,0.5f,0.0f);
-                    parentList.Remove(this);
+                    _parentList.Remove(this);
                 }
             }
-            else parentList.Remove(this);
+            else _parentList.Remove(this);
         }
 
         public override void CollisionHandler(List<Entity> list)
@@ -113,7 +112,7 @@ namespace _2._5D_FYP
                 }
                 if (entity._entityCollisionFlag == true && entity is Metal)
                 {
-                    entity._alive = false;
+                    entity._look = -entity._look;
                     entity._entityCollisionFlag = false;
                 }
                 if(entity._entityCollisionFlag == true && entity is Bullet)

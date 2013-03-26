@@ -160,6 +160,8 @@
       <Name>SpaceShip3</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_RotationZ>180</ProcessorParameters_RotationZ>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -223,18 +225,93 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Station Phases\CompleteStations5.fbx">
-      <Name>CompleteStations5</Name>
+    <Compile Include="Models\ParticleSpheres\sphereBlue1.fbx">
+      <Name>sphereBlue1</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Station Phases\CompleteStations5a.fbx">
-      <Name>CompleteStations5a</Name>
+    <Compile Include="Models\FloatingObjects\Asteroid1.fbx">
+      <Name>Asteroid1</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\ParticleSpheres\sphereBlue.fbx">
-      <Name>sphereBlue</Name>
+    <Compile Include="Models\FloatingObjects\metal1.fbx">
+      <Name>metal1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\metal2.fbx">
+      <Name>metal2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\metal3.fbx">
+      <Name>metal3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\metal4.fbx">
+      <Name>metal4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station1.fbx">
+      <Name>station1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station2.fbx">
+      <Name>station2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station3.fbx">
+      <Name>station3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station4.fbx">
+      <Name>station4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station5.fbx">
+      <Name>station5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station6.fbx">
+      <Name>station6</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station7.fbx">
+      <Name>station7</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station8.fbx">
+      <Name>station8</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station9.fbx">
+      <Name>station9</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Station Phases\station10.fbx">
+      <Name>station10</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Glow.fbx">
+      <Name>Glow</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\ParticleSpheres\blueSphere.fbx">
+      <Name>blueSphere</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
@@ -271,8 +348,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\FloatingObjects\Map__12_Cellular.tga">
+      <Name>Map__12_Cellular</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Map__15_Noise.tga">
+      <Name>Map__15_Noise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Map__4_Mix.tga">
+      <Name>Map__4_Mix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="mapunderlay.png">
       <Name>mapunderlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BG.png">
+      <Name>BG</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -106,10 +106,8 @@ namespace _2._5D_FYP
                 Game1.Instance().EnemyList[i].Draw(gameTime);
 
             for (int i = 0; i < Game1.Instance().AsteroidList.Count; i++)
-            {
                 Game1.Instance().AsteroidList[i].Draw(gameTime);
-            }
-
+            
             for (int i = 0; i < Game1.Instance().MetalList.Count; i++)
                 Game1.Instance().MetalList[i].Draw(gameTime);
 
@@ -137,7 +135,7 @@ namespace _2._5D_FYP
                         null,
                         null,
                         miniMap.get_transformation(new Vector2(1200 - mapUnderLay.Width/2, 800 - mapUnderLay.Height/2)));
-            spriteBatch.Draw(mapPlayer, mapPlayerPos, null, Color.White, -Game1.Instance().Player.getYaw(), new Vector2(mapPlayer.Width / 2, mapPlayer.Height / 2), 1, SpriteEffects.None, 0);
+            spriteBatch.Draw(mapPlayer, mapPlayerPos, null, Color.White, -(Game1.Instance().Player.getYaw() + MathHelper.PiOver2), new Vector2(mapPlayer.Width / 2, mapPlayer.Height / 2), 1, SpriteEffects.None, 0);
             spriteBatch.Draw(mapStation, new Vector2(Game1.Instance().Station._pos.X - mapStation.Height / 2, Game1.Instance().Station._pos.Y - mapStation.Width / 2), Color.White);
             
             for (int i = 0; i < (Game1.Instance().AsteroidCount); i++)

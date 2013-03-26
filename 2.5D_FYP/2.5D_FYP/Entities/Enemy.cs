@@ -10,24 +10,18 @@ namespace _2._5D_FYP
     {
         private Vector3 acceleration;
         private Weapon weapon = new Weapon();
-
-        private int weaponIndex = 0;
-
+        
         public int enemyTypeIndex = 0;
         string[] enemyType = { "Alien7Green", "Alien7Blue", "Alien7Red", "AlienMama1" };
 
-        public bool fireWeapon = false;
         private bool hasHitSomething = false;
-
-        List<Entity> playerBulletList = new List<Entity>();
-        List<Entity> enemyList = new List<Entity>();
         
         private int currentRound;
 
         public Enemy(List<Entity> list)
         {
             currentRound = Game1.getCurrentRound();
-
+            
             if (currentRound % 1 == 0)
             {
                 enemyTypeIndex = Entity.randomGenerator.Next(0, 1);
@@ -47,20 +41,14 @@ namespace _2._5D_FYP
 
             getEnemyType(enemyTypeIndex);
 
-            _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
-                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
+            _pos = _randomPosition;
+
             _look = new Vector3(randomClamped(), 0, randomClamped());
 
             _alive = true;
 
-            parentList = list;
-            if (_alive)
-                parentList.Add(this);
-
-            weaponIndex = Entity.randomGenerator.Next(0, 3);
-
-            playerBulletList = game.PlayerBulletList;
-            enemyList = game.EnemyList;
+            _parentList = list;
+            _parentList.Add(this);
         }
 
         float randomClamped()
@@ -76,19 +64,26 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
-                getEnemyType(enemyTypeIndex);
+                getEnemyBehaviour(enemyTypeIndex);
 
-                hasHitSomething = CheckCollision(playerBulletList);
+                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
+                {
+                    _pos = -_pos;
+                }
+
+                hasHitSomething = CheckCollision(this, Game1.Instance().PlayerBulletList);
                 if (hasHitSomething)
-                    CollisionHandler(playerBulletList);
-                hasHitSomething = CheckCollision(enemyList);
+                    CollisionHandler(Game1.Instance().PlayerBulletList);
+                hasHitSomething = CheckCollision(this, Game1.Instance().EnemyList);
                 if (hasHitSomething)
-                    CollisionHandler(enemyList);
-                hasHitSomething = CheckCollision(Game1.Instance().StageList);
+                    CollisionHandler(Game1.Instance().EnemyList);
+                hasHitSomething = CheckCollision(this,Game1.Instance().StageList);
                 if (hasHitSomething)
                     CollisionHandler(Game1.Instance().StageList);
 
                 weapon.Update(gameTime);
+                if(_fireWeapon)
+                    weapon.CheckWeaponFire(_weaponIndex, this);
 
                 _look = Vector3.Normalize(_velocity);
 
@@ -109,10 +104,10 @@ namespace _2._5D_FYP
                 if (!_alive)
                 {
                     Game1.Instance().Player.playerScore += (100 * (long)_scale);
-                    parentList.Remove(this);
+                    _parentList.Remove(this);
                 }
             }
-            else parentList.Remove(this);           
+            else _parentList.Remove(this);           
         }
 
         Vector3 seek(Vector3 targetPos)
@@ -150,20 +145,20 @@ namespace _2._5D_FYP
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }
-                /*if (entity._entityCollisionFlag == true && entity is ForceField)
+                if (entity._entityCollisionFlag == true && entity is ForceField)
                 {
                     if (enemyTypeIndex != 3)
                     {
-                        _force = _pos - entity._pos;
+                        _force = _pos - entity._pos * 20;
                     }
                 }
                 if (entity._entityCollisionFlag == true && entity is Enemy)
                 {
                     if (enemyTypeIndex != 3)
                     {
-                        _force = entity._pos - _pos;
+                        _force = (_pos - entity._pos) * 20;
                     }
-                }*/
+                }
             }
         }
 
@@ -173,49 +168,64 @@ namespace _2._5D_FYP
             {
                 case 0:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    weaponIndex = 0;
-                    _maxSpeed = 500.0f; _maxForce = 10.0f; _scale = 3.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
+                    _weaponIndex = 0;
+                    _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 3.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
                     _attackStrength = 1;
-                    if(game.Player.playerState != Player.State.Safe)
-                        _force = pursue(game.Player);
-                    if ((game.Player._pos - _pos).Length() < 100)
-                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 1:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    weaponIndex = 1;
-                    _maxSpeed = 500.0f; _maxForce = 10.0f; _scale = 4.5f; _mass = 1.0f; _rotationSpeed = 5.0f;
+                    _weaponIndex = 1;
+                    _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 4.5f; _mass = 1.0f; _rotationSpeed = 5.0f;
                     _attackStrength = 1;
-
-                    if (game.Player.playerState != Player.State.Safe)
-                        _force = pursue(game.Player);
-                    if ((game.Player._pos - _pos).Length() < 100)
-                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 2:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    weaponIndex = 2;
-                    _maxSpeed = 500.0f; _maxForce = 10.0f; _scale = 6.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
+                    _weaponIndex = 2;
+                    _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 6.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
                     _attackStrength = 1;
-                    
-                    if (game.Player.playerState != Player.State.Safe)
-                        _force = pursue(game.Player);
-                    if ((game.Player._pos - _pos).Length() < 200)
-                        weapon.CheckWeaponFire(weaponIndex, this);
                     break;
                 case 3:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    weaponIndex = 2;
+                    _weaponIndex = 1;
                     _maxSpeed = 500.0f; _maxForce = 10.0f; _scale = 5.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
                     _attackStrength = 1;
+                    break;
+            }
+        }
+
+        public void getEnemyBehaviour(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                        if (game.Player.playerState != Player.State.Safe)
+                            _force = seek(Game1.Instance().Player._pos);
+                        if ((Game1.Instance().Player._pos - _pos).Length() < 300)
+                            _fireWeapon = true;
+                        else _fireWeapon = false;
+                    break;
+                case 1:                    
+                        if (game.Player.playerState != Player.State.Safe)
+                            _force = seek(Game1.Instance().Player._pos);
+                        if ((Game1.Instance().Player._pos - _pos).Length() < 300)
+                            _fireWeapon = true;
+                        else _fireWeapon = false;
+                    break;
+                case 2: 
+                        if (game.Player.playerState != Player.State.Safe)
+                            _force = seek(Game1.Instance().Player._pos);
+                        if ((Game1.Instance().Player._pos - _pos).Length() < 300)
+                            _fireWeapon = true;
+                        else _fireWeapon = false;
+                    break;
+                case 3:
                     _force = pursue(game.Station);
-                    if ((game.Station._pos - _pos).Length() < 400)
+                    if ((Game1.Instance().Station._pos - _pos).Length() < 400)
                     {
-                        weapon.CheckWeaponFire(weaponIndex, this);
+                        weapon.CheckWeaponFire(_weaponIndex, this);
                         _maxSpeed = 1; _maxForce = 1;
                         _force = _look * _maxForce;
                     }
-
                     break;
             }
         }

@@ -22,7 +22,6 @@ namespace _2._5D_FYP
         public Weapon weapon;
 
         public int capacity = 0;
-        private int weaponIndex = 0;
         private float timeSinceLastHit = 0;
 
         public string weaponName = null;
@@ -30,7 +29,6 @@ namespace _2._5D_FYP
 
         private KeyboardState keyState;
 
-        public bool fireWeapon = false;
         private bool keyPressed = false;
         public bool hasHitSomething = false;
         private bool isThrusting = false;
@@ -51,7 +49,7 @@ namespace _2._5D_FYP
             _entityName = "Player";
             _type = this.GetType();
 
-            _pos = new Vector3(100, _YAxis, 100);
+            _pos = new Vector3(200, _YAxis, 200);
             _look = Vector3.Forward;
 
             _right = new Vector3(1, 0, 0);
@@ -62,14 +60,14 @@ namespace _2._5D_FYP
             _health = 100.0f; _shield = 100.0f;
 
             weapon = new Weapon();
-            weaponName = weaponArray[weaponIndex];
+            weaponName = weaponArray[_weaponIndex];
             
             _alive = true;
             
-            parentList = list;
+            _parentList = list;
 
             if (_alive)
-                parentList.Add(this);
+                _parentList.Add(this);
 
             stageList = game.StageList;
             asteroidList = game.AsteroidList;
@@ -83,26 +81,33 @@ namespace _2._5D_FYP
             {
                 float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
+                _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
-                hasHitSomething = CheckCollision(asteroidList);
+                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
+                {
+                    _pos = -_pos;
+                }
+
+                hasHitSomething = CheckCollision(this,asteroidList);
                 if (hasHitSomething)
                     CollisionHandler(asteroidList);
 
-                hasHitSomething = CheckCollision(metalList);
+                hasHitSomething = CheckCollision(this,metalList);
                 if (hasHitSomething)
                     CollisionHandler(metalList);
 
-                hasHitSomething = CheckCollision(stageList);
+                hasHitSomething = CheckCollision(this,stageList);
                 if (hasHitSomething)
                     CollisionHandler(stageList);
 
-                hasHitSomething = CheckCollision(enemyBulletList);
+                hasHitSomething = CheckCollision(this,enemyBulletList);
                 if (hasHitSomething)
                     CollisionHandler(enemyBulletList);
 
                 weapon.Update(gameTime);
-                weapon.CheckWeaponFire(weaponIndex, this);
+
+                //if(_fireWeapon)
+                    weapon.CheckWeaponFire(_weaponIndex, this);
 
                 acceleration = _force / _mass;
 
@@ -123,7 +128,8 @@ namespace _2._5D_FYP
 
                 if (keyState.IsKeyDown(Keys.Up))
                 {
-                    Docked = false;
+                    if (_velocity == Vector3.Zero)
+                        Docked = false;
                     isThrusting = true;
                     addForce(_look * _maxForce);
 
@@ -136,17 +142,19 @@ namespace _2._5D_FYP
                 else isThrusting = false;
 
                 if (keyState.IsKeyDown(Keys.Space))
-                    fireWeapon = true;
-                else fireWeapon = false;
+                    _fireWeapon = true;
+                else _fireWeapon = false;
 
                 if (keyState.IsKeyDown(Keys.Left))
                 {
-                    Docked = false;
+                    if (_velocity == Vector3.Zero)
+                        Docked = false;
                     yaw(_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.Right))
                 {
-                    Docked = false;
+                    if(_velocity == Vector3.Zero)
+                        Docked = false;
                     yaw(-_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.W))
@@ -154,8 +162,8 @@ namespace _2._5D_FYP
                     if (!keyPressed)
                     {
                         changeWeapon = true;
-                        weaponIndex = ++weaponIndex % 4;
-                        weaponName = weaponArray[weaponIndex];
+                        _weaponIndex = ++_weaponIndex % 4;
+                        weaponName = weaponArray[_weaponIndex];
                         keyPressed = true;
                     }
                 }
@@ -167,6 +175,20 @@ namespace _2._5D_FYP
                     {
                         Docked = true;
                     }
+                }
+                if (keyState.IsKeyDown(Keys.A))
+                {
+                    if (Docked)
+                    {
+                        Docked = false;
+                    }
+                }
+                if (Docked)
+                {
+                    Vector3 aboveStation = new Vector3(0, _YAxis, 0);
+                    _force = seek(aboveStation);
+                    if((Vector3.Zero - _pos).Length() < 200)
+                        _force = arrive(aboveStation);
                 }
 
                 if (timeSinceLastHit >= 10.0f) _shield++;
@@ -181,12 +203,12 @@ namespace _2._5D_FYP
                 if (capacity > 15) capacity = 15;
 
                 if (!_alive)
-                    parentList.Remove(this);
+                    _parentList.Remove(this);
 
                 timeSinceLastHit += timeDelta;
 
             }
-            else parentList.Remove(this);
+            else _parentList.Remove(this);
         } // End of Update(GameTime gameTime)
 
         public override void CollisionHandler(List<Entity> list)
@@ -202,12 +224,14 @@ namespace _2._5D_FYP
 
                     entity._entityCollisionFlag = false;
                 }
-                if (entity._entityCollisionFlag == true && entity is ForceField && Docked)
+                if (entity._entityCollisionFlag == true && entity is ForceField)
                 {
-                    Vector3 aboveStation = new Vector3(entity._pos.X, entity._YAxis, entity._pos.Z);
-                    playerState = State.Safe;
-                    _health++;
-                    _force = arrive(aboveStation);
+                    entity._entityCollisionFlag = false;
+                    if (Docked)
+                    {
+                        playerState = State.Safe;
+                    }
+                    else playerState = State.Attack;
                 }
 
                 if (entity._entityCollisionFlag == true && entity is Metal)
@@ -234,17 +258,28 @@ namespace _2._5D_FYP
             this._force += force;
         }
 
+        Vector3 seek(Vector3 targetPos)
+        {
+            Vector3 desiredVelocity;
+
+            desiredVelocity = targetPos - _pos;
+            desiredVelocity.Normalize();
+            desiredVelocity *= _maxSpeed;
+
+            return (desiredVelocity - _velocity);
+        }
+
         public Vector3 arrive(Vector3 targetPos)
         {
             Vector3 distanceToTarget = targetPos - _pos;
 
-            float slowingDistance = 20.0f;
+            float slowingDistance = 100.0f;
             float distance = distanceToTarget.Length();
             if (distance == 0.0f)
             {
                 return Vector3.Zero;
             }
-            const float DecelerationTweaker = 20.0f;
+            const float DecelerationTweaker = 100.0f;
             float ramped = _maxSpeed * (distance / (slowingDistance * DecelerationTweaker));
 
             float clamped = Math.Min(ramped, _maxSpeed);
@@ -252,5 +287,6 @@ namespace _2._5D_FYP
 
             return desiredVelocity - _velocity;
         }
+
     } // End of Player Class
 }

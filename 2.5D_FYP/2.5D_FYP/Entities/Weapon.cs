@@ -11,7 +11,6 @@ namespace _2._5D_FYP
     {
         float lastBulletFired = 0.0f;
         Bullet bullet;
-        Player player;
 
         bool shootWeapon = false;
 
@@ -30,15 +29,12 @@ namespace _2._5D_FYP
 
         public void CheckWeaponFire(int index, Entity e)
         {
-            player = game.Player;
             switch (index)
             {
                 case 0:
                     {
-                        if (e is Player && player.fireWeapon)
+                        if (e is Player && Game1.Instance().Player._fireWeapon)
                         {
-                            bullet = new Bullet(game.PlayerBulletList);
-                            bullet.getBulletType(e, index);
                             if (!shootWeapon)
                             {
                                 FireBullet(e, e._pos, e._look);
@@ -49,57 +45,51 @@ namespace _2._5D_FYP
 
                         if (e is Enemy)
                         {
-                            bullet = new Bullet(game.EnemyBulletList);
-                            bullet.getBulletType(e, index);
                             if (lastBulletFired >= 1.0f)
                             {
                                 lastBulletFired = 0.0f;
-
                                 FireBullet(e, e._pos, e._look);
                             }
                         }
+                        
                         break;
                     } 
                 case 1:
                     {
-                        if (e is Player && player.fireWeapon && lastBulletFired >= 0.1f) //10 milliseconds
+                        if (e is Player && Game1.Instance().Player._fireWeapon && lastBulletFired >= 0.1f) //10 milliseconds
                         {
-                            bullet = new Bullet(game.PlayerBulletList);
-                            bullet.getBulletType(e, index);
+                            //bullet = new Bullet(game.PlayerBulletList);
+                            //bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
-
                             FireBullet(e, e._pos, e._look);
                         }
                         if (e is Enemy && lastBulletFired >= 0.1f) //10 milliseconds
                         {
-                            bullet = new Bullet(game.EnemyBulletList);
-                            bullet.getBulletType(e, index);
+                            //bullet = new Bullet(game.EnemyBulletList);
+                            //bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
-
                             FireBullet(e, e._pos, e._look);
                         }
                         break;
                     }
                 case 2: 
                     {
-                        if (e is Player && player.fireWeapon && lastBulletFired >= 3.0f)
+                        if (e is Player && Game1.Instance().Player._fireWeapon && lastBulletFired >= 3.0f)
                         {
-                            bullet = new Bullet(game.PlayerBulletList);
-                            bullet.getBulletType(e, index);
+                            //bullet = new Bullet(game.PlayerBulletList);
+                            //bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
-
                             FireBullet(e, e._pos, e._look);
                         }
                         if (e is Enemy && lastBulletFired >= 3.0f)
                         {
-                            bullet = new Bullet(game.EnemyBulletList);
-                            bullet.getBulletType(e, index);
+                            //bullet = new Bullet(game.EnemyBulletList);
+                            //bullet.getBulletType(e, index);
 
                             lastBulletFired = 0.0f;
-
                             FireBullet(e, e._pos, e._look);
                         }
                         break;
@@ -111,7 +101,7 @@ namespace _2._5D_FYP
                     }
                 default: //Assumes case 0
                     {
-                        if (e is Player && player.fireWeapon)
+                        if (e is Player && Game1.Instance().Player._fireWeapon)
                         {
                             if (!shootWeapon)
                             {
@@ -126,10 +116,15 @@ namespace _2._5D_FYP
         }
 
         public void FireBullet(Entity e, Vector3 pos, Vector3 look)
-        {              
-            bullet.LoadContent();
+        {
+            if(e is Player)
+                bullet = new Bullet(Game1.Instance().PlayerBulletList);
+            if(e is Enemy)
+                bullet = new Bullet(Game1.Instance().EnemyBulletList);
+            bullet.getBulletType(e, e._weaponIndex);       
             bullet._pos = pos;
             bullet._look = look;
+            bullet.LoadContent();
         }
     }
 }

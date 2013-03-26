@@ -38,7 +38,6 @@ namespace _2._5D_FYP
             {
                 menuItem = 0;
                 Game1.GameState = "Main Menu Screen";
-                //Game1.Instance().menuSystem.gameScreen.isPaused = false;
                 Game1.Instance().menuSystem.gameScreen.isRunning = false;
             }
         }
@@ -49,6 +48,7 @@ namespace _2._5D_FYP
             int menuItemPosX = Game1.Instance().GraphicsDevice.Viewport.Width / 2;
             int menuItemPosY = Game1.Instance().GraphicsDevice.Viewport.Height / 2;
 
+            spriteBatch.Begin();
             for (int i = 0; i < menuButtons.Count; i++)
             {
                 color = (i == menuItem) ? Color.Yellow : Color.White;
@@ -58,6 +58,7 @@ namespace _2._5D_FYP
                         menuItemPosY - (menuFont.LineSpacing * (menuButtons.Count / 2)) + ((menuFont.LineSpacing + padding) * i)),
                         color);
             }
+            spriteBatch.End();
         }
 
     }

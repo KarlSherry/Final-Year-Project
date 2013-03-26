@@ -22,7 +22,7 @@ namespace _2._5D_FYP
             menuButtons.Add("Highscores");
             menuButtons.Add("Controls");
             menuButtons.Add("Quit Game");
-            menuBackground = Game1.Instance().Content.Load<Texture2D>("menuBackground1");
+            menuBackground = Game1.Instance().Content.Load<Texture2D>("BG");
             //gameMusic = Game1.Instance().Content.Load<SoundEffect>("SoundEffects//Ifyouwantto-starlightremix");                
 
             //gameMusic.Play();
@@ -31,8 +31,6 @@ namespace _2._5D_FYP
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
-            //Game1.Instance().menuSystem.gameScreen.isRunning = false; 
 
             if (menuItem == 0 && isSelected == true)
             {

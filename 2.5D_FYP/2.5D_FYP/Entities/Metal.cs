@@ -3,32 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace _2._5D_FYP
 {
     public class Metal : Entity
     {
         int metalTypeIndex;
-        string[] metalType = { "frag11", "frag22", "frag33", "frag44" };
+        string[] metalType = { "metal1", "metal2", "metal3", "metal4" };
 
         float angle = 0.0f;
+        float emmisiveColorDelta = 0.01f;
 
         public Metal(List<Entity> list)
         {
             metalTypeIndex = Entity.randomGenerator.Next(0, 4);
             getMetalType(metalTypeIndex);
 
-            _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
-                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
+            _pos = _randomPosition;
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
             _alive = true;
 
-            parentList = list;
+            _parentList = list;
             if (_alive)
-                parentList.Add(this);
+                _parentList.Add(this);
         }
+
+        /*public Metal(Vector3 pos) : base(pos) 
+        { 
+            pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
+                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
+        }*/
 
         float randomClamped()
         {
@@ -43,17 +50,28 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
-                if (_pos.Length() > game.World.worldWidth)
+                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
                 {
-                    _pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
-                           , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
+                    _pos = -_pos;
                 }
 
                 angle += timeDelta;
 
-                _pos += _look * timeDelta * _maxSpeed;
+                _pos += _look * timeDelta * _maxSpeed;                     
+
+                if (_emmisiveR >= 1.0f || _emmisiveG >= 1.0f)
+                {
+                    emmisiveColorDelta = -0.01f;
+                }
+                if (_emmisiveR <= 0.0f || _emmisiveG <= 0.0f)
+                {
+                    emmisiveColorDelta = 0.01f;
+                }
+
+                _emmisiveR += emmisiveColorDelta;
+                _emmisiveG += emmisiveColorDelta;
             }
-            else parentList.Remove(this);
+            else _parentList.Remove(this);
         }
 
         public void getMetalType(int index)
@@ -62,19 +80,19 @@ namespace _2._5D_FYP
             {
                 case 0:
                     _entityModel = "Models//FloatingObjects//" + metalType[metalTypeIndex];
-                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
+                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 10.0f;
                     break;
                 case 1:
                     _entityModel = "Models//FloatingObjects//" + metalType[metalTypeIndex];
-                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
+                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 10.0f;
                     break;
                 case 2:
                     _entityModel = "Models//FloatingObjects//" + metalType[metalTypeIndex];
-                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
+                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 10.0f;
                     break;
                 case 3:
                     _entityModel = "Models//FloatingObjects//" + metalType[metalTypeIndex];
-                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 5.0f;
+                    _maxSpeed = randomGenerator.Next(10, 25); _scale = 10.0f;
                     break;
 
             }

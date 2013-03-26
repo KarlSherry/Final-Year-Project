@@ -90,8 +90,8 @@ namespace _2._5D_FYP
                     mainMenuScreen.Draw(spriteBatch);
                     break;
                 case "Pause Menu Screen":
-                    pauseMenuScreen.Draw(spriteBatch);
                     gameScreen.Draw(spriteBatch, gameTime);
+                    pauseMenuScreen.Draw(spriteBatch);
                     break;
                 case "Game Screen":
                     gameScreen.Draw(spriteBatch, gameTime);

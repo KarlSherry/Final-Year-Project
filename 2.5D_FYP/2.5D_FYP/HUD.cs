@@ -68,6 +68,9 @@ namespace _2._5D_FYP
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            Console.WriteLine(Game1.Instance().ForceField._health);
+            Console.WriteLine(Game1.Instance().ForceField._entitySphere);
+
             int screenWidth = Game1.Instance().GraphicsDevice.Viewport.Width;
             int screenHeight = Game1.Instance().GraphicsDevice.Viewport.Height;
             int textureWidth = forceFieldHealthBar.Width;

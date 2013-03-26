@@ -31,7 +31,9 @@ namespace _2._5D_FYP
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(menuFont, "Control Screen", new Vector2(10, 10), color);
+            spriteBatch.Begin();
+                spriteBatch.DrawString(menuFont, "Control Screen", new Vector2(10, 10), color);
+            spriteBatch.End();
         }
     }
 }
