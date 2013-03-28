@@ -32,10 +32,7 @@ namespace _2._5D_FYP
         {
             base.Update(gameTime);
 
-            if (menuItem == 0 && isSelected == true)
-            {
-                Game1.GameState = "Game Screen";
-            }
+            if (menuItem == 0 && isSelected == true) Game1.GameState = "Game Screen";
             if (menuItem == 1 && isSelected == true) Game1.GameState = "Highscore Screen";
             if (menuItem == 2 && isSelected == true) Game1.GameState = "Control Screen";
             if (menuItem == menuButtons.Count - 1 && isSelected == true) Game1.Instance().Exit();

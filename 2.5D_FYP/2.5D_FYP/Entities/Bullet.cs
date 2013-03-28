@@ -20,6 +20,8 @@ namespace _2._5D_FYP
 
         Weapon w = Game1.Instance().Player.weapon;
 
+        Vector3 acceleration;
+
         #region Bullet Constructor
         // Parameter passed: The list that this bullet will be added to.
         public Bullet(List<Entity> list) 
@@ -41,7 +43,7 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos,_look, _up);
 
-                Vector3 acceleration = _force / _mass;
+                acceleration = _force / _mass;
                 
                 _velocity += acceleration;
 
@@ -75,7 +77,7 @@ namespace _2._5D_FYP
             {
                 case 0:
                     _entityModel = "Models//ParticleSpheres//sphere";
-                    _maxForce = 200.0f;
+                    _maxForce = 10000.0f;
                     _maxSpeed = 1000.0f; _scale = 1.0f; _mass = 1.0f;
                     maxTime = 1.0f;
                     _look = e._look;
@@ -84,7 +86,7 @@ namespace _2._5D_FYP
                     break;
                 case 1:
                     _entityModel = "Models//ParticleSpheres//sphere";
-                    _maxForce = 200.0f;
+                    _maxForce = 10000.0f;
                     _maxSpeed = 1000.0f; _scale = 2.0f; _mass = 1.0f;
                     maxTime = 1.0f;
                     _look = e._look;
@@ -94,8 +96,9 @@ namespace _2._5D_FYP
                 case 2:
                     _entityModel = "Models//ParticleSpheres//Rocket";
                     _maxForce = 10.0f;
-                    _maxSpeed = 500.0f; _scale = 1.0f; _mass = 1.0f;
-                    maxTime = 1.0f;
+                    _maxSpeed = 100.0f; _scale = 1.0f; _mass = 1.0f;
+                    maxTime = 10.0f;
+                    _look = e._look;
                     _force = seek(Game1.Instance().Player._pos);
                     _damageOnCollision = 20 * e._attackStrength;
                     break;

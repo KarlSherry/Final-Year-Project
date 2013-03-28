@@ -15,14 +15,14 @@ namespace _2._5D_FYP
 
         public ForceField(List<Entity> list)
         {
-            _entityModel = "Models//ParticleSpheres//sphereBlue1";
-            _entityName = "Force Field";
+            //_entityModel = "Models//ParticleSpheres//sphereBlue1";
+            _entityModel = "Transparent Square";
             _type = this.GetType();
 
             _pos = game.Station._pos;
             _look = Vector3.Forward;
 
-            _scale = 200.0f;
+            _scale = 100.0f;
             _health = 100.0f;
             _alpha = 0.15f;
 

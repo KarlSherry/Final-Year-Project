@@ -14,11 +14,16 @@ namespace _2._5D_FYP
         public KeyboardState keyState;
         public KeyboardState prevKeyState;
 
+        public GamePadState gamePadState;
+        public GamePadState prevPadState;
+
         public int menuItem = 0;
         public bool isSelected = false;
 
         public SpriteFont menuFont;
         public Color color = Color.White;
+
+        float vibrationAmount = 0.0f;
 
         public List<string> menuButtons = new List<string>();
 
@@ -32,22 +37,24 @@ namespace _2._5D_FYP
         public virtual void Update(GameTime gameTime)
         {
             keyState = Keyboard.GetState();
-
-            if (CheckKeyboardInput(Keys.Up))
+            gamePadState = GamePad.GetState(PlayerIndex.One);
+            
+            if (CheckKeyboardInput(Keys.Up) || (gamePadState.ThumbSticks.Left.Y > 0.5f && !(prevPadState.ThumbSticks.Left.Y > 0.5f)))
             {
-                if (menuItem > 0) menuItem--;                    
+                if (menuItem > 0) menuItem--;
             }
-            if (CheckKeyboardInput(Keys.Down))
+            if (CheckKeyboardInput(Keys.Down) || (gamePadState.ThumbSticks.Left.Y < -0.5f && !(prevPadState.ThumbSticks.Left.Y < -0.5f)))
             {
-                if (menuItem < menuButtons.Count - 1) menuItem++;                    
+                if (menuItem < menuButtons.Count - 1) menuItem++;
             }
-            if (CheckKeyboardInput(Keys.Enter))
+            if (CheckKeyboardInput(Keys.Enter) || (gamePadState.Buttons.A == ButtonState.Pressed && prevPadState.Buttons.A == ButtonState.Released))
             {
                 isSelected = true;
             }
             else isSelected = false;
 
             prevKeyState = keyState;
+            prevPadState = gamePadState;
         }
 
         public bool CheckKeyboardInput(Keys key)

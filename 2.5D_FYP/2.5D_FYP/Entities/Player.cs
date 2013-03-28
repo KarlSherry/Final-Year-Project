@@ -28,6 +28,7 @@ namespace _2._5D_FYP
         public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
 
         private KeyboardState keyState;
+        private GamePadState gamePadState;
 
         private bool keyPressed = false;
         public bool hasHitSomething = false;
@@ -126,8 +127,9 @@ namespace _2._5D_FYP
                     _velocity *= 0.99f;
 
                 keyState = Keyboard.GetState();
+                gamePadState = GamePad.GetState(PlayerIndex.One);                
 
-                if (keyState.IsKeyDown(Keys.Up))
+                if (keyState.IsKeyDown(Keys.Up) || gamePadState.ThumbSticks.Left.Y > 0.5f)
                 {
                     if (_velocity == Vector3.Zero)
                         Docking = false;
@@ -142,23 +144,23 @@ namespace _2._5D_FYP
                 }
                 else isThrusting = false;
 
-                if (keyState.IsKeyDown(Keys.Space))
+                if (keyState.IsKeyDown(Keys.Space) || gamePadState.Triggers.Right > 0.2f)
                     _fireWeapon = true;
                 else _fireWeapon = false;
 
-                if (keyState.IsKeyDown(Keys.Left))
+                if (keyState.IsKeyDown(Keys.Left) || gamePadState.ThumbSticks.Right.X < -0.5f)
                 {
                     if (_velocity == Vector3.Zero)
                         Docking = false;
                     yaw(_rotationSpeed * timeDelta);
                 }
-                if (keyState.IsKeyDown(Keys.Right))
+                if (keyState.IsKeyDown(Keys.Right) || gamePadState.ThumbSticks.Right.X > 0.5f)
                 {
                     if(_velocity == Vector3.Zero)
                         Docking = false;
                     yaw(-_rotationSpeed * timeDelta);
                 }
-                if (keyState.IsKeyDown(Keys.W))
+                if (keyState.IsKeyDown(Keys.W) || gamePadState.Buttons.Y == ButtonState.Pressed)
                 {
                     if (!keyPressed)
                     {

@@ -8,7 +8,6 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using System.Timers;
 using System.Diagnostics;
 
 
@@ -129,17 +128,18 @@ namespace _2._5D_FYP
             if (!menuSystem.gameScreen.isRunning)
             {
                 isNewGame = true;
+                //CreateNewGame();
                 StageList.Clear();
                 EnemyList.Clear();
                 AsteroidList.Clear();
                 MetalList.Clear();
                 EnemyBulletList.Clear();
                 PlayerBulletList.Clear();
-
+                
+                currentRound = 1;
                 Initialize();
                 LoadContent();
                 GameState = "Main Menu Screen";
-                currentRound = 1;
             }
 
             previousRound = currentRound;

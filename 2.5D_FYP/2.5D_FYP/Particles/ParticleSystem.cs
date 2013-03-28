@@ -6,8 +6,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
-using DPSF;
-
 namespace _2._5D_FYP
 {
     public class ParticleSystem

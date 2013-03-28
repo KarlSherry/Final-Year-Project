@@ -58,3 +58,4 @@ Content\Models\ParticleSpheres\blueSphere.xnb
 Content\medium.xnb
 Content\small.xnb
 Content\large.xnb
+Content\Transparent Square.xnb

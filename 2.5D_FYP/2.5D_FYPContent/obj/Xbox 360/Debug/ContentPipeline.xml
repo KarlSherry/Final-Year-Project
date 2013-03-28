@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Stars.bmp</Source>
+      <Name>Stars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Stars.xnb</Output>
+      <Time>2013-02-16T17:41:53.1210197+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Ground.bmp</Source>
+      <Name>Ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Ground.xnb</Output>
+      <Time>2013-02-16T20:41:46.0213383+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar.png</Source>
+      <Name>Bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Bar.xnb</Output>
+      <Time>2013-02-21T15:06:16.5962318+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\MetalBare.jpg</Source>
+      <Name>Models\FloatingObjects\MetalBare</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\MetalBare.xnb</Output>
+      <Time>2013-03-12T19:44:43.1198733+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\RockRough.jpg</Source>
+      <Name>Models\FloatingObjects\RockRough</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough.xnb</Output>
+      <Time>2013-03-12T19:44:43.1228734+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\RockRough0002_S.jpg</Source>
+      <Name>Models\FloatingObjects\RockRough0002_S</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0002_S.xnb</Output>
+      <Time>2013-03-12T19:44:43.1268737+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\RockRough0012_1_M.jpg</Source>
+      <Name>Models\FloatingObjects\RockRough0012_1_M</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0012_1_M.xnb</Output>
+      <Time>2013-03-12T19:44:43.1308739+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar2.png</Source>
+      <Name>Bar2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Bar2.xnb</Output>
+      <Time>2013-03-20T13:40:52.0074231+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar3.png</Source>
+      <Name>Bar3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Bar3.xnb</Output>
+      <Time>2013-03-20T13:43:58.9841176+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapAsteroids.png</Source>
+      <Name>mapAsteroids</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\mapAsteroids.xnb</Output>
+      <Time>2013-03-21T15:15:46.4400129+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapShip.png</Source>
+      <Name>mapShip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\mapShip.xnb</Output>
+      <Time>2013-03-21T15:15:46.476015+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapStation.png</Source>
+      <Name>mapStation</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\mapStation.xnb</Output>
+      <Time>2013-03-21T15:15:46.4840154+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Map__12_Cellular.tga</Source>
+      <Name>Models\FloatingObjects\Map__12_Cellular</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Map__12_Cellular.xnb</Output>
+      <Time>2013-03-22T12:25:48.7691084+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Map__15_Noise.tga</Source>
+      <Name>Models\FloatingObjects\Map__15_Noise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Map__15_Noise.xnb</Output>
+      <Time>2013-03-22T12:25:48.5180941+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Map__4_Mix.tga</Source>
+      <Name>Models\FloatingObjects\Map__4_Mix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Map__4_Mix.xnb</Output>
+      <Time>2013-03-22T12:25:48.6631024+00:00</Time>
+    </Item>
+    <Item>
+      <Source>mapunderlay.png</Source>
+      <Name>mapunderlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\mapunderlay.xnb</Output>
+      <Time>2013-03-24T12:48:38.9942278+00:00</Time>
+    </Item>
+    <Item>
+      <Source>BG.png</Source>
+      <Name>BG</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\BG.xnb</Output>
+      <Time>2013-03-24T16:53:04.3100359+00:00</Time>
+    </Item>
+    <Item>
+      <Source>medium.spritefont</Source>
+      <Name>medium</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\medium.xnb</Output>
+      <Time>2013-03-27T20:20:39.3330633+00:00</Time>
+    </Item>
+    <Item>
+      <Source>menuFont.spritefont</Source>
+      <Name>menuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\menuFont.xnb</Output>
+      <Time>2013-03-16T17:17:01.8647965+00:00</Time>
+    </Item>
+    <Item>
+      <Source>small.spritefont</Source>
+      <Name>small</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\small.xnb</Output>
+      <Time>2013-03-27T20:20:40.8191483+00:00</Time>
+    </Item>
+    <Item>
+      <Source>large.spritefont</Source>
+      <Name>large</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\large.xnb</Output>
+      <Time>2013-03-27T20:20:36.4368976+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphere.fbx</Source>
+      <Name>Models\ParticleSpheres\sphere</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\sphere.xnb</Output>
+      <Time>2013-03-09T16:32:00.7206445+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\sphere_0.xml</Key>
+        <Value>2013-03-28T16:19:09.8175939+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Asteroid.fbx</Source>
+      <Name>Models\FloatingObjects\Asteroid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Asteroid.xnb</Output>
+      <Time>2013-03-05T14:47:51.3306824+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\Asteroid_0.xml</Key>
+        <Value>2013-03-28T16:19:11.8667111+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereGrey.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereGrey</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\sphereGrey.xnb</Output>
+      <Time>2013-03-10T12:47:47.2234416+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereGrey_0.xml</Key>
+        <Value>2013-03-28T16:19:12.1407268+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereOrange.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereOrange</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\sphereOrange.xnb</Output>
+      <Time>2013-03-10T13:07:41.2627367+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereOrange_0.xml</Key>
+        <Value>2013-03-28T16:19:12.3587392+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereFire.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereFire</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\sphereFire.xnb</Output>
+      <Time>2013-03-10T13:41:02.9942292+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereFire_0.xml</Key>
+        <Value>2013-03-28T16:19:12.6637567+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag11.fbx</Source>
+      <Name>Models\FloatingObjects\frag11</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\frag11.xnb</Output>
+      <Time>2013-03-12T19:44:43.1068725+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\frag11_0.xml</Key>
+        <Value>2013-03-28T16:19:13.6978158+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag22.fbx</Source>
+      <Name>Models\FloatingObjects\frag22</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\frag22.xnb</Output>
+      <Time>2013-03-12T19:49:21.8458155+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\frag22_0.xml</Key>
+        <Value>2013-03-28T16:19:15.7249318+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0002_S_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag33.fbx</Source>
+      <Name>Models\FloatingObjects\frag33</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\frag33.xnb</Output>
+      <Time>2013-03-12T19:44:43.1138729+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\frag33_0.xml</Key>
+        <Value>2013-03-28T16:19:17.7200459+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag44.fbx</Source>
+      <Name>Models\FloatingObjects\frag44</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\frag44.xnb</Output>
+      <Time>2013-03-12T19:44:43.1168731+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\frag44_0.xml</Key>
+        <Value>2013-03-28T16:19:18.8091082+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\MetalBare_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip3.fbx</Source>
+      <Name>Models\SpaceShip3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="RotationX">-90</Data>
+        <Data Key="RotationZ">180</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\SpaceShip3.xnb</Output>
+      <Time>2013-03-13T21:31:50.1493998+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\SpaceShip3_0.xml</Key>
+        <Value>2013-03-28T16:19:19.8501677+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\AlienMama1.fbx</Source>
+      <Name>Models\Enemies\AlienMama1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">4</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\Enemies\AlienMama1.xnb</Output>
+      <Time>2013-03-18T14:08:07.0683776+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\Enemies\AlienMama1_0.xml</Key>
+        <Value>2013-03-28T16:19:20.1821867+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\Rocket.fbx</Source>
+      <Name>Models\ParticleSpheres\Rocket</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="RotationY">180</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\Rocket.xnb</Output>
+      <Time>2013-03-19T19:32:04.3217095+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\Rocket_0.xml</Key>
+        <Value>2013-03-28T16:19:20.3411958+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\Alien7Blue.fbx</Source>
+      <Name>Models\Enemies\Alien7Blue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\Enemies\Alien7Blue.xnb</Output>
+      <Time>2013-03-19T20:33:46.1224404+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\Enemies\Alien7Blue_0.xml</Key>
+        <Value>2013-03-28T16:19:20.5312067+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\Alien7Green.fbx</Source>
+      <Name>Models\Enemies\Alien7Green</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\Enemies\Alien7Green.xnb</Output>
+      <Time>2013-03-19T20:33:46.1434416+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\Enemies\Alien7Green_0.xml</Key>
+        <Value>2013-03-28T16:19:20.7592197+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\Alien7Red.fbx</Source>
+      <Name>Models\Enemies\Alien7Red</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\Enemies\Alien7Red.xnb</Output>
+      <Time>2013-03-19T20:33:46.1564423+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\Enemies\Alien7Red_0.xml</Key>
+        <Value>2013-03-28T16:19:20.9652315+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereBlue1.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereBlue1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\sphereBlue1.xnb</Output>
+      <Time>2013-03-19T23:13:39.3811434+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereBlue1_0.xml</Key>
+        <Value>2013-03-28T16:19:21.2342469+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Asteroid1.fbx</Source>
+      <Name>Models\FloatingObjects\Asteroid1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Asteroid1.xnb</Output>
+      <Time>2013-03-22T12:28:13.4583842+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\Asteroid1_0.xml</Key>
+        <Value>2013-03-28T16:19:21.7562767+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Map__15_Noise_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal1.fbx</Source>
+      <Name>Models\FloatingObjects\metal1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\metal1.xnb</Output>
+      <Time>2013-03-22T12:30:39.1357164+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\metal1_0.xml</Key>
+        <Value>2013-03-28T16:19:22.5863242+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal2.fbx</Source>
+      <Name>Models\FloatingObjects\metal2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\metal2.xnb</Output>
+      <Time>2013-03-22T12:31:38.9071352+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\metal2_0.xml</Key>
+        <Value>2013-03-28T16:19:23.1883586+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0002_S_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal3.fbx</Source>
+      <Name>Models\FloatingObjects\metal3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\metal3.xnb</Output>
+      <Time>2013-03-22T12:30:39.1417168+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\metal3_0.xml</Key>
+        <Value>2013-03-28T16:19:23.7743922+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal4.fbx</Source>
+      <Name>Models\FloatingObjects\metal4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\metal4.xnb</Output>
+      <Time>2013-03-22T12:30:39.144717+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\metal4_0.xml</Key>
+        <Value>2013-03-28T16:19:24.050408+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\MetalBare_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Station Phases\station1.fbx</Source>
+      <Name>Station Phases\station1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station1.xnb</Output>
+      <Time>2013-03-24T14:32:51.9738778+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station1_0.xml</Key>
+        <Value>2013-03-28T16:19:24.3974278+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station2.fbx</Source>
+      <Name>Station Phases\station2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station2.xnb</Output>
+      <Time>2013-03-24T14:32:51.9968791+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station2_0.xml</Key>
+        <Value>2013-03-28T16:19:24.7474478+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station3.fbx</Source>
+      <Name>Station Phases\station3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station3.xnb</Output>
+      <Time>2013-03-24T14:32:52.0288809+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station3_0.xml</Key>
+        <Value>2013-03-28T16:19:25.1764724+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station4.fbx</Source>
+      <Name>Station Phases\station4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station4.xnb</Output>
+      <Time>2013-03-24T14:39:58.8322927+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station4_0.xml</Key>
+        <Value>2013-03-28T16:19:25.7515053+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station5.fbx</Source>
+      <Name>Station Phases\station5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station5.xnb</Output>
+      <Time>2013-03-24T14:39:58.8952963+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station5_0.xml</Key>
+        <Value>2013-03-28T16:19:26.2785354+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station6.fbx</Source>
+      <Name>Station Phases\station6</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station6.xnb</Output>
+      <Time>2013-03-24T14:39:58.9272981+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station6_0.xml</Key>
+        <Value>2013-03-28T16:19:26.8465679+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station7.fbx</Source>
+      <Name>Station Phases\station7</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station7.xnb</Output>
+      <Time>2013-03-24T14:39:58.9683004+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station7_0.xml</Key>
+        <Value>2013-03-28T16:19:27.4586029+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station8.fbx</Source>
+      <Name>Station Phases\station8</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station8.xnb</Output>
+      <Time>2013-03-24T14:39:59.0083027+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station8_0.xml</Key>
+        <Value>2013-03-28T16:19:28.1036398+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station9.fbx</Source>
+      <Name>Station Phases\station9</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station9.xnb</Output>
+      <Time>2013-03-24T16:11:01.85976+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station9_0.xml</Key>
+        <Value>2013-03-28T16:19:28.771678+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Station Phases\station10.fbx</Source>
+      <Name>Station Phases\station10</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Station Phases\station10.xnb</Output>
+      <Time>2013-03-24T16:14:35.7569942+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Station Phases\station10_0.xml</Key>
+        <Value>2013-03-28T16:19:32.6298987+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Glow.fbx</Source>
+      <Name>Models\FloatingObjects\Glow</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Glow.xnb</Output>
+      <Time>2013-03-24T17:48:01.2186083+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\FloatingObjects\Glow_0.xml</Key>
+        <Value>2013-03-28T16:19:33.5579518+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\blueSphere.fbx</Source>
+      <Name>Models\ParticleSpheres\blueSphere</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\ParticleSpheres\blueSphere.xnb</Output>
+      <Time>2013-03-24T20:12:13.9005133+00:00</Time>
+      <Dependency>
+        <Key>obj\Xbox 360\Debug\Models\ParticleSpheres\blueSphere_0.xml</Key>
+        <Value>2013-03-28T16:19:33.7259614+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>SoundEffects\explosion.wav</Source>
+      <Name>SoundEffects\explosion</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\SoundEffects\explosion.xnb</Output>
+      <Time>2013-03-10T13:16:17.0852401+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphere.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\sphere_0.xml</Output>
+      <Time>2013-03-09T16:32:00.7206445+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Asteroid.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\Asteroid_0.xml</Output>
+      <Time>2013-03-05T14:47:51.3306824+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereGrey.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereGrey_0.xml</Output>
+      <Time>2013-03-10T12:47:47.2234416+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereOrange.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereOrange_0.xml</Output>
+      <Time>2013-03-10T13:07:41.2627367+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereFire.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereFire_0.xml</Output>
+      <Time>2013-03-10T13:41:02.9942292+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag11.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\frag11_0.xml</Output>
+      <Time>2013-03-12T19:44:43.1068725+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\RockRough.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1228734+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag22.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\frag22_0.xml</Output>
+      <Time>2013-03-12T19:49:21.8458155+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\RockRough0002_S.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0002_S_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1268737+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag33.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\frag33_0.xml</Output>
+      <Time>2013-03-12T19:44:43.1138729+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\RockRough0012_1_M.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1308739+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\frag44.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\frag44_0.xml</Output>
+      <Time>2013-03-12T19:44:43.1168731+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\MetalBare.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\MetalBare_0.xnb</Output>
+      <Time>2013-03-12T19:44:43.1198733+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\SpaceShip3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\SpaceShip3_0.xml</Output>
+      <Time>2013-03-13T21:31:50.1493998+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\AlienMama1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\Enemies\AlienMama1_0.xml</Output>
+      <Time>2013-03-18T14:08:07.0683776+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\Rocket.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\Rocket_0.xml</Output>
+      <Time>2013-03-19T19:32:04.3217095+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\Alien7Blue.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\Enemies\Alien7Blue_0.xml</Output>
+      <Time>2013-03-19T20:33:46.1224404+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\Alien7Green.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\Enemies\Alien7Green_0.xml</Output>
+      <Time>2013-03-19T20:33:46.1434416+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Enemies\Alien7Red.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\Enemies\Alien7Red_0.xml</Output>
+      <Time>2013-03-19T20:33:46.1564423+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereBlue1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\sphereBlue1_0.xml</Output>
+      <Time>2013-03-19T23:13:39.3811434+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Asteroid1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\Asteroid1_0.xml</Output>
+      <Time>2013-03-22T12:28:13.4583842+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Map__15_Noise.tga</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\Models\FloatingObjects\Map__15_Noise_0.xnb</Output>
+      <Time>2013-03-22T12:25:48.5180941+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\metal1_0.xml</Output>
+      <Time>2013-03-22T12:30:39.1357164+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\metal2_0.xml</Output>
+      <Time>2013-03-22T12:31:38.9071352+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\metal3_0.xml</Output>
+      <Time>2013-03-22T12:30:39.1417168+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal4.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\metal4_0.xml</Output>
+      <Time>2013-03-22T12:30:39.144717+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station1_0.xml</Output>
+      <Time>2013-03-24T14:32:51.9738778+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station2_0.xml</Output>
+      <Time>2013-03-24T14:32:51.9968791+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station3_0.xml</Output>
+      <Time>2013-03-24T14:32:52.0288809+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station4.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station4_0.xml</Output>
+      <Time>2013-03-24T14:39:58.8322927+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station5.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station5_0.xml</Output>
+      <Time>2013-03-24T14:39:58.8952963+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station6.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station6_0.xml</Output>
+      <Time>2013-03-24T14:39:58.9272981+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station7.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station7_0.xml</Output>
+      <Time>2013-03-24T14:39:58.9683004+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station8.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station8_0.xml</Output>
+      <Time>2013-03-24T14:39:59.0083027+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station9.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station9_0.xml</Output>
+      <Time>2013-03-24T16:11:01.85976+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Station Phases\station10.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Station Phases\station10_0.xml</Output>
+      <Time>2013-03-24T16:14:35.7569942+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\Glow.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\FloatingObjects\Glow_0.xml</Output>
+      <Time>2013-03-24T17:48:01.2186083+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\blueSphere.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Xbox 360\Debug\Models\ParticleSpheres\blueSphere_0.xml</Output>
+      <Time>2013-03-24T20:12:13.9005133+00:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Xbox360</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYPContent\obj\Xbox 360\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\Xbox 360\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2010-11-28T02:22:13.7769968+00:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

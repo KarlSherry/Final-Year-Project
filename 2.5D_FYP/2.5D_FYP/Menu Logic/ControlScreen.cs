@@ -18,12 +18,12 @@ namespace _2._5D_FYP
 
             keyState = Keyboard.GetState();
 
-            if (Game1.Instance().menuSystem.gameScreen.isPaused && keyState.IsKeyDown(Keys.Escape))
+            if (Game1.Instance().menuSystem.gameScreen.isPaused && (keyState.IsKeyDown(Keys.Escape) || gamePadState.Buttons.B == ButtonState.Pressed))
             {
                 Game1.GameState = "Pause Menu Screen";
             }
 
-            if (!Game1.Instance().menuSystem.gameScreen.isPaused && keyState.IsKeyDown(Keys.Escape))
+            if (!Game1.Instance().menuSystem.gameScreen.isPaused && (keyState.IsKeyDown(Keys.Escape) || gamePadState.Buttons.B == ButtonState.Pressed))
             {
                 Game1.GameState = "Main Menu Screen";
             }

@@ -48,13 +48,13 @@ namespace _2._5D_FYP
 
             keyState = Keyboard.GetState();
 
-            if (keyState.IsKeyDown(Keys.Escape))
+            if (keyState.IsKeyDown(Keys.Escape) || gamePadState.Buttons.Start == ButtonState.Pressed)
             {
                 isPaused = true;
                 Game1.GameState = "Pause Menu Screen";
             }
 
-            if (keyState.IsKeyDown(Keys.F1))
+            if (keyState.IsKeyDown(Keys.F1) || gamePadState.Buttons.Back == ButtonState.Pressed)
             {
                 if (!F1Pressed)
                 {

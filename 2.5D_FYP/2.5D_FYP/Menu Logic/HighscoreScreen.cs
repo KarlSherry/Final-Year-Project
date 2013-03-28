@@ -40,12 +40,9 @@ namespace _2._5D_FYP
         {
             base.Update(gameTime);
 
-            keyState = Keyboard.GetState();
+            if (gamePadState.Buttons.B == ButtonState.Pressed) Game1.GameState = "Main Menu Screen";
 
-            if (keyState.IsKeyDown(Keys.Escape))
-            {
-                Game1.GameState = "Main Menu Screen";
-            }
+            if (keyState.IsKeyDown(Keys.Escape)) Game1.GameState = "Main Menu Screen";
         }
 
         public override void Draw(SpriteBatch spriteBatch)

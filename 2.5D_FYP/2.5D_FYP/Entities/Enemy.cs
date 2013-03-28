@@ -34,6 +34,8 @@ namespace _2._5D_FYP
 
             getEnemyType(enemyTypeIndex);
 
+            if (currentRound % 5 == 0) { _maxSpeed *= 1.5f; _attackStrength *= 1.5f; _defence *= 1.5f; }
+
             _pos = _randomPosition;
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
@@ -59,8 +61,6 @@ namespace _2._5D_FYP
                 timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 _worldTransform = Matrix.CreateRotationX(MathHelper.PiOver2) * Matrix.CreateRotationZ(MathHelper.Pi) * Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
-
-                if (currentRound % 5 == 0) { _maxSpeed *= 1.5f; _attackStrength *= 1.5f; _defence *= 1.5f; }
                 
                 getEnemyBehaviour(enemyTypeIndex);
 
@@ -137,27 +137,6 @@ namespace _2._5D_FYP
             #endregion
         #endregion
 
-        Vector3 wander()
-        {
-            float wanderRadius = 5.2f;
-            float wanderDistance = 10.0f;
-            float wanderJitter = 40.0f;
-
-            float jitterTimeSlice = wanderJitter * timeDelta;
-
-            wanderTarget += new Vector3(randomClamped() * jitterTimeSlice, 0, randomClamped() * jitterTimeSlice);
-            wanderTarget.Normalize();
-
-            wanderTarget = wanderTarget * wanderRadius;
-            
-            Vector3 worldTarget = (_basis * wanderDistance) + wanderTarget;
-
-            worldTarget = Vector3.Transform(worldTarget, _worldTransform);
-
-            return (worldTarget - _pos);
-
-        }
-
         #region CollisionHandler(list) - Handles the collisions between an enemy and other entities in the world
         public override void CollisionHandler(List<Entity> list)
         {
@@ -228,10 +207,9 @@ namespace _2._5D_FYP
                 case 0:
                     if (game.Player.playerState != Player.State.Safe)
                         _force = seek(Game1.Instance().Player._pos);
-                    else wander();
-                        if ((Game1.Instance().Player._pos - _pos).Length() < 300)
-                            _fireWeapon = true;
-                        else _fireWeapon = false;
+                    if ((Game1.Instance().Player._pos - _pos).Length() < 300)
+                        _fireWeapon = true;
+                    else _fireWeapon = false;
                     break;
                 case 1:                    
                         if (game.Player.playerState != Player.State.Safe)
