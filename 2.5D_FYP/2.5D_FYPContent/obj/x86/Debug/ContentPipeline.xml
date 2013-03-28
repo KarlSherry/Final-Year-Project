@@ -29,15 +29,6 @@
       <Time>2013-02-21T15:06:16.5962318+00:00</Time>
     </Item>
     <Item>
-      <Source>Verdana.spritefont</Source>
-      <Name>Verdana</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Verdana.xnb</Output>
-      <Time>2013-02-16T20:48:27.2532874+00:00</Time>
-    </Item>
-    <Item>
       <Source>SoundEffects\explosion.wav</Source>
       <Name>SoundEffects\explosion</Name>
       <Importer>WavImporter</Importer>
@@ -61,33 +52,6 @@
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuFont.xnb</Output>
       <Time>2013-03-16T17:17:01.8647965+00:00</Time>
-    </Item>
-    <Item>
-      <Source>menuBackground1.png</Source>
-      <Name>menuBackground1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground1.xnb</Output>
-      <Time>2013-03-15T18:04:48.109711+00:00</Time>
-    </Item>
-    <Item>
-      <Source>menuBackground2.png</Source>
-      <Name>menuBackground2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground2.xnb</Output>
-      <Time>2013-03-14T21:12:26.1543981+00:00</Time>
-    </Item>
-    <Item>
-      <Source>menuBackground3.png</Source>
-      <Name>menuBackground3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\menuBackground3.xnb</Output>
-      <Time>2013-03-15T13:22:31.4679906+00:00</Time>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\MetalBare.jpg</Source>
@@ -966,6 +930,33 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\blueSphere_0.xml</Output>
       <Time>2013-03-24T20:12:13.9005133+00:00</Time>
+    </Item>
+    <Item>
+      <Source>medium.spritefont</Source>
+      <Name>medium</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\medium.xnb</Output>
+      <Time>2013-03-27T20:20:39.3330633+00:00</Time>
+    </Item>
+    <Item>
+      <Source>small.spritefont</Source>
+      <Name>small</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\small.xnb</Output>
+      <Time>2013-03-27T20:20:40.8191483+00:00</Time>
+    </Item>
+    <Item>
+      <Source>large.spritefont</Source>
+      <Name>large</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\large.xnb</Output>
+      <Time>2013-03-27T20:20:36.4368976+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

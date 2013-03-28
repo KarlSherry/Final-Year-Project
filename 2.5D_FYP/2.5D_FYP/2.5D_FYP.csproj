@@ -113,7 +113,7 @@
     <Compile Include="Minimap.cs" />
     <Compile Include="Entities\Asteroid.cs" />
     <Compile Include="Entities\Bullet.cs" />
-    <Compile Include="Entities\Camera.cs" />
+    <Compile Include="Camera.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\ForceField.cs" />
@@ -137,7 +137,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Entities\Station.cs" />
     <Compile Include="Entities\Weapon.cs" />
-    <Compile Include="Entities\World.cs" />
+    <Compile Include="World.cs" />
     <Compile Include="ScoreSystem.cs" />
   </ItemGroup>
   <ItemGroup>

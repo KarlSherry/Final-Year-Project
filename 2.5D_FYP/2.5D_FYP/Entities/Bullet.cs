@@ -76,7 +76,7 @@ namespace _2._5D_FYP
                 case 0:
                     _entityModel = "Models//ParticleSpheres//sphere";
                     _maxForce = 200.0f;
-                    _maxSpeed = 400.0f; _scale = 1.0f; _mass = 1.0f;
+                    _maxSpeed = 1000.0f; _scale = 1.0f; _mass = 1.0f;
                     maxTime = 1.0f;
                     _look = e._look;
                     _force = _look * _maxForce;
@@ -95,7 +95,7 @@ namespace _2._5D_FYP
                     _entityModel = "Models//ParticleSpheres//Rocket";
                     _maxForce = 10.0f;
                     _maxSpeed = 500.0f; _scale = 1.0f; _mass = 1.0f;
-                    maxTime = 10.0f;
+                    maxTime = 1.0f;
                     _force = seek(Game1.Instance().Player._pos);
                     _damageOnCollision = 20 * e._attackStrength;
                     break;

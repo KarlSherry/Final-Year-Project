@@ -32,7 +32,7 @@ namespace _2._5D_FYP
         private bool keyPressed = false;
         public bool hasHitSomething = false;
         private bool isThrusting = false;
-        public bool Docked = false;
+        public bool Docking = false;
 
         public bool changeWeapon = false;
 
@@ -51,6 +51,7 @@ namespace _2._5D_FYP
 
             _pos = new Vector3(200, _YAxis, 200);
             _look = Vector3.Forward;
+            _look.Normalize();
 
             _right = new Vector3(1, 0, 0);
             _up = new Vector3(0, 1, 0);
@@ -107,7 +108,7 @@ namespace _2._5D_FYP
                 weapon.Update(gameTime);
 
                 //if(_fireWeapon)
-                    weapon.CheckWeaponFire(_weaponIndex, this);
+                weapon.CheckWeaponFire(_weaponIndex, this);
 
                 acceleration = _force / _mass;
 
@@ -129,7 +130,7 @@ namespace _2._5D_FYP
                 if (keyState.IsKeyDown(Keys.Up))
                 {
                     if (_velocity == Vector3.Zero)
-                        Docked = false;
+                        Docking = false;
                     isThrusting = true;
                     addForce(_look * _maxForce);
 
@@ -148,13 +149,13 @@ namespace _2._5D_FYP
                 if (keyState.IsKeyDown(Keys.Left))
                 {
                     if (_velocity == Vector3.Zero)
-                        Docked = false;
+                        Docking = false;
                     yaw(_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.Right))
                 {
                     if(_velocity == Vector3.Zero)
-                        Docked = false;
+                        Docking = false;
                     yaw(-_rotationSpeed * timeDelta);
                 }
                 if (keyState.IsKeyDown(Keys.W))
@@ -171,22 +172,23 @@ namespace _2._5D_FYP
 
                 if (keyState.IsKeyDown(Keys.D))
                 {
-                    if (!Docked)
+                    if (!Docking)
                     {
-                        Docked = true;
+                        Docking = true;
                     }
                 }
                 if (keyState.IsKeyDown(Keys.A))
                 {
-                    if (Docked)
+                    if (Docking)
                     {
-                        Docked = false;
+                        Docking = false;
                     }
                 }
-                if (Docked)
+                if (Docking)
                 {
                     Vector3 aboveStation = new Vector3(0, _YAxis, 0);
                     _force = seek(aboveStation);
+                    _look = Vector3.Normalize(_velocity);
                     if((Vector3.Zero - _pos).Length() < 200)
                         _force = arrive(aboveStation);
                 }
@@ -200,7 +202,7 @@ namespace _2._5D_FYP
                 if (_health > 100) _health = 100;
 
                 if (capacity <= 0) capacity = 0;
-                if (capacity > 15) capacity = 15;
+                if (capacity > 20) capacity = 20;
 
                 if (!_alive)
                     _parentList.Remove(this);
@@ -227,7 +229,7 @@ namespace _2._5D_FYP
                 if (entity._entityCollisionFlag == true && entity is ForceField)
                 {
                     entity._entityCollisionFlag = false;
-                    if (Docked)
+                    if (Docking)
                     {
                         playerState = State.Safe;
                     }

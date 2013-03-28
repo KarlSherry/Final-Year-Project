@@ -23,6 +23,9 @@ namespace _2._5D_FYP
         public bool isPaused = false;
         public bool isNewGame = false;
 
+        public bool HUDEnabled = true;
+        bool F1Pressed = false;
+
         public GameScreen()
         {
             isRunning = true;
@@ -51,6 +54,18 @@ namespace _2._5D_FYP
                 Game1.GameState = "Pause Menu Screen";
             }
 
+            if (keyState.IsKeyDown(Keys.F1))
+            {
+                if (!F1Pressed)
+                {
+                    if (!HUDEnabled)
+                        HUDEnabled = true;
+                    else HUDEnabled = false;
+                    F1Pressed = true;
+                }
+            }
+            else F1Pressed = false;
+
             if (!isPaused) 
             {
                 for (int i = 0; i < Game1.Instance().StageList.Count; i++)
@@ -71,7 +86,7 @@ namespace _2._5D_FYP
                 for (int i = 0; i < Game1.Instance().EnemyBulletList.Count; i++)
                     Game1.Instance().EnemyBulletList[i].Update(gameTime);
 
-                Game1.Instance().HeadsUpDisplay.Update(gameTime);
+                Game1.Instance().HeadsUpDisplay.Update(gameTime, HUDEnabled);
 
                 Game1.Instance().particleSystem.Update(gameTime);
             }
@@ -119,7 +134,7 @@ namespace _2._5D_FYP
 
             Game1.Instance().particleSystem.Draw(gameTime);
 
-            Game1.Instance().HeadsUpDisplay.Draw(spriteBatch);
+            Game1.Instance().HeadsUpDisplay.Draw(spriteBatch, HUDEnabled);
 
             var transformation2 = miniMap.get_transformation(Game1.Instance().GraphicsDevice);
 

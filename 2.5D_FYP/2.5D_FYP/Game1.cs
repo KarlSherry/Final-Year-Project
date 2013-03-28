@@ -57,17 +57,20 @@ namespace _2._5D_FYP
 
         public static string GameState = "Main Menu Screen";
 
+        int EnemyBaseCount = 2, AsteroidBaseCount = 6, MetalBaseCount = 6;
         public int EnemyCount, AsteroidCount, MetalCount;
 
         public ParticleSystem particleSystem;
         public ScoreSystem scoreSystem;
 
         public bool isNewGame = true;
+        public bool isRunning = false;
         public bool hasMenuSystem = false;
 
         public Game1()
         {
             instance = this;
+
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 1200;
             graphics.PreferredBackBufferHeight = 800;
@@ -80,54 +83,13 @@ namespace _2._5D_FYP
 
         protected override void Initialize()
         {
-            int EnemyBaseCount = 3, AsteroidBaseCount = 15, MetalBaseCount = 15;
+            isRunning = true;
 
             menuSystem = new MenuSystem();
+            World = new World();//
+            Camera = new Camera();//
 
-            EnemyCount = EnemyBaseCount * currentRound;
-            if (EnemyCount > 30) EnemyCount = 25;
-            AsteroidCount = AsteroidBaseCount * currentRound;
-            if (AsteroidCount > 50) AsteroidCount = 50;
-            MetalCount = MetalBaseCount * currentRound;
-            if (MetalCount > 50) MetalCount = 50;
-
-            if (isNewGame)
-            {
-                timer = new Stopwatch();
-                World = new World();//
-                Camera = new Camera();//
-
-                Ground = new Ground(StageList);//
-                Station = new Station(StageList);//
-                Player = new Player(StageList);
-                ForceField = new ForceField(StageList);
-
-                GameState = "Main Menu Screen";
-                isNewGame = false;
-            }
-
-            Enemies = new Enemy[EnemyCount];
-            for (int i = 0; i < EnemyCount; i++)
-            {
-                Enemies[i] = new Enemy(EnemyList);
-            }
-
-            Asteroids = new Asteroid[AsteroidCount];//
-            for (int i = 0; i < AsteroidCount; i++) 
-            {
-                Asteroids[i] = new Asteroid(AsteroidList);
-            }
-
-            Metals = new Metal[MetalCount];//
-            for (int i = 0; i < MetalCount; i++)
-            {
-                Metals[i] = new Metal(MetalList);
-            }
-
-            HeadsUpDisplay = new HUD();
-
-            particleSystem = new ParticleSystem();
-            scoreSystem = new ScoreSystem();
+            CreateNewGame();
 
             base.Initialize();
         }
@@ -190,8 +152,7 @@ namespace _2._5D_FYP
             if (currentRound != previousRound)
             {
                 previousRound = currentRound;
-                Initialize();
-                LoadContent();
+                CreateNewRound();
             }
 
             base.Update(gameTime);
@@ -207,6 +168,87 @@ namespace _2._5D_FYP
         public static int getCurrentRound()
         {
             return currentRound;
+        }
+
+        public void CreateNewGame()
+        {
+            GameState = "Main Menu Screen";
+
+            StageList.Clear();
+            EnemyList.Clear();
+            AsteroidList.Clear();
+            MetalList.Clear();
+            EnemyBulletList.Clear();
+            PlayerBulletList.Clear();
+
+            EnemyCount = EnemyBaseCount * currentRound;
+            if (EnemyCount > 25) EnemyCount = 20;
+            AsteroidCount = AsteroidBaseCount * currentRound;
+            if (AsteroidCount > 50) AsteroidCount = 60;
+            MetalCount = MetalBaseCount * currentRound;
+            if (MetalCount > 50) MetalCount = 60;
+
+            currentRound = 1;
+            timer = new Stopwatch();
+
+            Ground = new Ground(StageList);//
+            Station = new Station(StageList);//
+            Player = new Player(StageList);
+            ForceField = new ForceField(StageList);
+
+            Enemies = new Enemy[EnemyCount];
+            for (int i = 0; i < EnemyCount; i++)
+            {
+                Enemies[i] = new Enemy(EnemyList);
+            }
+
+            Asteroids = new Asteroid[AsteroidCount];//
+            for (int i = 0; i < AsteroidCount; i++)
+            {
+                Asteroids[i] = new Asteroid(AsteroidList);
+            }
+
+            Metals = new Metal[MetalCount];//
+            for (int i = 0; i < MetalCount; i++)
+            {
+                Metals[i] = new Metal(MetalList);
+            }
+
+            HeadsUpDisplay = new HUD();
+            particleSystem = new ParticleSystem();
+            scoreSystem = new ScoreSystem();
+        }
+
+        public void CreateNewRound()
+        {
+            EnemyList.Clear(); // Clear Enemy List
+            AsteroidList.Clear(); // Clear Asteroid List
+            MetalList.Clear(); // Clear Metal List
+
+            // Update Enemy Count
+            EnemyCount = EnemyBaseCount * currentRound;
+            if (EnemyCount > 20) EnemyCount = 20;
+            // Update Asteroid Count
+            AsteroidCount = AsteroidBaseCount * currentRound;
+            if (AsteroidCount > 60) AsteroidCount = 60;
+            // Update Metal Count
+            MetalCount = MetalBaseCount * currentRound; 
+            if (MetalCount > 60) MetalCount = 60;
+
+            // Create Enemies
+            Enemies = new Enemy[EnemyCount]; 
+            for (int i = 0; i < EnemyCount; i++)
+                Enemies[i] = new Enemy(EnemyList);
+            // Create Asteroids
+            Asteroids = new Asteroid[AsteroidCount];
+            for (int i = 0; i < AsteroidCount; i++)
+                Asteroids[i] = new Asteroid(AsteroidList);
+            // Create Metals
+            Metals = new Metal[MetalCount]; 
+            for (int i = 0; i < MetalCount; i++)
+                Metals[i] = new Metal(MetalList);
+
+            LoadContent();
         }
 
         public GraphicsDeviceManager GraphicsDeviceManager

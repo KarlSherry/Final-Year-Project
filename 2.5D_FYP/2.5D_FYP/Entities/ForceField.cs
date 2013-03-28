@@ -31,7 +31,7 @@ namespace _2._5D_FYP
             _parentList = list;
             _parentList.Add(this);
 
-            _defence = 100;
+            _defence = 1;
         }
 
         public override void Update(GameTime gameTime)

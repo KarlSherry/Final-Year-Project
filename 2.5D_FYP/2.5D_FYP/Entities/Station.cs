@@ -129,7 +129,7 @@ namespace _2._5D_FYP
                 if (e._entityCollisionFlag == true && e is Player)
                 {
                     Player p = Game1.Instance().Player;
-                    if (p.capacity > 0 && p.Docked)
+                    if (p.capacity > 0 && p.Docking)
                     {
                         p.capacity--;
                         _health += 10;
