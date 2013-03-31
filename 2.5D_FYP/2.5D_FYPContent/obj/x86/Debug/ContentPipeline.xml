@@ -284,32 +284,6 @@
       </Dependency>
     </Item>
     <Item>
-      <Source>Models\ParticleSpheres\sphereOrange.fbx</Source>
-      <Name>Models\ParticleSpheres\sphereOrange</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereOrange.xnb</Output>
-      <Time>2013-03-10T13:07:41.2627367+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\ParticleSpheres\sphereOrange_0.xml</Key>
-        <Value>2013-03-16T13:41:20.6706025+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>Models\ParticleSpheres\sphereFire.fbx</Source>
-      <Name>Models\ParticleSpheres\sphereFire</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereFire.xnb</Output>
-      <Time>2013-03-10T13:41:02.9942292+00:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Models\ParticleSpheres\sphereFire_0.xml</Key>
-        <Value>2013-03-16T13:41:20.9886207+00:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
       <Source>Models\ParticleSpheres\sphere.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
@@ -977,6 +951,130 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Transparent Square_0.xml</Output>
       <Time>2013-03-29T11:21:59.5167457+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelBlue.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelBlue_0.xml</Output>
+      <Time>2013-03-29T19:36:20.3742497+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelFire.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelFire_0.xml</Output>
+      <Time>2013-03-29T19:36:20.4002512+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelGreen.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelGreen_0.xml</Output>
+      <Time>2013-03-29T19:36:20.4102518+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelRed.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelRed_0.xml</Output>
+      <Time>2013-03-29T19:36:20.4202524+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereOrange.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereOrange</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">10</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereOrange.xnb</Output>
+      <Time>2013-03-10T13:07:41.2627367+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\sphereOrange_0.xml</Key>
+        <Value>2013-03-16T13:41:20.6706025+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\sphereFire.fbx</Source>
+      <Name>Models\ParticleSpheres\sphereFire</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">10</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\sphereFire.xnb</Output>
+      <Time>2013-03-10T13:41:02.9942292+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\sphereFire_0.xml</Key>
+        <Value>2013-03-16T13:41:20.9886207+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelBlue.fbx</Source>
+      <Name>Models\ParticleSpheres\AlienShrapnelBlue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">2</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelBlue.xnb</Output>
+      <Time>2013-03-29T19:36:20.3742497+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelBlue_0.xml</Key>
+        <Value>2013-03-29T19:39:16.0722991+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelGreen.fbx</Source>
+      <Name>Models\ParticleSpheres\AlienShrapnelGreen</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">2</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelGreen.xnb</Output>
+      <Time>2013-03-29T19:36:20.4102518+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelGreen_0.xml</Key>
+        <Value>2013-03-29T19:39:16.3753164+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelRed.fbx</Source>
+      <Name>Models\ParticleSpheres\AlienShrapnelRed</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">2</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelRed.xnb</Output>
+      <Time>2013-03-29T19:36:20.4202524+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelRed_0.xml</Key>
+        <Value>2013-03-29T19:39:16.4873228+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\ParticleSpheres\AlienShrapnelFire.fbx</Source>
+      <Name>Models\ParticleSpheres\AlienShrapnelFire</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Parameters>
+        <Data Key="Scale">2</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelFire.xnb</Output>
+      <Time>2013-03-29T19:36:20.4002512+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelFire_0.xml</Key>
+        <Value>2013-03-29T19:39:16.2593098+00:00</Value>
+      </Dependency>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

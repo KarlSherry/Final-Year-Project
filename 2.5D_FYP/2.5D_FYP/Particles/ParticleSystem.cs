@@ -10,7 +10,7 @@ namespace _2._5D_FYP
 {
     public class ParticleSystem
     {
-        public int totalParticles = 100;
+        public int totalParticles = 50;
         public Vector3 position = Vector3.Zero;
         public Texture2D sprite;
         public Particle[] particle;
@@ -20,26 +20,18 @@ namespace _2._5D_FYP
 
         List<Particle> particleList = new List<Particle>();
 
-        public void Initialize()
-        {
-            Random r = new Random();
-            particle = new Particle[totalParticles];
-
-            for (int i = 0; i < totalParticles; i++)
-            {
-                particle[i] = new Particle(position
-                                          ,new Vector3((float)r.Next(-100, 100)/100, (float)r.Next(-100, 100)/100, (float)r.Next(-100, 100)/100)
-                                          ,r.Next(100,200), r.Next(1,6), 3.0f, r.Next(0,3));
-                particle[i].LoadContent();
-                particleList.Add(particle[i]);
-            }
-        }
-
         public void Start(Entity e, Vector3 emitterPos)
         {
             started = true;
             position = emitterPos;
-            Initialize();
+            if (e is Asteroid)
+            {
+                InitializeAsteroidExplosion();
+            }
+            if (e is Enemy)
+            {
+                InitializeEnemyExplosion(e._entityName);
+            }
         }
 
         public void Update(GameTime gameTime)
@@ -73,54 +65,41 @@ namespace _2._5D_FYP
                 }
             }
         }
+
+        public void InitializeAsteroidExplosion()
+        {
+            Random r = new Random();
+            particle = new Particle[totalParticles];
+
+            for (int i = 0; i < totalParticles; i++)
+            {
+                particle[i] = new Particle(position
+                                          , new Vector3((float)r.Next(-100, 100) / 100, (float)r.Next(-100, 100) / 100, (float)r.Next(-100, 100) / 100)
+                                          , r.Next(200, 500), r.Next(1, 6), 1.5f, r.Next(0,1));
+
+                particle[i].LoadAsteroidParticle(); 
+                particleList.Add(particle[i]);
+            }
+        }
+
+        public void InitializeEnemyExplosion(string enemyName)
+        {
+            Random r = new Random();
+            particle = new Particle[totalParticles];
+
+            for (int i = 0; i < totalParticles; i++)
+            {
+                particle[i] = new Particle(position
+                                          , new Vector3((float)r.Next(-100, 100) / 100, (float)r.Next(-100, 100) / 100, (float)r.Next(-100, 100) / 100)
+                                          , r.Next(200, 500), r.Next(1, 6), 1.5f, r.Next(0,2));
+
+                if (enemyName == "Mini-Z") particle[i].LoadMiniParticles();
+                if (enemyName == "Midi-Z") particle[i].LoadMidiParticles();
+                if (enemyName == "Maxi-Z") particle[i].LoadMaxiParticles();
+                if (enemyName == "Mega-Z") particle[i].LoadMegaParticles(); 
+                particle[i].LoadContent();
+                particleList.Add(particle[i]);
+            }
+        }
     }
-
-    /*public class ParticleSystem : DefaultTexturedQuadParticleSystem
-    {
-        public ParticleSystem(Game game) : base(game) { }
-
-        public override void AutoInitialize(GraphicsDevice graphicsDevice, ContentManager contentManager, SpriteBatch spriteBatch)
-        {
-            InitializeTexturedQuadParticleSystem(graphicsDevice, contentManager, 1000, 5000, UpdateVertexProperties, "Fire");
-        }
-
-        public void LoadParticleSystem(Vector3 pos)
-        {
-            ParticleInitializationFunction = InitializeParticle;
-
-            ParticleEvents.RemoveAllEvents();
-            ParticleSystemEvents.RemoveAllEvents();
-
-            ParticleEvents.AddEveryTimeEvent(UpdateParticlePositionUsingVelocity);
-            ParticleEvents.AddEveryTimeEvent(UpdateParticleRotationUsingRotationalVelocity);
-            ParticleEvents.AddEveryTimeEvent(UpdateParticleWidthAndHeightUsingLerp);
-            ParticleEvents.AddEveryTimeEvent(UpdateParticleColorUsingLerp);
-
-            ParticleEvents.AddEveryTimeEvent(UpdateParticleTransparencyToFadeOutUsingLerp, 1);
-            ParticleEvents.AddEveryTimeEvent(UpdateParticleToFaceTheCamera, 200);
-
-            ParticleSystemEvents.LifetimeData.Lifetime = 3.0f;
-            ParticleSystemEvents.AddTimedEvent(0.0f, UpdateParticleSystemEmitParticlesAutomaticallyOn);
-            ParticleSystemEvents.AddTimedEvent(1.0f, UpdateParticleSystemEmitParticlesAutomaticallyOff);
-
-            Emitter.ParticlesPerSecond = 100;
-            Emitter.PositionData.Position = pos;
-        }
-
-        public void InitializeParticle(DefaultQuadParticle p)
-        {
-            p.Lifetime = 2.0f;
-            p.Position = Emitter.PositionData.Position;
-
-            Vector3 vMin = new Vector3(-50, -50, -50);
-            Vector3 vMax = new Vector3(50, 50, 50);
-
-            p.Velocity = DPSFHelper.RandomVectorBetweenTwoVectors(vMin, vMax);
-
-            p.Width = p.StartWidth = p.EndWidth =
-                p.Height = p.StartHeight = p.EndHeight = RandomNumber.Next(10, 50);
-
-            p.RotationalVelocity = new Vector3(MathHelper.Pi, MathHelper.Pi, MathHelper.Pi);
-        }
-    }*/
 }

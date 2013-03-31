@@ -15,14 +15,13 @@ namespace _2._5D_FYP
 
         public ForceField(List<Entity> list)
         {
-            //_entityModel = "Models//ParticleSpheres//sphereBlue1";
-            _entityModel = "Transparent Square";
+            _entityModel = "Models//ParticleSpheres//sphereBlue1";
             _type = this.GetType();
 
             _pos = game.Station._pos;
             _look = Vector3.Forward;
 
-            _scale = 100.0f;
+            _scale = 200.0f;
             _health = 100.0f;
             _alpha = 0.15f;
 
@@ -31,7 +30,7 @@ namespace _2._5D_FYP
             _parentList = list;
             _parentList.Add(this);
 
-            _defence = 1;
+            _defence = 100;
         }
 
         public override void Update(GameTime gameTime)
@@ -46,10 +45,8 @@ namespace _2._5D_FYP
                 if (hasHitSomething)
                     CollisionHandler(Game1.Instance().EnemyBulletList);
 
-                if (_health < 0)
-                {
+                if (_health <= 0)
                     _alive = false;
-                }
 
                 if (!_alive)
                     _parentList.Remove(this);

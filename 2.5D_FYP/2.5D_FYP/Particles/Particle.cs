@@ -41,19 +41,40 @@ namespace _2._5D_FYP
 
         public void LoadContent()
         {
+            if (Index == 1) model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelFire");                  
+        }
+
+        public void LoadAsteroidParticle()
+        {
+            if(Index == 0) model = Game1.Instance().Content.Load<Model>("Models//FloatingObjects//Asteroid");
+            Scale = 0.5f;
+        }
+        public void LoadMiniParticles()
+        {
+            if (Index == 0) model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelGreen");          
+        }
+        public void LoadMidiParticles()
+        {
+            if (Index == 0) model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelBlue");
+        }
+        public void LoadMaxiParticles()
+        {
+            if (Index == 0) model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelRed");
+        }
+        public void LoadMegaParticles()
+        {
             switch (Index)
             {
                 case 0:
-                    model = Game1.Instance().Content.Load<Model>("Models//FloatingObjects//Asteroid");
-                    Scale = 0.5f;
+                    model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelGreen");
                     break;
                 case 1:
-                    model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//sphereFire");
-                    break;                    
+                    model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelBlue");
+                    break; 
                 case 2:
-                    model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//sphereOrange");
+                    model = Game1.Instance().Content.Load<Model>("Models//ParticleSpheres//AlienShrapnelRed");
                     break;
-            }        
+            }
         }
 
         public void Update(GameTime gameTime)
@@ -69,7 +90,7 @@ namespace _2._5D_FYP
                 Active = false;
 
             Angle += timeDelta;
-            Transparency -= timeDelta;
+            Transparency -= (timeDelta * 2);
         }
 
         public virtual void Draw(GameTime gameTime)

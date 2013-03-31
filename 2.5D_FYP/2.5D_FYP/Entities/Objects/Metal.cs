@@ -21,6 +21,7 @@ namespace _2._5D_FYP
             getMetalType(metalTypeIndex);
 
             _pos = _randomPosition;
+
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
@@ -30,12 +31,6 @@ namespace _2._5D_FYP
             if (_alive)
                 _parentList.Add(this);
         }
-
-        /*public Metal(Vector3 pos) : base(pos) 
-        { 
-            pos = new Vector3(Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth)
-                , _YAxis, Entity.randomGenerator.Next(-game.World.worldWidth, game.World.worldWidth));
-        }*/
 
         float randomClamped()
         {
@@ -50,10 +45,8 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateRotationY(angle) * Matrix.CreateRotationZ(angle) * Matrix.CreateScale(_scale) * Matrix.CreateTranslation(_pos);
 
-                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
-                {
+                if (_pos.Length() > 4250)
                     _pos = -_pos;
-                }
 
                 angle += timeDelta;
 

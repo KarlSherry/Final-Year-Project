@@ -24,7 +24,7 @@ namespace _2._5D_FYP
 
         public Camera()
         {
-            _pos = new Vector3(0, 300, 100);
+            _pos = new Vector3(0, 600, 200);
             _look = Vector3.Forward;
             _up = Vector3.Up;
         }
@@ -35,7 +35,7 @@ namespace _2._5D_FYP
 
             Vector3 playerPosition = Game1.Instance().Player._pos;
 
-            _pos = new Vector3(playerPosition.X, playerPosition.Y + 500.0f, playerPosition.Z + 250.0f);
+            _pos = new Vector3(playerPosition.X, playerPosition.Y + 700.0f, playerPosition.Z + 350.0f);
 
             view = Matrix.CreateLookAt(_pos, playerPosition, _up);
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);

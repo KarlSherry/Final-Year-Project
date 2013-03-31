@@ -18,8 +18,6 @@ Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb
 Content\Models\FloatingObjects\MetalBare_0.xnb
 Content\Models\ParticleSpheres\sphere.xnb
 Content\Models\ParticleSpheres\sphereGrey.xnb
-Content\Models\ParticleSpheres\sphereOrange.xnb
-Content\Models\ParticleSpheres\sphereFire.xnb
 Content\Models\Enemies\AlienMama1.xnb
 Content\Models\Enemies\Alien7Blue.xnb
 Content\Models\Enemies\Alien7Green.xnb
@@ -59,3 +57,9 @@ Content\medium.xnb
 Content\small.xnb
 Content\large.xnb
 Content\Transparent Square.xnb
+Content\Models\ParticleSpheres\sphereOrange.xnb
+Content\Models\ParticleSpheres\sphereFire.xnb
+Content\Models\ParticleSpheres\AlienShrapnelBlue.xnb
+Content\Models\ParticleSpheres\AlienShrapnelGreen.xnb
+Content\Models\ParticleSpheres\AlienShrapnelRed.xnb
+Content\Models\ParticleSpheres\AlienShrapnelFire.xnb

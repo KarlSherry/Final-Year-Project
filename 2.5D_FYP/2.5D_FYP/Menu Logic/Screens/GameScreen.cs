@@ -31,7 +31,7 @@ namespace _2._5D_FYP
             isRunning = true;
 
             miniMap = new MiniMap();
-            miniMap.Zoom = .03f;
+            miniMap.Zoom = 0.0275f;
             miniMap._pos = Vector2.Zero;
 
             mapUnderLay = Game1.Instance().Content.Load<Texture2D>("mapunderlay");
@@ -107,7 +107,19 @@ namespace _2._5D_FYP
         {
             spriteBatch.Begin();
 
-            spriteBatch.Draw(mapUnderLay, new Vector2(1200 - mapUnderLay.Width, 800 - mapUnderLay.Height), Color.White);
+            Color underLayColor = new Color(50, 50, 50, 0);
+            Rectangle playerHudUnderlay = new Rectangle();
+            playerHudUnderlay.Width = 260;
+            playerHudUnderlay.Height = 260;
+            playerHudUnderlay.X = Game1.Instance().GraphicsDevice.Viewport.Width - 270;
+            playerHudUnderlay.Y = Game1.Instance().GraphicsDevice.Viewport.Height - 270;
+
+            Texture2D dummyTexture = new Texture2D(Game1.Instance().GraphicsDevice, 1, 1);
+            dummyTexture.SetData(new Color[] { underLayColor });
+
+            spriteBatch.Draw(dummyTexture, playerHudUnderlay, underLayColor);
+
+            spriteBatch.Draw(mapUnderLay, new Vector2(1200 - (mapUnderLay.Width + 20), 800 - (mapUnderLay.Height + 20)), Color.White);
 
             for (int i = 0; i < Game1.Instance().StageList.Count; i++)
             {
@@ -136,8 +148,6 @@ namespace _2._5D_FYP
 
             Game1.Instance().HeadsUpDisplay.Draw(spriteBatch, HUDEnabled);
 
-            var transformation2 = miniMap.get_transformation(Game1.Instance().GraphicsDevice);
-
             Vector2 mapPlayerPos = new Vector2(Game1.Instance().Player._pos.X, Game1.Instance().Player._pos.Z);
 
             spriteBatch.End();
@@ -149,7 +159,7 @@ namespace _2._5D_FYP
                         null,
                         null,
                         null,
-                        miniMap.get_transformation(new Vector2(1200 - mapUnderLay.Width/2, 800 - mapUnderLay.Height/2)));
+                        miniMap.get_transformation(new Vector2(1200 - (mapUnderLay.Width + 20) / 2 - 10, 800 - (mapUnderLay.Height + 20) / 2 - 10)));
             spriteBatch.Draw(mapPlayer, mapPlayerPos, null, Color.White, -(Game1.Instance().Player.getYaw() + MathHelper.PiOver2), new Vector2(mapPlayer.Width / 2, mapPlayer.Height / 2), 1, SpriteEffects.None, 0);
             spriteBatch.Draw(mapStation, new Vector2(Game1.Instance().Station._pos.X - mapStation.Height / 2, Game1.Instance().Station._pos.Y - mapStation.Width / 2), Color.White);
             

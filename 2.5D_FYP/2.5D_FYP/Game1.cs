@@ -128,8 +128,8 @@ namespace _2._5D_FYP
             if (!menuSystem.gameScreen.isRunning)
             {
                 isNewGame = true;
-                //CreateNewGame();
-                StageList.Clear();
+                CreateNewGame();
+                /*StageList.Clear();
                 EnemyList.Clear();
                 AsteroidList.Clear();
                 MetalList.Clear();
@@ -139,7 +139,7 @@ namespace _2._5D_FYP
                 currentRound = 1;
                 Initialize();
                 LoadContent();
-                GameState = "Main Menu Screen";
+                GameState = "Main Menu Screen";/*/
             }
 
             previousRound = currentRound;
@@ -181,12 +181,14 @@ namespace _2._5D_FYP
             EnemyBulletList.Clear();
             PlayerBulletList.Clear();
 
+            EnemyBaseCount = 2; AsteroidBaseCount = 6; MetalBaseCount = 3;
+
             EnemyCount = EnemyBaseCount * currentRound;
-            if (EnemyCount > 25) EnemyCount = 20;
+            if (EnemyCount > 20) EnemyCount = 20;
             AsteroidCount = AsteroidBaseCount * currentRound;
-            if (AsteroidCount > 50) AsteroidCount = 60;
+            if (AsteroidCount > 60) AsteroidCount = 60;
             MetalCount = MetalBaseCount * currentRound;
-            if (MetalCount > 50) MetalCount = 60;
+            if (MetalCount > 20) MetalCount = 20;
 
             currentRound = 1;
             timer = new Stopwatch();

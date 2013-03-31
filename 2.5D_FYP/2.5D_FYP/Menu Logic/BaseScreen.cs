@@ -32,7 +32,7 @@ namespace _2._5D_FYP
         public virtual void LoadContent(ContentManager Content) 
         {
             menuFont = Content.Load<SpriteFont>("menuFont");
-        }
+        }//
 
         public virtual void Update(GameTime gameTime)
         {

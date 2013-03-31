@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace _2._5D_FYP
 {
-    public class Weapon : Entity
+    public class Weapon
     {
         float lastBulletFired = 0.0f;
         Bullet bullet;
@@ -18,13 +18,11 @@ namespace _2._5D_FYP
         {
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             lastBulletFired += timeDelta;
-
-            base.Update(gameTime);
         }
 
         public void CheckWeaponFire(int index, Entity e)

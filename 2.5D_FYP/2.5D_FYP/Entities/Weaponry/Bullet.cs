@@ -22,6 +22,8 @@ namespace _2._5D_FYP
 
         Vector3 acceleration;
 
+        int index;
+
         #region Bullet Constructor
         // Parameter passed: The list that this bullet will be added to.
         public Bullet(List<Entity> list) 
@@ -43,7 +45,10 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos,_look, _up);
 
+                //getBulletBehaviour();
+
                 acceleration = _force / _mass;
+                Console.WriteLine(_force);
                 
                 _velocity += acceleration;
 
@@ -55,7 +60,7 @@ namespace _2._5D_FYP
 
                 _pos += _velocity * timeDelta;
 
-                //walk(_maxSpeed * timeDelta);
+                _look = Vector3.Normalize(_velocity);
 
                 if (travelTime >= maxTime)
                 {
@@ -73,40 +78,56 @@ namespace _2._5D_FYP
         // Parameter passed: The Entity in question's weaponIndex(ie. weaponType).
         public void getBulletType(Entity e, int entityWeaponIndex)
         {
-            switch (entityWeaponIndex)
+            index = entityWeaponIndex;
+
+            switch (index)
             {
                 case 0:
                     _entityModel = "Models//ParticleSpheres//sphere";
                     _maxForce = 10000.0f;
                     _maxSpeed = 1000.0f; _scale = 1.0f; _mass = 1.0f;
-                    maxTime = 1.0f;
+                    maxTime = 0.5f;
                     _look = e._look;
                     _force = _look * _maxForce;
-                    _damageOnCollision = 5 * e._attackStrength;
+                    _damageOnCollision = 50 * e._attackStrength;
                     break;
                 case 1:
                     _entityModel = "Models//ParticleSpheres//sphere";
                     _maxForce = 10000.0f;
                     _maxSpeed = 1000.0f; _scale = 2.0f; _mass = 1.0f;
-                    maxTime = 1.0f;
+                    maxTime = 0.5f;
                     _look = e._look;
                     _force = _look * _maxForce;
-                    _damageOnCollision = 2 * e._attackStrength;
+                    _damageOnCollision = 10 * e._attackStrength;
                     break;
                 case 2:
                     _entityModel = "Models//ParticleSpheres//Rocket";
                     _maxForce = 10.0f;
-                    _maxSpeed = 100.0f; _scale = 1.0f; _mass = 1.0f;
+                    _maxSpeed = 300.0f; _scale = 1.0f; _mass = 10.0f;
                     maxTime = 10.0f;
                     _look = e._look;
                     _force = seek(Game1.Instance().Player._pos);
-                    _damageOnCollision = 20 * e._attackStrength;
-                    break;
-                case 3: 
+                    _damageOnCollision = 100 * e._attackStrength;
                     break;
             }
         }
         #endregion
+
+        public void getBulletBehaviour()
+        {
+            switch (index)
+            {
+                case 0:
+                    _force = _look * _maxForce;
+                    break;
+                case 1:
+                    _force = _look * _maxForce;
+                    break;
+                case 2:
+                    _force = seek(Game1.Instance().Player._pos);
+                    break;
+            }
+        }
 
         Vector3 seek(Vector3 targetPos)
         {

@@ -25,12 +25,14 @@ namespace _2._5D_FYP
         private float timeSinceLastHit = 0;
 
         public string weaponName = null;
-        public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher","EMP-Pulse"};
+        public string[] weaponArray = {"Single-Fire","Multi-Fire","Rocket Launcher"};
 
         private KeyboardState keyState;
         private GamePadState gamePadState;
 
-        private bool keyPressed = false;
+        private bool tabPressed = false;
+        private bool shiftPressed = false;
+
         public bool hasHitSomething = false;
         private bool isThrusting = false;
         public bool Docking = false;
@@ -59,7 +61,7 @@ namespace _2._5D_FYP
             _globalUp = new Vector3(0, 1, 0);
 
             _maxSpeed = 500.0f; _maxForce = 100.0f; _scale = 5.0f; _mass = 1.0f; _rotationSpeed = 2.5f;
-            _health = 100.0f; _shield = 100.0f;
+            _health = 100.0f; _shield = 100.0f; _attackStrength = 1.0f; _defence = 20.0f;
 
             weapon = new Weapon();
             weaponName = weaponArray[_weaponIndex];
@@ -85,10 +87,8 @@ namespace _2._5D_FYP
 
                 _worldTransform = Matrix.CreateScale(_scale) * Matrix.CreateWorld(_pos, _look, _up);
 
-                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
-                {
-                    _pos = -_pos;
-                }
+                if (_pos.Length() > 4250)
+                    _pos = -_pos; 
 
                 hasHitSomething = CheckCollision(this,asteroidList);
                 if (hasHitSomething)
@@ -129,10 +129,9 @@ namespace _2._5D_FYP
                 keyState = Keyboard.GetState();
                 gamePadState = GamePad.GetState(PlayerIndex.One);                
 
-                if (keyState.IsKeyDown(Keys.Up) || gamePadState.ThumbSticks.Left.Y > 0.5f)
+                if (keyState.IsKeyDown(Keys.W) || gamePadState.ThumbSticks.Left.Y > 0.5f)
                 {
-                    if (_velocity == Vector3.Zero)
-                        Docking = false;
+                    Docking = false;
                     isThrusting = true;
                     addForce(_look * _maxForce);
 
@@ -144,48 +143,64 @@ namespace _2._5D_FYP
                 }
                 else isThrusting = false;
 
+                if (keyState.IsKeyDown(Keys.Q) || keyState.IsKeyDown(Keys.Left) || gamePadState.ThumbSticks.Left.X < -0.2f)
+                {
+                    addForce(-_right * 100.0f);
+                    if (_force.Length() > 100.0f)
+                    {
+                        _force.Normalize();
+                        _force *= _maxForce;
+                    }
+                }
+                if (keyState.IsKeyDown(Keys.E) || keyState.IsKeyDown(Keys.Right) || gamePadState.ThumbSticks.Left.X > 0.2f)
+                {
+                    addForce(_right * 100.0f);
+                    if (_force.Length() > 100.0f)
+                    {
+                        _force.Normalize();
+                        _force *= _maxForce;
+                    }
+                }
+
+                if (keyState.IsKeyDown(Keys.A) || gamePadState.ThumbSticks.Right.X < -0.5f)
+                {
+                    Docking = false;
+                    yaw(_rotationSpeed * timeDelta);
+                }
+                if (keyState.IsKeyDown(Keys.D) || gamePadState.ThumbSticks.Right.X > 0.5f)
+                {
+                    Docking = false;
+                    yaw(-_rotationSpeed * timeDelta);
+                }
+
                 if (keyState.IsKeyDown(Keys.Space) || gamePadState.Triggers.Right > 0.2f)
                     _fireWeapon = true;
                 else _fireWeapon = false;
 
-                if (keyState.IsKeyDown(Keys.Left) || gamePadState.ThumbSticks.Right.X < -0.5f)
+                if (keyState.IsKeyDown(Keys.Tab) || gamePadState.Buttons.Y == ButtonState.Pressed)
                 {
-                    if (_velocity == Vector3.Zero)
-                        Docking = false;
-                    yaw(_rotationSpeed * timeDelta);
-                }
-                if (keyState.IsKeyDown(Keys.Right) || gamePadState.ThumbSticks.Right.X > 0.5f)
-                {
-                    if(_velocity == Vector3.Zero)
-                        Docking = false;
-                    yaw(-_rotationSpeed * timeDelta);
-                }
-                if (keyState.IsKeyDown(Keys.W) || gamePadState.Buttons.Y == ButtonState.Pressed)
-                {
-                    if (!keyPressed)
+                    if (!tabPressed)
                     {
                         changeWeapon = true;
-                        _weaponIndex = ++_weaponIndex % 4;
+                        _weaponIndex = ++_weaponIndex % 3;
                         weaponName = weaponArray[_weaponIndex];
-                        keyPressed = true;
+                        tabPressed = true;
                     }
                 }
-                else { changeWeapon = false; keyPressed = false;}
+                else { changeWeapon = false; tabPressed = false;}
 
-                if (keyState.IsKeyDown(Keys.D))
+                if (keyState.IsKeyDown(Keys.LeftShift) || gamePadState.Buttons.RightShoulder == ButtonState.Pressed)
                 {
-                    if (!Docking)
+                    if (!shiftPressed)
                     {
-                        Docking = true;
+                        if (!Docking)
+                            Docking = true;
+                        else Docking = false;
+                        shiftPressed = true;
                     }
                 }
-                if (keyState.IsKeyDown(Keys.A))
-                {
-                    if (Docking)
-                    {
-                        Docking = false;
-                    }
-                }
+                else shiftPressed = false;
+
                 if (Docking)
                 {
                     Vector3 aboveStation = new Vector3(0, _YAxis, 0);
@@ -222,22 +237,21 @@ namespace _2._5D_FYP
                 if (entity._entityCollisionFlag == true && entity is Asteroid)
                 {
                     timeSinceLastHit = 0.0f;
-                    _shield -= entity._damageOnCollision;
+                    _shield -= entity._damageOnCollision / _defence;
                     if (_shield <= 0)
-                        this._health -= entity._damageOnCollision;
+                        this._health -= entity._damageOnCollision / _defence;
 
                     entity._entityCollisionFlag = false;
                 }
-                if (entity._entityCollisionFlag == true && entity is ForceField)
+                if (entity._entityCollisionFlag == true && entity is Station)
                 {
                     entity._entityCollisionFlag = false;
-                    if (Docking)
+                    if (Docking && Game1.Instance().ForceField._alive)
                     {
                         playerState = State.Safe;
                     }
                     else playerState = State.Attack;
                 }
-
                 if (entity._entityCollisionFlag == true && entity is Metal)
                 {
                     playerScore += 75;
@@ -248,9 +262,9 @@ namespace _2._5D_FYP
                 if (entity._entityCollisionFlag == true && entity is Bullet)
                 {
                     timeSinceLastHit = 0.0f;
-                    _shield -= entity._damageOnCollision;
+                    _shield -= entity._damageOnCollision / _defence;
                     if (_shield <= 0)
-                        _health -= entity._damageOnCollision;
+                        _health -= entity._damageOnCollision / _defence;
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }

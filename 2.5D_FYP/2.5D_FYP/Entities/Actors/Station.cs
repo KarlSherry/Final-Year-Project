@@ -135,6 +135,7 @@ namespace _2._5D_FYP
                         _health += 10;
                         e._health++;
                     }
+
                     e._entityCollisionFlag = false;
                 }
 

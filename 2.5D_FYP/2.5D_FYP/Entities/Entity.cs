@@ -113,55 +113,31 @@ namespace _2._5D_FYP
 
             return angle;
         }
-
-        public void pitch(float angle)
-        {
-            Matrix T = Matrix.CreateFromAxisAngle(_right, angle);
-            _look = Vector3.Transform(_look, T);
-        }
-
-        public float getPitch()
-        {
-            if (_look.Y == _basis.Y)
-            {
-                return 0;
-            }
-            Vector3 localBasis = new Vector3(_look.X, 0, _look.Z);
-            localBasis.Normalize();
-            float dot = Vector3.Dot(localBasis, _look);
-            float angle = (float)Math.Acos(dot);
-            if (float.IsNaN(angle))
-            {
-                return 0.0f;
-            }
-            if (_look.Y < 0)
-            {
-                angle = (MathHelper.Pi * 2.0f) - angle;
-            }
-
-            return angle;
-        }
         
         public void walk(float timeDelta)
         {
-            float speed = 5.0f;
-            _pos += _look * timeDelta * speed;
+            _pos += _look * timeDelta;
         }
 
-        public Boolean CheckCollision(Entity e, List<Entity> children)
+        public void strafe(float timeDelta)
+        {
+            _pos += _right * timeDelta;
+        }
+
+        public Boolean CheckCollision(Entity entity, List<Entity> children)
         {
             bool intersect = false;
             for (int i = 0; i < children.Count; i++)
             {
-                if (!children.ElementAt(i).Equals(e))
+                if (!children.ElementAt(i).Equals(entity))
                 {
-                    intersect = e._entitySphere.Intersects(children.ElementAt(i)._entitySphere);
+                    intersect = entity._entitySphere.Intersects(children.ElementAt(i)._entitySphere);
 
-                    if (intersect == true)
+                    if (intersect)
                     {
-                        e._entityCollisionFlag = true;
+                        entity._entityCollisionFlag = true;
                         ///////////////
-                        if (!(e.GetType() == children.ElementAt(i).GetType()))
+                        if (!(entity.GetType() == children.ElementAt(i).GetType()))
                         {
                             children.ElementAt(i)._entityCollisionFlag = true;
                         }

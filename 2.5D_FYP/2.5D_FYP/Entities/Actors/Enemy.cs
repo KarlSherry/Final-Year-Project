@@ -24,8 +24,8 @@ namespace _2._5D_FYP
         public Enemy(List<Entity> list)
         {
             currentRound = Game1.getCurrentRound();
-
-            //enemyTypeIndex = 3;
+            
+            _health = 100;
 
             if (currentRound % 1 == 0) enemyTypeIndex = Entity.randomGenerator.Next(0, 1);
             if (currentRound % 2 == 0) enemyTypeIndex = Entity.randomGenerator.Next(0, 2);
@@ -37,6 +37,7 @@ namespace _2._5D_FYP
             if (currentRound % 5 == 0) { _maxSpeed *= 1.5f; _attackStrength *= 1.5f; _defence *= 1.5f; }
 
             _pos = _randomPosition;
+
             _look = new Vector3(randomClamped(), 0, randomClamped());
             _look.Normalize();
 
@@ -64,10 +65,8 @@ namespace _2._5D_FYP
                 
                 getEnemyBehaviour(enemyTypeIndex);
 
-                if (Math.Sqrt(Math.Pow(_pos.X - 0, 2) + Math.Pow(_pos.Y - 0, 2) + Math.Pow(_pos.Z - 0, 2)) > 4000)
-                {
+                if (_pos.Length() > 4250)
                     _pos = -_pos;
-                }
 
                 hasHitSomething = CheckCollision(this, Game1.Instance().PlayerBulletList);
                 if (hasHitSomething)
@@ -99,8 +98,12 @@ namespace _2._5D_FYP
                     _velocity *= _maxSpeed;
                 }
 
+                if (_health <= 0)
+                    _alive = false;
+
                 if (!_alive)
                 {
+                    game.particleSystem.Start(this, _pos);
                     Game1.Instance().Player.playerScore += (100 * (long)_scale);
                     _parentList.Remove(this);
                 }
@@ -144,7 +147,7 @@ namespace _2._5D_FYP
             {
                 if (entity._entityCollisionFlag == true && entity is Bullet)
                 {
-                    _alive = false;
+                    _health -= entity._damageOnCollision / _defence;
                     entity._alive = false;
                     entity._entityCollisionFlag = false;
                 }
@@ -173,27 +176,31 @@ namespace _2._5D_FYP
             {
                 case 0:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    _weaponIndex = 0;
+                    _entityName = "Mini-Z";
+                    _weaponIndex = 2;
                     _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 3.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
-                    _attackStrength = 1;
+                    _attackStrength = 1; _defence = 1;
                     break;
                 case 1:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    _weaponIndex = 1;
+                    _entityName = "Midi-Z";
+                    _weaponIndex = 2;
                     _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 4.5f; _mass = 1.0f; _rotationSpeed = 5.0f;
-                    _attackStrength = 1;
+                    _attackStrength = 1; _defence = 2;
                     break;
                 case 2:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
+                    _entityName = "Maxi-Z";
                     _weaponIndex = 2;
                     _maxSpeed = 250.0f; _maxForce = 10.0f; _scale = 6.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
-                    _attackStrength = 1;
+                    _attackStrength = 1; _defence = 3;
                     break;
                 case 3:
                     _entityModel = "Models//Enemies//" + enemyType[enemyTypeIndex];
-                    _weaponIndex = 3;
+                    _entityName = "Mega-Z";
+                    _weaponIndex = 2;
                     _maxSpeed = 200.0f; _maxForce = 10.0f; _scale = 5.0f; _mass = 1.0f; _rotationSpeed = 5.0f;
-                    _attackStrength = 1;
+                    _attackStrength = 5; _defence = 5;
                     break;
             }
         }
