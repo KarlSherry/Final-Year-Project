@@ -63,3 +63,11 @@ Content\Models\ParticleSpheres\AlienShrapnelBlue.xnb
 Content\Models\ParticleSpheres\AlienShrapnelGreen.xnb
 Content\Models\ParticleSpheres\AlienShrapnelRed.xnb
 Content\Models\ParticleSpheres\AlienShrapnelFire.xnb
+Content\Models\FloatingObjects\metal11.xnb
+Content\Models\FloatingObjects\metal22.xnb
+Content\Models\FloatingObjects\metal33.xnb
+Content\Models\FloatingObjects\metal44.xnb
+Content\Metal1.xnb
+Content\Metal2.xnb
+Content\Metal3.xnb
+Content\Metal4.xnb

@@ -10,7 +10,7 @@ namespace _2._5D_FYP
     public class Metal : Entity
     {
         int metalTypeIndex;
-        string[] metalType = { "metal1", "metal2", "metal3", "metal4" };
+        string[] metalType = { "Metal1", "Metal2", "Metal3", "Metal4" };
 
         float angle = 0.0f;
         float emmisiveColorDelta = 0.01f;
@@ -61,8 +61,8 @@ namespace _2._5D_FYP
                     emmisiveColorDelta = 0.01f;
                 }
 
-                _emmisiveR += emmisiveColorDelta;
-                _emmisiveG += emmisiveColorDelta;
+                //_emmisiveR += emmisiveColorDelta;
+                //_emmisiveG += emmisiveColorDelta;
             }
             else _parentList.Remove(this);
         }

@@ -216,23 +216,23 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\FloatingObjects\metal1.fbx">
-      <Name>metal1</Name>
+    <Compile Include="Models\FloatingObjects\metal11.fbx">
+      <Name>metal11</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\FloatingObjects\metal2.fbx">
-      <Name>metal2</Name>
+    <Compile Include="Models\FloatingObjects\metal22.fbx">
+      <Name>metal22</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\FloatingObjects\metal3.fbx">
-      <Name>metal3</Name>
+    <Compile Include="Models\FloatingObjects\metal33.fbx">
+      <Name>metal33</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
-    <Compile Include="Models\FloatingObjects\metal4.fbx">
-      <Name>metal4</Name>
+    <Compile Include="Models\FloatingObjects\metal44.fbx">
+      <Name>metal44</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
@@ -334,6 +334,46 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Metal1.fbx">
+      <Name>Metal1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Metal2.fbx">
+      <Name>Metal2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Metal3.fbx">
+      <Name>Metal3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Metal4.fbx">
+      <Name>Metal4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Metal1.fbx">
+      <Name>Metal1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Metal2.fbx">
+      <Name>Metal2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Metal3.fbx">
+      <Name>Metal3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\FloatingObjects\Metal4.fbx">
+      <Name>Metal4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>

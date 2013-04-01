@@ -559,12 +559,11 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal1.xnb</Output>
-      <Time>2013-03-22T12:30:39.1357164+00:00</Time>
+      <Time>2013-04-01T11:37:59.0496668+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\FloatingObjects\metal1_0.xml</Key>
-        <Value>2013-03-22T12:30:42.6319164+00:00</Value>
+        <Value>2013-04-01T11:38:40.383031+01:00</Value>
       </Dependency>
-      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\RockRough_0.xnb</Request>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal2.fbx</Source>
@@ -573,12 +572,11 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal2.xnb</Output>
-      <Time>2013-03-22T12:31:38.9071352+00:00</Time>
+      <Time>2013-04-01T11:37:59.052667+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\FloatingObjects\metal2_0.xml</Key>
-        <Value>2013-03-22T12:32:04.7956159+00:00</Value>
+        <Value>2013-04-01T11:38:40.9630642+01:00</Value>
       </Dependency>
-      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\RockRough0002_S_0.xnb</Request>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal3.fbx</Source>
@@ -587,12 +585,11 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal3.xnb</Output>
-      <Time>2013-03-22T12:30:39.1417168+00:00</Time>
+      <Time>2013-04-01T11:37:59.0616675+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\FloatingObjects\metal3_0.xml</Key>
-        <Value>2013-03-22T12:32:05.2266406+00:00</Value>
+        <Value>2013-04-01T11:38:41.4890942+01:00</Value>
       </Dependency>
-      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb</Request>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal4.fbx</Source>
@@ -601,40 +598,39 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal4.xnb</Output>
-      <Time>2013-03-22T12:30:39.144717+00:00</Time>
+      <Time>2013-04-01T11:37:59.0636676+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\FloatingObjects\metal4_0.xml</Key>
-        <Value>2013-03-22T12:32:05.3436473+00:00</Value>
+        <Value>2013-04-01T11:38:41.6661044+01:00</Value>
       </Dependency>
-      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\MetalBare_0.xnb</Request>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal1.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\FloatingObjects\metal1_0.xml</Output>
-      <Time>2013-03-22T12:30:39.1357164+00:00</Time>
+      <Time>2013-04-01T11:37:59.0496668+01:00</Time>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal2.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\FloatingObjects\metal2_0.xml</Output>
-      <Time>2013-03-22T12:31:38.9071352+00:00</Time>
+      <Time>2013-04-01T11:37:59.052667+01:00</Time>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal3.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\FloatingObjects\metal3_0.xml</Output>
-      <Time>2013-03-22T12:30:39.1417168+00:00</Time>
+      <Time>2013-04-01T11:37:59.0616675+01:00</Time>
     </Item>
     <Item>
       <Source>Models\FloatingObjects\metal4.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\FloatingObjects\metal4_0.xml</Output>
-      <Time>2013-03-22T12:30:39.144717+00:00</Time>
+      <Time>2013-04-01T11:37:59.0636676+01:00</Time>
     </Item>
     <Item>
       <Source>BG.png</Source>
@@ -957,28 +953,28 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelBlue_0.xml</Output>
-      <Time>2013-03-29T19:36:20.3742497+00:00</Time>
+      <Time>2013-03-31T15:43:53.6148545+01:00</Time>
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\AlienShrapnelFire.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelFire_0.xml</Output>
-      <Time>2013-03-29T19:36:20.4002512+00:00</Time>
+      <Time>2013-03-31T15:43:53.6198548+01:00</Time>
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\AlienShrapnelGreen.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelGreen_0.xml</Output>
-      <Time>2013-03-29T19:36:20.4102518+00:00</Time>
+      <Time>2013-03-31T15:43:53.623855+01:00</Time>
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\AlienShrapnelRed.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelRed_0.xml</Output>
-      <Time>2013-03-29T19:36:20.4202524+00:00</Time>
+      <Time>2013-03-31T15:43:53.6278553+01:00</Time>
     </Item>
     <Item>
       <Source>Models\ParticleSpheres\sphereOrange.fbx</Source>
@@ -1022,10 +1018,10 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelBlue.xnb</Output>
-      <Time>2013-03-29T19:36:20.3742497+00:00</Time>
+      <Time>2013-03-31T15:43:53.6148545+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelBlue_0.xml</Key>
-        <Value>2013-03-29T19:39:16.0722991+00:00</Value>
+        <Value>2013-03-31T15:44:17.8502407+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1038,10 +1034,10 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelGreen.xnb</Output>
-      <Time>2013-03-29T19:36:20.4102518+00:00</Time>
+      <Time>2013-03-31T15:43:53.623855+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelGreen_0.xml</Key>
-        <Value>2013-03-29T19:39:16.3753164+00:00</Value>
+        <Value>2013-03-31T15:44:18.2942661+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1054,10 +1050,10 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelRed.xnb</Output>
-      <Time>2013-03-29T19:36:20.4202524+00:00</Time>
+      <Time>2013-03-31T15:43:53.6278553+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelRed_0.xml</Key>
-        <Value>2013-03-29T19:39:16.4873228+00:00</Value>
+        <Value>2013-03-31T15:44:18.4102727+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1070,11 +1066,175 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\ParticleSpheres\AlienShrapnelFire.xnb</Output>
-      <Time>2013-03-29T19:36:20.4002512+00:00</Time>
+      <Time>2013-03-31T15:43:53.6198548+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\ParticleSpheres\AlienShrapnelFire_0.xml</Key>
-        <Value>2013-03-29T19:39:16.2593098+00:00</Value>
+        <Value>2013-03-31T15:44:18.1712591+01:00</Value>
       </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal11.fbx</Source>
+      <Name>Models\FloatingObjects\metal11</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal11.xnb</Output>
+      <Time>2013-03-22T12:30:39.1357164+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\FloatingObjects\metal11_0.xml</Key>
+        <Value>2013-04-01T11:38:36.4798077+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\RockRough_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal22.fbx</Source>
+      <Name>Models\FloatingObjects\metal22</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal22.xnb</Output>
+      <Time>2013-03-22T12:31:38.9071352+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\FloatingObjects\metal22_0.xml</Key>
+        <Value>2013-04-01T11:38:37.446863+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\RockRough0002_S_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal33.fbx</Source>
+      <Name>Models\FloatingObjects\metal33</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal33.xnb</Output>
+      <Time>2013-03-22T12:30:39.1417168+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\FloatingObjects\metal33_0.xml</Key>
+        <Value>2013-04-01T11:38:37.8578865+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\RockRough0012_1_M_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal44.fbx</Source>
+      <Name>Models\FloatingObjects\metal44</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\metal44.xnb</Output>
+      <Time>2013-03-22T12:30:39.144717+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Models\FloatingObjects\metal44_0.xml</Key>
+        <Value>2013-04-01T11:38:38.0288963+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Models\FloatingObjects\MetalBare_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Metal1.fbx</Source>
+      <Name>Metal1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Metal1.xnb</Output>
+      <Time>2013-04-01T11:37:29.0719522+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Metal1_0.xml</Key>
+        <Value>2013-04-01T11:38:38.5749276+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Metal2.fbx</Source>
+      <Name>Metal2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Metal2.xnb</Output>
+      <Time>2013-04-01T11:37:29.1249553+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Metal2_0.xml</Key>
+        <Value>2013-04-01T11:38:39.1059579+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Metal3.fbx</Source>
+      <Name>Metal3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Metal3.xnb</Output>
+      <Time>2013-04-01T11:37:29.1789583+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Metal3_0.xml</Key>
+        <Value>2013-04-01T11:38:39.7029921+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Metal4.fbx</Source>
+      <Name>Metal4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Imaginote\Desktop\Karl_Sherry_FYP\2.5D_FYP\2.5D_FYP\2.5D_FYP\bin\x86\Debug\Content\Metal4.xnb</Output>
+      <Time>2013-04-01T11:37:29.1919591+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Metal4_0.xml</Key>
+        <Value>2013-04-01T11:38:39.8720017+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal11.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\FloatingObjects\metal11_0.xml</Output>
+      <Time>2013-03-22T12:30:39.1357164+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal22.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\FloatingObjects\metal22_0.xml</Output>
+      <Time>2013-03-22T12:31:38.9071352+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal33.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\FloatingObjects\metal33_0.xml</Output>
+      <Time>2013-03-22T12:30:39.1417168+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\FloatingObjects\metal44.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Models\FloatingObjects\metal44_0.xml</Output>
+      <Time>2013-03-22T12:30:39.144717+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Metal1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Metal1_0.xml</Output>
+      <Time>2013-04-01T11:37:29.0719522+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Metal2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Metal2_0.xml</Output>
+      <Time>2013-04-01T11:37:29.1249553+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Metal3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Metal3_0.xml</Output>
+      <Time>2013-04-01T11:37:29.1789583+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Metal4.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Metal4_0.xml</Output>
+      <Time>2013-04-01T11:37:29.1919591+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
